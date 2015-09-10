@@ -1,0 +1,20 @@
+postgresql: &postgresql
+ adapter: postgresql
+ host: localhost
+ min_messages: ERROR
+ username: mikesaurio
+ password: 
+ pool: 5
+ timeout: 5000
+
+development:
+ <<: *postgresql
+ database: oficina_virtual_development
+
+test:
+ <<: *postgresql
+ database: oficina_virtual_test
+
+production:
+ <<: *postgresql
+ database: oficina_virtual_production
