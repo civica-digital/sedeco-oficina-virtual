@@ -1,0 +1,55 @@
+<sedeco>
+    <impacto>
+        <pregunta>
+            <numero>
+                1
+            </numero>
+            <texto>
+                ¿Ya cuentas con un establecimiento mercantil?
+            </texto>
+            <respuestas>
+                <respuesta>
+                    <texto>
+                        Sí
+                    </texto>
+                    <imagen>
+                        positivo.png
+                    </imagen>
+                    <siguiente>
+                        
+                    <siguiente>
+                    <path>
+                    </path> 
+                </respuesta>
+                <respuesta>
+                    <texto>
+                        No
+                    </texto>
+                    <imagen>
+                        negativo.png
+                    </imagen>
+                    <siguiente>
+                        
+                    <siguiente>
+                    <path>
+                    
+                    </path> 
+                </respuesta>
+                <respuesta>
+                    <texto>
+                      No lo se
+                    </texto>
+                    <imagen>
+                      question.png
+                    </imagen>
+                    <siguiente>
+                      
+                    <siguiente>
+                    <path>
+                    
+                    </path>  
+                </respuesta>
+            </respuestas>
+        </pregunta>
+    <impacto>
+</sedeco>
