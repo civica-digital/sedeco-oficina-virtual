@@ -112,6 +112,12 @@
         <respuesta type="fecha">
           <texto>Selecciona una fecha:</texto>
           <rangoinicial>1900</rangoinicial>
+          <siguiente>0</siguiente>
+        </respuesta>
+        <respuesta type="normal">
+          <texto>No se</texto>
+          <imagen>question.png</imagen>
+          <siguiente></siguiente>
         </respuesta>
       </array_respuestas>
     </pregunta>

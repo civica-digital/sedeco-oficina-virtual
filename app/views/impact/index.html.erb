@@ -33,7 +33,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                
+                    <%@impacto["impacto"]["array_preguntas"]["pregunta"].each_with_index do |pregunta, index|%>
+                        <%@respuestas_texto_array.clear  %>
+                        <%@respuestas_imagen_array.clear%>
+                        <%@respuestas_siguiente_array.clear%>
+                        <%@respuestas_rango_array.clear%>
+                        <%pregunta["array_respuestas"]["respuesta"].each do |respuestas|%>
+                            <%if pregunta["array_respuestas"]["tipo"] == "normal"%>
+                                <%@tipo = "normal"%>
+                                <%@respuestas_texto_array << respuestas["texto"]%>
+                                <%@respuestas_imagen_array << respuestas["imagen"]%>
+                                <%@respuestas_siguiente_array << respuestas["siguiente"]%>
+                            <%elsif pregunta["array_respuestas"]["tipo"] == "fecha"%>
+                                <%@tipo = "fecha"%>
+                                <%@respuestas_texto_array << respuestas["texto"]%>
+                                <%@respuestas_rango_array << respuestas["rangoinicial"]%>
+                                <%@respuestas_siguiente_array << respuestas["siguiente"]%>
+                            <%end%>
+                        <%end%>
+                        <%if @tipo == "normal"%>
+                            <%= render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :next => @respuestas_siguiente_array} %>
+                        <%end%>
+                    <%end%>     
                 </div>
             </div>
         </div>
