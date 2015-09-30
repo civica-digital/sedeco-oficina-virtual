@@ -1,0 +1,119 @@
+{
+  "impacto": {
+    "array_preguntas": {
+      "pregunta": [
+        {
+          "numero": "1",
+          "texto": "¿Ya cuentas con un establecimiento mercantil?",
+          "array_respuestas": {
+            "respuesta": [
+              {
+                "-type": "normal",
+                "texto": "Sí",
+                "imagen": "positivo.png",
+                "siguiente": "2"
+              },
+              {
+                "-type": "normal",
+                "texto": "No",
+                "imagen": "negativo.png",
+                "siguiente": "2"
+              },
+              {
+                "-type": "normal",
+                "texto": "No se",
+                "imagen": "question.png"
+              }
+            ]
+          }
+        },
+        {
+          "numero": "2",
+          "texto": "¿Deseas abrir o tienes un negocio que tiene el giro mercantil de un restaurante con venta de bebidas alcohólicas, salón de fiestas, establecimiento de hospedaje (hotel, motel, etc.), cine, teatro, auditorio o club privado?",
+          "array_respuestas": {
+            "respuesta": [
+              {
+                "-type": "normal",
+                "texto": "Sí",
+                "imagen": "positivo.png",
+                "siguiente": "-1"
+              },
+              {
+                "-type": "normal",
+                "texto": "No",
+                "imagen": "negativo.png",
+                "siguiente": "3"
+              },
+              {
+                "-type": "normal",
+                "texto": "No se",
+                "imagen": "question.png"
+              }
+            ]
+          }
+        },
+        {
+          "numero": "3",
+          "texto": "¿Deseas abrir o tienes un negocio con giro mercantil de bar, cantina, cervecería, pulquería, cabaret, centro nocturno, peña, discoteque o centro de juegos con apuestas y sorteos?",
+          "array_respuestas": {
+            "respuesta": [
+              {
+                "-type": "normal",
+                "texto": "Sí",
+                "imagen": "positivo.png",
+                "siguiente": "0"
+              },
+              {
+                "-type": "normal",
+                "texto": "No",
+                "imagen": "negativo.png",
+                "siguiente": "4"
+              },
+              {
+                "-type": "normal",
+                "texto": "No se",
+                "imagen": "question.png"
+              }
+            ]
+          }
+        },
+        {
+          "numero": "4",
+          "texto": "¿Ya registraste tu negocio en el Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles (SIAPEM)?",
+          "array_respuestas": {
+            "respuesta": [
+              {
+                "-type": "normal",
+                "texto": "Sí",
+                "imagen": "positivo.png",
+                "siguiente": "5"
+              },
+              {
+                "-type": "normal",
+                "texto": "No",
+                "imagen": "negativo.png",
+                "siguiente": "0"
+              },
+              {
+                "-type": "normal",
+                "texto": "No se",
+                "imagen": "question.png"
+              }
+            ]
+          }
+        },
+        {
+          "numero": "5",
+          "texto": "¿Cuándo te registraste en el SIAPEM?",
+          "array_respuestas": {
+            "respuesta": {
+              "-type": "fecha",
+              "texto": "Selecciona una fecha:",
+              "rangoinicial": "1900"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

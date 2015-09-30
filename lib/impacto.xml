@@ -1,4 +1,4 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <impacto>
   <array_preguntas>
     <pregunta>
@@ -26,7 +26,6 @@
         </respuesta>
       </array_respuestas>
     </pregunta>
-    -----------
     <pregunta>
       <numero>
         2
@@ -44,15 +43,14 @@
           <texto>No</texto>
           <imagen>negativo.png</imagen>
           <siguiente>3</siguiente>
-        </respuesta type="normal">
-        <respuesta>
+        </respuesta>
+        <respuesta type="normal">
           <texto>No se</texto>
           <imagen>question.png</imagen>
           <siguiente></siguiente>
         </respuesta>
       </array_respuestas>
     </pregunta>
-    -----------
     <pregunta>
       <numero>
         3
@@ -78,7 +76,6 @@
         </respuesta>
       </array_respuestas>
     </pregunta>
-    -----------
     <pregunta>
       <numero>
         4
@@ -104,7 +101,6 @@
         </respuesta>
       </array_respuestas>
     </pregunta>
-    -----------
     <pregunta>
       <numero>
         5
@@ -119,7 +115,6 @@
         </respuesta>
       </array_respuestas>
     </pregunta>
-    -----------
   </array_preguntas>
 </impacto>
 
