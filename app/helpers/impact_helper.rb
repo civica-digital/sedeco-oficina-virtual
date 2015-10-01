@@ -1,7 +1,7 @@
 module ImpactHelper
 	def get_array_fecha(inicial)
 		fechas = []
-		(Integer(inicial)..2015).each do |n|
+		(2015.downto(Integer(inicial))).each do |n|
   			fechas << n
   		end
   		return fechas

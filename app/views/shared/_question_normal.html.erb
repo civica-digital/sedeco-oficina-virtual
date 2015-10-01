@@ -8,7 +8,9 @@
         <div class="col-md-8 col-md-offset-2">
         <%locals[:texto_answer].each_with_index do |text, index|%>
           <div class=<%="col-md-#{12/locals[:texto_answer].size}"%>>
-            <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+            <div id="rcorner" class="text-center">
+              <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+            </div>
             <%=text%>
           </div>
         <%end%>

@@ -1,4 +1,4 @@
-<div id=<%="#{locals[:number]}"%>>
+<div class=<%="bloque#{locals[:number]} hidde"%>%>>
 	<p> 
 		<%= locals[:texto_question] %> 
 	</p>
@@ -11,7 +11,9 @@
             <%unless locals[:rangoinicial][index].nil?%>
               <%=select "obj", "test", get_array_fecha(locals[:rangoinicial][index]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: 'chosen-select'%><br>
             <%else%>
-              <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+              <div id="rcorner" class="text-center">
+                <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+              </div>
               <%=text%>
             <%end%>
             
@@ -21,4 +23,6 @@
       </div>
   </div>
 </div>
-<hr> 
+<div class="col-md-12">
+  <hr>
+</div>
