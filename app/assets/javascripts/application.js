@@ -14,4 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require chosen-jquery
 //= require_tree .
+
+$(document).ready(loadChosen);
+$(document).on('page:load', loadChosen);

@@ -9,15 +9,16 @@
         <%locals[:texto_answer].each_with_index do |text, index|%>
           <div class=<%="col-md-#{12/locals[:texto_answer].size}"%>>
             <%unless locals[:rangoinicial][index].nil?%>
-
+              <%=select "obj", "test", get_array_fecha(locals[:rangoinicial][index]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: 'chosen-select form-control'%><br>
             <%else%>
               <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+              <%=text%>
             <%end%>
-            <%=text%>
+            
           </div>
         <%end%>
         </div>
       </div>
   </div>
 </div>
-<hr>
+<hr> 

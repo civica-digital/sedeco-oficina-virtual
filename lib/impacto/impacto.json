@@ -183,7 +183,7 @@
                             {
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
-                                "rangoinicial": "1900",
+                                "rangoinicial": "1980",
                                 "siguiente": "0"
                             },
                             {
