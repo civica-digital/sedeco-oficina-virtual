@@ -12,21 +12,18 @@
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "positivo",
-                                "hover": "positivo-m",
                                 "siguiente": "2"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "negativo",
-                                "hover": "negativo-m",
                                 "siguiente": "2"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
-                                "hover": "question-m"
+                                "imagen": "question"
                             }
                         ]
                     }
@@ -41,27 +38,23 @@
                                 "-type": "normal",
                                 "texto": "Restaurante con venta de bebidas alcohólicas",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Salón de fiestas",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Establecimiento de hospedaje (hotel, motel, etc.)",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Cine, Teatro, Auditorio",
-                                "hover": "bolita-m",
                                 "imagen": "bolita",
                                 "siguiente": "-1"
                             },
@@ -69,21 +62,18 @@
                                 "-type": "normal",
                                 "texto": "Club privado",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Ninguno de estos",
                                 "imagen": "negativo",
-                                "hover": "negativo-m",
                                 "siguiente": "3"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
-                                "hover": "question-m"
+                                "imagen": "question"
                             }
                         ]
                     }
@@ -98,49 +88,42 @@
                                 "-type": "normal",
                                 "texto": "Bar, Cantina o pulquería",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "cervecería",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Cabaret o Centro nocturno",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "discoteque",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Centro de juegos con apuestas y sorteos",
                                 "imagen": "bolita",
-                                "hover": "bolita-m",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Ninguno de estos",
                                 "imagen": "negativo",
-                                "hover": "negativo-m",
                                 "siguiente": "4"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
-                                "hover": "question-m"
+                                "imagen": "question"
                             }
                         ]
                     }
@@ -155,21 +138,18 @@
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "positivo",
-                                "hover": "positivo-m",
                                 "siguiente": "5"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "negativo",
-                                "hover": "negativo-m",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
-                                "hover": "question-m"
+                                "imagen": "question"
                             }
                         ]
                     }
@@ -189,8 +169,7 @@
                             {
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
-                                "hover": "question-m"
+                                "imagen": "question"
                             }
                         ]
                     }

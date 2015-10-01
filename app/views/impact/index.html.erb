@@ -38,20 +38,17 @@
                     <%@respuestas_imagen_array.clear%>
                     <%@respuestas_siguiente_array.clear%>
                     <%@respuestas_rango_array.clear%>
-                    <%@respuestas_hover_array.clear%>
                     <%pregunta["array_respuestas"]["respuesta"].each do |respuestas|%>
                         <%if pregunta["array_respuestas"]["tipo"] == "normal"%>
                             <%@tipo = "normal"%>
                             <%@respuestas_texto_array << respuestas["texto"]%>
                             <%@respuestas_imagen_array << respuestas["imagen"]%>
                             <%@respuestas_siguiente_array << respuestas["siguiente"]%>
-                            <%@respuestas_hover_array << respuestas["hover"]%>
                         <%elsif pregunta["array_respuestas"]["tipo"] == "fecha"%>
                             <%@tipo = "fecha"%>
                             <%@respuestas_texto_array << respuestas["texto"]%>
                             <%@respuestas_rango_array << respuestas["rangoinicial"]%>
                             <%@respuestas_siguiente_array << respuestas["siguiente"]%>
-                            <%@respuestas_hover_array << respuestas["hover"]%>
                             <%@respuestas_imagen_array << respuestas["imagen"]%>
                         <%end%>
                     <%end%>
@@ -64,5 +61,6 @@
             </div>
         </div>
     </div>
+<%=render "shared/diagnostic"%>
 </header>
 
