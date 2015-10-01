@@ -472,6 +472,8 @@ footer .footer-below {
     padding: 20px;
     text-align: center !important;
     display: table;
+    width: 95px;
+    height: 85px;
     margin: 0 auto;
 }
 .rcorner:hover {
