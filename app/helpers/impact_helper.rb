@@ -6,4 +6,12 @@ module ImpactHelper
   		end
   		return fechas
 	end
+
+	def prod_img_full(img)
+  		"#{img}.png"
+	end
+
+	def prod_img_over(img)
+  		"#{img}-m.png"
+	end
 end

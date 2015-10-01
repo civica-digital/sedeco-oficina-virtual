@@ -466,17 +466,17 @@ footer .footer-below {
     opacity: 0;
 }
 
-#rcorner{
+.rcorner{
     border-radius: 20px;
     border: 2px solid #E6007E;
-    padding-top: 25px;
-    width: 100px;
-    height: 100px;
+    padding: 20px;
     text-align: center !important;
-     display: table;
+    display: table;
     margin: 0 auto;
 }
-
+.rcorner:hover {
+  border: 2px solid #871C57;
+}
 
 .form-control {
   display: block;
