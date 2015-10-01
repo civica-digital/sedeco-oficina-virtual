@@ -40,36 +40,36 @@
                             {
                                 "-type": "normal",
                                 "texto": "Restaurante con venta de bebidas alcohólicas",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Salón de fiestas",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Establecimiento de hospedaje (hotel, motel, etc.)",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Cine, Teatro, Auditorio",
-                                "hover": "question-m.png",
-                                "imagen": "question.png",
+                                "hover": "bolita-m.png",
+                                "imagen": "bolita.png",
                                 "siguiente": "-1"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Club privado",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "-1"
                             },
                             {
@@ -97,36 +97,36 @@
                             {
                                 "-type": "normal",
                                 "texto": "Bar, Cantina o pulquería",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "cervecería",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Cabaret o Centro nocturno",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "discoteque",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "0"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Centro de juegos con apuestas y sorteos",
-                                "imagen": "question.png",
-                                "hover": "question-m.png",
+                                "imagen": "bolita.png",
+                                "hover": "bolita-m.png",
                                 "siguiente": "0"
                             },
                             {
