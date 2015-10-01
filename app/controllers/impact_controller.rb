@@ -18,6 +18,7 @@ private
     @respuestas_imagen_array = []
     @respuestas_siguiente_array = []
     @respuestas_rango_array = []
+	@respuestas_hover_array = []
  end
  
 end

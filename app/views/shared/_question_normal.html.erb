@@ -4,14 +4,16 @@
 	</p>
 	<BR>
   <div class="col-md-12">
-    <div class="col-md-6 col-md-offset-3">
-      <div class="row">
+      <div class="row seven-cols">
+        <div class="col-md-8 col-md-offset-2">
         <%locals[:texto_answer].each_with_index do |text, index|%>
           <div class=<%="col-md-#{12/locals[:texto_answer].size}"%>>
-            <%=image_tag locals[:imagen][index], class: "img-responsive"%>
+            <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+            <%=text%>
           </div>
         <%end%>
+        </div>
       </div>
-    </div>
   </div>
 </div>
+<HR>
