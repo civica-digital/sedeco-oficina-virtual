@@ -498,7 +498,7 @@ footer .footer-below {
 
 /******************Chosen******************/
 .chosen-container ul.chosen-results li.highlighted {
-  background-color: $light-green;
+  background-color: #E6007E;
   background-image: none;
   color: #000000 !important;
 }

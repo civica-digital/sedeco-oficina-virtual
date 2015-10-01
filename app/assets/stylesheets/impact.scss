@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+/**********************NAvbar*********************/
 /* line 398, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
   color: #fff !important;
@@ -98,4 +98,7 @@
 }
 .margin-bottom{
     margin-bottom: 50px;
+}
+.margin-top-dropdown{
+  margin-top:20px;
 }

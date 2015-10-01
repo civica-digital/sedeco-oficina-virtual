@@ -7,13 +7,13 @@
       <div class="row seven-cols">
         <div class="col-md-8 col-md-offset-2">
         <%locals[:texto_answer].each_with_index do |text, index|%>
-          <div class=<%="col-md-#{12/locals[:texto_answer].size}"%>>
+          <div class=<%="col-md-#{12/locals[:texto_answer].size} text-center"%>>
             <%unless locals[:rangoinicial][index].nil?%>
-              <%=select "obj", "test", get_array_fecha(locals[:rangoinicial][index]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: 'chosen-select'%><br>
-            <%else%>
-              <div id="rcorner" class="text-center">
-                <%=image_tag locals[:imagen][index],class: "img-responsive"%>
+            <div class=" margin-top-dropdown">
+              <%=select "obj", "test", get_array_fecha(locals[:rangoinicial][index]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: 'chosen-select'%>
               </div>
+            <%else%>
+              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ")%>
               <%=text%>
             <%end%>
             
