@@ -38,31 +38,31 @@
                                 "-type": "normal",
                                 "texto": "Restaurante con venta de bebidas alcohólicas",
                                 "imagen": "bolita",
-                                "siguiente": "-1"
+                                "siguiente": "4"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Salón de fiestas",
                                 "imagen": "bolita",
-                                "siguiente": "-1"
+                                "siguiente": "4"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Establecimiento de hospedaje (hotel, motel, etc.)",
                                 "imagen": "bolita",
-                                "siguiente": "-1"
+                                "siguiente": "4"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Cine, Teatro, Auditorio",
                                 "imagen": "bolita",
-                                "siguiente": "-1"
+                                "siguiente": "4"
                             },
                             {
                                 "-type": "normal",
                                 "texto": "Club privado",
                                 "imagen": "bolita",
-                                "siguiente": "-1"
+                                "siguiente": "4"
                             },
                             {
                                 "-type": "normal",
@@ -86,13 +86,7 @@
                         "respuesta": [
                             {
                                 "-type": "normal",
-                                "texto": "Bar, Cantina o pulquería",
-                                "imagen": "bolita",
-                                "siguiente": "0"
-                            },
-                            {
-                                "-type": "normal",
-                                "texto": "cervecería",
+                                "texto": "Cervecería, Cantina o pulquería",
                                 "imagen": "bolita",
                                 "siguiente": "0"
                             },
@@ -104,7 +98,7 @@
                             },
                             {
                                 "-type": "normal",
-                                "texto": "discoteque",
+                                "texto": "discoteque o bar",
                                 "imagen": "bolita",
                                 "siguiente": "0"
                             },
@@ -144,7 +138,13 @@
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "negativo",
-                                "siguiente": "0"
+                                "siguiente": "0",
+                                "restricciones":[
+                                    {
+                                        "uso": "vecinal",
+                                        "siguiente":"6"
+                                    }
+                                ]
                             },
                             {
                                 "-type": "normal",
@@ -164,6 +164,32 @@
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
                                 "rangoinicial": "1980",
+                                "siguiente": "0"
+                            },
+                            {
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "question"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "6",
+                    "texto": "¿Cuentas con algún tipo de permiso o licencia de funcionamiento proporcionada como A, B, ordinaria o especial?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {
+                                "-type": "normal",
+                                "texto": "Sí",
+                                "imagen": "positivo",
+                                "siguiente": "0"
+                            },
+                            {
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "negativo",
                                 "siguiente": "0"
                             },
                             {
