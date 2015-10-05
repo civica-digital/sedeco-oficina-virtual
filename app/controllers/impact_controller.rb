@@ -3,7 +3,7 @@ class ImpactController < ApplicationController
  require 'json'
   
  def index
-
+	@tipo_de_impacto = "Bajo Impacto"
  end
 
 private

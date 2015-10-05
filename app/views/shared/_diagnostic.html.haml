@@ -1,4 +1,11 @@
-%div
+%div.margin-bottom-end-page
   .H1
     De acuerdo a tus respuestas, tu <colorprimario>IMPACTO</colorprimario> es:
-  = render 'shared/message_exit', message: t('.no_business_available')
+  .jumbotron
+    %h2.colorprimario
+      = impacto
+  .H3.text-right
+    <colorprimario>Siguiente paso "Uso de suelo"</colorprimario> 
+    =link_to root_path, :class=>"colorprimario" do
+      %span.glyphicon.glyphicon-chevron-right
+    
