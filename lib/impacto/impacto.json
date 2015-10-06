@@ -8,19 +8,21 @@
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
-                            {
+                            {   "id":"1",
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "positivo",
                                 "siguiente": "2"
                             },
                             {
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "negativo",
                                 "siguiente": "2"
                             },
                             {
+                                "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "question"

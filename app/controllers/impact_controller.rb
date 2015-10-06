@@ -4,6 +4,14 @@ class ImpactController < ApplicationController
   
  def index
 	@tipo_de_impacto = "Bajo Impacto"
+	unless params[:pagetime].blank?
+		params[:pagetime][:root]
+		puts params[:pagetime][:button]
+		respond_to do |format|
+    		format.js { render :js => "hidden_div(2);" }
+  		end
+    end
+
  end
 
 private
@@ -19,6 +27,7 @@ private
     @respuestas_siguiente_array = []
     @respuestas_rango_array = []
 	@respuestas_hover_array = []
+	@respuestas_id_array = []
  end
  
 end

@@ -7,17 +7,44 @@
           -@respuestas_imagen_array.clear
           -@respuestas_siguiente_array.clear
           -@respuestas_rango_array.clear
+          -@respuestas_id_array.clear
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
             -@respuestas_rango_array << respuestas["rangoinicial"]
             -@respuestas_siguiente_array << respuestas["siguiente"]
             -@respuestas_imagen_array << respuestas["imagen"]
+            -@respuestas_id_array << respuestas["id"]
 
           -if pregunta["array_respuestas"]["tipo"] == "normal"
-            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array}
+            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array}
           -elsif pregunta["array_respuestas"]["tipo"] == "fecha"
             = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array}
-    =render "shared/diagnostic", impacto: @tipo_de_impacto
+    -unless @resultado_impacto.nil?          
+      =render "shared/diagnostic", impacto: @tipo_de_impacto
     =render "shared/progressbar", impacto: @tipo_de_impacto, uso_de_suelo: @use_de_suelo, seguridad: @seguridad
+
+:javascript
+  $(document).ready(function(){ 
+    document.getElementById("1").removeAttribute("class");
+  });
+  
+  function buttonClick(a,b){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+         },
+        error: function(){
+        }, 
+         data: $.param({ pagetime: {root: a, button: b}})
+    });
+  }
+
+  function hidden_div(id){
+  document.getElementById(id).removeAttribute("class");
+  }
+
+
+
 
 

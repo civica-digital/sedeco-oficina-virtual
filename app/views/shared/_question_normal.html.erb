@@ -1,4 +1,4 @@
-<div id=<%="#{locals[:number]}"%>>
+<div class="hidden" id=<%="#{locals[:number]}"%>>
   <div class="col-md-12 margin-top">
     <p> 
 		  <%= locals[:texto_question] %> 
@@ -9,7 +9,7 @@
       <div class="col-md-8 col-md-offset-2">
         <%locals[:texto_answer].each_with_index do |text, index|%>
           <div class=<%="col-md-#{12/locals[:texto_answer].size} text-center"%>>
-              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ")%>
+              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ", :onclick=>"buttonClick(#{locals[:number]},#{locals[:id][index]})")%>
             <%=text%>
           </div>
         <%end%>
