@@ -42,9 +42,11 @@
     deleteAndFill(actual,next);
   }
 
-  /*Se elimina la classe hidden para hacer visible el view*/
+  /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
   function hidden_div(id, impacto){
     document.getElementById(id).removeAttribute("class");
+
+    //Actualizamos los progressBars
     $('.progress-impacto').text("Impacto: "+impacto+"%");
     $('.progress-impacto-css').css({'width': impacto+'%'});
   }
