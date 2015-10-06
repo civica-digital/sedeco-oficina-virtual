@@ -9,7 +9,7 @@
       <div class="col-md-8 col-md-offset-2">
         <%locals[:texto_answer].each_with_index do |text, index|%>
           <div class=<%="col-md-#{12/locals[:texto_answer].size} text-center"%>>
-              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ", :onclick=>"buttonClick(#{locals[:number]},#{locals[:id][index]})")%>
+              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ", :onclick=>"buttonClick(#{locals[:number]}, #{locals[:next][index]},#{locals[:id].size})")%>
             <%=text%>
           </div>
         <%end%>

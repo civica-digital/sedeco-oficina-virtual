@@ -5,10 +5,10 @@ class ImpactController < ApplicationController
  def index
 	@tipo_de_impacto = "Bajo Impacto"
 	unless params[:pagetime].blank?
-		params[:pagetime][:root]
-		puts params[:pagetime][:button]
+		next_value = params[:pagetime][:next]
+		#getNext(params[:pagetime][:root],params[:pagetime][:button])
 		respond_to do |format|
-    		format.js { render :js => "hidden_div(2);" }
+    		format.js { render :js => "hidden_div(#{next_value});" }
   		end
     end
 

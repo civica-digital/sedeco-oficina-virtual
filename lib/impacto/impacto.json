@@ -25,7 +25,8 @@
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question"
+                                "imagen": "question",
+                                "siguiente": "0"
                             }
                         ]
                     }
@@ -37,45 +38,52 @@
                         "tipo": "normal",
                         "respuesta": [
                             {
+                                "id":"1",
                                 "-type": "normal",
                                 "texto": "Restaurante con venta de bebidas alcohólicas",
                                 "imagen": "bolita",
                                 "siguiente": "4"
                             },
-                            {
+                            {   "id":"2",
                                 "-type": "normal",
                                 "texto": "Salón de fiestas",
                                 "imagen": "bolita",
                                 "siguiente": "4"
                             },
-                            {
+                            {   
+                                "id":"3",
                                 "-type": "normal",
                                 "texto": "Establecimiento de hospedaje (hotel, motel, etc.)",
                                 "imagen": "bolita",
                                 "siguiente": "4"
                             },
                             {
+                                "id":"4",
                                 "-type": "normal",
                                 "texto": "Cine, Teatro, Auditorio",
                                 "imagen": "bolita",
                                 "siguiente": "4"
                             },
                             {
+                                "id":"5",
                                 "-type": "normal",
                                 "texto": "Club privado",
                                 "imagen": "bolita",
                                 "siguiente": "4"
                             },
                             {
+                                "id":"6",
                                 "-type": "normal",
                                 "texto": "Ninguno de estos",
                                 "imagen": "negativo",
                                 "siguiente": "3"
                             },
                             {
+                                "id":"7",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question"
+                                "imagen": "question",
+                                "siguiente": "0"
                             }
                         ]
                     }
@@ -87,39 +95,46 @@
                         "tipo": "normal",
                         "respuesta": [
                             {
+                                "id":"1",
                                 "-type": "normal",
                                 "texto": "Cervecería, Cantina o pulquería",
                                 "imagen": "bolita",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "Cabaret o Centro nocturno",
                                 "imagen": "bolita",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"3",
                                 "-type": "normal",
                                 "texto": "discoteque o bar",
                                 "imagen": "bolita",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"4",
                                 "-type": "normal",
                                 "texto": "Centro de juegos con apuestas y sorteos",
                                 "imagen": "bolita",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"5",
                                 "-type": "normal",
                                 "texto": "Ninguno de estos",
                                 "imagen": "negativo",
                                 "siguiente": "4"
                             },
                             {
+                                "id":"6",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question"
+                                "imagen": "question",
+                                "siguiente": "0"
                             }
                         ]
                     }
@@ -131,12 +146,14 @@
                         "tipo": "normal",
                         "respuesta": [
                             {
+                                "id":"1",
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "positivo",
                                 "siguiente": "5"
                             },
                             {
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "negativo",
@@ -149,9 +166,11 @@
                                 ]
                             },
                             {
+                                "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question"
+                                "imagen": "question",
+                                "siguiente": "0"
                             }
                         ]
                     }
@@ -163,15 +182,18 @@
                         "tipo": "fecha",
                         "respuesta": [
                             {
+                                "id":"1",
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
                                 "rangoinicial": "1980",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question"
+                                "imagen": "question",
+                                "siguiente": "0"
                             }
                         ]
                     }
@@ -183,21 +205,25 @@
                         "tipo": "normal",
                         "respuesta": [
                             {
+                                "id":"1",
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "positivo",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "negativo",
                                 "siguiente": "0"
                             },
                             {
+                                "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question"
+                                "imagen": "question",
+                                "siguiente": "0"
                             }
                         ]
                     }

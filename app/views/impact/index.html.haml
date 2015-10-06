@@ -28,7 +28,22 @@
     document.getElementById("1").removeAttribute("class");
   });
   
-  function buttonClick(a,b){
+  function buttonClick(actual, next){
+  var size = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}"
+  deleteAndFill(actual,next,size);
+  }
+
+  function hidden_div(id){
+  document.getElementById(id).removeAttribute("class");
+  }
+
+  function deleteAndFill(actual,next,size){
+  console.log(actual);
+  console.log(next);
+  console.log(size);
+    for(i = parseInt(actual)+1 ; i <size;i++){
+      document.getElementById(i).setAttribute("class", "hidden");
+    }
     $.ajax({
          type:'GET', 
          url: "#{root_path}",
@@ -36,12 +51,8 @@
          },
         error: function(){
         }, 
-         data: $.param({ pagetime: {root: a, button: b}})
+         data: $.param({ pagetime: {next: next}})
     });
-  }
-
-  function hidden_div(id){
-  document.getElementById(id).removeAttribute("class");
   }
 
 
