@@ -4,11 +4,12 @@ class ImpactController < ApplicationController
   
  def index
 	@tipo_de_impacto = "Bajo Impacto"
+	@impacto_count = 80
+
 	unless params[:pagetime].blank?
 		next_value = params[:pagetime][:next]
-		#getNext(params[:pagetime][:root],params[:pagetime][:button])
 		respond_to do |format|
-    		format.js { render :js => "hidden_div(#{next_value});" }
+    		format.js { render :js => "hidden_div(#{next_value});"}
   		end
     end
 
