@@ -8,6 +8,7 @@
           -@respuestas_siguiente_array.clear
           -@respuestas_rango_array.clear
           -@respuestas_id_array.clear
+          
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
             -@respuestas_rango_array << respuestas["rangoinicial"]
@@ -22,29 +23,38 @@
     -unless @resultado_impacto.nil?          
       =render "shared/diagnostic", impacto: @tipo_de_impacto
     .div.margin-bottom-end-page  
-      =render "shared/progressbar", impacto: @tipo_de_impacto, uso_de_suelo: @use_de_suelo, seguridad: @seguridad
+      =render "shared/progressbar"
+
+
+
 
 :javascript
+  /*Obtenemos el tamaño maximo de ids en la vista*/
+  var number_of_views = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}";
+
+  /*Cuando el documento carga se muestra la promer pregunta por defecto*/
   $(document).ready(function(){ 
     document.getElementById("1").removeAttribute("class");
   });
   
+  /*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual, next){
-  var size = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}"
-  deleteAndFill(actual,next,size);
+    deleteAndFill(actual,next);
   }
 
-  function hidden_div(id){
-  document.getElementById(id).removeAttribute("class");
+  /*Se elimina la classe hidden para hacer visible el view*/
+  function hidden_div(id, impacto){
+    document.getElementById(id).removeAttribute("class");
+    $('.progress-impacto').text("Impacto: "+impacto+"%");
+    $('.progress-impacto-css').css({'width': impacto+'%'});
   }
 
-  function deleteAndFill(actual,next,size){
-  console.log(actual);
-  console.log(next);
-  console.log(size);
-    for(i = parseInt(actual)+1 ; i <size;i++){
+  /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
+  function deleteAndFill(actual,next){
+    for(i = parseInt(actual)+1 ; i < number_of_views;i++){
       document.getElementById(i).setAttribute("class", "hidden");
     }
+
     $.ajax({
          type:'GET', 
          url: "#{root_path}",
@@ -53,7 +63,7 @@
          },
         error: function(){
         }, 
-         data: $.param({ pagetime: {next: next}})
+         data: $.param({ pagetime: {next: next, totals: number_of_views}})
     });
   }
 

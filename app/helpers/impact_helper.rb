@@ -14,4 +14,15 @@ module ImpactHelper
 	def prod_img_over(img)
   		"#{img}-m.png"
 	end
+
+	def get_progreso(total, value)
+		unless total.nil? || total.to_i > 0
+			(value.to_i * 100 / total.to_i)
+		else
+			0
+		end
+ 		
+ 	end
+
+
 end
