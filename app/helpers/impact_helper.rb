@@ -8,11 +8,11 @@ module ImpactHelper
 	end
 
 	def prod_img_full(img)
-  		"#{img}.png"
+  		"iconos/#{img}.png"
 	end
 
 	def prod_img_over(img)
-  		"#{img}-m.png"
+  		"iconos/#{img}-m.png"
 	end
 
 	def get_progreso(total, value)

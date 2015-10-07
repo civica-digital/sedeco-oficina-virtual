@@ -11,21 +11,21 @@
                             {   "id":"1",
                                 "-type": "normal",
                                 "texto": "Sí",
-                                "imagen": "positivo",
+                                "imagen": "si",
                                 "siguiente": "2"
                             },
                             {
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
-                                "imagen": "negativo",
+                                "imagen": "no",
                                 "siguiente": "2"
                             },
                             {
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
+                                "imagen": "nose",
                                 "siguiente": "0"
                             }
                         ]
@@ -41,48 +41,48 @@
                                 "id":"1",
                                 "-type": "normal",
                                 "texto": "Restaurante con venta de bebidas alcohólicas",
-                                "imagen": "bolita",
+                                "imagen": "bar",
                                 "siguiente": "4"
                             },
                             {   "id":"2",
                                 "-type": "normal",
                                 "texto": "Salón de fiestas",
-                                "imagen": "bolita",
+                                "imagen": "salon",
                                 "siguiente": "4"
                             },
                             {   
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "Establecimiento de hospedaje (hotel, motel, etc.)",
-                                "imagen": "bolita",
+                                "imagen": "hotel",
                                 "siguiente": "4"
                             },
                             {
                                 "id":"4",
                                 "-type": "normal",
                                 "texto": "Cine, Teatro, Auditorio",
-                                "imagen": "bolita",
+                                "imagen": "cine",
                                 "siguiente": "4"
                             },
                             {
                                 "id":"5",
                                 "-type": "normal",
                                 "texto": "Club privado",
-                                "imagen": "bolita",
+                                "imagen": "comercial",
                                 "siguiente": "4"
                             },
                             {
                                 "id":"6",
                                 "-type": "normal",
                                 "texto": "Ninguno de estos",
-                                "imagen": "negativo",
+                                "imagen": "no",
                                 "siguiente": "3"
                             },
                             {
                                 "id":"7",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
+                                "imagen": "nose",
                                 "siguiente": "0"
                             }
                         ]
@@ -98,42 +98,42 @@
                                 "id":"1",
                                 "-type": "normal",
                                 "texto": "Cervecería, Cantina o pulquería",
-                                "imagen": "bolita",
+                                "imagen": "cerveceria",
                                 "siguiente": "-3"
                             },
                             {
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "Cabaret o Centro nocturno",
-                                "imagen": "bolita",
+                                "imagen": "cabaret",
                                 "siguiente": "-3"
                             },
                             {
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "discoteque o bar",
-                                "imagen": "bolita",
+                                "imagen": "disco",
                                 "siguiente": "-3"
                             },
                             {
                                 "id":"4",
                                 "-type": "normal",
                                 "texto": "Centro de juegos con apuestas y sorteos",
-                                "imagen": "bolita",
+                                "imagen": "casino",
                                 "siguiente": "-3"
                             },
                             {
                                 "id":"5",
                                 "-type": "normal",
                                 "texto": "Ninguno de estos",
-                                "imagen": "negativo",
+                                "imagen": "no",
                                 "siguiente": "4"
                             },
                             {
                                 "id":"6",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
+                                "imagen": "nose",
                                 "siguiente": "0"
                             }
                         ]
@@ -149,14 +149,14 @@
                                 "id":"1",
                                 "-type": "normal",
                                 "texto": "Sí",
-                                "imagen": "positivo",
+                                "imagen": "si",
                                 "siguiente": "5"
                             },
                             {
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
-                                "imagen": "negativo",
+                                "imagen": "no",
                                 "siguiente": "0",
                                 "restricciones":[
                                     {
@@ -169,7 +169,7 @@
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
+                                "imagen": "nose",
                                 "siguiente": "0"
                             }
                         ]
@@ -192,7 +192,7 @@
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
+                                "imagen": "nose",
                                 "siguiente": "0"
                             }
                         ]
@@ -208,21 +208,21 @@
                                 "id":"1",
                                 "-type": "normal",
                                 "texto": "Sí",
-                                "imagen": "positivo",
+                                "imagen": "si",
                                 "siguiente": "0"
                             },
                             {
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
-                                "imagen": "negativo",
+                                "imagen": "no",
                                 "siguiente": "0"
                             },
                             {
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "No se",
-                                "imagen": "question",
+                                "imagen": "nose",
                                 "siguiente": "0"
                             }
                         ]
