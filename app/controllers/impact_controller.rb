@@ -7,10 +7,14 @@ class ImpactController < ApplicationController
 	@progreso_de_impacto = 0
 
 	unless params[:pagetime].blank?
-		next_value = params[:pagetime][:next]
+		next_value = getNext(params[:pagetime][:next],params[:pagetime][:restrictions])
 		@progreso_de_impacto =	get_progreso(params[:pagetime][:totals],next_value)
 		respond_to do |format|
-    		format.js { render :js => "hidden_div(#{next_value},#{@progreso_de_impacto});"}
+			if next_value == "-3"
+				format.js { render :js => "finaliza_impacto_zonal();"}
+			else	
+    			format.js { render :js => "hidden_div(#{next_value},#{@progreso_de_impacto});"}
+    		end
   		end
     end
 
@@ -18,9 +22,9 @@ class ImpactController < ApplicationController
 
 private
  def get_json
-  source = 'lib/impacto/impacto.json'
+ 	source = 'lib/impacto/impacto.json'
 	file = File.read(source)
-  @impacto = ActiveSupport::JSON.decode(file)#JSON.parse(file)
+  	@impacto = ActiveSupport::JSON.decode(file)#JSON.parse(file)
  end
  
  def fill_array
@@ -30,10 +34,19 @@ private
     @respuestas_rango_array = []
 	@respuestas_hover_array = []
 	@respuestas_id_array = []
+	@respuestas_uso_restriccion_array =[]
  end
 
  def get_progreso(total, value)
  	(value.to_i * 100 / total.to_i)
+ end
+
+ def getNext(next_val, restriction)
+ 	unless restriction.nil?
+ 		restriction
+ 	else
+ 		next_val
+ 	end
  end
 
 end

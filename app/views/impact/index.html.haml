@@ -8,16 +8,24 @@
           -@respuestas_siguiente_array.clear
           -@respuestas_rango_array.clear
           -@respuestas_id_array.clear
+          -@respuestas_uso_restriccion_array.clear
           
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
             -@respuestas_rango_array << respuestas["rangoinicial"]
-            -@respuestas_siguiente_array << respuestas["siguiente"]
             -@respuestas_imagen_array << respuestas["imagen"]
             -@respuestas_id_array << respuestas["id"]
+            - unless respuestas["restricciones"].nil?
+              -respuestas["restricciones"].each do |restriccion|
+                -@respuestas_siguiente_array << restriccion["siguiente"]
+                -@respuestas_uso_restriccion_array << restriccion["uso"]
+            -else
+              -@respuestas_siguiente_array << respuestas["siguiente"]
+              -@respuestas_uso_restriccion_array << nil
+          
 
           -if pregunta["array_respuestas"]["tipo"] == "normal"
-            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array}
+            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array}
           -elsif pregunta["array_respuestas"]["tipo"] == "fecha"
             = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array}
     .div.diagnostic.hidden{:id=>"diagnostic"}         
@@ -44,16 +52,10 @@
 
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
   function hidden_div(id, impacto){
-    //el tipo -3 es impacto zonal
-    if(id=="-3"){
-      impacto = 100;
-      $('.diagnostic').removeClass("hidden");
-      $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
-      $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
-    }else{
+    //hacemos invisible la salida
     $('.diagnostic').addClass("hidden");
-     document.getElementById(id).removeAttribute("class");
-    }
+    //hacemos visible el view de pregunta
+    document.getElementById(id).removeAttribute("class");
     //Actualizamos los progressBars
     $('.progress-impacto').text("Impacto: "+impacto+"%");
     $('.progress-impacto-css').css({'width': impacto+'%'});
@@ -63,7 +65,7 @@
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
   function deleteAndFill(actual,next){
-    for(i = parseInt(actual)+1 ; i < number_of_views;i++){
+    for(i = parseInt(actual)+1; i <= number_of_views; i++){
       document.getElementById(i).setAttribute("class", "hidden");
     }
 
@@ -78,6 +80,18 @@
         }, 
          data: $.param({ pagetime: {next: next, totals: number_of_views}})
     });
+  }
+
+  /*Prepara la vista cuando de detecta un impacto zonal*/
+  function finaliza_impacto_zonal(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
+    //Actualizamos los progressBars
+    $('.progress-impacto').text("Impacto: 100%");
+    $('.progress-impacto-css').css({'width': '100%'});
+
   }
 
 
