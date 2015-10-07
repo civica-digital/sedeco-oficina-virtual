@@ -35,5 +35,5 @@ private
  def get_progreso(total, value)
  	(value.to_i * 100 / total.to_i)
  end
- 
+
 end

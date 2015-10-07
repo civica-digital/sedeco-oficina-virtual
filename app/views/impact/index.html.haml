@@ -20,7 +20,7 @@
             = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array}
           -elsif pregunta["array_respuestas"]["tipo"] == "fecha"
             = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array}
-    -unless @resultado_impacto.nil?          
+    .div.diagnostic.hidden{:id=>"diagnostic"}         
       =render "shared/diagnostic", impacto: @tipo_de_impacto
     .div.margin-bottom-end-page  
       =render "shared/progressbar"
@@ -44,11 +44,19 @@
 
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
   function hidden_div(id, impacto){
-    document.getElementById(id).removeAttribute("class");
-
+    if(id=="-3"){
+      impacto = 100;
+      $('.diagnostic').removeClass("hidden");
+      $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
+      
+    }else{
+     document.getElementById(id).removeAttribute("class");
+    }
     //Actualizamos los progressBars
     $('.progress-impacto').text("Impacto: "+impacto+"%");
     $('.progress-impacto-css').css({'width': impacto+'%'});
+
+
   }
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
@@ -61,6 +69,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
+          //Centramos la siguiente pregunta
           window.scrollBy(0, 300);
          },
         error: function(){

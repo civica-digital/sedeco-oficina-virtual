@@ -99,28 +99,28 @@
                                 "-type": "normal",
                                 "texto": "Cervecería, Cantina o pulquería",
                                 "imagen": "bolita",
-                                "siguiente": "0"
+                                "siguiente": "-3"
                             },
                             {
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "Cabaret o Centro nocturno",
                                 "imagen": "bolita",
-                                "siguiente": "0"
+                                "siguiente": "-3"
                             },
                             {
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "discoteque o bar",
                                 "imagen": "bolita",
-                                "siguiente": "0"
+                                "siguiente": "-3"
                             },
                             {
                                 "id":"4",
                                 "-type": "normal",
                                 "texto": "Centro de juegos con apuestas y sorteos",
                                 "imagen": "bolita",
-                                "siguiente": "0"
+                                "siguiente": "-3"
                             },
                             {
                                 "id":"5",
