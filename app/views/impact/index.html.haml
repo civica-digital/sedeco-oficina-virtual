@@ -44,12 +44,14 @@
 
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
   function hidden_div(id, impacto){
+    //el tipo -3 es impacto zonal
     if(id=="-3"){
       impacto = 100;
       $('.diagnostic').removeClass("hidden");
       $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
-      
+      $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
     }else{
+    $('.diagnostic').addClass("hidden");
      document.getElementById(id).removeAttribute("class");
     }
     //Actualizamos los progressBars
