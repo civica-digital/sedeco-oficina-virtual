@@ -15,26 +15,24 @@ class ImpactController < ApplicationController
   end
   
 
-	unless params[:pagetime].blank?
-    puts params[:pagetime][:next]
-    puts params[:pagetime][:restriction]
-    puts params[:pagetime][:next_restrictions]
-
-		next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
+	unless params[:pagetime].blank?    
+    next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
 
 		progreso_de_impacto =	get_progreso(params[:pagetime][:totals],next_value)
 		respond_to do |format|
 			if next_value == "-3"
 				format.js { render :js => "finaliza_impacto_zonal();"}
 			elsif next_value == "-2"
-        format.js { render :js => "finaliza_impacto_vecinal();"}
+        format.js { render :js => "finaliza_impacto_vecinal('normal');"}
+      elsif next_value == "-21"
+        format.js { render :js => "finaliza_impacto_vecinal('cita');"}
       elsif next_value == "-1"
         format.js { render :js => "finaliza_bajo_impacto();"}
       else   	
-    			format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto});"}
-    		end
-  		end
-    end
+    		format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto});"}
+    	end
+  	end
+  end
 
 
 
