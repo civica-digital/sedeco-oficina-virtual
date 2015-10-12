@@ -2,17 +2,17 @@ module ImpactHelper
 	def get_array_fecha(inicial)
 		fechas = []
 		(2015.downto(Integer(inicial))).each do |n|
-  			fechas << n
-  		end
-  		return fechas
+  		fechas << n
+  	end
+  	return fechas
 	end
 
 	def prod_img_full(img)
-  		"iconos/#{img}.png"
+  	"iconos/#{img}.png"
 	end
 
 	def prod_img_over(img)
-  		"iconos/#{img}-m.png"
+  	"iconos/#{img}-m.png"
 	end
 
 	def get_progreso(total, value)
@@ -21,7 +21,16 @@ module ImpactHelper
 		else
 			0
 		end
- 		
+ 	end
+
+ 	def clean_array_impacto
+ 		@respuestas_texto_array.clear
+    @respuestas_imagen_array.clear
+    @respuestas_siguiente_array.clear
+    @respuestas_rango_array.clear
+    @respuestas_id_array.clear
+    @respuestas_uso_restriccion_array.clear
+    @respuestas_siguiente_restriccion_array.clear
  	end
 
 

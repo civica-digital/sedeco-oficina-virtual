@@ -3,29 +3,23 @@
     %div.row
       %div.col-lg-12
         -@impacto["impacto"]["array_preguntas"]["pregunta"].each_with_index do |pregunta, index|
-          -@respuestas_texto_array.clear
-          -@respuestas_imagen_array.clear
-          -@respuestas_siguiente_array.clear
-          -@respuestas_rango_array.clear
-          -@respuestas_id_array.clear
-          -@respuestas_uso_restriccion_array.clear
-          
+          -clean_array_impacto
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
             -@respuestas_rango_array << respuestas["rangoinicial"]
             -@respuestas_imagen_array << respuestas["imagen"]
             -@respuestas_id_array << respuestas["id"]
-            - unless respuestas["restricciones"].nil?
+            -@respuestas_siguiente_array << respuestas["siguiente"] 
+            -unless respuestas["restricciones"].blank?
               -respuestas["restricciones"].each do |restriccion|
-                -@respuestas_siguiente_array << restriccion["siguiente"]
+                -@respuestas_siguiente_restriccion_array << restriccion["siguiente"]
                 -@respuestas_uso_restriccion_array << restriccion["uso"]
             -else
-              -@respuestas_siguiente_array << respuestas["siguiente"]
-              -@respuestas_uso_restriccion_array << nil
-          
+              -@respuestas_siguiente_restriccion_array << "0"
+              -@respuestas_uso_restriccion_array << "0"
 
           -if pregunta["array_respuestas"]["tipo"] == "normal"
-            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array}
+            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array,:next_restrictions=> @respuestas_siguiente_restriccion_array}
           -elsif pregunta["array_respuestas"]["tipo"] == "fecha"
             = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array}
     .div.diagnostic.hidden{:id=>"diagnostic"}         
@@ -46,8 +40,8 @@
   });
   
   /*Cuando se da clic a una opcion se obtiene el tama*/
-  function buttonClick(actual, next){
-    deleteAndFill(actual,next);
+  function buttonClick(actual,clicked, next, restriction, next_restrictions){
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions);
   }
 
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
@@ -64,22 +58,13 @@
   }
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
-  function deleteAndFill(actual,next){
+  function deleteAndFill(actual,clicked,next,restriction,next_restrictions){
+
     for(i = parseInt(actual)+1; i <= number_of_views; i++){
       document.getElementById(i).setAttribute("class", "hidden");
     }
 
-    $.ajax({
-         type:'GET', 
-         url: "#{root_path}",
-         success: function(){
-          //Centramos la siguiente pregunta
-          window.scrollBy(0, 300);
-         },
-        error: function(){
-        }, 
-         data: $.param({ pagetime: {next: next, totals: number_of_views}})
-    });
+    save_advance(actual,clicked,next,restriction,next_restrictions);
   }
 
   /*Prepara la vista cuando de detecta un impacto zonal*/
@@ -92,6 +77,58 @@
     $('.progress-impacto').text("Impacto: 100%");
     $('.progress-impacto-css').css({'width': '100%'});
 
+  }
+
+  /*Prepara la vista cuando de detecta un impacto vecinal*/
+  function finaliza_impacto_vecinal(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+    //Actualizamos los progressBars
+    $('.progress-impacto').text("Impacto: 100%");
+    $('.progress-impacto-css').css({'width': '100%'});
+  }
+
+  /*Prepara la vista cuando de detecta un impacto vecinal*/
+  function finaliza_bajo_impacto(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Bajo impacto<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+    //Actualizamos los progressBars
+    $('.progress-impacto').text("Impacto: 100%");
+    $('.progress-impacto-css').css({'width': '100%'});
+  }
+
+  /*Se guarda el valor clikeado para saber que vista sigue*/
+  function save_advance(actual,clicked,next,restriction,next_restrictions){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          show_view(next, restriction, next_restrictions)
+         },
+        error: function(){
+        }, 
+         data: $.param({ savetime: {actual: actual, clicked: clicked}})
+    });
+  }
+
+
+
+  /*Se muestra la vista dependiendo si existe una restriccion */
+  function show_view(next, restriction,next_restrictions){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          window.scrollBy(0, 300);
+         },
+        error: function(){
+        }, 
+         data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
+    });
   }
 
 
