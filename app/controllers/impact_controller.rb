@@ -4,13 +4,16 @@ class ImpactController < ApplicationController
   
  def index
 	@tipo_de_impacto = "Bajo Impacto"
-	@progreso_de_impacto = 0
+	progreso_de_impacto = 0
 
 	unless params[:savetime].blank?
 		save_advance(params[:savetime][:actual],params[:savetime][:clicked])
-		puts session[:has_bussine]
-		puts session[:giro_usuario]
 	end
+  
+  unless params[:savedate].blank?
+    save_advance_date(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
+  end
+  
 
 	unless params[:pagetime].blank?
     puts params[:pagetime][:next]
@@ -18,8 +21,7 @@ class ImpactController < ApplicationController
     puts params[:pagetime][:next_restrictions]
 
 		next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
-    puts '****************'
-    puts next_value
+
 		progreso_de_impacto =	get_progreso(params[:pagetime][:totals],next_value)
 		respond_to do |format|
 			if next_value == "-3"
@@ -60,11 +62,8 @@ private
  	(value.to_i * 100 / total.to_i)
  end
 
+  #regresa el id de la vista que continua
  def getNext(next_val, restriction, next_restriction)
-    puts '****************XDXD'
-    puts restriction
-    puts next_restriction
-    puts session[:giro_usuario]
  	if restriction.to_i == -2 && session[:giro_usuario].to_i == -2 
  		next_restriction
  	else
@@ -72,42 +71,87 @@ private
  	end
  end
 
- def save_advance(actual, clicked)
- 	case actual.to_i
-	 	when 1
-	 		case clicked.to_i
-		 		when 1
-		 			session[:has_bussine] = true
-		 		when 2
-		 			session[:has_bussine] = false
-		 		when 3
-		 			session[:has_bussine] = false
-		 	else
-				session[:has_bussine] = false
-	 		end
-	 	when 2
-	 		case clicked.to_i
-		 		when 1..5
-					session[:giro_usuario] = -2
-		 		when 6
-		 			session[:giro_usuario] = 0
-		 		when 7
-		 			session[:giro_usuario] = 0
-		 	else
-		 		session[:giro_usuario] = 0
-	 		end
+   #guarda los valores clickeados por el momento en la session del usuario
+  def save_advance(actual, clicked)
+   	case actual.to_i
+  	 	when 1 #pregunta uno
+  	 		case clicked.to_i
+  		 		when 1
+  		 			session[:has_bussine] = true
+  		 		when 2
+  		 			session[:has_bussine] = false
+  		 		when 3
+  		 			session[:has_bussine] = -4
+  		 	else
+  				session[:has_bussine] = false
+  	 		end
 
-	 	when 3
+  	 	when 2 #pregunta 2
+  	 		case clicked.to_i
+  		 		when 1..5
+  					session[:giro_usuario] = -2
+  		 		when 6
+  		 			session[:giro_usuario] = 0
+  		 		when 7
+  		 			session[:giro_usuario] = -4
+  		 	else
+  		 		session[:giro_usuario] = -4
+  	 		end
 
-	 	when 4
+  	 	when 3 #pregunta 3
+        case clicked.to_i
+          when 1..4
+            session[:giro_usuario] = -3
+          when 6
+            session[:giro_usuario] = -1
+          when 7
+            session[:giro_usuario] = -4
+        else
+          session[:giro_usuario] = -4
+        end
 
-	 	when 5
+  	 	when 4 #pregunta 4
+        case clicked.to_i
+          when 1
+            session[:has_siapem] = true
+          when 2
+            session[:has_siapem] = false
+          when 3
+            session[:has_siapem] = -4
+        else
+          session[:has_siapem] = false
+        end
 
-	 	when 6
+  	 	when 6 #pregunta 6
+        case clicked.to_i
+          when 1
+            session[:has_special_license] = true
+          when 2
+            session[:has_special_license] = false
+          when 3
+            session[:has_special_license] = -4
+        else
+          session[:has_special_license] = false
+        end
+  	else
+   	
+   	end
+  end
 
-	else
- 	
- 	end
- end
+
+    #guarda los valores clickeados por el momento en la session del usuario
+  def save_advance_date(actual, clicked, date)
+    case actual.to_i
+      when 5 #pregunta 5
+        case clicked.to_i
+          when 3
+            session[:date_siapem] = true
+        else
+          session[:date_siapem] = date
+        end
+    else
+    
+    end
+  end
 
 end

@@ -21,7 +21,7 @@
           -if pregunta["array_respuestas"]["tipo"] == "normal"
             = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array,:next_restrictions=> @respuestas_siguiente_restriccion_array}
           -elsif pregunta["array_respuestas"]["tipo"] == "fecha"
-            = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array}
+            = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array,:next_restrictions=> @respuestas_siguiente_restriccion_array}
     .div.diagnostic.hidden{:id=>"diagnostic"}         
       =render "shared/diagnostic", impacto: @tipo_de_impacto
     .div.margin-bottom-end-page  
@@ -33,6 +33,12 @@
 :javascript
   /*Obtenemos el tamaño maximo de ids en la vista*/
   var number_of_views = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}";
+  var IMPACTO = 1;
+  var SUELO = 2;
+  var SEGURIDAD = 3;
+
+  var TIPO_NORMAL= 1;
+  var TIPO_FECHA = 2;
 
   /*Cuando el documento carga se muestra la promer pregunta por defecto*/
   $(document).ready(function(){ 
@@ -41,7 +47,12 @@
   
   /*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual,clicked, next, restriction, next_restrictions){
-    deleteAndFill(actual,clicked, next, restriction, next_restrictions);
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_NORMAL, 0);
+  }
+
+  /*Cuando se da clic a una opcion se obtiene el tama*/
+  function dateClick(actual,clicked, next, restriction, next_restrictions){
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, (".result-selected").text());
   }
 
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
@@ -51,54 +62,22 @@
     //hacemos visible el view de pregunta
     document.getElementById(id).removeAttribute("class");
     //Actualizamos los progressBars
-    $('.progress-impacto').text("Impacto: "+impacto+"%");
-    $('.progress-impacto-css').css({'width': impacto+'%'});
-
-
+    progressBar(IMPACTO, impacto);
   }
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
-  function deleteAndFill(actual,clicked,next,restriction,next_restrictions){
+  function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
 
     for(i = parseInt(actual)+1; i <= number_of_views; i++){
       document.getElementById(i).setAttribute("class", "hidden");
     }
 
-    save_advance(actual,clicked,next,restriction,next_restrictions);
-  }
-
-  /*Prepara la vista cuando de detecta un impacto zonal*/
-  function finaliza_impacto_zonal(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
-    //Actualizamos los progressBars
-    $('.progress-impacto').text("Impacto: 100%");
-    $('.progress-impacto-css').css({'width': '100%'});
-
-  }
-
-  /*Prepara la vista cuando de detecta un impacto vecinal*/
-  function finaliza_impacto_vecinal(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
-    //Actualizamos los progressBars
-    $('.progress-impacto').text("Impacto: 100%");
-    $('.progress-impacto-css').css({'width': '100%'});
-  }
-
-  /*Prepara la vista cuando de detecta un impacto vecinal*/
-  function finaliza_bajo_impacto(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html('<H2 class="colorprimario">Bajo impacto<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
-    //Actualizamos los progressBars
-    $('.progress-impacto').text("Impacto: 100%");
-    $('.progress-impacto-css').css({'width': '100%'});
+    if(tipo == TIPO_NORMAL){
+      save_advance(actual,clicked,next,restriction,next_restrictions);
+    }else if(tipo == TIPO_FECHA){
+     save_advance_date(actual,clicked,next,restriction,next_restrictions, date);
+    }
+    
   }
 
   /*Se guarda el valor clikeado para saber que vista sigue*/
@@ -115,7 +94,19 @@
     });
   }
 
-
+  /*Se guarda el valor clikeado para saber que vista sigue SOLO PARA LOS DE FORMATO FECHA*/
+  function save_advance_date(actual,clicked,next,restriction,next_restrictions, date){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          show_view(next, restriction, next_restrictions)
+         },
+        error: function(){
+        }, 
+         data: $.param({ savedate: {actual: actual, clicked: clicked, date: date}})
+    });
+  }
 
   /*Se muestra la vista dependiendo si existe una restriccion */
   function show_view(next, restriction,next_restrictions){
@@ -129,6 +120,55 @@
         }, 
          data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
     });
+  }
+
+  /*Prepara la vista cuando de detecta un impacto zonal*/
+  function finaliza_impacto_zonal(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, 100);
+
+  }
+
+  /*Prepara la vista cuando de detecta un impacto vecinal*/
+  function finaliza_impacto_vecinal(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, 100);
+  }
+
+  /*Prepara la vista cuando de detecta un bajo impacto*/
+  function finaliza_bajo_impacto(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Bajo impacto<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, 100);
+  }
+
+  /*Maneja el llenado de las barras de progreso*/
+  /**
+  //barra (Nombre de la barra)
+  //progreso (Numero del 0 al 100) 
+  /**/
+  function progressBar(barra, progresso){
+    if(barra== IMPACTO){
+        $('.progress-impacto').text("Impacto: "+progresso+"%");
+        $('.progress-impacto-css').css({'width': progresso+'%'});
+    }else if(barra == SUELO){
+        $('.progress-suelo').text("Impacto: "+progresso+"%");
+        $('.progress-suelo-css').css({'width': progresso+'%'});
+    }else if(barra== SEGURIDAD){
+        $('.progress-seguridad').text("Impacto: "+progresso+"%");
+        $('.progress-seguridad-css').css({'width': progresso+'%'});
+    }
   }
 
 

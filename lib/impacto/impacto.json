@@ -204,7 +204,7 @@
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
                                 "rangoinicial": "1980",
-                                "siguiente": "0",
+                                "siguiente": "-1",
                                 "restricciones":[]
                             },
                             {
@@ -229,7 +229,7 @@
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "si",
-                                "siguiente": "0",
+                                "siguiente": "-2",
                                 "restricciones":[]
                             },
                             {
@@ -237,7 +237,7 @@
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "no",
-                                "siguiente": "0",
+                                "siguiente": "-2",
                                 "restricciones":[]
                             },
                             {
