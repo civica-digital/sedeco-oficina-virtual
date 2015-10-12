@@ -33,6 +33,7 @@
 :javascript
   /*Obtenemos el tamaño maximo de ids en la vista*/
   var number_of_views = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}";
+ 
   var IMPACTO = 1;
   var SUELO = 2;
   var SEGURIDAD = 3;
@@ -47,6 +48,7 @@
   
   /*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual,clicked, next, restriction, next_restrictions){
+    changeColorSelected(actual,clicked);
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_NORMAL, 0);
   }
 
@@ -78,6 +80,19 @@
      save_advance_date(actual,clicked,next,restriction,next_restrictions, date);
     }
     
+  }
+
+
+  function changeColorSelected(actual, clicked){
+    for(i=actual; i<=number_of_views; i++){
+      for(j=1; j<8; j++){
+          var element = document.getElementById(i+"-"+j)
+          if(element != null){
+            element.style.color = '#000000';//Cambiamos el color del texto que seleccionamos
+          }
+      }
+    }
+    document.getElementById(actual+"-"+clicked).style.color = '#E6007E';//Cambiamos el color del texto que seleccionamos
   }
 
   /*Se guarda el valor clikeado para saber que vista sigue*/
