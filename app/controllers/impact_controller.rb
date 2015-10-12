@@ -23,7 +23,9 @@ class ImpactController < ApplicationController
 			if next_value == "-3"
 				format.js { render :js => "finaliza_impacto_zonal();"}
 			elsif next_value == "-2"
-        format.js { render :js => "finaliza_impacto_vecinal();"}
+        format.js { render :js => "finaliza_impacto_vecinal('normal');"}
+      elsif next_value == "-21"
+        format.js { render :js => "finaliza_impacto_vecinal('cita');"}
       elsif next_value == "-1"
         format.js { render :js => "finaliza_bajo_impacto();"}
       else   	

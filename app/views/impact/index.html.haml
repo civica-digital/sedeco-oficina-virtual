@@ -34,6 +34,7 @@
   /*Obtenemos el tamaño maximo de ids en la vista*/
   var number_of_views = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}";
  
+  /*Flags*/
   var IMPACTO = 1;
   var SUELO = 2;
   var SEGURIDAD = 3;
@@ -83,17 +84,17 @@
     
   }
 
-
+  /*Cambia el color del texto seleccionado, en caso de regresarte cambia todos los textos siguientes a color original*/
   function changeColorSelected(actual, clicked){
     for(i=actual; i<=number_of_views; i++){
       for(j=1; j<8; j++){
           var element = document.getElementById(i+"-"+j)
           if(element != null){
-            element.style.color = '#000000';//Cambiamos el color del texto que seleccionamos
+            element.style.color = '#000000';//Cambiamos el color del texto por default
           }
       }
     }
-    document.getElementById(actual+"-"+clicked).style.color = '#E6007E';//Cambiamos el color del texto que seleccionamos
+    document.getElementById(actual+"-"+clicked).style.color = '#E6007E'; //Cambiamos el color del texto que seleccionamos
   }
 
   /*Se guarda el valor clikeado para saber que vista sigue*/
@@ -150,11 +151,17 @@
   }
 
   /*Prepara la vista cuando de detecta un impacto vecinal*/
-  function finaliza_impacto_vecinal(){
+  function finaliza_impacto_vecinal(tipo){
     //hacemos visible la salida y la llenamos con la información
     $('.diagnostic').removeClass("hidden");
     $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+
+    if(tipo == 'cita'){
+      $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');   
+    }else if('normal'){
+      $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');   
+    }
+     
     //Actualizamos los progressBars
     progressBar(IMPACTO, 100);
   }
