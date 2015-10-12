@@ -1,0 +1,28 @@
+<div class="hidden" id=<%="#{locals[:number]}"%> >
+	<p> 
+		<%= locals[:texto_question] %> 
+	</p>
+	<BR>
+  <div class="col-md-12">
+      <div class="row seven-cols">
+        <div class="col-md-8 col-md-offset-2">
+        <%locals[:texto_answer].each_with_index do |text, index|%>
+          <div class=<%="col-md-#{12/locals[:texto_answer].size} text-center"%>>
+            <%unless locals[:rangoinicial][index].nil?%>
+            <div class=" margin-top-dropdown">
+              <%=select :date, "test", get_array_fecha(locals[:rangoinicial][index]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: 'chosen-select',:onchange=>"dateClick(#{locals[:number]}, #{locals[:id][index]}, #{locals[:next][index]}, #{locals[:restrictions][index]},#{locals[:next_restrictions][index]})"%>
+              </div>
+            <%else%>
+              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ", :onclick=>"buttonClick(#{locals[:number]}, #{locals[:id][index]}, #{locals[:next][index]}, #{locals[:restrictions][index]},#{locals[:next_restrictions][index]})")%>
+              <%=text%>
+            <%end%>
+            
+          </div>
+        <%end%>
+        </div>
+      </div>
+  </div>
+  <div class="col-md-12">
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+
+Salidas de Impacto:
+
+ 0: termina el árbol
+-3: impacto zonal
+-2: vecinal
+-1: bajo impacto
+-4: no se
+
+Sessión de usuario:
+
+has_bussine:
+giro_usuario:
+has_siapem: 
+

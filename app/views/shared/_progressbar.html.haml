@@ -1,0 +1,14 @@
+%div.scroll-footer.margin-top
+  %div.col-md-8.col-md-offset-2
+    %div.row
+      %div.col-md-4.progress.sin-padding{:id=>"1"}
+        %span.progress-value.progress-impacto="Impacto: #{@progreso_de_impacto}%"
+        %div.progress-bar.progress-impacto-css{:style=>"width:#{@progreso_de_impacto}%;"}
+      %div.col-md-4.progress.sin-padding{:id=>"2"}
+        %span.progress-value.progress-uso
+          Uso de suelo: 0%
+        %div.progress-bar.progress-uso-css{:style=>"width: 0%;"}
+      %div.col-md-4.progress.sin-padding{:id=>"3"}
+        %span.progress-value.progress-proteccion
+          Protección civil: 0%
+        %div.progress-bar.progress-proteccion-css{:style=>"width: 0%;"}

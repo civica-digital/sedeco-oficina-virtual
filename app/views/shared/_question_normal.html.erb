@@ -1,0 +1,22 @@
+<div class="hidden" id=<%="#{locals[:number]}"%>>
+  <div class="col-md-12 margin-top">
+    <p> 
+		  <%= locals[:texto_question] %> 
+    </p>
+	 </div>
+  <div class="col-md-12">
+    <div class="row seven-cols">
+      <div class="col-md-8 col-md-offset-2">
+        <%locals[:texto_answer].each_with_index do |text, index|%>
+          <div class=<%="col-md-#{12/locals[:texto_answer].size} text-center"%>>
+              <%=image_tag(prod_img_full(locals[:imagen][index]), onMouseover: "this.src='#{image_path(prod_img_over(locals[:imagen][index]))}'",onMouseout: "this.src='#{image_path(prod_img_full(locals[:imagen][index]))}'",class: "rcorner ", :onclick=>"buttonClick(#{locals[:number]}, #{locals[:id][index]}, #{locals[:next][index]}, #{locals[:restrictions][index]},#{locals[:next_restrictions][index]})")%>
+            <%=text%>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 margin-top">
+    <hr>
+  </div>
+</div>

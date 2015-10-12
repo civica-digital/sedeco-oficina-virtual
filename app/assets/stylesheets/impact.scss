@@ -1,0 +1,112 @@
+// Place all the styles related to the Impact controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**********************NAvbar*********************/
+/* line 398, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-brand {
+  color: #fff !important;
+}
+/* line 400, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #fff !important;
+  background-color: transparent;
+}
+/* line 407, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-text {
+  color: #fff !important;
+}
+/* line 412, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #fff !important;
+}
+/* line 415, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #fff !important;
+  background-color: transparent;
+}
+/* line 422, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #fff !important;
+  background-color: #e7e7e7;
+}
+/* line 430, /Users/mikesaurio/.rvm/gems/ruby-2.2.2/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
+  color: #fff !important;
+  background-color: transparent;
+}
+
+/******************************dividir entre 7************************************/
+
+@media (min-width: 768px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+  }
+}
+
+/*********************container impacto**************************/
+.container-impacto {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 100px;
+}
+@media (min-width: 768px) {
+  .container-impacto {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container-impacto {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-impacto {
+    width: 1170px;
+  }
+}
+.container-impacto-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*************************margenes***********************/
+.margin-top{
+  margin-top: 50px;
+}
+.margin-bottom{
+    margin-bottom: 50px;
+}
+.margin-top-dropdown{
+  margin-top:20px;
+}
+
+.margin-bottom-end-page{
+  margin-bottom: 150px;
+}
+.sin-padding{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
