@@ -8,7 +8,7 @@ module ImpactHelper
 	end
 
 	def prod_img_full(img)
-  	"iconos/#{img}.png"
+  	"iconos/#{img}.svg"
 	end
 
 	def prod_img_over(img)

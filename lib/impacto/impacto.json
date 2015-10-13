@@ -75,7 +75,7 @@
                                 "id":"5",
                                 "-type": "normal",
                                 "texto": "Club privado",
-                                "imagen": "comercial",
+                                "imagen": "club",
                                 "siguiente": "4",
                                 "restricciones":[]
                             },
