@@ -39,12 +39,14 @@ class ImpactController < ApplicationController
  end
 
 private
+#obtiene el Json de impacto
  def get_json
  	source = 'lib/impacto/impacto.json'
 	file = File.read(source)
   	@impacto = ActiveSupport::JSON.decode(file)#JSON.parse(file)
  end
  
+ #inicializa los arrays de impacto
  def fill_array
  	@respuestas_texto_array = []
   @respuestas_imagen_array = []
@@ -56,6 +58,7 @@ private
 	@respuestas_siguiente_restriccion_array = []
  end
 
+#obtiene el progreso del progresBar
  def get_progreso(total, value)
  	(value.to_i * 100 / total.to_i)
  end

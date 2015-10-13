@@ -88,13 +88,22 @@
   function changeColorSelected(actual, clicked){
     for(i=actual; i<=number_of_views; i++){
       for(j=1; j<8; j++){
-          var element = document.getElementById(i+"-"+j)
-          if(element != null){
-            element.style.color = '#000000';//Cambiamos el color del texto por default
-          }
+
+        var element = document.getElementById(i+"-"+j)
+        if(element != null){
+          element.style.color = '#000000';//Cambiamos el color del texto por default
+        }
+
+        var element = document.getElementById("image"+i+"-"+j)
+        if(element != null){
+          element.classList.remove("rcorner-selected");
+        }
       }
     }
-    document.getElementById(actual+"-"+clicked).style.color = '#E6007E'; //Cambiamos el color del texto que seleccionamos
+
+    document.getElementById(actual+"-"+clicked).style.color = '#871C57'; //Cambiamos el color del texto que seleccionamos
+    document.getElementById("image"+actual+"-"+clicked).className = "rcorner rcorner-selected";
+
   }
 
   /*Se guarda el valor clikeado para saber que vista sigue*/
@@ -193,6 +202,8 @@
         $('.progress-seguridad-css').css({'width': progresso+'%'});
     }
   }
+
+
 
 
 

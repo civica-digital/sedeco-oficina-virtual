@@ -24,7 +24,7 @@ module ImpactHelper
  	end
 
  	def clean_array_impacto
- 		@respuestas_texto_array.clear
+ 	@respuestas_texto_array.clear
     @respuestas_imagen_array.clear
     @respuestas_siguiente_array.clear
     @respuestas_rango_array.clear

@@ -497,6 +497,10 @@ footer .footer-below {
 .rcorner:hover {
   border: 2px solid #871C57;
 }
+.rcorner-selected{
+ border: 2px solid #871C57 !important;
+}
+
 
 .form-control {
   display: block;
