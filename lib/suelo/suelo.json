@@ -1,0 +1,282 @@
+{
+    "suelo": {
+        "array_preguntas": {
+            "pregunta": [
+                {
+                    "numero": "1",
+                    "texto": "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Habitacional",
+                                "imagen": "bolita",
+                                "siguiente": "2",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "Habitacional Mixto",
+                                "imagen": "bolita",
+                                "siguiente": "4",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "Habitacional Oficina",
+                                "imagen": "bolita",
+                                "siguiente": "4",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"4",
+                                "-type": "normal",
+                                "texto": "Habitacional Comercio",
+                                "imagen": "bolita",
+                                "siguiente": "4",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"5",
+                                "-type": "normal",
+                                "texto": "Equipamiento o conservación",
+                                "imagen": "bolita",
+                                "siguiente": "-5",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"6",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "2",
+                    "texto": "¿El negocio está o desea abrirlo en su vivienda?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "bolita",
+                                "siguiente": "3",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "bolita",
+                                "siguiente": "4",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "3",
+                    "texto": "¿Cuánto mide la vivienda donde está o se abrirá el negocio?",
+                    "array_respuestas": {
+                        "tipo": "fecha",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "fecha",
+                                "texto": "Selecciona en metros cuadrados:",
+                                "rangoinicial": "1",
+                                "siguiente": "4",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "4",
+                    "texto": "¿Cuánto mide o medirá el negocio?",
+                    "array_respuestas": {
+                        "tipo": "fecha",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "fecha",
+                                "texto": "Selecciona en metros cuadrados:",
+                                "rangoinicial": "1",
+                                "siguiente": "5",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "5",
+                    "texto": "¿Cuentas con tu certificado de uso de suelo?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "bolita",
+                                "siguiente": "6",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "bolita",
+                                "siguiente": "8",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "6",
+                    "texto": "¿Fecha de expedición del certificado de uso de suelo?",
+                    "array_respuestas": {
+                        "tipo": "fecha",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "fecha",
+                                "texto": "Selecciona una fecha:",
+                                "rangoinicial": "1980",
+                                "siguiente": "5",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "7",
+                    "texto": "¿Qué tipo de certificado de uso de suelo tienes?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Derechos adquiridos",
+                                "imagen": "bolita",
+                                "siguiente": "-6",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "certificado único de zonificación",
+                                "imagen": "bolita",
+                                "siguiente": "8",
+                                "restricciones":[]
+                            },
+                            {   "id":"3",
+                                "-type": "normal",
+                                "texto": "Especial",
+                                "imagen": "bolita",
+                                "siguiente": "8",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"4",
+                                "-type": "normal",
+                                "texto": "Específico",
+                                "imagen": "bolita",
+                                "siguiente": "8",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"5",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "8",
+                    "texto": "¿Dónde está ubicado o estará el inmueble?",
+                    "array_respuestas": {
+                        "tipo": "lugar",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "delegacion",
+                                "texto": "Selecciona una delegación",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "colonia",
+                                "texto": "Selecciona una colonia",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                }
+               
+            ]
+        }
+    }
+}

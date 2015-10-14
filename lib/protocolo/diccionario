@@ -7,6 +7,16 @@ Salidas de Impacto:
 -21: vecinal termina, agendar cita
  -1: bajo impacto
  -4: no se
+_____________________________________________
+
+ Salidas de Suelo:
+
+  -5: cita por uso de suelo Equipamiento o conservación
+  -6: Cita por derechos adquiridos
+
+
+_____________________________________________
+
 
 Sessión de usuario:
 
