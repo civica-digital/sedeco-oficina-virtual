@@ -113,7 +113,7 @@
     //hacemos visible la salida y la llenamos con la información
     $('.diagnostic').removeClass("hidden");
     $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
+    $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');    
     //Actualizamos los progressBars
     progressBar(IMPACTO, 100);
 
@@ -126,9 +126,9 @@
     $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
 
     if(tipo == 'cita'){
-      $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');   
+      $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');   
     }else if('normal'){
-      $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');   
+      $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');   
     }
      
     //Actualizamos los progressBars
@@ -140,7 +140,7 @@
     //hacemos visible la salida y la llenamos con la información
     $('.diagnostic').removeClass("hidden");
     $('.jumbotron').html('<H2 class="colorprimario">Bajo impacto<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');    
     //Actualizamos los progressBars
     progressBar(IMPACTO, 100);
   }

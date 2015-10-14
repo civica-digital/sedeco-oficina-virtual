@@ -33,9 +33,7 @@ class ImpactController < ApplicationController
     	end
   	end
   end
-
-
-
+  
  end
 
 private
@@ -60,7 +58,7 @@ private
 
 #obtiene el progreso del progresBar
  def get_progreso(total, value)
- 	(value.to_i * 100 / total.to_i)
+ 	(value.to_i * 100 / total.to_i) - 10
  end
 
   #regresa el id de la vista que continua
