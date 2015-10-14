@@ -36,7 +36,7 @@
                 },
                 {
                     "numero": "2",
-                    "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros? ",
+                    "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [

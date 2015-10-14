@@ -1,0 +1,160 @@
+  /*Flags*/
+  var IMPACTO = 1;
+  var SUELO = 2;
+  var SEGURIDAD = 3;
+
+  var TIPO_NORMAL= 1;
+  var TIPO_FECHA = 2;
+
+
+/*Cuando se da clic a una opcion se obtiene el tama*/
+  function buttonClick(actual,clicked, next, restriction, next_restrictions){
+    changeColorSelected(actual,clicked);
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_NORMAL, 0);
+  }
+
+  /*Cuando se da clic a una opcion se obtiene el tama*/
+  function dateClick(actual,clicked, next, restriction, next_restrictions){
+    var date = $(".result-selected").first().text();
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
+  }
+
+  /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
+  function hidden_div(id, impacto){
+    //hacemos invisible la salida
+    $('.diagnostic').addClass("hidden");
+    //hacemos visible el view de pregunta
+    document.getElementById(id).removeAttribute("class");
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, impacto);
+  }
+
+  /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
+  function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
+
+    for(i = parseInt(actual)+1; i <= number_of_views; i++){
+      document.getElementById(i).setAttribute("class", "hidden");
+    }
+
+    if(tipo == TIPO_NORMAL){
+      save_advance(actual,clicked,next,restriction,next_restrictions);
+    }else if(tipo == TIPO_FECHA){
+     save_advance_date(actual,clicked,next,restriction,next_restrictions, date);
+    }
+    
+  }
+
+  /*Cambia el color del texto seleccionado, en caso de regresarte cambia todos los textos siguientes a color original*/
+  function changeColorSelected(actual, clicked){
+    for(i=actual; i<=number_of_views; i++){
+      for(j=1; j<8; j++){
+
+        var element = document.getElementById(i+"-"+j)
+        if(element != null){
+          element.style.color = '#000000';//Cambiamos el color del texto por default
+        }
+
+        var element = document.getElementById("image"+i+"-"+j)
+        if(element != null){
+          element.classList.remove("rcorner-selected");
+        }
+      }
+    }
+
+    document.getElementById(actual+"-"+clicked).style.color = '#871C57'; //Cambiamos el color del texto que seleccionamos
+    document.getElementById("image"+actual+"-"+clicked).className = "rcorner rcorner-selected";
+
+  }
+
+  /*Se guarda el valor clikeado para saber que vista sigue*/
+  function save_advance(actual,clicked,next,restriction,next_restrictions){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          show_view(next, restriction, next_restrictions)
+         },
+        error: function(){
+        }, 
+         data: $.param({ savetime: {actual: actual, clicked: clicked}})
+    });
+  }
+
+  /*Se guarda el valor clikeado para saber que vista sigue SOLO PARA LOS DE FORMATO FECHA*/
+  function save_advance_date(actual,clicked,next,restriction,next_restrictions, date){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          show_view(next, restriction, next_restrictions)
+         },
+        error: function(){
+        }, 
+         data: $.param({ savedate: {actual: actual, clicked: clicked, date: date}})
+    });
+  }
+
+  /*Se muestra la vista dependiendo si existe una restriccion */
+  function show_view(next, restriction,next_restrictions){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          window.scrollBy(0, 300);
+         },
+        error: function(){
+        }, 
+         data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
+    });
+  }
+
+  /*Prepara la vista cuando de detecta un impacto zonal*/
+  function finaliza_impacto_zonal(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');    
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, 100);
+
+  }
+
+  /*Prepara la vista cuando de detecta un impacto vecinal*/
+  function finaliza_impacto_vecinal(tipo){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
+
+    if(tipo == 'cita'){
+      $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario>');   
+    }else if('normal'){
+      $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');   
+    }
+     
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, 100);
+  }
+
+  /*Prepara la vista cuando de detecta un bajo impacto*/
+  function finaliza_bajo_impacto(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Bajo impacto<H2>');
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario>');    
+    //Actualizamos los progressBars
+    progressBar(IMPACTO, 100);
+  }
+
+  /*Maneja el llenado de las barras de progreso*/
+  function progressBar(barra, progresso){
+    if(barra== IMPACTO){
+        $('.progress-impacto').text("Impacto: "+progresso+"%");
+        $('.progress-impacto-css').css({'width': progresso+'%'});
+    }else if(barra == SUELO){
+        $('.progress-suelo').text("Impacto: "+progresso+"%");
+        $('.progress-suelo-css').css({'width': progresso+'%'});
+    }else if(barra== SEGURIDAD){
+        $('.progress-seguridad').text("Impacto: "+progresso+"%");
+        $('.progress-seguridad-css').css({'width': progresso+'%'});
+    }
+  }
