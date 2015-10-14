@@ -3,8 +3,8 @@ class ImpactController < ApplicationController
  require 'json'
   
  def index
-	@tipo_de_impacto = "Bajo Impacto"
-	progreso_de_impacto = 0
+	@tipo_de_impacto = ""
+	@progreso_de_impacto = 0
 
 	unless params[:savetime].blank?
 		save_advance(params[:savetime][:actual],params[:savetime][:clicked])
@@ -33,18 +33,18 @@ class ImpactController < ApplicationController
     	end
   	end
   end
-
-
-
+  
  end
 
 private
+#obtiene el Json de impacto
  def get_json
  	source = 'lib/impacto/impacto.json'
 	file = File.read(source)
   	@impacto = ActiveSupport::JSON.decode(file)#JSON.parse(file)
  end
  
+ #inicializa los arrays de impacto
  def fill_array
  	@respuestas_texto_array = []
   @respuestas_imagen_array = []
@@ -56,8 +56,9 @@ private
 	@respuestas_siguiente_restriccion_array = []
  end
 
+#obtiene el progreso del progresBar
  def get_progreso(total, value)
- 	(value.to_i * 100 / total.to_i)
+ 	(value.to_i * 100 / total.to_i) - 10
  end
 
   #regresa el id de la vista que continua

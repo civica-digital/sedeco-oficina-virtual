@@ -36,7 +36,7 @@
                 },
                 {
                     "numero": "2",
-                    "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros? ",
+                    "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -75,7 +75,7 @@
                                 "id":"5",
                                 "-type": "normal",
                                 "texto": "Club privado",
-                                "imagen": "comercial",
+                                "imagen": "club",
                                 "siguiente": "4",
                                 "restricciones":[]
                             },
@@ -205,7 +205,12 @@
                                 "texto": "Selecciona una fecha:",
                                 "rangoinicial": "1980",
                                 "siguiente": "-1",
-                                "restricciones":[]
+                                "restricciones":[
+                                    {
+                                        "uso": "-2",
+                                        "siguiente": "-2"
+                                    }
+                                ]
                             },
                             {
                                 "id":"2",
@@ -220,7 +225,7 @@
                 },
                 {
                     "numero": "6",
-                    "texto": "¿Cuentas con algún tipo de permiso o licencia de funcionamiento proporcionada como A, B, ordinaria o especial?",
+                    "texto": "¿Cuentas con algún tipo de permiso o licencia de funcionamiento tipo A u ordinaria?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
