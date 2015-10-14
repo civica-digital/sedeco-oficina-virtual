@@ -3,7 +3,7 @@ class ImpactController < ApplicationController
  require 'json'
   
  def index
-	@tipo_de_impacto = "Bajo Impacto"
+	@tipo_de_impacto = ""
 	@progreso_de_impacto = 0
 
 	unless params[:savetime].blank?

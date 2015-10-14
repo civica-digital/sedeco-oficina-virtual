@@ -7,7 +7,7 @@
   var TIPO_FECHA = 2;
 
 
-/*Cuando se da clic a una opcion se obtiene el tama*/
+  /*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual,clicked, next, restriction, next_restrictions){
     changeColorSelected(actual,clicked);
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_NORMAL, 0);
