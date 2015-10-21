@@ -1,11 +1,3 @@
-  /*Flags*/
-  var IMPACTO = 1;
-  var SUELO = 2;
-  var SEGURIDAD = 3;
-
-  var TIPO_NORMAL= 1;
-  var TIPO_FECHA = 2;
-
 
   /*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual,clicked, next, restriction, next_restrictions){
@@ -20,20 +12,22 @@
   }
 
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
-  function hidden_div(id, impacto){
+  function hidden_div(id, impacto, suelo, seguiridad){
     //hacemos invisible la salida
     $('.diagnostic').addClass("hidden");
     //hacemos visible el view de pregunta
     document.getElementById(id).removeAttribute("class");
     //Actualizamos los progressBars
-    progressBar(IMPACTO, impacto);
+    progressBar(impacto, suelo, seguiridad);
   }
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
   function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
-
     for(i = parseInt(actual)+1; i <= number_of_views; i++){
-      document.getElementById(i).setAttribute("class", "hidden");
+      var element = document.getElementById(i)
+        if(element != null){
+          element.setAttribute("class", "hidden");
+        }
     }
 
     if(tipo == TIPO_NORMAL){
@@ -115,7 +109,7 @@
     $('.jumbotron').html('<H2 class="colorprimario">Impacto Zonal<H2>');
     $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');    
     //Actualizamos los progressBars
-    progressBar(IMPACTO, 100);
+    progressBar("100","0","0");
 
   }
 
@@ -128,11 +122,11 @@
     if(tipo == 'cita'){
       $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');   
     }else if('normal'){
-      $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');   
+      $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario><a class="colorprimario" href="/zoning"><span class="glyphicon glyphicon-chevron-right"></span></a>');   
     }
      
     //Actualizamos los progressBars
-    progressBar(IMPACTO, 100);
+    progressBar("100","0","0");
   }
 
   /*Prepara la vista cuando de detecta un bajo impacto*/
@@ -140,21 +134,20 @@
     //hacemos visible la salida y la llenamos con la información
     $('.diagnostic').removeClass("hidden");
     $('.jumbotron').html('<H2 class="colorprimario">Bajo impacto<H2>');
-    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');    
+    $('.next-step').html('<colorprimario>Siguiente paso "Uso de suelo"</colorprimario><a class="colorprimario" href="/zoning"><span class="glyphicon glyphicon-chevron-right"></span></a>');    
     //Actualizamos los progressBars
-    progressBar(IMPACTO, 100);
+    progressBar("100","0","0");
   }
 
   /*Maneja el llenado de las barras de progreso*/
-  function progressBar(barra, progresso){
-    if(barra== IMPACTO){
-        $('.progress-impacto').text("Impacto: "+progresso+"%");
-        $('.progress-impacto-css').css({'width': progresso+'%'});
-    }else if(barra == SUELO){
-        $('.progress-suelo').text("Impacto: "+progresso+"%");
-        $('.progress-suelo-css').css({'width': progresso+'%'});
-    }else if(barra== SEGURIDAD){
-        $('.progress-seguridad').text("Impacto: "+progresso+"%");
-        $('.progress-seguridad-css').css({'width': progresso+'%'});
-    }
+  function progressBar(impacto,suelo, seguiridad){
+        $('.progress-impacto').text("Impacto: "+impacto+"%");
+        $('.progress-impacto-css').css({'width': impacto+'%'});
+
+        $('.progress-uso').text("Suelo: "+suelo+"%");
+        $('.progress-uso-css').css({'width': suelo+'%'});
+
+        $('.progress-seguridad').text("Impacto: "+seguiridad+"%");
+        $('.progress-seguridad-css').css({'width': seguiridad+'%'});
+
   }

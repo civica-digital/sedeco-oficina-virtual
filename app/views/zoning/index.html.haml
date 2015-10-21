@@ -2,7 +2,7 @@
   %div.container-impacto.text-center
     %div.row
       %div.col-lg-12
-        -@impacto["impacto"]["array_preguntas"]["pregunta"].each_with_index do |pregunta, index|
+        -@suelo["suelo"]["array_preguntas"]["pregunta"].each_with_index do |pregunta, index|
           -clean_array_impacto
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
@@ -29,7 +29,7 @@
 
 :javascript
     var number_of_views = 0;
-        /*Flags*/
+      /*Flags*/
     var IMPACTO = 1;
     var SUELO = 2;
     var SEGURIDAD = 3;
@@ -40,6 +40,7 @@
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
     document.getElementById("1").removeAttribute("class");
-      /*Obtenemos el tamaño maximo de ids en la vista*/
-    number_of_views = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}";
+        /*Obtenemos el tamaño maximo de ids en la vista*/
+    number_of_views = "#{@suelo["suelo"]["array_preguntas"]["pregunta"].size}";
+
   });

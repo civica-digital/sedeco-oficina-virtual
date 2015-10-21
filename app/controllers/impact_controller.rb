@@ -4,7 +4,8 @@ class ImpactController < ApplicationController
   
  def index
 	@tipo_de_impacto = ""
-	@progreso_de_impacto = 0
+  @progreso_de_impacto = 0
+  @progreso_de_suelo = 0
 
 	unless params[:savetime].blank?
 		save_advance(params[:savetime][:actual],params[:savetime][:clicked])
@@ -29,7 +30,7 @@ class ImpactController < ApplicationController
       elsif next_value == "-1"
         format.js { render :js => "finaliza_bajo_impacto();"}
       else   	
-    		format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto});"}
+    		format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto},0,0);"}
     	end
   	end
   end
