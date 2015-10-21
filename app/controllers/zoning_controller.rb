@@ -21,7 +21,11 @@ class ZoningController < ApplicationController
 
     progreso_de_suelo = get_progreso(params[:pagetime][:totals],next_value)
     respond_to do |format|
-      format.js { render :js => "hidden_div(#{next_value},100,#{progreso_de_suelo},0);"}
+      if next_value == "-5"
+        format.js { render :js => "finaliza_uso_equipamiento();"}
+      else  
+        format.js { render :js => "hidden_div(#{next_value},100,#{progreso_de_suelo},0);"}
+      end
     end
   end
   

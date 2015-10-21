@@ -102,6 +102,15 @@
     });
   }
 
+
+  function finaliza_uso_equipamiento(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html('<H2 class="colorprimario">Especial<H2>');
+     $('.next-step').html('<colorprimario>Siguiente paso "Hacer una cita"</colorprimario><a class="colorprimario" href="/"><span class="glyphicon glyphicon-chevron-right"></span></a>');   
+  }
+
+
   /*Prepara la vista cuando de detecta un impacto zonal*/
   function finaliza_impacto_zonal(){
     //hacemos visible la salida y la llenamos con la información
