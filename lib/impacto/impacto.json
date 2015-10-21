@@ -174,7 +174,7 @@
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "no",
-                                "siguiente": "-1",
+                                "siguiente": "7",
                                 "restricciones":[
                                     {
                                         "uso": "-2",
@@ -243,6 +243,39 @@
                                 "texto": "No",
                                 "imagen": "no",
                                 "siguiente": "-2",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "7",
+                    "texto": "¿Cuentas con declaración de apertura?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "normal",
+                                "texto": "Sí",
+                                "imagen": "si",
+                                "siguiente": "-1",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "-1",
                                 "restricciones":[]
                             },
                             {
