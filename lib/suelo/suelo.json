@@ -10,7 +10,7 @@
                         "respuesta": [
                             {   "id":"1",
                                 "-type": "normal",
-                                "texto": "Habitacional",
+                                "texto": "(H)Habitacional",
                                 "imagen": "bolita",
                                 "siguiente": "2",
                                 "restricciones":[]
@@ -18,7 +18,7 @@
                             {
                                 "id":"2",
                                 "-type": "normal",
-                                "texto": "Habitacional Mixto",
+                                "texto": "(HM)Habitacional Mixto",
                                 "imagen": "bolita",
                                 "siguiente": "4",
                                 "restricciones":[]
@@ -26,7 +26,7 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "Habitacional Oficina",
+                                "texto": "(HO)Habitacional Oficina",
                                 "imagen": "bolita",
                                 "siguiente": "4",
                                 "restricciones":[]
@@ -34,7 +34,7 @@
                             {
                                 "id":"4",
                                 "-type": "normal",
-                                "texto": "Habitacional Comercio",
+                                "texto": "(HC)Habitacional Comercio",
                                 "imagen": "bolita",
                                 "siguiente": "4",
                                 "restricciones":[]
@@ -42,7 +42,7 @@
                             {
                                 "id":"5",
                                 "-type": "normal",
-                                "texto": "Equipamiento o conservación",
+                                "texto": "(E)Equipamiento, (AV)Áreas verdes o (EA)Espacio Abierto",
                                 "imagen": "bolita",
                                 "siguiente": "-5",
                                 "restricciones":[]
@@ -52,7 +52,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -84,7 +84,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -109,7 +109,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -127,14 +127,19 @@
                                 "texto": "Selecciona en metros cuadrados:",
                                 "rangoinicial": "1",
                                 "siguiente": "5",
-                                "restricciones":[]
+                                "restricciones":[
+                                    {
+                                        "uso": "-20",
+                                        "siguiente": "8"
+                                    }
+                                ]
                             },
                             {
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -166,7 +171,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -183,7 +188,7 @@
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
                                 "rangoinicial": "1980",
-                                "siguiente": "5",
+                                "siguiente": "7",
                                 "restricciones":[]
                             },
                             {
@@ -191,7 +196,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -238,7 +243,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -252,7 +257,7 @@
                         "respuesta": [
                             {
                                 "id":"1",
-                                "-type": "delegacion",
+                                "-type": "delegación",
                                 "texto": "Selecciona una delegación",
                                 "siguiente": "0",
                                 "restricciones":[]
@@ -269,13 +274,12 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
                     }
                 }
-               
             ]
         }
     }

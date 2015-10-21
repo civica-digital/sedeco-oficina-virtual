@@ -11,8 +11,12 @@ _____________________________________________
 
  Salidas de Suelo:
 
-  -5: cita por uso de suelo Equipamiento o conservación
+  -5: cita por uso de suelo Equipamiento o conservación, areas verdes o espacio
   -6: Cita por derechos adquiridos
+  -1: habitacional
+  -2: No Habitacional
+  0: termina arbol
+  -4: nose
 
 
 _____________________________________________

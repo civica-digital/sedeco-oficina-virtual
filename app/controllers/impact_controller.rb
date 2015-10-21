@@ -132,6 +132,18 @@ private
         else
           session[:has_special_license] = false
         end
+
+      when 7 #pregunta 7
+        case clicked.to_i
+          when 1
+            session[:has_open_declaration] = true
+          when 2
+            session[:has_open_declaration] = false
+          when 3
+            session[:has_open_declaration] = -4
+        else
+          session[:has_open_declaration] = false
+        end
   	else
    	
    	end
