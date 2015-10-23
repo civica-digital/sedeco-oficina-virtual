@@ -1,0 +1,33 @@
+---
+- :id: 1
+  :name: 'Álvaro Obregón'
+- :id: 2
+  :name: 'Azcapotzalco'
+- :id: 3
+  :name: 'Benito Juárez'
+- :id: 4
+  :name: 'Coyoacán'
+- :id: 5
+  :name: 'Cuajimalpa de Morelos'
+- :id: 6
+  :name: 'Cuauhtémoc'
+- :id: 7
+  :name: 'Gustavo A. Madero' 
+- :id: 8
+  :name: 'Iztacalco'
+- :id: 9
+  :name: 'Iztapalapa'
+- :id: 10
+  :name: 'La Magdalena Contreras'
+- :id: 11
+  :name: 'Miguel Hidalgo'
+- :id: 12
+  :name: 'Milpa Alta'
+- :id: 13
+  :name: 'Tláhuac'
+- :id: 14
+  :name: 'Tlalpan' 
+- :id: 15
+  :name: 'Venustiano Carranza'
+- :id: 16
+  :name: 'Xochimilco'

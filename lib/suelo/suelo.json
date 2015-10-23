@@ -11,7 +11,7 @@
                             {   "id":"1",
                                 "-type": "normal",
                                 "texto": "(H)Habitacional",
-                                "imagen": "bolita",
+                                "imagen": "habitacional",
                                 "siguiente": "2",
                                 "restricciones":[]
                             },
@@ -19,7 +19,7 @@
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "(HM)Habitacional Mixto",
-                                "imagen": "bolita",
+                                "imagen": "hab-mixto",
                                 "siguiente": "4",
                                 "restricciones":[]
                             },
@@ -27,7 +27,7 @@
                                 "id":"3",
                                 "-type": "normal",
                                 "texto": "(HO)Habitacional Oficina",
-                                "imagen": "bolita",
+                                "imagen": "hab-oficinas",
                                 "siguiente": "4",
                                 "restricciones":[]
                             },
@@ -35,15 +35,15 @@
                                 "id":"4",
                                 "-type": "normal",
                                 "texto": "(HC)Habitacional Comercio",
-                                "imagen": "bolita",
+                                "imagen": "hab-comercio",
                                 "siguiente": "4",
                                 "restricciones":[]
                             },
                             {
                                 "id":"5",
                                 "-type": "normal",
-                                "texto": "(E)Equipamiento, (AV)Áreas verdes o (EA)Espacio Abierto",
-                                "imagen": "bolita",
+                                "texto": "(E)Equipamiento,(AV)Áreas verdes o (EA)Espacio Abierto",
+                                "imagen": "zonificacion",
                                 "siguiente": "-5",
                                 "restricciones":[]
                             },
@@ -67,7 +67,7 @@
                             {   "id":"1",
                                 "-type": "normal",
                                 "texto": "Si",
-                                "imagen": "bolita",
+                                "imagen": "si",
                                 "siguiente": "3",
                                 "restricciones":[]
                             },
@@ -75,7 +75,7 @@
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
-                                "imagen": "bolita",
+                                "imagen": "no",
                                 "siguiente": "4",
                                 "restricciones":[]
                             },
@@ -94,11 +94,11 @@
                     "numero": "3",
                     "texto": "¿Cuánto mide la vivienda donde está o se abrirá el negocio?",
                     "array_respuestas": {
-                        "tipo": "fecha",
+                        "tipo": "rango",
                         "respuesta": [
                             {
                                 "id":"1",
-                                "-type": "fecha",
+                                "-type": "rango",
                                 "texto": "Selecciona en metros cuadrados:",
                                 "rangoinicial": "1",
                                 "siguiente": "4",
@@ -119,11 +119,11 @@
                     "numero": "4",
                     "texto": "¿Cuánto mide o medirá el negocio?",
                     "array_respuestas": {
-                        "tipo": "fecha",
+                        "tipo": "rango",
                         "respuesta": [
                             {
                                 "id":"1",
-                                "-type": "fecha",
+                                "-type": "rango",
                                 "texto": "Selecciona en metros cuadrados:",
                                 "rangoinicial": "1",
                                 "siguiente": "5",
@@ -154,7 +154,7 @@
                             {   "id":"1",
                                 "-type": "normal",
                                 "texto": "Si",
-                                "imagen": "bolita",
+                                "imagen": "si",
                                 "siguiente": "6",
                                 "restricciones":[]
                             },
@@ -162,7 +162,7 @@
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "No",
-                                "imagen": "bolita",
+                                "imagen": "no",
                                 "siguiente": "8",
                                 "restricciones":[]
                             },
@@ -211,7 +211,7 @@
                             {   "id":"1",
                                 "-type": "normal",
                                 "texto": "Derechos adquiridos",
-                                "imagen": "bolita",
+                                "imagen": "derechos-adq",
                                 "siguiente": "-6",
                                 "restricciones":[]
                             },
@@ -257,8 +257,9 @@
                         "respuesta": [
                             {
                                 "id":"1",
-                                "-type": "delegación",
+                                "-type": "lugar",
                                 "texto": "Selecciona una delegación",
+                                "rangoinicial": "1",
                                 "siguiente": "0",
                                 "restricciones":[]
                             },
@@ -266,6 +267,7 @@
                                 "id":"2",
                                 "-type": "colonia",
                                 "texto": "Selecciona una colonia",
+                                "rangoinicial": "1",
                                 "siguiente": "0",
                                 "restricciones":[]
                             },

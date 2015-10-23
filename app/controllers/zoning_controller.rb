@@ -12,7 +12,7 @@ class ZoningController < ApplicationController
   end
   
   unless params[:savedate].blank?
-    save_advance_date(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
+    save_advance_rank(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
   end
   
 
@@ -36,7 +36,7 @@ private
  def get_json
  	source = 'lib/suelo/suelo.json'
 	file = File.read(source)
-  	@suelo = ActiveSupport::JSON.decode(file)
+  @suelo = ActiveSupport::JSON.decode(file)
  end
  
  #inicializa los arrays de impacto
@@ -68,6 +68,11 @@ private
 
   #guarda los valores clickeados por el momento en la session del usuario
   def save_advance(actual, clicked)
+  
+  end
+
+    #guarda los valores clickeados por el momento en la session del usuario
+  def save_advance_rank(actual, clicked, date)
   
   end
 

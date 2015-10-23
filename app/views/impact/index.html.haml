@@ -3,7 +3,7 @@
     %div.row
       %div.col-lg-12
         -@impacto["impacto"]["array_preguntas"]["pregunta"].each_with_index do |pregunta, index|
-          -clean_array_impacto
+          -clean_arrays
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
             -@respuestas_rango_array << respuestas["rangoinicial"]
