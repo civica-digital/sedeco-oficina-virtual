@@ -52,9 +52,6 @@ private
 
    #guarda los valores clickeados por el momento en la session del usuario
   def save_advance(actual, clicked)
-    puts actual
-    puts clicked
-    puts '*****************'
    	case actual.to_i
   	 	when 1 #pregunta uno
   	 		case clicked.to_i
@@ -73,7 +70,7 @@ private
   		 		when 1..5
   					session[:impacto_usuario] = -2
   		 		when 6
-  		 			session[:impacto_usuario] = 0
+  		 			session[:impacto_usuario] = -4
   		 		when 7
   		 			session[:impacto_usuario] = -4
   		 	else
@@ -84,9 +81,9 @@ private
         case clicked.to_i
           when 1..4
             session[:impacto_usuario] = -3
-          when 6
+          when 5
             session[:impacto_usuario] = -1
-          when 7
+          when 6
             session[:impacto_usuario] = -4
         else
           session[:impacto_usuario] = -4

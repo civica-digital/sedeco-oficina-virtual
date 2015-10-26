@@ -3,7 +3,9 @@ class ZoningController < ApplicationController
  require 'json'
   
  def index
-	
+    puts '**************'
+    puts session[:has_bussine]
+    puts session[:impacto_usuario]	
 
   unless params[:savetime].blank?
     save_advance(params[:savetime][:actual],params[:savetime][:clicked])
