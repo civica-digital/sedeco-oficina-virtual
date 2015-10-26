@@ -1,4 +1,14 @@
+      /*Flags*/
+    var IMPACTO = 1;
+    var SUELO = 2;
+    var SEGURIDAD = 3;
 
+    var TIPO_NORMAL= 1;
+    var TIPO_FECHA = 2;
+    var TIPO_RANGO = 3;
+    var TIPO_LUGAR = 4;
+
+    
   /*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual,clicked, next, restriction, next_restrictions){
     changeColorSelected(actual,clicked);

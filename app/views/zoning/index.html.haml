@@ -38,20 +38,9 @@
 
 :javascript
     var number_of_views = 0;
-      /*Flags*/
-    var IMPACTO = 1;
-    var SUELO = 2;
-    var SEGURIDAD = 3;
 
-    var TIPO_NORMAL= 1;
-    var TIPO_FECHA = 2;
-    var TIPO_RANGO = 3;
-    var TIPO_LUGAR = 4;
- 
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
     document.getElementById("1").removeAttribute("class");
-        /*Obtenemos el tamaño maximo de ids en la vista*/
-    number_of_views = "#{@suelo.size}";
-
+    number_of_views = "#{@suelo.size}"; /*Obtenemos el tamaño maximo de ids en la vista*/
   });

@@ -43,7 +43,7 @@ private
  
   #regresa el id de la vista que continua
  def getNext(next_val, restriction, next_restriction)
- 	if restriction.to_i == -2 && session[:giro_usuario].to_i == -2 
+ 	if restriction.to_i == -2 && session[:impacto_usuario].to_i == -2 
  		next_restriction
  	else
  		next_val
@@ -52,6 +52,9 @@ private
 
    #guarda los valores clickeados por el momento en la session del usuario
   def save_advance(actual, clicked)
+    puts actual
+    puts clicked
+    puts '*****************'
    	case actual.to_i
   	 	when 1 #pregunta uno
   	 		case clicked.to_i
@@ -68,25 +71,25 @@ private
   	 	when 2 #pregunta 2
   	 		case clicked.to_i
   		 		when 1..5
-  					session[:giro_usuario] = -2
+  					session[:impacto_usuario] = -2
   		 		when 6
-  		 			session[:giro_usuario] = 0
+  		 			session[:impacto_usuario] = 0
   		 		when 7
-  		 			session[:giro_usuario] = -4
+  		 			session[:impacto_usuario] = -4
   		 	else
-  		 		session[:giro_usuario] = -4
+  		 		session[:impacto_usuario] = -4
   	 		end
 
   	 	when 3 #pregunta 3
         case clicked.to_i
           when 1..4
-            session[:giro_usuario] = -3
+            session[:impacto_usuario] = -3
           when 6
-            session[:giro_usuario] = -1
+            session[:impacto_usuario] = -1
           when 7
-            session[:giro_usuario] = -4
+            session[:impacto_usuario] = -4
         else
-          session[:giro_usuario] = -4
+          session[:impacto_usuario] = -4
         end
 
   	 	when 4 #pregunta 4

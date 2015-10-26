@@ -27,7 +27,7 @@
                                                         :id => @respuestas_id_array,
                                                         :restrictions =>@respuestas_uso_restriccion_array,
                                                         :next_restrictions=> @respuestas_siguiente_restriccion_array,
-                                                        :rangoinicial => @respuestas_rango_array}
+                                                        :rank_init => @respuestas_rango_array}
     
     .div.diagnostic.hidden{:id=>"diagnostic"}         
       =render "shared/diagnostic_impact", impacto: @tipo_de_impacto
@@ -39,14 +39,7 @@
 
 :javascript
     var number_of_views = 0;
-    /*Flags*/
-    var IMPACTO = 1;
-    var SUELO = 2;
-    var SEGURIDAD = 3;
 
-    var TIPO_NORMAL= 1;
-    var TIPO_FECHA = 2;
- 
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
     document.getElementById("1").removeAttribute("class");
