@@ -1,11 +1,8 @@
 class ImpactController < ApplicationController
- before_action :get_json, :fill_array
+ before_action :get_json, :init
  require 'json'
   
  def index
-	@tipo_de_impacto = ""
-  @progreso_de_impacto = 0
-  @progreso_de_suelo = 0
 
 	unless params[:savetime].blank?
 		save_advance(params[:savetime][:actual],params[:savetime][:clicked])
@@ -15,7 +12,6 @@ class ImpactController < ApplicationController
     save_advance_date(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
   end
   
-
 	unless params[:pagetime].blank?    
     next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
 
@@ -42,26 +38,9 @@ private
  def get_json
  	source = 'lib/impacto/impacto.json'
 	file = File.read(source)
-  	@impacto = ActiveSupport::JSON.decode(file)#JSON.parse(file)
+  @impacto = ActiveSupport::JSON.decode(file)["impacto"]["array_preguntas"]["pregunta"]#JSON.parse(file)
  end
  
- #inicializa los arrays de impacto
- def fill_array
- 	@respuestas_texto_array = []
-  @respuestas_imagen_array = []
-  @respuestas_siguiente_array = []
-  @respuestas_rango_array = []
-	@respuestas_hover_array = []
-	@respuestas_id_array = []
-	@respuestas_uso_restriccion_array = []
-	@respuestas_siguiente_restriccion_array = []
- end
-
-#obtiene el progreso del progresBar
- def get_progreso(total, value)
- 	(value.to_i * 100 / total.to_i) - 10
- end
-
   #regresa el id de la vista que continua
  def getNext(next_val, restriction, next_restriction)
  	if restriction.to_i == -2 && session[:giro_usuario].to_i == -2 
@@ -165,5 +144,23 @@ private
     
     end
   end
+
+
+  #inicializa los arrays de impacto y los Strings
+ def init
+  @respuestas_texto_array = []
+  @respuestas_imagen_array = []
+  @respuestas_siguiente_array = []
+  @respuestas_rango_array = []
+  @respuestas_hover_array = []
+  @respuestas_id_array = []
+  @respuestas_uso_restriccion_array = []
+  @respuestas_siguiente_restriccion_array = []
+
+  @tipo_de_impacto = ""
+  @progreso_de_impacto = 0
+  @progreso_de_suelo = 0
+  @progreso_de_seguridad = 0
+ end
 
 end

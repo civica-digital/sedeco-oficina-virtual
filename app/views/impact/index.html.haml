@@ -2,7 +2,7 @@
   %div.container-impacto.text-center
     %div.row
       %div.col-lg-12
-        -@impacto["impacto"]["array_preguntas"]["pregunta"].each_with_index do |pregunta, index|
+        -@impacto.each_with_index do |pregunta, index|
           -clean_arrays
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
@@ -18,18 +18,28 @@
               -@respuestas_siguiente_restriccion_array << "0"
               -@respuestas_uso_restriccion_array << "0"
 
-          -if pregunta["array_respuestas"]["tipo"] == "normal"
-            = render 'shared/question_normal', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array, :hover => @respuestas_hover_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array,:next_restrictions=> @respuestas_siguiente_restriccion_array}
-          -elsif pregunta["array_respuestas"]["tipo"] == "fecha"
-            = render 'shared/question_date', :locals => {:number => pregunta["numero"], :texto_question => pregunta["texto"],:texto_answer => @respuestas_texto_array,:imagen => @respuestas_imagen_array,:rangoinicial => @respuestas_rango_array, :next => @respuestas_siguiente_array, :id => @respuestas_id_array ,:restrictions =>@respuestas_uso_restriccion_array,:next_restrictions=> @respuestas_siguiente_restriccion_array}
+          = render 'shared/question_type', :locals => {:tipo =>pregunta["array_respuestas"]["tipo"],
+                                                        :number => pregunta["numero"], 
+                                                        :texto_question => pregunta["texto"],
+                                                        :texto_answer => @respuestas_texto_array,
+                                                        :imagen => @respuestas_imagen_array,
+                                                        :next => @respuestas_siguiente_array, 
+                                                        :id => @respuestas_id_array,
+                                                        :restrictions =>@respuestas_uso_restriccion_array,
+                                                        :next_restrictions=> @respuestas_siguiente_restriccion_array,
+                                                        :rangoinicial => @respuestas_rango_array}
+    
     .div.diagnostic.hidden{:id=>"diagnostic"}         
       =render "shared/diagnostic_impact", impacto: @tipo_de_impacto
     .div.margin-bottom-end-page  
       =render "shared/progressbar"
 
+
+
+
 :javascript
     var number_of_views = 0;
-        /*Flags*/
+    /*Flags*/
     var IMPACTO = 1;
     var SUELO = 2;
     var SEGURIDAD = 3;
@@ -40,6 +50,5 @@
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
     document.getElementById("1").removeAttribute("class");
-      /*Obtenemos el tamaño maximo de ids en la vista*/
-    number_of_views = "#{@impacto["impacto"]["array_preguntas"]["pregunta"].size}";
+    number_of_views = "#{@impacto.size}";    /*Obtenemos el tamaño maximo de ids en la vista*/
   });

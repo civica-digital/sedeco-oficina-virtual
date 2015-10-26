@@ -161,3 +161,19 @@
         $('.progress-seguridad-css').css({'width': seguiridad+'%'});
 
   }
+
+   /*Se piden las colonias de una delegacion */
+  function show_city(town){
+    alert(town);
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          window.scrollBy(0, 300);
+         },
+        error: function(){
+        }, 
+         data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
+    });
+  }
+
