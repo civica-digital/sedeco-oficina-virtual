@@ -41,6 +41,11 @@
 
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
-    document.getElementById("1").removeAttribute("class");
+    var impacto = "#{@impacto_usuario}" 
+    if(impacto == "-2"){
+      document.getElementById("4").removeAttribute("class");
+    }else{
+      document.getElementById("1").removeAttribute("class");
+    }
     number_of_views = "#{@suelo.size}"; /*Obtenemos el tamaño maximo de ids en la vista*/
   });

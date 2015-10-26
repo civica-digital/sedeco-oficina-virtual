@@ -5,7 +5,7 @@ class ZoningController < ApplicationController
  def index
     puts '**************'
     puts session[:has_bussine]
-    puts session[:impacto_usuario]	
+   	
 
   unless params[:savetime].blank?
     save_advance(params[:savetime][:actual],params[:savetime][:clicked])
@@ -77,6 +77,8 @@ private
   @progreso_de_impacto = 100
   @progreso_de_suelo = 0
   @progreso_de_seguridad = 0
+
+  @impacto_usuario =  session[:impacto_usuario]
  end
 
 
