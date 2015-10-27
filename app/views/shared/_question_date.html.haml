@@ -24,6 +24,14 @@
           #{locals[:next]},
           #{locals[:restrictions]},
           #{locals[:next_restrictions]})"
+    -elsif locals[:tipo] == "subligar"
+      =select :date, "test", 
+        Services.load_city(session[:town_business]).each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: 'chosen-select',
+        :onchange=> "dateClick(#{locals[:number]}, 
+          #{locals[:id]}, 
+          #{locals[:next]},
+          #{locals[:restrictions]},
+          #{locals[:next_restrictions]})"
 -else
   = render 'shared/question_normal', :locals => {:imagen => locals[:imagen],
                                                 :number => locals[:number], 

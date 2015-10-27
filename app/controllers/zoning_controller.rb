@@ -3,10 +3,6 @@ class ZoningController < ApplicationController
  require 'json'
   
  def index
-    puts '**************'
-    puts session[:has_bussine]
-   	
-
   unless params[:savetime].blank?
     save_advance(params[:savetime][:actual],params[:savetime][:clicked])
   end
@@ -53,12 +49,46 @@ private
 
   #guarda los valores clickeados por el momento en la session del usuario
   def save_advance(actual, clicked)
+    puts '**************advance'
+    puts actual
+    puts clicked
+
   
   end
 
     #guarda los valores clickeados por el momento en la session del usuario
   def save_advance_rank(actual, clicked, date)
-  
+    puts '**************rank'
+    puts actual
+    puts clicked
+    puts date
+   case actual.to_i
+      when 4 #pregunta 4
+        case clicked.to_i
+          when 2
+            session[:size_business] = 0
+        else
+          session[:size_business] = date
+        end
+        
+      when 6 #pregunta 6
+        case clicked.to_i
+          when 2
+            session[:date_zoning] = 0
+        else
+          session[:date_zoning] = date
+        end
+      
+      when 8 #pregunta 8
+        case clicked.to_i
+          when 2
+            session[:town_business] = 0
+        else
+          session[:town_business] = date
+        end
+    else
+    
+    end
   end
 
 

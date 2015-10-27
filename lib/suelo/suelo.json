@@ -251,7 +251,7 @@
                 },
                 {
                     "numero": "8",
-                    "texto": "¿Dónde está ubicado o estará el inmueble?",
+                    "texto": "En que delegación está ubicado o estará el inmueble?",
                     "array_respuestas": {
                         "tipo": "lugar",
                         "respuesta": [
@@ -260,12 +260,29 @@
                                 "-type": "lugar",
                                 "texto": "Selecciona una delegación",
                                 "rangoinicial": "1",
-                                "siguiente": "0",
+                                "siguiente": "9",
                                 "restricciones":[]
                             },
                             {
-                                "id":"2",
-                                "-type": "colonia",
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "9",
+                    "texto": "En que colonia está ubicado o estará el inmueble?",
+                    "array_respuestas": {
+                        "tipo": "sublugar",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "sublugar",
                                 "texto": "Selecciona una colonia",
                                 "rangoinicial": "1",
                                 "siguiente": "0",

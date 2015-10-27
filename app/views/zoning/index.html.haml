@@ -42,7 +42,7 @@
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
     var impacto = "#{@impacto_usuario}" 
-    if(impacto == "-2"){
+    if(impacto == "-2"){ //uso de suelo vecinal
       document.getElementById("4").removeAttribute("class");
     }else{
       document.getElementById("1").removeAttribute("class");
