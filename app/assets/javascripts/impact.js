@@ -16,8 +16,10 @@
   }
 
   /*Cuando se da clic a una opcion se obtiene el tama*/
-  function dateClick(actual,clicked, next, restriction, next_restrictions){
-    var date = $(".result-selected").first().text();
+  function dateClick(actual,clicked, next, restriction, next_restrictions,index){
+    //var date = $(".date_"+clicked).val();
+    var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
+    alert(date);
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
   }
 

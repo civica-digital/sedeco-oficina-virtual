@@ -46,14 +46,12 @@ private
  	end
  end
 
-
+     
   #guarda los valores clickeados por el momento en la session del usuario
   def save_advance(actual, clicked)
     puts '**************advance'
     puts actual
-    puts clicked
-
-  
+    puts clicked  
   end
 
     #guarda los valores clickeados por el momento en la session del usuario

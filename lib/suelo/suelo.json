@@ -43,7 +43,7 @@
                                 "id":"5",
                                 "-type": "normal",
                                 "texto": "(E)Equipamiento,(AV)Áreas verdes o (EA)Espacio Abierto",
-                                "imagen": "zonificacion",
+                                "imagen": "espacio",
                                 "siguiente": "-5",
                                 "restricciones":[]
                             },
@@ -219,7 +219,7 @@
                                 "id":"2",
                                 "-type": "normal",
                                 "texto": "certificado único de zonificación",
-                                "imagen": "bolita",
+                                "imagen": "zonificacion",
                                 "siguiente": "8",
                                 "restricciones":[]
                             },

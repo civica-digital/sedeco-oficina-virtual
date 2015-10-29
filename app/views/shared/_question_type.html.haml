@@ -17,7 +17,7 @@
                                                               :next_restrictions=>locals[:next_restrictions][index]}
 
             -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'
-              = render 'shared/question_date', :locals => {:imagen => locals[:imagen][index],
+              = render 'shared/question_date', :locals => {   :imagen => locals[:imagen][index],
                                                               :number => locals[:number], 
                                                               :text => text,
                                                               :id => locals[:id][index],
