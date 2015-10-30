@@ -19,7 +19,7 @@
     -elsif locals[:tipo] == "lugar"
       =select :date, "date", 
         Services.load_towns.each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select",
-        :onchange=> "dateClick(#{locals[:number]}, 
+        :onchange=> "dateClickTown(#{locals[:number]}, 
           #{locals[:id]}, 
           #{locals[:next]},
           #{locals[:restrictions]},

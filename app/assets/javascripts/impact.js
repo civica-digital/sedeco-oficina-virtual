@@ -25,6 +25,26 @@
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
   }
 
+
+  function dateClickTown(actual,clicked, next, restriction, next_restrictions,index){
+    //var date = $(".date_"+clicked).val();
+    var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
+    $("#date_"+next+"_"+clicked)
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
+    window.order = date;
+    var url = window.location.href;
+
+      $.ajax({
+        type:'GET', 
+        url: window.url,
+        success: function(){
+        },
+        error: function(){
+        }, 
+        data: $.param({ pagetown: {city_id: window.order}}), format: 'js'
+      });
+  }
+
   /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
   function hidden_div(id, impacto, suelo, seguiridad){
     //hacemos invisible la salida

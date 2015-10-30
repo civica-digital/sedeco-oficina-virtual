@@ -12,8 +12,6 @@ module Services
   end
 
   def self.load_city(city)
-    puts '*********************'
-    puts city
     if city == 'Álvaro Obregón'
        return load_values(:alvaro_obregon).fetch("alvaro_obregon").values
        
@@ -61,7 +59,8 @@ module Services
 
     elsif city == 'Xochimilco'
       return load_values(:xochimilco).fetch("xochimilco").values
-
+    else
+      return ""
     end
   end
 

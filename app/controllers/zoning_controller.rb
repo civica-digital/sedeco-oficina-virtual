@@ -11,6 +11,15 @@ class ZoningController < ApplicationController
     save_advance_rank(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
   end
   
+  unless params[:pagetown].blank?
+
+    @town_name = params[:pagetown][:city_id]
+    puts '*************************'
+    puts @town_name
+    respond_to do |format|
+      format.js  {render :layout => false}
+    end
+  end
 
   unless params[:pagetime].blank?    
     next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
@@ -68,6 +77,7 @@ private
             session[:date_zoning] = 0
         else
           session[:date_zoning] = date
+          @lugar = date
         end
       
       when 9 #pregunta 9
@@ -98,6 +108,10 @@ private
   @progreso_de_impacto = 100
   @progreso_de_suelo = 0
   @progreso_de_seguridad = 0
+
+  @array_line=[]
+  @array_id=[]
+  @lugar= ""
 
   @impacto_usuario =  session[:impacto_usuario]
  end

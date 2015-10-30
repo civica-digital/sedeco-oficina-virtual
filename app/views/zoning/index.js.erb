@@ -1,0 +1,20 @@
+$('#date_9_1').empty();
+$('#date_9_1').trigger("chosen:updated");
+console.log('pase');
+<%Services.load_city(@town_name).each_with_index do |city, index|%>
+  <%@array_line[index] = city.to_s%>
+  <%@array_id[index] = index.to_s%>
+  console.log('<%=city%>');
+<%end%>
+var array_line = <%= raw @array_line%>
+var array_id = <%= raw @array_id%>
+var sel = document.getElementById('date_9_1');
+for(var i = 0; i < array_line.length; i++) {
+  var opt = document.createElement('option');
+  opt.innerHTML = array_line[i];
+  opt.value = array_id[i];
+  opt.id = array_id[i];
+  opt.data = array_line[i]
+  sel.appendChild(opt);
+}
+$('#date_9_1').trigger("chosen:updated");
