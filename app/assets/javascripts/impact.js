@@ -27,11 +27,11 @@
 
 
   function dateClickTown(actual,clicked, next, restriction, next_restrictions,index){
-    //var date = $(".date_"+clicked).val();
     var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
     $("#date_"+next+"_"+clicked)
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
     window.order = date;
+    window.key = "date_"+next+"_"+clicked
     var url = window.location.href;
 
       $.ajax({
@@ -41,7 +41,7 @@
         },
         error: function(){
         }, 
-        data: $.param({ pagetown: {city_id: window.order}}), format: 'js'
+        data: $.param({ pagetown: {city_id: window.order, key: window.key}}), format: 'js'
       });
   }
 

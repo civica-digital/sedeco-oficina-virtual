@@ -12,10 +12,8 @@ class ZoningController < ApplicationController
   end
   
   unless params[:pagetown].blank?
-
     @town_name = params[:pagetown][:city_id]
-    puts '*************************'
-    puts @town_name
+    @key = params[:pagetown][:key]
     respond_to do |format|
       format.js  {render :layout => false}
     end
