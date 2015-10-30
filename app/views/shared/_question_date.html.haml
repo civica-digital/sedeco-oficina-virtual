@@ -26,7 +26,7 @@
           #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
     -elsif locals[:tipo] == "sublugar"
       =select :date, "date", 
-        Services.load_city(session[:town_business]).each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select",
+        Services.load_city(session[:date_zoning]),{ include_blank: true , selected: false }, class: "chosen-select",
         :onchange=> "dateClick(#{locals[:number]}, 
           #{locals[:id]}, 
           #{locals[:next]},

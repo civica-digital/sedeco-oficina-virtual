@@ -48,18 +48,11 @@ private
 
      
   #guarda los valores clickeados por el momento en la session del usuario
-  def save_advance(actual, clicked)
-    puts '**************advance'
-    puts actual
-    puts clicked  
+  def save_advance(actual, clicked) 
   end
 
     #guarda los valores clickeados por el momento en la session del usuario
   def save_advance_rank(actual, clicked, date)
-    puts '**************rank'
-    puts actual
-    puts clicked
-    puts date
    case actual.to_i
       when 4 #pregunta 4
         case clicked.to_i
@@ -69,7 +62,7 @@ private
           session[:size_business] = date
         end
         
-      when 6 #pregunta 6
+      when 8 #pregunta 8
         case clicked.to_i
           when 2
             session[:date_zoning] = 0
@@ -77,7 +70,7 @@ private
           session[:date_zoning] = date
         end
       
-      when 8 #pregunta 8
+      when 9 #pregunta 9
         case clicked.to_i
           when 2
             session[:town_business] = 0

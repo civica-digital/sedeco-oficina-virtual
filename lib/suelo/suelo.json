@@ -251,7 +251,7 @@
                 },
                 {
                     "numero": "8",
-                    "texto": "En que delegación está ubicado o estará el inmueble?",
+                    "texto": "¿En que delegación está ubicado o estará el inmueble?",
                     "array_respuestas": {
                         "tipo": "lugar",
                         "respuesta": [
@@ -276,7 +276,7 @@
                 },
                 {
                     "numero": "9",
-                    "texto": "En que colonia está ubicado o estará el inmueble?",
+                    "texto": "¿En que colonia está ubicado o estará el inmueble?",
                     "array_respuestas": {
                         "tipo": "sublugar",
                         "respuesta": [
