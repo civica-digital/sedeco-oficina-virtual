@@ -16,6 +16,13 @@ _____________________________________________
   -2: No Habitacional
   0: termina arbol
   -4: nose
+  -10: en vivienda
+  -11: no en vivienda
+  -12: tiene certificado de uso
+  -13: no tiene certificado de uso de suelo
+  -21: tiene derechos adquiridos
+  -22: certificado unico, especial o especifico
+
 
 
 _____________________________________________
