@@ -1,0 +1,305 @@
+{
+    "seguridad": {
+        "array_preguntas": {
+            "pregunta": [
+                {
+                    "numero": "1",
+                    "texto": "¿Cuál es tu aforo?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {
+                                "id":"1",
+                                "-type": "rango",
+                                "texto": "Selecciona el aforo:",
+                                "rangoinicial": "1",
+                                "siguiente": "3",
+                                "restricciones":[
+                                    {
+                                        "uso": "-2",
+                                        "siguiente": "4"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "2",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "2",
+                    "texto": "Calculemos tu aforo",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "3",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "4",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "3",
+                    "texto": "¿Recogiste y entregaste el autodiagnóstico de tu delegación?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "5",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "7",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "4",
+                    "texto": "¿Cuentas con el VoBo seguridad y operación?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "6",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "-2",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "5",
+                    "texto": "¿Te aplica un programa  interno de protección civil?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "6",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "7",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "6",
+                    "texto": "¿Tienes implementado tu programa interno de protección civil?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "7",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "7",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "7",
+                    "texto": "¿Sabes si requieres una Licencia Ambiental Única (LAUDF)?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "8",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "8",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "8",
+                    "texto": "¿Sabes si requieres un aviso de funcionamiento sanitario?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "0",
+                                "restricciones":[
+                                    {
+                                        "uso": "-3",
+                                        "siguiente": "9"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "0",
+                                "restricciones":[
+                                    {
+                                        "uso": "-3",
+                                        "siguiente": "9"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "9",
+                    "texto": "¿Cuentas con la constancia de no adeudo de Agua y predial en secretaria de Finanzas?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "0",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "-4",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                }
+
+            ]
+        }
+    }
+}
