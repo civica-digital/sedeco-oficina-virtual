@@ -32,6 +32,14 @@
           #{locals[:next]},
           #{locals[:restrictions]},
           #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
+    -elsif locals[:tipo] == "aforo"
+      =select :date, "date", 
+        get_array_aforo(locals[:rank_init]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
+        :onchange=> "dateClick(#{locals[:number]}, 
+          #{locals[:id]}, 
+          #{locals[:next]},
+          #{locals[:restrictions]},
+          #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
 -else
   = render 'shared/question_normal', :locals => {:imagen => locals[:imagen],
                                                 :number => locals[:number], 

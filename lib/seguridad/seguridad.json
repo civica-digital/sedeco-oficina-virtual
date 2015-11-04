@@ -6,12 +6,12 @@
                     "numero": "1",
                     "texto": "¿Cuál es tu aforo?",
                     "array_respuestas": {
-                        "tipo": "normal",
+                        "tipo": "aforo",
                         "respuesta": [
                             {
                                 "id":"1",
-                                "-type": "rango",
-                                "texto": "Selecciona el aforo:",
+                                "-type": "aforo",
+                                "texto": "Selecciona:",
                                 "rangoinicial": "1",
                                 "siguiente": "3",
                                 "restricciones":[

@@ -1,6 +1,5 @@
 class ZoningController < ApplicationController
- before_action :get_json
- before_action :init ,only: [:index]
+ before_action :get_json,:init
  require 'json'
   
  def index
