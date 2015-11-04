@@ -1,0 +1,10 @@
+=image_tag(prod_img_full(locals[:imagen]),class: "rcorner cuadro#{locals[:number]}-#{locals[:id]}",
+            :onclick=>"buttonClick(#{locals[:number]}, 
+              #{locals[:id]},
+              #{locals[:next]}, 
+              #{locals[:restrictions]},
+              #{locals[:next_restrictions]})",
+              :id=>"image#{locals[:number]}-#{locals[:id]}",
+              :name=>"#{locals[:imagen]}")
+%div{:id=>"#{locals[:number]}-#{locals[:id]}"}
+  ="#{locals[:text]}"

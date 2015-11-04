@@ -2,7 +2,7 @@
   %div.container-impacto.text-center
     %div.row
       %div.col-lg-12
-        -@impacto.each_with_index do |pregunta, index|
+        -@suelo.each_with_index do |pregunta, index|
           -clean_arrays
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
@@ -28,12 +28,11 @@
                                                         :restrictions =>@respuestas_uso_restriccion_array,
                                                         :next_restrictions=> @respuestas_siguiente_restriccion_array,
                                                         :rank_init => @respuestas_rango_array}
-    
+
     .div.diagnostic.hidden{:id=>"diagnostic"}         
-      =render "shared/diagnostic_impact", impacto: @tipo_de_impacto
+      =render "shared/diagnostic_zoning", uso: @tipo_de_uso
     .div.margin-bottom-end-page  
       =render "shared/progressbar"
-
 
 
 
@@ -42,6 +41,11 @@
 
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
-    document.getElementById("1").removeAttribute("class");
-    number_of_views = "#{@impacto.size}";    /*Obtenemos el tamaño maximo de ids en la vista*/
+    var impacto = "#{@impacto_usuario}" 
+    if(impacto == "-2"){ //uso de suelo vecinal
+      document.getElementById("4").removeAttribute("class");
+    }else{
+      document.getElementById("1").removeAttribute("class");
+    }
+    number_of_views = "#{@suelo.size}"; /*Obtenemos el tamaño maximo de ids en la vista*/
   });

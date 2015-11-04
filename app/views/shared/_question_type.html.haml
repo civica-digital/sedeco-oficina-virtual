@@ -1,0 +1,30 @@
+%div.hidden{:id=>"#{locals[:number]}"}
+  %div.col-md-12.margin-top
+    .p= locals[:texto_question] 
+  %div.col-md-12
+    %div.row.seven-cols
+      %div.col-md-10.col-md-offset-1
+        -locals[:texto_answer].each_with_index do |text, index|
+          %div{:class=>"col-md-#{12/locals[:texto_answer].size} text-center"}
+
+            -if locals[:tipo]=='normal'
+              = render 'shared/question_normal', :locals => {:imagen => locals[:imagen][index],
+                                                              :number => locals[:number], 
+                                                              :text => text,
+                                                              :id => locals[:id][index],
+                                                              :next => locals[:next][index],
+                                                              :restrictions => locals[:restrictions][index],
+                                                              :next_restrictions=>locals[:next_restrictions][index]}
+
+            -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'
+              = render 'shared/question_date', :locals => {   :imagen => locals[:imagen][index],
+                                                              :number => locals[:number], 
+                                                              :text => text,
+                                                              :id => locals[:id][index],
+                                                              :next => locals[:next][index],
+                                                              :restrictions => locals[:restrictions][index],
+                                                              :next_restrictions=>locals[:next_restrictions][index],
+                                                              :rank_init=>locals[:rank_init][index],
+                                                              :tipo => locals[:tipo]}
+  %div.col-md-12.margin-top
+    %hr

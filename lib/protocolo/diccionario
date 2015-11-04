@@ -1,12 +1,36 @@
 
 Salidas de Impacto:
-
   0: termina el árbol
  -3: impacto zonal
  -2: vecinal
 -21: vecinal termina, agendar cita
  -1: bajo impacto
  -4: no se
+_____________________________________________
+
+ Salidas de Suelo:
+
+  -5: cita por uso de suelo Equipamiento o conservación, areas verdes o espacio
+  -6: Cita por derechos adquiridos
+  -1: habitacional
+  -2: No Habitacional
+  0: termina arbol
+  -4: nose
+  -10: en vivienda
+  -11: no en vivienda
+  -12: tiene certificado de uso
+  -13: no tiene certificado de uso de suelo
+  -21: tiene derechos adquiridos
+  -22: certificado unico, especial o especifico
+
+_____________________________________________
+
+
+Salidas Seguridad
+
+-2 No cuenta con VoBo de seguridad y operacion (termina y manda a tramitarlo)
+0 termina arbol
+
 
 Sessión de usuario:
 
