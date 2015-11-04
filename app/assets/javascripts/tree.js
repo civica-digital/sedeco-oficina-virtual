@@ -137,52 +137,7 @@
   }
 
 
-  function finaliza_uso_equipamiento(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html("<H2 class='colorprimario'>Especial<H2>");
-    $('.next-step').html("<colorprimario>Siguiente paso 'Hacer una cita'</colorprimario><a class='colorprimario' href='/' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");   
-    progressBar("100","100","0"); 
-  }
-
-
-  /*Prepara la vista cuando de detecta un impacto zonal*/
-  function finaliza_impacto_zonal(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html("<H2 class='colorprimario'>Impacto Zonal<H2>");
-    $('.next-step').html("<colorprimario>Siguiente paso 'Hacer una cita'</colorprimario><a class='colorprimario' href='/' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
-    //Actualizamos los progressBars
-    progressBar("100","0","0");
-
-  }
-
-  /*Prepara la vista cuando de detecta un impacto vecinal*/
-  function finaliza_impacto_vecinal(tipo){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2>');
-
-    if(tipo == 'cita'){
-      $('.next-step').html("<colorprimario>Siguiente paso 'Hacer una cita'</colorprimario><a class='colorprimario' href='/' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");   
-    }else if('normal'){
-      $('.next-step').html("<colorprimario>Siguiente paso 'Uso de suelo'</colorprimario><a class='colorprimario' href='/zoning' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");   
-    }
-     
-    //Actualizamos los progressBars
-    progressBar("100","0","0");
-  }
-
-  /*Prepara la vista cuando de detecta un bajo impacto*/
-  function finaliza_bajo_impacto(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html("<H2 class='colorprimario'>Bajo impacto<H2>");
-    $('.next-step').html("<colorprimario>Siguiente paso 'Uso de suelo'</colorprimario><a class='colorprimario' href='/zoning' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
-    //Actualizamos los progressBars
-    progressBar("100","0","0");
-  }
-
+ 
   /*Maneja el llenado de las barras de progreso*/
   function progressBar(impacto,suelo, seguiridad){
         $('.progress-impacto').text("Impacto: "+impacto+"%");

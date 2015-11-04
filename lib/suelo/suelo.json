@@ -226,7 +226,7 @@
                             {   "id":"3",
                                 "-type": "normal",
                                 "texto": "Especial",
-                                "imagen": "bolita",
+                                "imagen": "especial",
                                 "siguiente": "8",
                                 "restricciones":[]
                             },
@@ -234,7 +234,7 @@
                                 "id":"4",
                                 "-type": "normal",
                                 "texto": "Específico",
-                                "imagen": "bolita",
+                                "imagen": "especifico",
                                 "siguiente": "8",
                                 "restricciones":[]
                             },

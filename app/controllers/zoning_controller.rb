@@ -1,5 +1,6 @@
 class ZoningController < ApplicationController
- before_action :get_json, :init
+ before_action :get_json
+ before_action :init ,only: [:index]
  require 'json'
   
  def index
@@ -23,8 +24,14 @@ class ZoningController < ApplicationController
     next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
     progreso_de_suelo = get_progreso(params[:pagetime][:totals],next_value)
     respond_to do |format|
-      if next_value == "-5"
+      if session[:uso_de_suelo] && next_value == "0"
+        format.js { render :js => "finaliza_sin_uso_de_suelo();"}
+      elsif !session[:uso_de_suelo] && next_value == "0"
+        format.js { render :js => "finaliza_con_uso_de_suelo();"}
+      elsif next_value == "-5"
         format.js { render :js => "finaliza_uso_equipamiento();"}
+      elsif next_value == "-6"
+        format.js { render :js => "finaliza_uso_derechos_adquiridos();"}
       else  
         format.js { render :js => "hidden_div(#{next_value},100,#{progreso_de_suelo},0);"}
       end
@@ -159,7 +166,7 @@ private
     unless session[:size_house].nil? || session[:size_house].to_i == 0
       business = session[:size_business].to_i
       house = session[:size_house].to_i
-      if (business*100)/house <=20
+      if (business*100)/house <= 20
        session[:uso_de_suelo] = true
       else
         session[:uso_de_suelo] = false
@@ -187,8 +194,6 @@ private
   @array_line=[]
   @array_id=[]
   @lugar= ""
-
-  
 
   @impacto_usuario =  session[:impacto_usuario]
  end
