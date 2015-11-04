@@ -146,8 +146,8 @@
         $('.progress-uso').text("Suelo: "+suelo+"%");
         $('.progress-uso-css').css({'width': suelo+'%'});
 
-        $('.progress-seguridad').text("Impacto: "+seguiridad+"%");
-        $('.progress-seguridad-css').css({'width': seguiridad+'%'});
+        $('.progress-proteccion').text("Impacto: "+seguiridad+"%");
+        $('.progress-proteccion-css').css({'width': seguiridad+'%'});
 
   }
 

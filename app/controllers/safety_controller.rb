@@ -15,9 +15,9 @@ class SafetyController < ApplicationController
 	unless params[:pagetime].blank?    
     next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
 
-		progreso_de_impacto =	get_progreso(params[:pagetime][:totals],next_value)
+		progreso_de_seguridad =	get_progreso(params[:pagetime][:totals],next_value)
 		respond_to do |format|	
-    		format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto},0,0);"}
+    		format.js { render :js => "hidden_div(#{next_value},100,100,#{progreso_de_seguridad});"}
   	end
   end
   
