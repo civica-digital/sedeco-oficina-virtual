@@ -1,6 +1,10 @@
 class ImpactController < ApplicationController
- before_action :get_json, :init
- require 'json'
+  before_action :init
+  before_action only: :index do
+    get_json('impacto/impacto.json')
+  end
+ 
+
   
  def index
 
@@ -33,14 +37,7 @@ class ImpactController < ApplicationController
   
  end
 
-private
-#obtiene el Json de impacto
- def get_json
- 	source = 'lib/impacto/impacto.json'
-	file = File.read(source)
-  @impacto = ActiveSupport::JSON.decode(file)["impacto"]["array_preguntas"]["pregunta"]#JSON.parse(file)
- end
- 
+private 
   #regresa el id de la vista que continua
  def getNext(next_val, restriction, next_restriction)
  	if restriction.to_i == -2 && session[:impacto_usuario].to_i == -2 

@@ -1,6 +1,9 @@
 class ZoningController < ApplicationController
- before_action :get_json,:init
- require 'json'
+  before_action :init
+  before_action only: :index do
+    get_json('suelo/suelo.json')
+  end
+
   
  def index
   unless params[:savetime].blank?
@@ -40,15 +43,6 @@ class ZoningController < ApplicationController
  end
 
 private
-#obtiene el Json de impacto
- def get_json
- 	source = 'lib/suelo/suelo.json'
-	file = File.read(source)
-  @suelo = ActiveSupport::JSON.decode(file)["suelo"]["array_preguntas"]["pregunta"]
- end
- 
-
-
   #regresa el id de la vista que continua
  def getNext(next_val, restriction, next_restriction)
  	if restriction.to_i == -20 && session[:uso_de_suelo]

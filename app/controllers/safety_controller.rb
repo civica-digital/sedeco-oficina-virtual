@@ -1,6 +1,9 @@
 class SafetyController < ApplicationController
- before_action :get_json, :init
- require 'json'
+  before_action :init
+  before_action only: :index do
+    get_json('seguridad/seguridad.json')
+  end
+
   
  def index
 
@@ -25,14 +28,7 @@ class SafetyController < ApplicationController
   end
  end
 
-private
-#obtiene el Json de seguridad
- def get_json
- 	source = 'lib/seguridad/seguridad.json'
-	file = File.read(source)
-  @seguridad = ActiveSupport::JSON.decode(file)["seguridad"]["array_preguntas"]["pregunta"]#JSON.parse(file)
- end
- 
+private 
   #regresa el id de la vista que continua
  def getNext(next_val, restriction, next_restriction)
     if restriction.to_i == -3 && session[:impacto_usuario] == -2
