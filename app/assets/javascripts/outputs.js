@@ -69,3 +69,12 @@
     $('.next-step').html("<colorprimario>Siguiente paso 'Protección civíl</colorprimario><a class='colorprimario' href='/safety' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
     progressBar("100","100","0"); 
   }
+
+ /***********************************SEGURIDAD***************************************/
+  function finaliza_sefuridad_visto_bueno(){
+    //hacemos visible la salida y la llenamos con la información
+    $('.diagnostic').removeClass("hidden");
+    $('.jumbotron').html("<H2 class='colorprimario'><H2>No cuenta con el Vo.Bo. de Seguridad y operación<p>Porfavor haz una cita para poder tramitarlo y continuar el diagnóstico</p>");
+    $('.next-step').html("<colorprimario>Página para ver trámite 'Ir'</colorprimario><a class='colorprimario' href='/safety' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
+    progressBar("100","100","100"); 
+  }

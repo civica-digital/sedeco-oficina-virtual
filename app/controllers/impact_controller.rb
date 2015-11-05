@@ -135,8 +135,8 @@ private
     case actual.to_i
       when 5 #pregunta 5
         case clicked.to_i
-          when 3
-            session[:date_siapem] = true
+          when 2
+            session[:date_siapem] = 0
         else
           session[:date_siapem] = date
         end

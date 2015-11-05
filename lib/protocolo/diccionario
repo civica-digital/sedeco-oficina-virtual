@@ -28,13 +28,8 @@ _____________________________________________
 
 Salidas Seguridad
 
--2 No cuenta con VoBo de seguridad y operacion (termina y manda a tramitarlo)
+-11 No cuenta con VoBo de seguridad y operacion (termina y manda a tramitarlo)
+-3 impacto vecinal y se agrega una ultima pregunta
 0 termina arbol
-
-
-Sessión de usuario:
-
-	-Impacto
-		has_bussine:
-		giro_usuario:
-		has_siapem: 
+50 aforo mayor a 50
+-11 
