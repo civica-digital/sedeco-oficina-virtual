@@ -2,7 +2,7 @@
   %div.container-impacto.text-center
     %div.row
       %div.col-lg-12
-        -@impacto.each_with_index do |pregunta, index|
+        -@file.each_with_index do |pregunta, index|
           -clean_arrays
           -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
             -@respuestas_texto_array << respuestas["texto"]
@@ -43,5 +43,5 @@
   /*Cuando el documento carga se muestra la primer pregunta por defecto*/
   $(document).ready(function(){ 
     document.getElementById("1").removeAttribute("class");
-    number_of_views = "#{@impacto.size}";    /*Obtenemos el tamaño maximo de ids en la vista*/
+    number_of_views = "#{@file.size}";    /*Obtenemos el tamaño maximo de ids en la vista*/
   });

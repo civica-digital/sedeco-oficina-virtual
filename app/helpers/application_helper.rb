@@ -4,14 +4,6 @@ module ApplicationHelper
   	"iconos/#{img}.svg"
 	end
 
-	def get_progreso(total, value)
-		unless total.nil? || total.to_i > 0
-			(value.to_i * 100 / total.to_i)
-		else
-			0
-		end
- 	end
-
  	def clean_arrays
  	@respuestas_texto_array.clear
     @respuestas_imagen_array.clear

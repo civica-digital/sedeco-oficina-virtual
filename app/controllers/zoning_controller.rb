@@ -1,7 +1,6 @@
 class ZoningController < ApplicationController
-  before_action :init
   before_action only: :index do
-    get_json('suelo/suelo.json')
+    get_json('suelo')
   end
 
   
@@ -24,7 +23,7 @@ class ZoningController < ApplicationController
 
   unless params[:pagetime].blank?    
     next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
-    progreso_de_suelo = get_progreso(params[:pagetime][:totals],next_value)
+    progreso_de_suelo = get_progress(params[:pagetime][:totals],next_value)
     respond_to do |format|
       if session[:uso_de_suelo] && next_value == "0"
         format.js { render :js => "finaliza_sin_uso_de_suelo();"}
@@ -139,7 +138,6 @@ private
             session[:city_zoning] = 0
         else
           session[:city_zoning] = date
-          @lugar = date
         end
       
       when 9 #pregunta 9
@@ -166,30 +164,5 @@ private
       end
     end
   end
-
-
-   #inicializa los arrays de impacto
- def init
-  @respuestas_texto_array = []
-  @respuestas_imagen_array = []
-  @respuestas_siguiente_array = []
-  @respuestas_rango_array = []
-  @respuestas_hover_array = []
-  @respuestas_id_array = []
-  @respuestas_uso_restriccion_array = []
-  @respuestas_siguiente_restriccion_array = []
-
-  @tipo_de_suelo = ""
-  @progreso_de_impacto = 100
-  @progreso_de_suelo = 0
-  @progreso_de_seguridad = 0
-
-  @array_line=[]
-  @array_id=[]
-  @lugar= ""
-
-  @impacto_usuario =  session[:impacto_usuario]
- end
-
 
 end
