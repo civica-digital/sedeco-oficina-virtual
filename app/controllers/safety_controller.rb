@@ -18,7 +18,7 @@ class SafetyController < ApplicationController
     end
     
     unless params[:savedate].blank?
-      save_advance_date_safety(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
+      save_advance_rank_safety(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
     end
     
     unless params[:pagetime].blank?    

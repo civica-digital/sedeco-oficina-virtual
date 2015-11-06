@@ -13,11 +13,11 @@ class ZoningController < ApplicationController
   #Evalua los parametros enviados de la vista (guarda o renderea dependiendo)
   def evaluate_params(params)
     unless params[:savetime].blank?
-      save_advance(params[:savetime][:actual],params[:savetime][:clicked])
+      save_advance_zoning(params[:savetime][:actual],params[:savetime][:clicked])
     end
     
     unless params[:savedate].blank?
-      save_advance_rank(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
+      save_advance_rank_zoning(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
     end
     
     unless params[:pagetown].blank?
@@ -56,18 +56,5 @@ class ZoningController < ApplicationController
   	end
   end
 
-     
-  #valida si el negocio aplica para no tramitar uso de suelo
-  def validate_not_zoning
-    unless session[:size_house].nil? || session[:size_house].to_i == 0
-      business = session[:size_business].to_i
-      house = session[:size_house].to_i
-      if (business*100)/house <= 20
-       session[:uso_de_suelo] = true
-      else
-        session[:uso_de_suelo] = false
-      end
-    end
-  end
 
 end

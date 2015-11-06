@@ -94,8 +94,8 @@ module ProgressModule
     
     end
   end
-#*************************************SUELO*********************************
-  def save_advance(actual, clicked)
+#*************************************SEGURIDAD*********************************
+  def save_advance_safety(actual, clicked)
     case actual.to_i
       when 3 #pregunta 3
         case clicked.to_i
@@ -187,7 +187,7 @@ module ProgressModule
 
 
     #guarda los valores clickeados por el momento en la session del usuario
-  def save_advance_date(actual, clicked, date)
+  def save_advance_rank_safety(actual, clicked, date)
     case actual.to_i
       when 1 #pregunta 1
         case clicked.to_i
@@ -200,8 +200,8 @@ module ProgressModule
       end
   end
 
-#*************************************SEGURIDAD*********************************
-  def save_advance_safety(actual, clicked) 
+#*************************************USO DE SUELO*********************************
+  def save_advance_zoning(actual, clicked) 
     case actual.to_i
       when 1#pregunta 1
         case clicked.to_i
@@ -256,7 +256,7 @@ module ProgressModule
   end
 
     #guarda los valores clickeados por el momento en la session del usuario
-  def save_advance_rank_safety(actual, clicked, date)
+  def save_advance_rank_zoning(actual, clicked, date)
    case actual.to_i
       when 3 #pregunta 3
         case clicked.to_i
@@ -297,6 +297,20 @@ module ProgressModule
         end
     else
     
+    end
+  end
+
+
+  #valida si el negocio aplica para no tramitar uso de suelo
+  def validate_not_zoning
+    unless session[:size_house].nil? || session[:size_house].to_i == 0
+      business = session[:size_business].to_i
+      house = session[:size_house].to_i
+      if (business*100)/house <= 20
+       session[:uso_de_suelo] = true
+      else
+        session[:uso_de_suelo] = false
+      end
     end
   end
 

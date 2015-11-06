@@ -25,7 +25,7 @@
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
   }
 
-
+  /*Cuando se da clic a una delegacion se obtiene las colonias*/
   function dateClickTown(actual,clicked, next, restriction, next_restrictions,index){
     var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
     $("#date_"+next+"_"+clicked)
