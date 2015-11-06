@@ -1,24 +1,6 @@
 /***********************************IMPACTO***************************************/
   
 
-  /*Prepara la vista cuando de detecta un impacto vecinal*/
-  function finaliza_impacto_vecinal(tipo){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    
-
-    if(tipo == 'cita'){
-      $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2><p>Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita.</p>');
-      $('.next-step').html("<colorprimario>Siguiente paso 'Hacer una cita'</colorprimario><a class='colorprimario' href='/' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");   
-    }else if('normal'){
-      $('.jumbotron').html('<H2 class="colorprimario">Impacto Vecinal<H2><p>Porfavor continua y al final se daran todos los trámites y pasos que tu negocio necesita.</p>');
-      $('.next-step').html("<colorprimario>Siguiente paso 'Uso de suelo'</colorprimario><a class='colorprimario' href='/zoning' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");   
-    }
-     
-    //Actualizamos los progressBars
-    progressBar("100","0","0");
-  }
-
 
  /***********************************SUELO***************************************/
  function finaliza_uso_equipamiento(){

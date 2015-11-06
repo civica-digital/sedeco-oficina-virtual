@@ -27,9 +27,9 @@ private
         if next_value == "-3"
           format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_zonal'), :text =>t('outputs.impact.comment_zonal'),:next_text=>t('outputs.impact.next_text_zonal'), :path=> "#{root_path}"} }
         elsif next_value == "-2"
-          format.js { render :js => "finaliza_impacto_vecinal('normal');"}
+          format.js  { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_vecinal'), :text =>t('outputs.impact.comment_vecinal'),:next_text=>t('outputs.impact.next_text_vecinal'), :path=> "#{zoning_index_path}"} }
         elsif next_value == "-21"
-          format.js { render :js => "finaliza_impacto_vecinal('cita');"}
+          format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_vecinal'), :text =>t('outputs.impact.comment_vecinal_cita'),:next_text=>t('outputs.impact.next_text_vecinal_cita'), :path=> "#{root_path}"} }
         elsif next_value == "-1"
           format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_bajo'), :text =>t('outputs.impact.comment_bajo'),:next_text=>t('outputs.impact.next_text_bajo'), :path=> "#{zoning_index_path}"} }
         else    
