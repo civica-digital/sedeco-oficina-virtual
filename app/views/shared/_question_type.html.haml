@@ -16,7 +16,7 @@
                                                               :restrictions => locals[:restrictions][index],
                                                               :next_restrictions=>locals[:next_restrictions][index]}
 
-            -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'
+            -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'|| locals[:tipo]=='aforo'
               = render 'shared/question_date', :locals => {   :imagen => locals[:imagen][index],
                                                               :number => locals[:number], 
                                                               :text => text,
@@ -26,5 +26,13 @@
                                                               :next_restrictions=>locals[:next_restrictions][index],
                                                               :rank_init=>locals[:rank_init][index],
                                                               :tipo => locals[:tipo]}
+            -elsif locals[:tipo]=='calculadora'
+              = render 'shared/question_calculadora', :locals => {:imagen => locals[:imagen][index],
+                                                              :number => locals[:number], 
+                                                              :text => text,
+                                                              :id => locals[:id][index],
+                                                              :next => locals[:next][index],
+                                                              :restrictions => locals[:restrictions][index],
+                                                              :next_restrictions=>locals[:next_restrictions][index]}
   %div.col-md-12.margin-top
     %hr

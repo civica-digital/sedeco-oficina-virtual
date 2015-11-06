@@ -6,17 +6,17 @@
                     "numero": "1",
                     "texto": "¿Cuál es tu aforo?",
                     "array_respuestas": {
-                        "tipo": "normal",
+                        "tipo": "aforo",
                         "respuesta": [
                             {
                                 "id":"1",
-                                "-type": "rango",
-                                "texto": "Selecciona el aforo:",
+                                "-type": "aforo",
+                                "texto": "Selecciona:",
                                 "rangoinicial": "1",
                                 "siguiente": "3",
                                 "restricciones":[
                                     {
-                                        "uso": "-2",
+                                        "uso": "50",
                                         "siguiente": "4"
                                     }
                                 ]
@@ -34,32 +34,22 @@
                 },
                 {
                     "numero": "2",
-                    "texto": "Calculemos tu aforo",
+                    "texto": "Calculemos la capacidad total de tu negocio con la siguiente formula:",
                     "array_respuestas": {
-                        "tipo": "normal",
+                        "tipo": "calculadora",
                         "respuesta": [
-                            {   "id":"1",
-                                "-type": "normal",
-                                "texto": "Si",
-                                "imagen": "si",
+                            {
+                                "id":"1",
+                                "-type": "calculadora",
+                                "texto": "Selecciona:",
+                                "rangoinicial": "1",
                                 "siguiente": "3",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "-4",
-                                "restricciones":[]
+                                "restricciones":[
+                                    {
+                                        "uso": "50",
+                                        "siguiente": "4"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -114,7 +104,7 @@
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "no",
-                                "siguiente": "-2",
+                                "siguiente": "-11",
                                 "restricciones":[]
                             },
                             {
