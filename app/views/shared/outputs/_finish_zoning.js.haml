@@ -1,0 +1,6 @@
+//hacemos visible la salida y la llenamos con la información
+$('.diagnostic').removeClass("hidden");
+$('.jumbotron').html("<H2 class='colorprimario'>#{type}<H2><p>#{text}</p>");
+$('.next-step').html("<colorprimario>#{next_text}</colorprimario><a class='colorprimario' href=#{path} data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
+//Actualizamos los progressBars
+progressBar("100","100","0");

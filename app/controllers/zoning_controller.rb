@@ -33,13 +33,13 @@ class ZoningController < ApplicationController
       progreso_de_suelo = get_progress(params[:pagetime][:totals],next_value)
       respond_to do |format|
         if session[:uso_de_suelo] && next_value == "0"
-          format.js { render :js => "finaliza_sin_uso_de_suelo();"}
+          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_sin_suelo'), :text =>t('outputs.zoning.comment_sin_suelo'),:next_text=>t('outputs.zoning.next_text_sin_suelo'), :path=> "#{safety_index_path}"} }
         elsif !session[:uso_de_suelo] && next_value == "0"
-          format.js { render :js => "finaliza_con_uso_de_suelo();"}
+          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_con_suelo'), :text =>t('outputs.zoning.comment_con_suelo'),:next_text=>t('outputs.zoning.next_text_con_suelo'), :path=> "#{safety_index_path}"} }
         elsif next_value == "-5"
-          format.js { render :js => "finaliza_uso_equipamiento();"}
+          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_equipamiento'), :text =>t('outputs.zoning.comment_equipamiento'),:next_text=>t('outputs.zoning.next_text_equipamiento'), :path=> "#{root_path}"} }
         elsif next_value == "-6"
-          format.js { render :js => "finaliza_uso_derechos_adquiridos();"}
+          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_derechos'), :text =>t('outputs.zoning.comment_derechos'),:next_text=>t('outputs.zoning.next_text_derechos'), :path=> "#{root_path}"} }
         else  
           format.js { render :js => "hidden_div(#{next_value},100,#{progreso_de_suelo},0);"}
         end
