@@ -19,15 +19,7 @@
     progressBar("100","0","0");
   }
 
-  /*Prepara la vista cuando de detecta un bajo impacto*/
-  function finaliza_bajo_impacto(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html("<H2 class='colorprimario'>Bajo impacto<H2><p>Porfavor continua y al final se daran todos los trámites y pasos que tu negocio necesita.</p>");
-    $('.next-step').html("<colorprimario>Siguiente paso 'Uso de suelo'</colorprimario><a class='colorprimario' href='/zoning' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
-    //Actualizamos los progressBars
-    progressBar("100","0","0");
-  }
+
  /***********************************SUELO***************************************/
  function finaliza_uso_equipamiento(){
     //hacemos visible la salida y la llenamos con la información
