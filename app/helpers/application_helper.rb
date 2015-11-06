@@ -16,4 +16,24 @@ module ApplicationHelper
     @respuestas_siguiente_restriccion_array.clear
   end
 
+  #crea array dinamico para dorpdown
+  def get_array_values(init,type)
+    if type == "fecha"
+      final = Time.new.year
+      unidad = ""
+    elsif type == "rango"
+      final = 5000
+      unidad = "m2"
+    elsif type == "aforo"
+      final = 500
+      unidad = ""
+    end 
+    array_ = []
+
+    ((final.to_i).downto(Integer(init))).each do |n|
+      array_ << "#{n}#{unidad}"
+    end
+    return array_
+  end
+
 end

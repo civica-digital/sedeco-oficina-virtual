@@ -1,16 +1,8 @@
 -unless locals[:rank_init].nil?
   %div.margin-top-dropdown
-    -if locals[:tipo] == "fecha"
+    -if locals[:tipo] == "fecha" || locals[:tipo] == "aforo"|| locals[:tipo] == "rango"
       =select :date, "date", 
-        get_array_fecha(locals[:rank_init]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
-        :onchange=> "dateClick(#{locals[:number]}, 
-          #{locals[:id]}, 
-          #{locals[:next]},
-          #{locals[:restrictions]},
-          #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
-    -elsif locals[:tipo] == "rango"
-      =select :date, "date", 
-        get_array_rank(locals[:rank_init]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
+        get_array_values(locals[:rank_init],locals[:tipo]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
         :onchange=> "dateClick(#{locals[:number]}, 
           #{locals[:id]}, 
           #{locals[:next]},
@@ -27,14 +19,6 @@
     -elsif locals[:tipo] == "sublugar"
       =select :date, "date", 
         Services.load_city(session[:date_zoning]),{ include_blank: true , selected: false }, class: "chosen-select",
-        :onchange=> "dateClick(#{locals[:number]}, 
-          #{locals[:id]}, 
-          #{locals[:next]},
-          #{locals[:restrictions]},
-          #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
-    -elsif locals[:tipo] == "aforo"
-      =select :date, "date", 
-        get_array_aforo(locals[:rank_init]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
         :onchange=> "dateClick(#{locals[:number]}, 
           #{locals[:id]}, 
           #{locals[:next]},

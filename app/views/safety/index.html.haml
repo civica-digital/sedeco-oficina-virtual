@@ -17,6 +17,7 @@
             -else
               -@respuestas_siguiente_restriccion_array << "0"
               -@respuestas_uso_restriccion_array << "0"
+         
           = render 'shared/question_type', :locals => {:tipo =>pregunta["array_respuestas"]["tipo"],
                                                         :number => pregunta["numero"], 
                                                         :texto_question => pregunta["texto"],
@@ -29,7 +30,7 @@
                                                         :rank_init => @respuestas_rango_array}
     
     .div.diagnostic.hidden{:id=>"diagnostic"}         
-      =render "shared/diagnostic_safety", text: @tipo_de_impacto
+      =render "shared/diagnostic_safety", safety: @tipo_de_impacto
     .div.margin-bottom-end-page  
       =render "shared/progressbar"
 
