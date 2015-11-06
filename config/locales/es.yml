@@ -2,3 +2,7 @@ es:
   shared:
     question_calculadora:
       menos: "-"
+  outputs:
+    impact:
+      type: "Impacto Zonalo"
+      comment: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita." 

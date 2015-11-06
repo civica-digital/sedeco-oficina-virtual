@@ -1,0 +1,6 @@
+//hacemos visible la salida y la llenamos con la información
+$('.diagnostic').removeClass("hidden");
+$('.jumbotron').html("<H2 class='colorprimario'>#{t('outputs.impact.type')}<H2><p>#{t('outputs.impact.comment')}</p>");
+$('.next-step').html("<colorprimario>Siguiente paso 'Hacer una cita'</colorprimario><a class='colorprimario' href=#{root_path} data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
+//Actualizamos los progressBars
+progressBar("100","0","0");

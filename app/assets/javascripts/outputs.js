@@ -1,14 +1,5 @@
 /***********************************IMPACTO***************************************/
-  /*Prepara la vista cuando de detecta un impacto zonal*/
-  function finaliza_impacto_zonal(){
-    //hacemos visible la salida y la llenamos con la información
-    $('.diagnostic').removeClass("hidden");
-    $('.jumbotron').html("<H2 class='colorprimario'>Impacto Zonal<H2><p>Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita.</p>");
-    $('.next-step').html("<colorprimario>Siguiente paso 'Hacer una cita'</colorprimario><a class='colorprimario' href='/' data-no-turbolink='true'><span class='glyphicon glyphicon-chevron-right'></span></a>");    
-    //Actualizamos los progressBars
-    progressBar("100","0","0");
-
-  }
+  
 
   /*Prepara la vista cuando de detecta un impacto vecinal*/
   function finaliza_impacto_vecinal(tipo){

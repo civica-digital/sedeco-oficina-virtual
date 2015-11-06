@@ -25,7 +25,7 @@ private
       progreso_de_impacto = get_progress(params[:pagetime][:totals],next_value)
       respond_to do |format|
         if next_value == "-3"
-          format.js { render :js => "finaliza_impacto_zonal();"}
+          format.js { render :partial => 'shared/outputs/finish_zonal'}
         elsif next_value == "-2"
           format.js { render :js => "finaliza_impacto_vecinal('normal');"}
         elsif next_value == "-21"
