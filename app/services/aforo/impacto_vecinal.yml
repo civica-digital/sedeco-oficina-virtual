@@ -1,0 +1,19 @@
+---
+- :id: 1
+  :name: 'Restaurantes y clubes privados'
+  :size: '1.00'
+- :id: 2
+  :name: 'Salones de fiestas para hasta 250 personas'
+  :size: '0.50'
+- :id: 3
+  :name: 'Salones de fiestas para más de 250 personas'
+  :size: '0.70'
+- :id: 4
+  :name: 'Cines, teatros y auditorios para hasta 250 personas'
+  :size: '0.50'
+- :id: 5
+  :name: 'Cines, teatros y auditorios para más de 250 personas'
+  :size: '0.70'
+- :id: 6
+  :name: 'Establecimientos de hospedaje'
+  :size: '5.00'

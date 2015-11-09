@@ -1,10 +1,8 @@
 $('#<%=@key%>').empty();
 $('#<%=@key%>').trigger("chosen:updated");
-console.log('pase');
 <%Services.load_city(@town_name).each_with_index do |city, index|%>
   <%@array_city[index] = city.to_s%>
   <%@array_id[index] = index.to_s%>
-  console.log('#<%=city%>');
 <%end%>
 var array_line = <%= raw @array_city%>
 var array_id = <%= raw @array_id%>
