@@ -36,4 +36,8 @@ module ApplicationHelper
     return array_
   end
 
+  def bajo_impacto?
+    session[:impacto_usuario] == -1
+  end
+
 end

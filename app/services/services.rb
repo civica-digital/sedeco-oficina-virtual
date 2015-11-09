@@ -64,6 +64,17 @@ module Services
     end
   end
 
+  def self.load_aforo(type)
+    if type == 'bajo'
+      val = 'aforo/bajo_impacto'
+    else
+      val = 'aforo/impacto_vecinal'
+    end
+    load_values(val).map do |town|
+        { id: town[:id], label: town[:name]}
+      end
+  end
+
   def self.path_to(object)
     File.expand_path("#{object}.yml", File.dirname(__FILE__))
   end

@@ -15,5 +15,9 @@
   %div.row  
     .col-md-6.col-md-offset-3
       superficie del giro
-      =select :date, "date", 
-      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select"
+      -if bajo_impacto?
+        =select :date, "date", 
+        Services.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select"
+      -else
+        =select :date, "date", 
+        Services.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select"
