@@ -39,7 +39,7 @@ class SafetyController < ApplicationController
    def getNext(next_val, restriction, next_restriction)
       if restriction.to_i == -3 && session[:impacto_usuario] == -2
         next_restriction
-      elsif restriction.to_i == 50 && session[:aforo] != nil && session[:aforo].to_i > 50
+      elsif restriction.to_i == 50 && session[:aforo] != nil && session[:aforo].to_i > 49
         next_restriction
       else
         next_val

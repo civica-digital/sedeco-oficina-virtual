@@ -56,7 +56,7 @@
                 },
                 {
                     "numero": "3",
-                    "texto": "¿Recogiste y entregaste el autodiagnóstico de tu delegación?",
+                    "texto": "¿Recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -88,7 +88,7 @@
                 },
                 {
                     "numero": "4",
-                    "texto": "¿Cuentas con el VoBo seguridad y operación?",
+                    "texto": "¿Cuentas con el visto bueno de seguridad y operación?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
