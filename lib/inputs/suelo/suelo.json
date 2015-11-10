@@ -20,7 +20,7 @@
                                 "-type": "normal",
                                 "texto": "(HM)Habitacional Mixto",
                                 "imagen": "hab-mixto",
-                                "siguiente": "4",
+                                "siguiente": "2",
                                 "restricciones":[]
                             },
                             {
@@ -28,7 +28,7 @@
                                 "-type": "normal",
                                 "texto": "(HO)Habitacional Oficina",
                                 "imagen": "hab-oficinas",
-                                "siguiente": "4",
+                                "siguiente": "2",
                                 "restricciones":[]
                             },
                             {
@@ -36,7 +36,7 @@
                                 "-type": "normal",
                                 "texto": "(HC)Habitacional Comercio",
                                 "imagen": "hab-comercio",
-                                "siguiente": "4",
+                                "siguiente": "2",
                                 "restricciones":[]
                             },
                             {

@@ -4,8 +4,8 @@ es:
       menos: "-"
   outputs:
     impact:
-      type_zonal: "Impacto Zonalo"
-      comment_zonal: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita." 
+      type_zonal: "Impacto Zonal"
+      comment_zonal: "Debido a los datos que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita." 
       next_text_zonal: "Siguiente paso 'Hacer una cita'"
       type_bajo: "Bajo impacto"
       comment_bajo: "Porfavor continua y al final se daran todos los trámites y pasos que tu negocio necesita."

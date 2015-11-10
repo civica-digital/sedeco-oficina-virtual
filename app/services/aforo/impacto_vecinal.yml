@@ -17,3 +17,6 @@
 - :id: 6
   :name: 'Establecimientos de hospedaje'
   :size: '5.00'
+- :id: 7
+  :name: 'Otro'
+  :size: '0.60'
