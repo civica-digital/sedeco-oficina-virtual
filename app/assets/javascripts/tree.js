@@ -153,7 +153,6 @@
 
    /*Se piden las colonias de una delegacion */
   function show_city(town){
-    alert(town);
     $.ajax({
          type:'GET', 
          url: "#{root_path}",
@@ -164,5 +163,53 @@
         }, 
          data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
     });
+  }
+
+/*Permite obtener y validar el aforo del negocio*/
+ function valueAforo(type){
+    var superficie = $("#superficie option:selected").text();
+    var mobiliario = $("#mobiliario option:selected").text();
+    var impacto = $("#impacto option:selected").text();
+
+    if(superficie!= "" && mobiliario!= "" && impacto!= ""){
+      if(parseInt(superficie)>=parseInt(mobiliario)){
+        set_aforo(superficie,mobiliario,impacto,type);
+      }else{
+        alert('El Mobiliario no puede ser mayor al establecimiento');
+        $("#mobiliario option:selected").removeAttr("selected");
+        $('#mobiliario').trigger("chosen:updated");
+      }
+      
+    }
+  }
+
+
+  /*Obtiene y regresa el valor de aforo de un negocio*/
+  function set_aforo(superficie,mobiliario,impacto,type){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          window.scrollBy(0, 300);
+         },
+        error: function(){
+        }, 
+         data: $.param({ impact: {type: type ,name: impacto,superficie: superficie, mobiliario: mobiliario}})
+    });
+  }
+
+
+
+  function set_value_aforo(valor){
+    document.getElementById('date_1_1').value = valor;
+
+    $("#mobiliario option:selected").removeAttr("selected");
+    $('#mobiliario').trigger("chosen:updated");
+    $("#superficie option:selected").removeAttr("selected");
+    $('#superficie').trigger("chosen:updated");
+    $("#impacto option:selected").removeAttr("selected");
+    $('#impacto').trigger("chosen:updated");
+    document.getElementById(2).setAttribute("class", "hidden");
+    document.getElementById(3).removeAttribute("class");
   }
 

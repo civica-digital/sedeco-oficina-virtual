@@ -20,6 +20,17 @@ class SafetyController < ApplicationController
     unless params[:savedate].blank?
       save_advance_rank_safety(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
     end
+
+    unless params[:impact].blank?
+      superficie = params[:impact][:superficie].chomp('m2')   
+      mobiliario = params[:impact][:mobiliario].chomp('m2')   
+      aforo_size = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:name])
+      total = (superficie.to_f -  mobiliario.to_f) / aforo_size.to_f
+      save_aforo(total)
+      respond_to do |format|
+        format.js { render :js => "set_value_aforo(#{total.to_i});"}
+      end
+    end
     
     unless params[:pagetime].blank?    
       next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])

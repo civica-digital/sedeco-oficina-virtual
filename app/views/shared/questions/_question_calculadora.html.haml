@@ -17,18 +17,11 @@
       superficie del giro
       -if bajo_impacto?
         =select :date, "date", 
-        Services.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo()"
+        Towns.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo('bajo')"
       -else
         =select :date, "date", 
-        Services.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo()"
+        Towns.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo('vecinal')"
 %div.margin-top-dropdown.hidden{:id=>"diagnosticaforo"} 
   .jumbotron
     %h2.colorprimario
       ="Tu aforo es: #@aforo"
-:javascript
-  function valueAforo(){
-    var superficie = $("#superficie option:selected").text();
-    var mobiliario = $("#superficie option:selected").text();
-    var impacto = $("#superficie option:selected").text();
-    alert(date);
-  }
