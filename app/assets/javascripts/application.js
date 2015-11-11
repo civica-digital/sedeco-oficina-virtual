@@ -14,8 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery-ui/datepicker
+//= require jquery-ui/datepicker-es
 //= require chosen-jquery
 //= require_tree .
 
 $(document).ready(loadChosen);
 $(document).on('page:load', loadChosen);
+
+$(function() {
+  $("#calendar").datepicker({ minDate: 0, dayNamesMin: $.datepicker.regional.es.dayNamesShort });
+});
+
