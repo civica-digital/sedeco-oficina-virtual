@@ -3,21 +3,32 @@
     .col-md-5
       Superficie del establecimiento
       =select :date, "date", 
-      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select"
+      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select", id:"superficie",:onchange=> "valueAforo()"
     .col-md-2
       .col-md-6.col-md-offset-3
         %hr.style-line
     .col-md-5
       Superficie del mobiliario
       =select :date, "date", 
-      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select"
+      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",:id=>"mobiliario",:onchange=> "valueAforo()"
   %hr.style-line
   %div.row  
     .col-md-6.col-md-offset-3
       superficie del giro
       -if bajo_impacto?
         =select :date, "date", 
-        Services.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select"
+        Services.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo()"
       -else
         =select :date, "date", 
-        Services.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select"
+        Services.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo()"
+%div.margin-top-dropdown.hidden{:id=>"diagnosticaforo"} 
+  .jumbotron
+    %h2.colorprimario
+      ="Tu aforo es: #@aforo"
+:javascript
+  function valueAforo(){
+    var superficie = $("#superficie option:selected").text();
+    var mobiliario = $("#superficie option:selected").text();
+    var impacto = $("#superficie option:selected").text();
+    alert(date);
+  }
