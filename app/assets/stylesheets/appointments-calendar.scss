@@ -1,0 +1,55 @@
+.appointments-calendar .ui-datepicker {
+  border: none;
+  width: 100%;
+}
+
+.appointments-calendar .ui-datepicker-header {
+  background: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+.appointments-calendar .ui-datepicker-calendar {
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+
+  thead {
+    text-transform: uppercase;
+    color: #cccccc;
+
+  }
+
+  thead th {
+    font-weight: normal;
+    font-size: 0.8em;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  th, td {
+    border: 1px solid #cccccc;
+  }
+
+  td {
+    padding: 0;
+  }
+}
+
+.appointments-calendar .ui-state-default {
+  height: 100px;
+  font-weight: bold;
+  text-decoration: none;
+  background: none;
+  border: none;
+
+  &.ui-state-active {
+    border: none;
+    background: #E6007E;
+  }
+}
+
+.appointments-calendar .ui-state-highlight {
+  border: none;
+  background: none;
+}
+

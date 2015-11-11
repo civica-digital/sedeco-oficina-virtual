@@ -23,6 +23,10 @@ $(document).ready(loadChosen);
 $(document).on('page:load', loadChosen);
 
 $(function() {
-  $("#calendar").datepicker({ minDate: 0, dayNamesMin: $.datepicker.regional.es.dayNamesShort });
+  $("#calendar").datepicker({
+    minDate: 0,
+    dayNamesMin: $.datepicker.regional.es.dayNamesShort,
+    hideIfNoPrevNext: true
+  });
 });
 
