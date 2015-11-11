@@ -1,26 +1,26 @@
 -unless locals[:rank_init].nil?
   %div.margin-top-dropdown
     -if locals[:tipo] == "fecha" || locals[:tipo] == "aforo"|| locals[:tipo] == "rango"
-      =select :date, "date", 
+      =select :date, "date",
         get_array_values(locals[:rank_init],locals[:tipo]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
-        :onchange=> "dateClick(#{locals[:number]}, 
-          #{locals[:id]}, 
+        :onchange=> "dateClick(#{locals[:number]},
+          #{locals[:id]},
           #{locals[:next]},
           #{locals[:restrictions]},
           #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
     -elsif locals[:tipo] == "lugar"
-      =select :date, "date", 
-        Services.load_towns.each_with_index.collect {|opt| [opt[:label], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select",
-        :onchange=> "dateClickTown(#{locals[:number]}, 
-          #{locals[:id]}, 
+      =select :date, "date",
+        Towns.load_towns.each_with_index.collect {|opt| [opt[:name], opt[:id]]},{ include_blank: true , selected: false }, class: "chosen-select",
+        :onchange=> "dateClickTown(#{locals[:number]},
+          #{locals[:id]},
           #{locals[:next]},
           #{locals[:restrictions]},
           #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
     -elsif locals[:tipo] == "sublugar"
-      =select :date, "date", 
-        Services.load_city(session[:date_zoning]),{ include_blank: true , selected: false }, class: "chosen-select",
-        :onchange=> "dateClick(#{locals[:number]}, 
-          #{locals[:id]}, 
+      =select :date, "date",
+        Towns.load_city(session[:date_zoning]),{ include_blank: true , selected: false }, class: "chosen-select",
+        :onchange=> "dateClick(#{locals[:number]},
+          #{locals[:id]},
           #{locals[:next]},
           #{locals[:restrictions]},
           #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
