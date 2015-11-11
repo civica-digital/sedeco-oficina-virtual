@@ -199,10 +199,10 @@
   }
 
 
-
+/*Se coloca el valor del aforo y se borran los valores de la calculadora*/
   function set_value_aforo(valor){
+    
     document.getElementById('date_1_1').value = valor;
-
     $("#mobiliario option:selected").removeAttr("selected");
     $('#mobiliario').trigger("chosen:updated");
     $("#superficie option:selected").removeAttr("selected");
