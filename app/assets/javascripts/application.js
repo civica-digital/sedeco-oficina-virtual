@@ -24,6 +24,9 @@ $(document).on('page:load', loadChosen);
 
 $(function() {
   $("#calendar").datepicker({
+    onSelect: function(date) {
+      $("#new_appointment").modal();
+    },
     minDate: 0,
     dayNamesMin: $.datepicker.regional.es.dayNamesShort,
     hideIfNoPrevNext: true

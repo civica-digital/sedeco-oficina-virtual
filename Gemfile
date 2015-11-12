@@ -16,6 +16,7 @@ gem 'chosen-rails'
 gem 'haml-rails'
 gem 'i18n'
 gem 'route_translator'
+gem 'simple_form'
 
 group :development, :test do
   gem 'byebug'

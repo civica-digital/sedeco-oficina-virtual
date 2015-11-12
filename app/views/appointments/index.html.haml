@@ -4,3 +4,16 @@
       %h4
         Selecciona una fecha
       %div#calendar.appointments-calendar
+
+%div.modal.fade#new_appointment
+  %div.modal-dialog.modal-sm
+    %div.modal-content
+      %div.modal-header
+        %h4
+          Agendar cita
+      %div.modal-body
+        = simple_form_for @appointment do |f|
+          = f.input :name
+          = f.input :email
+          = f.input :phonenumber
+          = f.button :submit, class: "btn btn-primary btn-block"
