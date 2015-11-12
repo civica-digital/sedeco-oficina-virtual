@@ -1,3 +1,5 @@
+@import "colors";
+
 .appointments-calendar .ui-datepicker {
   border: none;
   width: 100%;
@@ -6,7 +8,8 @@
 .appointments-calendar .ui-datepicker-header {
   background: none;
   border: none;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  color: $pink;
 }
 
 .appointments-calendar .ui-datepicker-calendar {
@@ -44,12 +47,39 @@
 
   &.ui-state-active {
     border: none;
-    background: #E6007E;
+    background: $pink;
+    background-image: url('iconos/si-m.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45px 30px;
   }
 }
 
 .appointments-calendar .ui-state-highlight {
   border: none;
   background: none;
+}
+
+.appointments-calendar .ui-icon.ui-icon-circle-triangle-e {
+  background-image: url('iconos/arrow487.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.appointments-calendar .ui-icon.ui-icon-circle-triangle-w {
+  background-image: url('iconos/arrowhead7.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+
+.appointments-calendar .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
 }
 

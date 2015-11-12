@@ -6,7 +6,7 @@ describe 'User can set an appointment', js: true do
     visit "/citas"
 
     expect(calendar_input).to be_present
-    expect(page).to have_content current_month
+    expect(page).to have_content current_month.upcase
 
     select_date Date.tomorrow
     expect(selected_date_cell).to be_present
