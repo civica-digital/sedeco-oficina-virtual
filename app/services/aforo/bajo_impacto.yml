@@ -1,8 +1,5 @@
 ---
 - :id: 1
-  :name: 'Áreas de Servicios'
-  :size: '0.50'
-- :id: 2
   :name: 'Servicios de hospedaje prestados por hospitales, clínicas médicas, asilos, conventos, internados y seminarios'
   :size: '4.00'
 - :id: 3

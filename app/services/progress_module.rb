@@ -200,6 +200,10 @@ module ProgressModule
       end
   end
 
+  def save_aforo(value)
+    session[:aforo] = value
+  end
+
 #*************************************USO DE SUELO*********************************
   def save_advance_zoning(actual, clicked) 
     case actual.to_i

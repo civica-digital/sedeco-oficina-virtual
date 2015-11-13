@@ -7,45 +7,47 @@
     var TIPO_FECHA = 2;
     var TIPO_RANGO = 3;
     var TIPO_LUGAR = 4;
+  
+/*************************************************GENERALES************************************/
 
-    
-  /*Cuando se da clic a una opcion se obtiene el tama*/
+/*Cuando se da clic a una opcion se obtiene el tama*/
   function buttonClick(actual,clicked, next, restriction, next_restrictions){
     changeColorSelected(actual,clicked);
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_NORMAL, 0);
   }
 
-  /*Cuando se da clic a una opcion se obtiene el tama*/
+  /*Cuando se da clic a una opcion de un dropdown se obtiene el tama*/
   function dateClick(actual,clicked, next, restriction, next_restrictions,index){
     //var date = $(".date_"+clicked).val();
-    var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
+    var date = $("#date_"+actual+"_"+clicked).val();
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
+  }
+
+    /*Cuando se escribe un valor manualmente*/
+  function dateText(actual,clicked, next, restriction, next_restrictions,index){
+    //var date = $(".date_"+clicked).val();
+    var date = $("#date_"+actual+"_"+clicked).text();
 
     $("#date_"+next+"_"+clicked)
 
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
   }
 
-  /*Cuando se da clic a una delegacion se obtiene las colonias*/
-  function dateClickTown(actual,clicked, next, restriction, next_restrictions,index){
-    var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
-    $("#date_"+next+"_"+clicked)
-    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
-    window.order = date;
-    window.key = "date_"+next+"_"+clicked
-    var url = window.location.href;
-
-      $.ajax({
-        type:'GET', 
-        url: window.url,
-        success: function(){
-        },
+/*Se muestra la vista dependiendo si existe una restriccion */
+  function show_view(next, restriction,next_restrictions){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          window.scrollBy(0, 300);
+         },
         error: function(){
         }, 
-        data: $.param({ pagetown: {city_id: window.order, key: window.key}}), format: 'js'
-      });
+         data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
+    });
   }
 
-  /*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
+/*Se elimina la classe hidden para hacer visible el view y se actualizan los progress bar*/
   function hidden_div(id, impacto, suelo, seguiridad){
     //hacemos invisible la salida
     $('.diagnostic').addClass("hidden");
@@ -122,22 +124,6 @@
     });
   }
 
-  /*Se muestra la vista dependiendo si existe una restriccion */
-  function show_view(next, restriction,next_restrictions){
-    $.ajax({
-         type:'GET', 
-         url: "#{root_path}",
-         success: function(){
-          window.scrollBy(0, 300);
-         },
-        error: function(){
-        }, 
-         data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
-    });
-  }
-
-
- 
   /*Maneja el llenado de las barras de progreso*/
   function progressBar(impacto,suelo, seguiridad){
         $('.progress-impacto').text("Impacto: "+impacto+"%");
@@ -151,9 +137,14 @@
 
   }
 
+/*************************************************IMPACTO************************************/
+ 
+
+
+
+/*************************************************SUELO************************************/
    /*Se piden las colonias de una delegacion */
   function show_city(town){
-    alert(town);
     $.ajax({
          type:'GET', 
          url: "#{root_path}",
@@ -164,5 +155,78 @@
         }, 
          data: $.param({ pagetime: {next: next, totals: number_of_views, restriction: restriction, next_restrictions: next_restrictions }})
     });
+  }
+
+
+ /*Cuando se da clic a una delegacion se obtiene las colonias*/
+  function dateClickTown(actual,clicked, next, restriction, next_restrictions,index){
+    var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
+    $("#date_"+next+"_"+clicked)
+    deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
+    window.order = date;
+    window.key = "date_"+next+"_"+clicked
+    var url = window.location.href;
+
+      $.ajax({
+        type:'GET', 
+        url: window.url,
+        success: function(){
+        },
+        error: function(){
+        }, 
+        data: $.param({ pagetown: {city_id: window.order, key: window.key}}), format: 'js'
+      });
+  }
+
+/*************************************************SEGURIDAD************************************/
+
+/*Permite obtener y validar el aforo del negocio*/
+ function valueAforo(type){
+
+    var superficie = $("#superficie option:selected").text();
+    var mobiliario = $("#mobiliario option:selected").text();
+    var impacto = $("#impacto option:selected").text();
+
+    if(superficie!= "" && mobiliario!= "" && impacto!= ""){
+      if(parseInt(superficie)>=parseInt(mobiliario)){
+        set_aforo(superficie,mobiliario,impacto,type);
+      }else{
+
+        alert('El Mobiliario no puede ser mayor al establecimiento');
+        $("#mobiliario option:selected").removeAttr("selected");
+        $('#mobiliario').trigger("chosen:updated");
+      }
+      
+    }
+  }
+
+
+  /*Obtiene y regresa el valor de aforo de un negocio*/
+  function set_aforo(superficie,mobiliario,impacto,type){
+    $.ajax({
+         type:'GET', 
+         url: "#{root_path}",
+         success: function(){
+          window.scrollBy(0, 300);
+
+         },
+        error: function(){
+        }, 
+         data: $.param({ impact: {type: type ,name: impacto,superficie: superficie, mobiliario: mobiliario}})
+    });
+  }
+
+
+/*Se coloca el valor del aforo y se borran los valores de la calculadora*/
+  function set_value_aforo(valor){
+    document.getElementById('date_1_1').value = valor;
+    $('#date_1_1').trigger("change");
+    $("#mobiliario option:selected").removeAttr("selected");
+    $('#mobiliario').trigger("chosen:updated");
+    $("#superficie option:selected").removeAttr("selected");
+    $('#superficie').trigger("chosen:updated");
+    $("#impacto option:selected").removeAttr("selected");
+    $('#impacto').trigger("chosen:updated");
+    document.getElementById(2).setAttribute("class", "hidden");
   }
 

@@ -8,7 +8,7 @@
           %div{:class=>"col-md-#{12/locals[:texto_answer].size} text-center"}
 
             -if locals[:tipo]=='normal'
-              = render 'shared/question_normal', :locals => {:imagen => locals[:imagen][index],
+              = render 'shared/questions/question_normal', :locals => {:imagen => locals[:imagen][index],
                                                               :number => locals[:number], 
                                                               :text => text,
                                                               :id => locals[:id][index],
@@ -16,8 +16,8 @@
                                                               :restrictions => locals[:restrictions][index],
                                                               :next_restrictions=>locals[:next_restrictions][index]}
 
-            -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'|| locals[:tipo]=='aforo'
-              = render 'shared/question_date', :locals => {   :imagen => locals[:imagen][index],
+            -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'
+              = render 'shared/questions/question_date', :locals => {  :imagen => locals[:imagen][index],
                                                               :number => locals[:number], 
                                                               :text => text,
                                                               :id => locals[:id][index],
@@ -26,8 +26,19 @@
                                                               :next_restrictions=>locals[:next_restrictions][index],
                                                               :rank_init=>locals[:rank_init][index],
                                                               :tipo => locals[:tipo]}
+            -elsif locals[:tipo]=='open'
+              = render 'shared/questions/question_open', :locals => { :imagen => locals[:imagen][index],
+                                                              :number => locals[:number], 
+                                                              :text => text,
+                                                              :id => locals[:id][index],
+                                                              :next => locals[:next][index],
+                                                              :restrictions => locals[:restrictions][index],
+                                                              :next_restrictions=>locals[:next_restrictions][index],
+                                                              :rank_init=>locals[:rank_init][index],
+                                                              :tipo => locals[:tipo]}
+
             -elsif locals[:tipo]=='calculadora'
-              = render 'shared/question_calculadora', :locals => {:imagen => locals[:imagen][index],
+              = render 'shared/questions/question_calculadora', :locals => {:imagen => locals[:imagen][index],
                                                               :number => locals[:number], 
                                                               :text => text,
                                                               :id => locals[:id][index],

@@ -1,6 +1,6 @@
 $('#<%=@key%>').empty();
 $('#<%=@key%>').trigger("chosen:updated");
-<%Services.load_city(@town_name).each_with_index do |city, index|%>
+<%Towns.load_city(@town_name).each_with_index do |city, index|%>
   <%@array_city[index] = city.to_s%>
   <%@array_id[index] = index.to_s%>
 <%end%>
