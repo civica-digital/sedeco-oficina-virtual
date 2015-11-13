@@ -37,7 +37,7 @@ class SafetyController < ApplicationController
       progreso_de_seguridad = get_progress(params[:pagetime][:totals],next_value)
       respond_to do |format|  
         if next_value == "0"
-          format.js { render :partial => 'shared/outputs/finish_safety', :locals => {:type => t('outputs.safety.type_vobo'), :text =>t('outputs.safety.comment_vobo'),:next_text=>t('outputs.safety.next_text_vobo'), :path=> "#{root_path}"} }
+          format.js { render :partial => 'shared/outputs/finish_safety', :locals => {:type => t('outputs.safety.type_last'), :text =>t('outputs.safety.comment_last'),:next_text=>t('outputs.safety.next_text_last'), :path=> "#{root_path}"} }
         else
           format.js { render :js => "hidden_div(#{next_value},100,100,#{progreso_de_seguridad});"}
         end

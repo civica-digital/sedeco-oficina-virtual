@@ -32,3 +32,6 @@ es:
       type_vobo: "No tiene el visto bueno de seguridad."
       comment_vobo: "Porfavor haz una cita para poder tramitarlo y continuar el diagnóstico."
       next_text_vobo: "Página para ver trámite 'Ir'"
+      type_last: "Terminamos."
+      comment_last: "Porfavor da clic en continuar para ver tu diagnóstico completo"
+      next_text_last: "Siguiente paso 'Ver diagnóstico'"
