@@ -16,3 +16,4 @@ es:
         email: 'Correo electrónico'
         phonenumber: "Teléfono"
         name: "Nombre"
+        scheduled_date: "Fecha"

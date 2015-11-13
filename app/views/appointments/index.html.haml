@@ -1,5 +1,6 @@
 %div.container
   %div.row
+    = render partial: "shared/messages", flash: flash
     %div.col-md-10.col-md-offset-1
       %h4
         Selecciona una fecha
@@ -12,8 +13,9 @@
         %h4
           Agendar cita
       %div.modal-body
-        = simple_form_for @appointment do |f|
+        = simple_form_for @appointment, html: { class: form_errors_class(@appointment) } do |f|
+          = f.input :scheduled_date, as: :string, readonly: true
           = f.input :name
-          = f.input :email
+          = f.input :email, as: :email
           = f.input :phonenumber
           = f.button :submit, class: "btn btn-primary btn-block"

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :safety, controller: 'safety'
 
   localized do
-    resources :appointments
+    resources :appointments, only: [:index, :create]
   end
 end
