@@ -48,7 +48,7 @@
   &.ui-state-active {
     border: none;
     background: $pink;
-    background-image: url('iconos/si-m.svg');
+    background-image: image-url('iconos/si-m.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 45px 30px;
@@ -61,14 +61,14 @@
 }
 
 .appointments-calendar .ui-icon.ui-icon-circle-triangle-e {
-  background-image: url('iconos/arrow487.svg');
+  background-image: image-url('iconos/arrow487.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
 }
 
 .appointments-calendar .ui-icon.ui-icon-circle-triangle-w {
-  background-image: url('iconos/arrowhead7.svg');
+  background-image: image-url('iconos/arrowhead7.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px 20px;
