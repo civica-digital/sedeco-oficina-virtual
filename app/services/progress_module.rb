@@ -188,6 +188,10 @@ module ProgressModule
 
     #guarda los valores clickeados por el momento en la session del usuario
   def save_advance_rank_safety(actual, clicked, date)
+    puts '****************dentro'
+    puts actual
+    puts clicked
+    puts date
     case actual.to_i
       when 1 #pregunta 1
         case clicked.to_i
