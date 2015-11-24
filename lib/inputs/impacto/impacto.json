@@ -1,295 +1,305 @@
 {
-    "impacto": {
-        "array_preguntas": {
-            "pregunta": [
-                {
-                    "numero": "1",
-                    "texto": "¿Ya cuentas con un establecimiento mercantil?",
-                    "array_respuestas": {
-                        "tipo": "normal",
-                        "respuesta": [
-                            {   "id":"1",
-                                "-type": "normal",
-                                "texto": "Sí",
-                                "imagen": "si",
-                                "siguiente": "2",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "2",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "numero": "2",
-                    "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
-                    "array_respuestas": {
-                        "tipo": "normal",
-                        "respuesta": [
-                            {
-                                "id":"1",
-                                "-type": "normal",
-                                "texto": "Restaurante con venta de bebidas alcohólicas",
-                                "imagen": "bar",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {   "id":"2",
-                                "-type": "normal",
-                                "texto": "Salón de fiestas",
-                                "imagen": "salon",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {   
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "Establecimiento de hospedaje (hotel, motel, etc.)",
-                                "imagen": "hotel",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"4",
-                                "-type": "normal",
-                                "texto": "Cine, Teatro, Auditorio",
-                                "imagen": "cine",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"5",
-                                "-type": "normal",
-                                "texto": "Club privado",
-                                "imagen": "club",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"6",
-                                "-type": "normal",
-                                "texto": "Ninguno de estos",
-                                "imagen": "no",
-                                "siguiente": "3",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"7",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "numero": "3",
-                    "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
-                    "array_respuestas": {
-                        "tipo": "normal",
-                        "respuesta": [
-                            {
-                                "id":"1",
-                                "-type": "normal",
-                                "texto": "Cervecería, Cantina o pulquería",
-                                "imagen": "cerveceria",
-                                "siguiente": "-3",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "Cabaret o Centro nocturno",
-                                "imagen": "cabaret",
-                                "siguiente": "-3",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "discoteque o bar",
-                                "imagen": "disco",
-                                "siguiente": "-3",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"4",
-                                "-type": "normal",
-                                "texto": "Centro de juegos con apuestas y sorteos",
-                                "imagen": "casino",
-                                "siguiente": "-3",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"5",
-                                "-type": "normal",
-                                "texto": "Ninguno de estos",
-                                "imagen": "no",
-                                "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"6",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "numero": "4",
-                    "texto": "¿Ya registraste tu negocio en el Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles (SIAPEM)?",
-                    "array_respuestas": {
-                        "tipo": "normal",
-                        "respuesta": [
-                            {
-                                "id":"1",
-                                "-type": "normal",
-                                "texto": "Sí",
-                                "imagen": "si",
-                                "siguiente": "5",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "7",
-                                "restricciones":[
-                                    {
-                                        "uso": "-2",
-                                        "siguiente": "6"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "numero": "5",
-                    "texto": "¿Cuándo te registraste en el SIAPEM?",
-                    "array_respuestas": {
-                        "tipo": "fecha",
-                        "respuesta": [
-                            {
-                                "id":"1",
-                                "-type": "fecha",
-                                "texto": "Selecciona una fecha:",
-                                "rangoinicial": "1980",
-                                "siguiente": "-1",
-                                "restricciones":[
-                                    {
-                                        "uso": "-2",
-                                        "siguiente": "-2"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "numero": "6",
-                    "texto": "¿Cuentas con algún tipo de permiso o licencia de funcionamiento tipo A u ordinaria?",
-                    "array_respuestas": {
-                        "tipo": "normal",
-                        "respuesta": [
-                            {
-                                "id":"1",
-                                "-type": "normal",
-                                "texto": "Sí",
-                                "imagen": "si",
-                                "siguiente": "-21",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "-2",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "numero": "7",
-                    "texto": "¿Cuentas con declaración de apertura?",
-                    "array_respuestas": {
-                        "tipo": "normal",
-                        "respuesta": [
-                            {
-                                "id":"1",
-                                "-type": "normal",
-                                "texto": "Sí",
-                                "imagen": "si",
-                                "siguiente": "-1",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "-1",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
-                            }
-                        ]
-                    }
-                }
-            ]
-        }
-    }
-}
+  "impact": 
+  {
+    "questions_array":
+    [
+      {
+        "id": "1",
+        "text": "¿Ya cuentas con un establecimiento mercantil?",
+        "question_type": "predefined",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "text": "Sí",
+            "style_class": "si",
+            "default_next": "2",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"2",
+            "text": "No",
+            "style_class": "no",
+            "default_next": "2",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"3",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "2",
+            "constraints": [],
+            "final": "false"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "text": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
+        "question_type": "predefined",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "text": "Restaurante con venta de bebidas alcohólicas",
+            "style_class": "bar",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"2",
+            "text": "Salón de fiestas",
+            "style_class": "salon",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"3",
+            "text": "Establecimiento de hospedaje (hotel, motel, etc.)",
+            "style_class": "hotel",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"4",
+            "text": "Cine, Teatro, Auditorio",
+            "style_class": "cine",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"5",
+            "text": "Club privado",
+            "style_class": "club",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"6",
+            "text": "Ninguno de estos",
+            "style_class": "no",
+            "default_next": "3",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"7",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "3",
+            "constraints": [],
+            "final": "false"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "text": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
+        "question_type": "predefined",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "answer_type": "normal",
+            "text": "Cervecería, Cantina o pulquería",
+            "style_class": "cerveceria",
+            "default_next": "0",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"2",
+            "answer_type": "normal",
+            "text": "Cabaret o Centro nocturno",
+            "style_class": "cabaret",
+            "default_next": "0",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"3",
+            "answer_type": "normal",
+            "text": "discoteque o bar",
+            "style_class": "disco",
+            "default_next": "0",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"4",
+            "answer_type": "normal",
+            "text": "Centro de juegos con apuestas y sorteos",
+            "style_class": "casino",
+            "default_next": "0",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"5",
+            "answer_type": "normal",
+            "text": "Club privado",
+            "style_class": "club",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"6",
+            "answer_type": "normal",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "4",
+            "constraints": [],
+            "final": "false"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "text": "¿Ya registraste tu negocio en el Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles (SIAPEM)?",
+        "question_type": "predefined",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "text": "Sí",
+            "style_class": "si",
+            "default_next": "5",
+            "constraints": [],
+            "final": "false"
+          },
+          {
+            "id":"2",
+            "text": "No",
+            "style_class": "no",
+            "default_next": "7",
+            "constraints": 
+            [
+              {
+                "key": "-2",
+                "next": "6"
+              }
+            ],
+            "final": "false"
+          },
+          {
+            "id":"3",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "7",
+            "constraints":  
+            [
+              {
+                "key": "-2",
+                "next": "6"
+              }
+            ],
+            "final": "false"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "text": "¿Cuándo te registraste en el SIAPEM?",
+        "question_type": "date",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "text": "Selecciona una fecha:",
+            "start": "1980",
+            "style_class": "si",
+            "default_next": "",
+            "constraints": 
+            [
+              {
+                "key": "-2",
+                "next": "-2"
+              }
+            ],
+            "final": "true"
+          },
+          {
+            "id":"3",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "2",
+            "constraints": [],
+            "final": "false"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "text": "¿Cuentas con algún tipo de permiso o licencia de funcionamiento tipo A u ordinaria?",
+        "question_type": "predefined",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "text": "Sí",
+            "style_class": "si",
+            "default_next": "",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"2",
+            "text": "No",
+            "style_class": "no",
+            "default_next": "",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"3",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "",
+            "constraints": [],
+            "final": "true"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "text": "¿Cuentas con declaración de apertura?",
+        "question_type": "predefined",
+        "answers_array":
+        [
+          {  
+            "id":"1",
+            "text": "Sí",
+            "style_class": "si",
+            "default_next": "",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"2",
+            "text": "No",
+            "style_class": "no",
+            "default_next": "",
+            "constraints": [],
+            "final": "true"
+          },
+          {
+            "id":"3",
+            "text": "No se",
+            "style_class": "nose",
+            "default_next": "",
+            "constraints": [],
+            "final": "true"
+          }
+        ]
+      }
+    ]
+  }
+}              
