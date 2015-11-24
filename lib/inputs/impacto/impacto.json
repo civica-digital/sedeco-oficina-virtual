@@ -227,7 +227,7 @@
             "final": "true"
           },
           {
-            "id":"3",
+            "id":"2",
             "text": "No se",
             "style_class": "nose",
             "default_next": "2",
