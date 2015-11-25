@@ -39,7 +39,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          window.scrollBy(0, 300);
+            up_page();
          },
         error: function(){
         }, 
@@ -152,7 +152,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          window.scrollBy(0, 300);
+          up_page();
          },
         error: function(){
         }, 
@@ -210,8 +210,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          window.scrollBy(0, 300);
-
+          up_page();
          },
         error: function(){
         }, 
@@ -231,5 +230,11 @@
     $("#impacto option:selected").removeAttr("selected");
     $('#impacto').trigger("chosen:updated");
     document.getElementById(2).setAttribute("class", "hidden");
+  }
+
+  function up_page(){
+    $('html, body').animate({
+    scrollTop: '+=700'
+    }, 2000);
   }
 
