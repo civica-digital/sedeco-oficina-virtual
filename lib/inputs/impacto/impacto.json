@@ -203,7 +203,7 @@
                                 "id":"1",
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
-                                "rangoinicial": "1980",
+                                "rangoinicial": "2011",
                                 "siguiente": "-1",
                                 "restricciones":[
                                     {

@@ -19,6 +19,7 @@ class ZoningController < ApplicationController
     unless params[:savedate].blank?
       save_advance_rank_zoning(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
     end
+
     
     unless params[:pagetown].blank?
       @town_name = params[:pagetown][:city_id]

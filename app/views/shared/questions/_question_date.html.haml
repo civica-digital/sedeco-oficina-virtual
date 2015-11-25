@@ -25,8 +25,8 @@
           #{locals[:restrictions]},
           #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
 -else
-  = render 'shared/question_normal', :locals => {:imagen => locals[:imagen],
-                                                :number => locals[:number],
+  = render 'shared/questions/question_normal', :locals => {:imagen => locals[:imagen],
+                                                :number => locals[:number], 
                                                 :text => locals[:text],
                                                 :id => locals[:id],
                                                 :next => locals[:next],

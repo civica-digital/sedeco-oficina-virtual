@@ -18,7 +18,7 @@
               -@respuestas_siguiente_restriccion_array << "0"
               -@respuestas_uso_restriccion_array << "0"
 
-          = render 'shared/question_type', :locals => {:tipo =>pregunta["array_respuestas"]["tipo"],
+          = render 'shared/questions/question_type', :locals => {:tipo =>pregunta["array_respuestas"]["tipo"],
                                                         :number => pregunta["numero"], 
                                                         :texto_question => pregunta["texto"],
                                                         :texto_answer => @respuestas_texto_array,
@@ -30,7 +30,7 @@
                                                         :rank_init => @respuestas_rango_array}
     
     .div.diagnostic.hidden{:id=>"diagnostic"}         
-      =render "shared/diagnostic_impact", impacto: @tipo_de_impacto
+      =render "shared/outputs/diagnostic_impact", impacto: @tipo_de_impacto
     .div.margin-bottom-end-page  
       =render "shared/progressbar"
 
