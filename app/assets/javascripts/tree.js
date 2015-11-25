@@ -19,7 +19,7 @@
   /*Cuando se da clic a una opcion de un dropdown se obtiene el tama*/
   function dateClick(actual,clicked, next, restriction, next_restrictions,index){
     //var date = $(".date_"+clicked).val();
-    var date = $("#date_"+actual+"_"+clicked).val();
+    var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
   }
 
@@ -112,6 +112,7 @@
 
   /*Se guarda el valor clikeado para saber que vista sigue SOLO PARA LOS DE FORMATO FECHA*/
   function save_advance_date(actual,clicked,next,restriction,next_restrictions, date){
+
     $.ajax({
          type:'GET', 
          url: "#{root_path}",

@@ -307,9 +307,12 @@ module ProgressModule
 
   #valida si el negocio aplica para no tramitar uso de suelo
   def validate_not_zoning
+    puts '*********************'
     unless session[:size_house].nil? || session[:size_house].to_i == 0
       business = session[:size_business].to_i
       house = session[:size_house].to_i
+      puts business
+      puts house
       if (business*100)/house <= 20
        session[:uso_de_suelo] = true
       else
