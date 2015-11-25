@@ -53,6 +53,8 @@
     $('.diagnostic').addClass("hidden");
     //hacemos visible el view de pregunta
     document.getElementById(id).removeAttribute("class");
+    $('#'+document.getElementById(id).id).addClass('animated fadeIn');
+    
     //Actualizamos los progressBars
     progressBar(impacto, suelo, seguiridad);
   }
