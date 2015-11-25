@@ -1,7 +1,7 @@
 %div.hidden{:id=>"#{locals[:number]}"}
-  %div.col-md-12
+  %div.col-md-12.text-question
     .p= locals[:texto_question] 
-  %div.col-md-12.margin-top
+  %div.col-md-12
     %div.row.seven-cols
       %div.col-md-10.col-md-offset-1
         -locals[:texto_answer].each_with_index do |text, index|
