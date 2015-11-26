@@ -4,10 +4,14 @@ module Towns
   end
 
   def self.load_city(city)
-    return "" unless city.present?
 
+    return "" unless city.present?
     formatted_city = format(city)
-    load_values("towns/#{formatted_city}").fetch(formatted_city).values
+    begin
+     load_values("towns/#{formatted_city}").fetch(formatted_city).values
+    rescue => ex
+      return ""
+    end
   end
 
   private

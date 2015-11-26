@@ -20,7 +20,6 @@
   function dateClick(actual,clicked, next, restriction, next_restrictions,index){
     //var date = $(".date_"+clicked).val();
     var date = $("#date_"+actual+"_"+clicked+" option:selected").text();
-
     deleteAndFill(actual,clicked, next, restriction, next_restrictions,TIPO_FECHA, date);
   }
 
@@ -61,12 +60,11 @@
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
   function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
     for(i = parseInt(actual)+1; i <= number_of_views; i++){
-      var element = document.getElementById(i)
+      var element = document.getElementById(i);
         if(element != null){
           element.setAttribute("class", "hidden");
         }
     }
-
     if(tipo == TIPO_NORMAL){
       save_advance(actual,clicked,next,restriction,next_restrictions);
     }else if(tipo == TIPO_FECHA){
@@ -85,7 +83,7 @@
           element.style.color = '#000000';//Cambiamos el color del texto por default
         }
 
-        var element = document.getElementById("image"+i+"-"+j)
+        var element = document.getElementById("image"+i+"-"+j);
         if(element != null){
           element.classList.remove("rcorner-selected");
         }
@@ -103,7 +101,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          show_view(next, restriction, next_restrictions)
+          show_view(next, restriction, next_restrictions);
          },
         error: function(){
         }, 
@@ -117,9 +115,10 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          show_view(next, restriction, next_restrictions)
+          show_view(next, restriction, next_restrictions);
          },
         error: function(){
+          alert('error');
         }, 
          data: $.param({ savedate: {actual: actual, clicked: clicked, date: date}})
     });
@@ -230,6 +229,8 @@
     document.getElementById(2).setAttribute("class", "hidden");
   }
 
+
+/*animacion que sube el scroll lentamente*/
   function up_page(){
     $('html, body').animate({
     scrollTop: '+=700'

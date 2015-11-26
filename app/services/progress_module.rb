@@ -261,6 +261,10 @@ module ProgressModule
 
     #guarda los valores clickeados por el momento en la session del usuario
   def save_advance_rank_zoning(actual, clicked, date)
+    puts '*******************'
+    puts actual
+    puts clicked
+    puts date
    case actual.to_i
       when 3 #pregunta 3
         case clicked.to_i
@@ -307,7 +311,6 @@ module ProgressModule
 
   #valida si el negocio aplica para no tramitar uso de suelo
   def validate_not_zoning
-    puts '*********************'
     unless session[:size_house].nil? || session[:size_house].to_i == 0
       business = session[:size_business].to_i
       house = session[:size_house].to_i

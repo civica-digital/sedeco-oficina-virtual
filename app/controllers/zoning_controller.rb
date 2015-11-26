@@ -16,17 +16,16 @@ class ZoningController < ApplicationController
       save_advance_zoning(params[:savetime][:actual],params[:savetime][:clicked])
     end
     
-    unless params[:savedate].blank?
-      save_advance_rank_zoning(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
-    end
-
-    
     unless params[:pagetown].blank?
       @town_name = params[:pagetown][:city_id]
       @key = params[:pagetown][:key]
       respond_to do |format|
         format.js  {render :layout => false}
       end
+    end
+
+    unless params[:savedate].blank?
+      save_advance_rank_zoning(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
     end
 
     unless params[:pagetime].blank?    
