@@ -18,8 +18,6 @@ class SafetyController < ApplicationController
     end
     
     unless params[:savedate].blank?
-      puts '*****************'
-      puts params[:savedate][:date]
       save_advance_rank_safety(params[:savedate][:actual],params[:savedate][:clicked],params[:savedate][:date])
     end
 
