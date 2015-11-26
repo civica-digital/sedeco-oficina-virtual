@@ -17,3 +17,9 @@ es:
         phonenumber: "Teléfono"
         name: "Nombre"
         scheduled_date: "Fecha"
+  activerecord:
+    attributes:
+      admin:
+        email: "Correo electrónico"
+        password: "Contraseña"
+        remember_me: "Recordarme"

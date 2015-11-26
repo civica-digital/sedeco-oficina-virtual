@@ -2,3 +2,7 @@ es:
   routes:
     new: "nuevo"
     appointments: "citas"
+    admins: "admins"
+    sign_in: "inicia_sesion"
+    resources: "recursos"
+    panel: "panel"

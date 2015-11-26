@@ -128,9 +128,18 @@ es:
   appointments:
     create:
       appointment_created: "La cita se ha agendado exitosamente."
+  admins:
+    sessions:
+      new:
+        log_in: "Iniciar sesión"
+    resources:
+      index:
+        log_: "Iniciar sesión"
   shared:
     question_calculadora:
       menos: "-"
+    admin_navbar:
+      log_out: "Cerrar sesión"
   outputs:
     impact:
       type_zonal: "Impacto Zonalo"

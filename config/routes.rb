@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :admins
   root 'impact#index'
 
   resources :impact, controller: 'impact'
@@ -8,5 +7,11 @@ Rails.application.routes.draw do
 
   localized do
     resources :appointments, only: [:index, :create]
+    devise_for :admins, controllers: { sessions: 'admins/sessions' }
+
+    namespace :admins do
+      resources :panel, only: :index
+      resources :resources
+    end
   end
 end

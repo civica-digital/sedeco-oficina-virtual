@@ -24,6 +24,7 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -32,6 +33,5 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'factory_girl_rails'
   gem 'selenium-webdriver'
 end
