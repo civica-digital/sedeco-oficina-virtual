@@ -1,11 +1,11 @@
 %div.hidden{:id=>"#{locals[:number]}"}
   %div.col-md-12.text-question
     .p= locals[:texto_question] 
-  %div.col-md-12
+  %div.col-md-12.text-center
     %div.row.seven-cols
-      %div.col-md-10.col-md-offset-1
+      %div.col-md-12
         -locals[:texto_answer].each_with_index do |text, index|
-          %div{:class=>"col-md-#{12/locals[:texto_answer].size} text-center"}
+          %div{:class=>"col-md-#{12/locals[:texto_answer].size} #{((12.0/locals[:texto_answer].size)%2 == 0 || index!=0) ? '' : 'col-md-offset-1'}  text-center"}
 
             -if locals[:tipo]=='normal'
               = render 'shared/questions/question_normal', :locals => {:imagen => locals[:imagen][index],
