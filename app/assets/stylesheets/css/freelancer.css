@@ -513,6 +513,7 @@ footer .footer-below {
 .rcorner:hover {
   border: 2px solid #871C57;
 -webkit-filter: hue-rotate(356deg) saturate(0.4) brightness(120%);
+cursor: pointer;
 }
 .rcorner-selected{
  border: 2px solid #871C57 !important;
