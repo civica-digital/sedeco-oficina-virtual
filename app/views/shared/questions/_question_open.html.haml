@@ -1,7 +1,7 @@
 -unless locals[:rank_init].nil?
   %div.margin-top-dropdown
     =text_field :date, "date", class: 'form-controler', :placeholder => locals[:rank_init],
-      :onchange=> "dateClick(#{locals[:number]}, 
+      :onchange=> "dateText(#{locals[:number]}, 
         #{locals[:id]}, 
         #{locals[:next]},
         #{locals[:restrictions]},

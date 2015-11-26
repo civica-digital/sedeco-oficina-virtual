@@ -157,6 +157,19 @@
                                         "siguiente": "6"
                                     }
                                 ]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No se",
+                                "imagen": "nose",
+                                "siguiente": "7",
+                                "restricciones":[
+                                    {
+                                        "uso": "-2",
+                                        "siguiente": "6"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -210,7 +223,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-2",
                                 "restricciones":[]
                             }
                         ]
@@ -243,7 +256,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-1",
                                 "restricciones":[]
                             }
                         ]
