@@ -1,0 +1,26 @@
+@import "colors";
+
+.learning-center .description-container {
+  margin: 40px 0px;
+}
+
+.learning-center .resource-detail {
+  background-color: $light-gray;
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  height: 220px;
+
+  a {
+    color: $pink;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .resource-icon {
+    fill: $pink;
+  }
+
+  .resource-icon:hover {
+    fill: $purple;
+  }
+}

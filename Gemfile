@@ -14,15 +14,19 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'chosen-rails'
 gem 'haml-rails'
+gem 'devise'
 gem 'i18n'
 gem 'route_translator'
 gem 'simple_form'
+gem 'validate_url'
+gem 'inline_svg'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -31,6 +35,5 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'factory_girl_rails'
   gem 'selenium-webdriver'
 end
