@@ -18,6 +18,7 @@ gem 'devise'
 gem 'i18n'
 gem 'route_translator'
 gem 'simple_form'
+gem 'validate_url'
 
 group :development, :test do
   gem 'byebug'

@@ -132,9 +132,29 @@ es:
     sessions:
       new:
         log_in: "Iniciar sesión"
-    resources:
+    panel:
       index:
-        log_: "Iniciar sesión"
+        admin_panel: "Panel de administración"
+        app_name: "Oficina virtual SEDECO"
+        learning_center: "Centro de aprendizaje"
+    resources:
+      new:
+        new_resource: "Nuevo recurso"
+      create:
+        resource_created: "El recurso se agregó exitosamente."
+      index:
+        app_name: "Oficina virtual SEDECO"
+        learning_center: "Centro de aprendizaje"
+        add_resource: "Agregar un recurso"
+        no_resources: "No se han agregado recursos al centro de aprendizaje."
+        name: "Nombre"
+        id: "Id"
+        category: "Categoría"
+        url: "Liga"
+  category_options:
+    impact: "Impacto"
+    ground: "Suelo"
+    protection: "Protección Civil"
   shared:
     question_calculadora:
       menos: "-"

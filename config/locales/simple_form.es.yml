@@ -3,6 +3,8 @@ es:
     submit:
       appointment:
         create: "Agendar"
+      resource:
+        create: "Agregar"
   simple_form:
     "yes": 'Sí'
     "no": 'No'
@@ -23,3 +25,13 @@ es:
         email: "Correo electrónico"
         password: "Contraseña"
         remember_me: "Recordarme"
+      resource:
+        name: "Nombre del Recurso"
+        url: "Liga"
+        category: "Categoría"
+    errors:
+      models:
+        resource:
+          attributes:
+            url:
+              url: "No es una URL válida."
