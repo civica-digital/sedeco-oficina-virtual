@@ -1,0 +1,4 @@
+-if locals[:has_bussine] && locals[:has_zoning]
+  = validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning])
+-else
+  = get_documents_zoning

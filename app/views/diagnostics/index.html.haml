@@ -20,31 +20,7 @@
                 Resultado de Uso de suelo
           #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
             .panel-body
-              = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem],
-                                                                :date_siapem => session[:date_siapem],
-                                                                :has_zoning => session[:has_zoning],
-
-                                                              } 
-              tipo de uso de suelo:
-              =session[:type_zoning]
-              %br
-              tiene uso de suelo:
-              =session[:has_zoning]
-              %br
-              tamano casa:
-              =session[:size_house]
-              %br
-              tamano empresa
-              =session[:size_business]
-              %br
-              fecha de uso de suelo
-              =session[:date_zoning]
-              %br
-              ciudad
-              =session[:city_zoning]
-              %br
-              colonia
-              =session[:town_business]
+              = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
         .panel.panel-default
           #headingThree.panel-heading{:role => "tab"}
             %h4.panel-title

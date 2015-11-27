@@ -30,4 +30,17 @@ module DiagnosticHelper
     end
   end
 
+
+  def validate_expiration_zoning(date_siapem, date_zoning)
+    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+      'Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo, por lo que'
+    else
+      get_documents_zoning
+    end
+  end
+
+  def get_documents_zoning
+    'Es importante que llevas a SEDECO los siguientes documentos'
+  end
+
 end
