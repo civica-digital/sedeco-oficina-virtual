@@ -9,7 +9,7 @@
         - @resources.each do |resource|
           %div.resource.col-md-6
             %div.resource-detail.text-center
-              = link_to resource.url do
+              = link_to resource.url, target: :blank do
                 = inline_svg "iconos/pdf.svg", class: 'resource-icon'
               %h3.text-center
                 = link_to resource.url do
