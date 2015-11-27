@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   resources :diagnostic, controller: 'diagnostics'
 
   localized do
+    resources :learning_center, only: :index
     resources :appointments, only: [:index, :create]
+    devise_for :admins, controllers: { sessions: 'admins/sessions' }
+
+    namespace :admins do
+      resources :panel, only: :index
+      resources :resources
+    end
   end
 end

@@ -128,9 +128,41 @@ es:
   appointments:
     create:
       appointment_created: "La cita se ha agendado exitosamente."
+  learning_center:
+    index:
+      learning_center_description: "Aquí conocerás los trámites que necesitas para dar de alta tu negocio y resolverás todas las dudas que tengas al respecto."
+  admins:
+    sessions:
+      new:
+        log_in: "Iniciar sesión"
+    panel:
+      index:
+        admin_panel: "Panel de administración"
+        app_name: "Oficina virtual SEDECO"
+        learning_center: "Centro de aprendizaje"
+    resources:
+      new:
+        new_resource: "Nuevo recurso"
+      create:
+        resource_created: "El recurso se agregó exitosamente."
+      index:
+        app_name: "Oficina virtual SEDECO"
+        learning_center: "Centro de aprendizaje"
+        add_resource: "Agregar un recurso"
+        no_resources: "No se han agregado recursos al centro de aprendizaje."
+        name: "Nombre"
+        id: "Id"
+        category: "Categoría"
+        url: "Liga"
+  category_options:
+    impact: "Impacto"
+    ground: "Uso de Suelo"
+    protection: "Protección Civil"
   shared:
     question_calculadora:
       menos: "-"
+    admin_navbar:
+      log_out: "Cerrar sesión"
   outputs:
     impact:
       type_zonal: "Impacto Zonal"

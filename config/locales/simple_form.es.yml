@@ -3,6 +3,8 @@ es:
     submit:
       appointment:
         create: "Agendar"
+      resource:
+        create: "Agregar"
   simple_form:
     "yes": 'Sí'
     "no": 'No'
@@ -17,3 +19,19 @@ es:
         phonenumber: "Teléfono"
         name: "Nombre"
         scheduled_date: "Fecha"
+  activerecord:
+    attributes:
+      admin:
+        email: "Correo electrónico"
+        password: "Contraseña"
+        remember_me: "Recordarme"
+      resource:
+        name: "Nombre del Recurso"
+        url: "Liga"
+        category: "Categoría"
+    errors:
+      models:
+        resource:
+          attributes:
+            url:
+              url: "No es una URL válida."
