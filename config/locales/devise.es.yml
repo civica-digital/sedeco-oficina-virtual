@@ -11,6 +11,8 @@ es:
 
   devise:
     failure:
+      admin:
+        not_found_in_database: "No se ha encontrado administrador en la base de datos."
       already_authenticated: 'Ya iniciaste sesión.'
       unauthenticated: 'Tienes que registrarte o iniciar sesión antes de continuar.'
       unconfirmed: 'Tienes que confirmar tu cuenta antes de continuar.'
