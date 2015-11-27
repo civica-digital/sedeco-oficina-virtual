@@ -5,7 +5,7 @@
       =select :date, "date", 
       get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select", id:"superficie",:onchange=> "valueAforo()"
     .col-md-2
-      .col-md-6.col-md-offset-3
+      .col-md-8.col-md-offset-2
         %hr.style-line
     .col-md-5
       Superficie del mobiliario

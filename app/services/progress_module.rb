@@ -9,8 +9,6 @@ module ProgressModule
   		 			session[:has_bussine] = true
   		 		when 2
   		 			session[:has_bussine] = false
-  		 		when 3
-  		 			session[:has_bussine] = -4
   		 	else
   				session[:has_bussine] = false
   	 		end
@@ -20,8 +18,6 @@ module ProgressModule
   		 		when 1..5
   					session[:impacto_usuario] = -2
   		 		when 6
-  		 			session[:impacto_usuario] = -4
-  		 		when 7
   		 			session[:impacto_usuario] = -4
   		 	else
   		 		session[:impacto_usuario] = -4
@@ -33,10 +29,8 @@ module ProgressModule
 	            session[:impacto_usuario] = -3
 	          when 5
 	            session[:impacto_usuario] = -1
-	          when 6
-	            session[:impacto_usuario] = -4
 	        else
-	          session[:impacto_usuario] = -4
+	          session[:impacto_usuario] = -1
 	        end
 
   	 	when 4 #pregunta 4
@@ -46,7 +40,7 @@ module ProgressModule
 	          when 2
 	            session[:has_siapem] = false
 	          when 3
-	            session[:has_siapem] = -4
+	            session[:has_siapem] = false
 	        else
 	          session[:has_siapem] = false
 	        end
@@ -70,7 +64,7 @@ module ProgressModule
           when 2
             session[:has_open_declaration] = false
           when 3
-            session[:has_open_declaration] = -4
+            session[:has_open_declaration] = false
         else
           session[:has_open_declaration] = false
         end
@@ -261,10 +255,6 @@ module ProgressModule
 
     #guarda los valores clickeados por el momento en la session del usuario
   def save_advance_rank_zoning(actual, clicked, date)
-    puts '*******************'
-    puts actual
-    puts clicked
-    puts date
    case actual.to_i
       when 3 #pregunta 3
         case clicked.to_i

@@ -1,1 +1,73 @@
-hola
+.header
+  %div.container-impacto
+    %div.row
+      #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
+        .panel.panel-default
+          #headingOne.panel-heading{:role => "tab"}
+            %h4.panel-title
+              %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
+                Resultado de Impacto
+          #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+            .panel-body
+              = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
+                                                    :impacto_usuario => session[:impacto_usuario], 
+                                                    :has_siapem => session[:has_siapem],
+                                                    :has_special_license => session[:has_special_license]}         
+        .panel.panel-default
+          #headingTwo.panel-heading{:role => "tab"}
+            %h4.panel-title
+              %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
+                Resultado de Uso de suelo
+          #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
+            .panel-body
+            
+              tipo de uso de suelo:
+              =session[:type_zoning]
+              %br
+              tiene uso de suelo:
+              =session[:has_zoning]
+              %br
+              tamano casa:
+              =session[:size_house]
+              %br
+              tamano empresa
+              =session[:size_business]
+              %br
+              fecha de uso de suelo
+              =session[:date_zoning]
+              %br
+              ciudad
+              =session[:city_zoning]
+              %br
+              colonia
+              =session[:town_business]
+        .panel.panel-default
+          #headingThree.panel-heading{:role => "tab"}
+            %h4.panel-title
+              %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "button"}
+                Resultado de Seguridad y otros
+          #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
+            .panel-body
+              tiene autodiagnostico:
+              =session[:has_autodiagnostico]
+              %br
+              Visto bueno de seguridad:
+              =session[:vobo_seguridad]
+              %br
+              tiene proteccion:
+              =session[:has_protection]
+              %br
+              hizo plan proteccion:
+              =session[:make_protection]
+              %br
+              aplica licencia ambiental:
+              =session[:license_ambiental]
+              %br
+              aplica licencia sanitaria:
+              =session[:license_sanitaria]
+              %br
+              tiene NO adeudo:
+              =session[:no_adeudos]
+              %br
+              Aforo:
+              =session[:aforo]
