@@ -1,0 +1,16 @@
+%div.container.learning-center
+  %div.row.description-container
+    %div.col-md-8.col-md-offset-2
+      %h4.text-center
+        = t(".learning_center_description")
+  %div.row.resource-container
+    %div.col-md-8.col-md-offset-2
+      %div.row
+        - @resources.each do |resource|
+          %div.resource.col-md-6
+            %div.resource-detail.text-center
+              = link_to resource.url do
+                = inline_svg "iconos/pdf.svg", class: 'resource-icon'
+              %h3.text-center
+                = link_to resource.url do
+                  = resource.name
