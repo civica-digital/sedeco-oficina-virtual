@@ -20,6 +20,7 @@ gem 'route_translator'
 gem 'simple_form'
 gem 'validate_url'
 gem 'inline_svg'
+gem 'youtube_addy'
 
 group :development, :test do
   gem 'byebug'
