@@ -61,7 +61,12 @@
                                 "texto": "Si",
                                 "imagen": "si",
                                 "siguiente": "3",
-                                "restricciones":[]
+                                "restricciones":[
+                                {
+                                    "uso": "-20",
+                                    "siguiente": "4"
+                                }
+                                ]
                             },
                             {
                                 "id":"2",

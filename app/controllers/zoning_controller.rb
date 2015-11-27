@@ -49,7 +49,9 @@ class ZoningController < ApplicationController
 
   #regresa el id de la vista que continua
   def getNext(next_val, restriction, next_restriction)
-  	if restriction.to_i == -20 && session[:uso_de_suelo]
+    if restriction.to_i == -20 && !session[:is_business_home]
+      next_restriction
+  	elsif restriction.to_i == -20 && session[:uso_de_suelo]
   		next_restriction
   	else
   		next_val

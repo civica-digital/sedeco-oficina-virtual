@@ -20,7 +20,11 @@
                 Resultado de Uso de suelo
           #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
             .panel-body
-            
+              = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem],
+                                                                :date_siapem => session[:date_siapem],
+                                                                :has_zoning => session[:has_zoning],
+
+                                                              } 
               tipo de uso de suelo:
               =session[:type_zoning]
               %br

@@ -209,21 +209,19 @@ module ProgressModule
             session[:type_zoning] = -2
           when 5
             session[:type_zoning] = -5
-          when 6
-            session[:type_zoning] = -4
         else
-          session[:type_zoning] = -4
+          session[:type_zoning] = -1
         end
       when 2#pregunta 2
+        puts '*******************'
         case clicked.to_i
           when 1
-            session[:type_zoning] = -10
+            session[:is_business_home] = true
+            puts 'hola'
           when 2
-            session[:type_zoning] = -11
-          when 3
-            session[:type_zoning] = -4
+            session[:is_business_home] = false
         else
-          session[:type_zoning] = -4
+          session[:is_business_home] = false
         end
       when 5#pregunta 5
         case clicked.to_i
