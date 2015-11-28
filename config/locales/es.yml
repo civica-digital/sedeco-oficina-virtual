@@ -130,6 +130,7 @@ es:
       appointment_created: "La cita se ha agendado exitosamente."
   learning_center:
     index:
+      get_social_reason: "Obtener Razón Social"
       learning_center_description: "Aquí conocerás los trámites que necesitas para dar de alta tu negocio y resolverás todas las dudas que tengas al respecto."
   admins:
     sessions:

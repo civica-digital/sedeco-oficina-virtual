@@ -28,6 +28,7 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 group :development do
