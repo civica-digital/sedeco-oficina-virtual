@@ -1,8 +1,10 @@
--if locals[:has_bussine] && locals[:has_zoning]
+-if locals[:uso_de_suelo]
+  = get_validate_not_zoning
+-elsif locals[:has_bussine] && locals[:has_zoning] 
   = validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning])
 -else
   = get_documents_zoning
--if locals[:uso_de_suelo]
-  = get_validate_not_zoning
+%hr
 -if locals[:size_business].to_i > 80
   = get_business_recommendations
+  %hr
