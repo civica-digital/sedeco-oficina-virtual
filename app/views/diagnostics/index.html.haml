@@ -28,26 +28,12 @@
                 Resultado de Seguridad y otros
           #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
             .panel-body
-              tiene autodiagnostico:
-              =session[:has_autodiagnostico]
-              %br
-              Visto bueno de seguridad:
-              =session[:vobo_seguridad]
-              %br
-              tiene proteccion:
-              =session[:has_protection]
-              %br
-              hizo plan proteccion:
-              =session[:make_protection]
-              %br
-              aplica licencia ambiental:
-              =session[:license_ambiental]
-              %br
-              aplica licencia sanitaria:
-              =session[:license_sanitaria]
-              %br
-              tiene NO adeudo:
-              =session[:no_adeudos]
-              %br
-              Aforo:
-              =session[:aforo]
+              = render 'shared/diagnostics/safety', :locals => {:has_autodiagnostico => session[:has_autodiagnostico],
+              :vobo_seguridad => session[:vobo_seguridad],
+              :has_protection => session[:has_protection],
+              :make_protection => session[:make_protection],
+              :license_ambiental => session[:license_ambiental],
+              :license_sanitaria => session[:license_sanitaria],
+              :no_adeudos => session[:no_adeudos],
+              :aforo => session[:aforo],
+              :impacto_usuario => session[:impacto_usuario]}

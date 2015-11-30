@@ -51,4 +51,38 @@ module DiagnosticHelper
     t('zoning.recommendations_html')
   end
 
+  def get_diagnostico_seguridad(has_autodiagnostico,has_protection,make_protection,aforo)
+    if aforo.to_i >= 50
+      if make_protection
+        t('safety.make_protection_html')
+      else
+        t('safety.no_make_protection_html')
+      end
+    else
+      if has_autodiagnostico && has_protection && make_protection
+        t('safety.seguridad_minima_con_proteccion_implementado_html')
+      elsif has_autodiagnostico && has_protection && !make_protection
+        t('safety.seguridad_minima_con_proteccion_sin_implementar_html')
+      elsif has_autodiagnostico && !has_protection
+        t('safety.seguridad_minima_sin_proteccion_html')
+      else
+        t('safety.seguridad_minima_sin_diagnostico_html')
+      end
+    end
+  end
+
+  def get_diagnostic_license_ambiental(license_ambiental)
+    t('safety.ambiental_html')
+  end
+
+  def get_diagnostic_license_sanitaria(license_sanitaria)
+    t('safety.sanitaria_html')
+  end
+  
+  def has_not_debts(no_adeudos)
+    if !no_adeudos
+       t('safety.no_debts_html')
+    end
+  end
+
 end
