@@ -40,7 +40,15 @@ module DiagnosticHelper
   end
 
   def get_documents_zoning
-    'Es importante que llevas a SEDECO los siguientes documentos'
+    'Es importante que llevas a SEDECO los siguientes documentos ...... '
+  end
+
+  def get_validate_not_zoning
+    'Debido a que tu negocio se encuentra en el mismo lugar en donde habitas y la superficie destinada para el negocio es menor al 20% del total de la propiedad, te aplica el Art 37 de la ley de establecimientos mercantiles....'
+  end
+
+  def get_business_recommendations
+    'Recomendar que quizá requiera estacionamientos, mostrarle donde y cuando aplica, en esta liga http://www.seduvi.df.gob.mx/portal/index.php/programas-de-desarrollo'
   end
 
 end
