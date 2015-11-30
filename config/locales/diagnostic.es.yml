@@ -40,12 +40,14 @@ es:
     seguridad_minima_sin_proteccion_html: 'Tu negocio debe tener los requisitos minimos de seguridad, los cuales son> ....si tienes mas dudas puedes revisar ...'
     seguridad_minima_sin_diagnostico_html: 'Es importante que <b>asistas a tu delegación</b> a realizar el Autodiagnostico para tu negocio, para que en caso de que te aplique un plan de protección civil lo puedas implementar'
     ambiental_html: 'Realizar el trámite de la Licencia Ambiental Única para Distrito Federal (LAUDF), revisa la gaceta si quieres saber más http://www.sedema.df.gob.mx/sedema/images/archivos/tramites/licencia-ambiental-unica-df/laudf-listado-no-requieren.pdf'
-    sanitaria_html: 'Invitarlos a que llamen o asistan a http://www.agenciaproteccionsanitaria.df.gob.mx/ en sus oficinas o a COFEPRIS(http://www.cofepris.gob.mx/).
-                      Realizar el trámite de funcionamiento sanitario para los giros contemplados por parte de la Agencia de Protección Sanitaria del Distrito Federal y/o la Comisión para la Protección contra Riesgos Sanitario (COFEPRIS)
-                      Aviso de Funcionamiento, de Responsable Sanitario 
-                      Original y copia del formato debidamente llenado
-                      Original y copia del Acta Constitutiva y/o poder otorgado ante notario o corredor público d elos representantes legales
-                      Copia e identificación oficial con fotografía del representatne legal (de preferencia credencial de elector, pasaporte o cartilla). 
-                      Copia de identificacación oficial con fotogradía de la() persona(s) autorizadas(s) (credencial de elector, pasaporte o cartilla). 
-                      Licencia Sanitaria L Realizar licencia en COFEPRIS'
+    sanitaria_html: 'Para trámitar o ver si aplica la licencia sanitaria te invitamos a realizar lo siguiente:
+                    <ul type = disk >
+                    <li>Invitarlos a que llamen o asistan a http://www.agenciaproteccionsanitaria.df.gob.mx/ en sus oficinas o a COFEPRIS(http://www.cofepris.gob.mx/).
+                    <li>Realizar el trámite de funcionamiento sanitario para los giros contemplados por parte de la Agencia de Protección Sanitaria del Distrito Federal y/o la Comisión para la Protección contra Riesgos Sanitario (COFEPRIS)
+                    <li>Aviso de Funcionamiento, de Responsable Sanitario 
+                    <li>Original y copia del formato debidamente llenado
+                    <li>Original y copia del Acta Constitutiva y/o poder otorgado ante notario o corredor público d elos representantes legales
+                    <li>Copia e identificación oficial con fotografía del representatne legal (de preferencia credencial de elector, pasaporte o cartilla). 
+                    <li>Copia de identificacación oficial con fotogradía de la() persona(s) autorizadas(s) (credencial de elector, pasaporte o cartilla). 
+                    <li>Licencia Sanitaria L Realizar licencia en COFEPRIS'
     no_debts_html: 'Todos los negocios de <b>IMPACTO VECINAL</b> deben tener la constancia de <NO ADEUDOS>, la cual puedes tramitar en Finanzas con un periodo no mayor al actual y a la secretaría de aguas'
