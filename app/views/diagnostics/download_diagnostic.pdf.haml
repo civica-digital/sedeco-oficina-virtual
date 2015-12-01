@@ -1,20 +1,24 @@
+%meta{:charset=>"UTF-8"}
 .container
   .row
-    hola
+    %h1.text-center
+      Diagnóstico general de tu negocio:
+    %hr
+    %hr
   .row
-    .col-xs-6
-      %h3
-        Lorem ipsum
-      %p
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum semper placerat. Aenean mattis fringilla risus ut fermentum. Fusce posuere dictum venenatis. Aliquam id tincidunt ante, eu pretium eros. Sed eget risus a nisl aliquet scelerisque sit amet id nisi. Praesent porta molestie ipsum, ac commodo erat hendrerit nec. Nullam interdum ipsum a quam euismod, at consequat libero bibendum. Nam at nulla fermentum, congue lectus ut, pulvinar nisl. Curabitur consectetur quis libero id laoreet. Fusce dictum metus et orci pretium, vel imperdiet est viverra. Morbi vitae libero in tortor mattis commodo. Ut sodales libero erat, at gravida enim rhoncus ut.
-    .col-xs-6
-      %h3
-        Duis vel
-      %p
-        Duis vel tortor elementum, ultrices tortor vel, accumsan dui. Nullam in dolor rutrum, gravida turpis eu, vestibulum lectus. Pellentesque aliquet dignissim justo ut fringilla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut venenatis massa non eros venenatis aliquet. Suspendisse potenti. Mauris sed tincidunt mauris, et vulputate risus. Aliquam eget nibh at erat dignissim aliquam non et risus. Fusce mattis neque id diam pulvinar, fermentum luctus enim porttitor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
+                                                    :impacto_usuario => session[:impacto_usuario], 
+                                                    :has_siapem => session[:has_siapem],
+                                                    :has_special_license => session[:has_special_license]}         
   .row
-    %table.table.table-striped
-      %thead
-        %th #
-        %th Product
-        %th Price
+    = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
+  .row
+    = render 'shared/diagnostics/safety', :locals => {:has_autodiagnostico => session[:has_autodiagnostico],
+              :vobo_seguridad => session[:vobo_seguridad],
+              :has_protection => session[:has_protection],
+              :make_protection => session[:make_protection],
+              :license_ambiental => session[:license_ambiental],
+              :license_sanitaria => session[:license_sanitaria],
+              :no_adeudos => session[:no_adeudos],
+              :aforo => session[:aforo],
+              :impacto_usuario => session[:impacto_usuario]}
