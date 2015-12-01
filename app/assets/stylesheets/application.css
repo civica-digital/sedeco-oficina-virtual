@@ -12,6 +12,7 @@
  *
  *= require jquery-ui/datepicker
  *= require chosen
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -22,3 +23,7 @@
 @import "appointments-calendar"
 @import "modal"
 @import "learning-center"
+@import "font-awesome";
+
+
+

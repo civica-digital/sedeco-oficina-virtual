@@ -10,7 +10,7 @@
           #headingOne.panel-heading{:role => "tab"}
             %h4.panel-title
               %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
-                =t('.title_impact_html')
+                %i.fa.fa-angle-down=t('.title_impact_html')
           #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
             .panel-body
               = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
