@@ -10,10 +10,15 @@
           #headingOne.panel-heading{:role => "tab"}
             %h4.panel-title
               %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
-                %i.fa.fa-angle-down=t('.title_impact_html')
-          #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
-            .panel-body
-              = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
+                .row
+                  .col-md-6.not-padding-left
+                    =t('.title_impact_html')
+                  .col-md-6.text-right
+                    %i.fa.fa-angle-down.impacto1.colorprimario
+                    %i.fa.fa-angle-up.impacto2.colorprimario.hidden
+        #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+          .panel-body
+            = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
                                                     :impacto_usuario => session[:impacto_usuario], 
                                                     :has_siapem => session[:has_siapem],
                                                     :has_special_license => session[:has_special_license]}         
@@ -21,7 +26,12 @@
           #headingTwo.panel-heading{:role => "tab"}
             %h4.panel-title
               %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
-                =t('.title_zoning_html')
+                .row
+                  .col-md-6.not-padding-left
+                    =t('.title_zoning_html')
+                  .col-md-6.text-right
+                    %i.fa.fa-angle-down.suelo1.colorprimario.hidden
+                    %i.fa.fa-angle-up.suelo2.colorprimario
           #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
             .panel-body
               = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
@@ -29,7 +39,12 @@
           #headingThree.panel-heading{:role => "tab"}
             %h4.panel-title
               %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "button"}
-                =t('.title_safety_html')
+                .row
+                  .col-md-6.not-padding-left
+                    =t('.title_safety_html')
+                  .col-md-6.text-right
+                    %i.fa.fa-angle-down.seguridad1.colorprimario.hidden
+                    %i.fa.fa-angle-up.seguridad2.colorprimario
           #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
             .panel-body
               = render 'shared/diagnostics/safety', :locals => {:has_autodiagnostico => session[:has_autodiagnostico],
