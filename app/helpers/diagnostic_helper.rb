@@ -2,25 +2,25 @@ module DiagnosticHelper
 
   def get_diagnostic_impact(has_business, type, has_siapem)
     if !has_business && type == -1
-      'Debido a que tu negocio es nuevo y es de bajo impacto te recomendamos descargar el formato EM03'
+      t('impact.exituno_html')
     elsif !has_business && type == -2
-      'Debido a que tu negocio es nuevo y es de impacto vecinal te recomendamos descargar el formato EM11'
+      t('impact.exitdos_html')
     elsif has_business && type == -1 && has_siapem
-      'Debido a que tu negocio ya esta en operación, es de bajo impacto y ya te encuentras registrado en el SIAPEM, te recomendamos descargar los formatos EM01, EM02, EM06, EM07, EM09, EM10 y EMQ'
+      t('impact.exittres_html')
     elsif has_business && type == -2 && has_siapem
-       'Debido a que tu negocio ya esta en operación, es de impacto vecinal y ya te encuentras registrado en el SIAPEM te recomendamos descargar los formatos EM01, EM02, EM04, EM05, EM06, EM7, EM9 y EMH'
+      t('impact.exitcuatro_html')
     elsif has_business && type == -1 && !has_siapem
-      'Debido a que tu negocio ya esta en operación, es de bajo impacto, pero aun no te encuentras registrado en el SIAPEM, te recomendamos descargar el formato EMB'
+      t('impact.exitcinco_html')
     elsif has_business && type == -2 && !has_siapem
-      'Debido a que tu negocio ya esta en operación, es de impacto vecinal, pero aun no te encuentras registrado en el SIAPEM, te recomendamos descargar el formato EMA'
+      t('impact.exitseis_html')
     end
   end
 
   def get_diagnostic_impact_license(license)
     if license
-      'Debido a que tienes una licencia A u ordinaria te recomendamos descargar el formato EMA del SIAPEM'
+      t('impact.has_license_html')
     else
-      'Debido a que NO tienes una licencia A u ordinaria te recomendamos descargar el formato EM11 del SIAPEM'
+      t('impact.hasnt_licese_html')
     end
   end
 
@@ -33,14 +33,56 @@ module DiagnosticHelper
 
   def validate_expiration_zoning(date_siapem, date_zoning)
     if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
-      'Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo, por lo que'
+      t('zoning.expiration_zoning_html')
     else
       get_documents_zoning
     end
   end
 
   def get_documents_zoning
-    'Es importante que llevas a SEDECO los siguientes documentos'
+    t('zoning.documents_html')
+  end
+
+  def get_validate_not_zoning
+    t('zoning.not_zoning_html')
+  end
+
+  def get_business_recommendations
+    t('zoning.recommendations_html')
+  end
+
+  def get_diagnostico_seguridad(has_autodiagnostico,has_protection,make_protection,aforo)
+    if aforo.to_i >= 50
+      if make_protection
+        t('safety.make_protection_html')
+      else
+        t('safety.no_make_protection_html')
+      end
+    else
+      if has_autodiagnostico && has_protection && make_protection
+        t('safety.seguridad_minima_con_proteccion_implementado_html')
+      elsif has_autodiagnostico && has_protection && !make_protection
+        t('safety.seguridad_minima_con_proteccion_sin_implementar_html')
+      elsif has_autodiagnostico && !has_protection
+        t('safety.seguridad_minima_sin_proteccion_html')
+      else
+        t('safety.seguridad_minima_sin_diagnostico_html')
+      end
+    end
+  end
+
+  def get_diagnostic_license_ambiental(license_ambiental)
+    t('safety.ambiental_html')
+  end
+
+  def get_diagnostic_license_sanitaria(license_sanitaria)
+    t('safety.sanitaria_html')
+  end
+  
+  def has_not_debts(no_adeudos)
+    if !no_adeudos
+       t('safety.no_debts_html')
+    end
   end
 
 end

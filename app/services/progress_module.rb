@@ -148,7 +148,7 @@ module ProgressModule
           when 3
             session[:license_ambiental] = -4
         else
-          session[:license_ambiental] = false
+          session[:license_ambiental] = true
         end
           
       when 8 #pregunta 8
@@ -160,7 +160,7 @@ module ProgressModule
           when 3
               session[:license_sanitaria] = -4
         else
-          session[:license_sanitaria] = false
+          session[:license_sanitaria] = true
         end
 
       when 9 #pregunta 9
@@ -213,11 +213,9 @@ module ProgressModule
           session[:type_zoning] = -1
         end
       when 2#pregunta 2
-        puts '*******************'
         case clicked.to_i
           when 1
             session[:is_business_home] = true
-            puts 'hola'
           when 2
             session[:is_business_home] = false
         else
