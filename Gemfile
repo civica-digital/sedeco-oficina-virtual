@@ -21,6 +21,8 @@ gem 'simple_form'
 gem 'validate_url'
 gem 'inline_svg'
 gem 'youtube_addy'
+gem 'wicked_pdf' #crear PDF
+gem 'wkhtmltopdf-binary'
 
 group :development, :test do
   gem 'byebug'

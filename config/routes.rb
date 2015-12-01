@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :impact, controller: 'impact'
   resources :zoning, controller: 'zoning'
   resources :safety, controller: 'safety'
-  resources :diagnostic, controller: 'diagnostics'
+  resources :diagnostic, controller: 'diagnostics'do
+      collection do
+        get 'download_diagnostic', :path => "descargar_diagnostico"
+      end
+  end
 
   localized do
     resources :learning_center, only: :index
