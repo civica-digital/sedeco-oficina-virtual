@@ -2,3 +2,8 @@ es:
   routes:
     new: "nuevo"
     appointments: "citas"
+    admins: "admins"
+    sign_in: "inicia_sesion"
+    resources: "recursos"
+    panel: "panel"
+    learning_center: "centro_de_aprendizaje"

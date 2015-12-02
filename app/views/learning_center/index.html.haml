@@ -1,0 +1,34 @@
+%div.container.learning-center
+  %div.row.description-container
+    %div.col-md-8.col-md-offset-2
+      %h4.text-center
+        = t(".learning_center_description")
+
+  %div.row.description-container
+    %div.col-md-3.col-md-offset-4
+      %div.btn-group.btn-block
+        %div.category-select.btn.btn-md.btn-default.btn-block.dropdown-toggle{ "data-toggle" => "dropdown" }
+          - if @search.present?
+            = @search
+          - else
+            = t(".get_social_reason")
+          %span.glyphicon.glyphicon-chevron-down.pull-right
+        %ul.dropdown-menu.btn-block{ "data-no-turbolink" => true }
+          - category_options.each do |category|
+            %li
+              = link_to category, learning_center_index_path(search: category)
+            %li.divider
+  %div.row.resource-container
+    %div.col-md-8.col-md-offset-2
+      %div.row
+        - @resources.each do |resource|
+          %div.resource.col-md-6
+            - if resource.youtube_video?
+              = YouTubeAddy.youtube_embed_url(resource.url, 360,220).html_safe
+            - else
+              %div.resource-detail.text-center
+                = link_to resource.url, target: :blank do
+                  = inline_svg "iconos/pdf.svg", class: 'resource-icon'
+                %h3.text-center
+                  = link_to resource.url, target: :blank do
+                    = resource.name

@@ -1,0 +1,41 @@
+%div.container
+  %div.row
+    = render partial: "shared/messages", flash: flash
+  %div.jumbotron
+    %h3.text-center
+      = t(".app_name")
+    %h4.text-center
+      = t(".learning_center")
+    %div.row
+      %div.col-md-2.pull-right
+        = link_to new_admins_resource_path, class: "btn btn-primary" do
+          %span.glyphicon.glyphicon-plus
+          = t(".add_resource")
+    %div.row
+      - if @resources.any?
+        %table.table.table-striped
+          %thead
+            %tr
+              %th
+                = t(".id")
+              %th
+                = t(".name")
+              %th
+                = t(".url")
+              %th
+                = t(".category")
+          %tbody
+            - @resources.each do |resource|
+              %tr
+                %td
+                  = resource.id
+                %td
+                  = resource.name
+                %td
+                  = resource.url
+                %td
+                  = resource.category
+      - else
+        %div.row.text-center
+          %em.text-muted
+            = t(".no_resources")
