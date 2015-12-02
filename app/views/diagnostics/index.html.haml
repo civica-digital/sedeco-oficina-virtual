@@ -1,8 +1,14 @@
 .header
-  %div.container.container-impacto.text-right.margin-bottom.margin-top
+  %div.container.container-impacto.margin-bottom.margin-top
     %div.row
-      = link_to download_diagnostic_diagnostic_index_path, :class=>"colorprimario", :target => "_blank" do
-        #{image_tag(prod_img_full('imprimir'))} Imprimir
+      .col-md-9.text-left.text-question
+        -if @appontment
+          #{image_tag(prod_img_full('cita'), :class=>"padding-icon-date")} #{t('.title_must_cita_html', path: appointments_path)}
+        -else
+          #{image_tag(prod_img_full('cita'), :class=>"padding-icon-date")} #{t('.title_cita_html', path: appointments_path)}
+      .col-md-3.text-right
+        = link_to download_diagnostic_diagnostic_index_path, :class=>"colorprimario", :target => "_blank" do
+          #{image_tag(prod_img_full('imprimir'))} Imprimir
   %div.container-impacto
     %div.row
       #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
@@ -11,14 +17,14 @@
             %h4.panel-title
               %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
                 .row
-                  .col-md-6.not-padding-left
+                  .col-md-6.not-padding-left.details-toggle1
                     =t('.title_impact_html')
-                  .col-md-6.text-right
-                    %i.fa.fa-angle-down.impacto1.colorprimario
-                    %i.fa.fa-angle-up.impacto2.colorprimario.hidden
-        #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
-          .panel-body
-            = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
+                  .col-md-6.text-right.edit-toggle
+                    %i.fa.fa-angle-down.impacto1.colorprimario.hidden
+                    %i.fa.fa-angle-up.impacto2.colorprimario
+          #collapseOne.panel-collapse.collapse.in{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+            .panel-body
+              = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
                                                     :impacto_usuario => session[:impacto_usuario], 
                                                     :has_siapem => session[:has_siapem],
                                                     :has_special_license => session[:has_special_license]}         
@@ -27,11 +33,11 @@
             %h4.panel-title
               %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
                 .row
-                  .col-md-6.not-padding-left
+                  .col-md-6.not-padding-left.details-toggle2
                     =t('.title_zoning_html')
                   .col-md-6.text-right
-                    %i.fa.fa-angle-down.suelo1.colorprimario.hidden
-                    %i.fa.fa-angle-up.suelo2.colorprimario
+                    %i.fa.fa-angle-down.suelo1.colorprimario
+                    %i.fa.fa-angle-up.suelo2.colorprimario.hidden
           #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
             .panel-body
               = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
@@ -40,11 +46,11 @@
             %h4.panel-title
               %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "button"}
                 .row
-                  .col-md-6.not-padding-left
+                  .col-md-6.not-padding-left.details-toggle3
                     =t('.title_safety_html')
                   .col-md-6.text-right
-                    %i.fa.fa-angle-down.seguridad1.colorprimario.hidden
-                    %i.fa.fa-angle-up.seguridad2.colorprimario
+                    %i.fa.fa-angle-down.seguridad1.colorprimario
+                    %i.fa.fa-angle-up.seguridad2.colorprimario.hidden
           #collapseThree.panel-collapse.collapse{"aria-labelledby" => "headingThree", :role => "tabpanel"}
             .panel-body
               = render 'shared/diagnostics/safety', :locals => {:has_autodiagnostico => session[:has_autodiagnostico],
@@ -56,3 +62,41 @@
               :no_adeudos => session[:no_adeudos],
               :aforo => session[:aforo],
               :impacto_usuario => session[:impacto_usuario]}
+
+
+:javascript
+  $(function () {
+      $(".details-toggle1").click(function () {
+        if($( ".impacto1" ).is(":visible")){
+          $( ".impacto2" ).removeClass( "hidden");
+          $( ".impacto1" ).addClass( "hidden" );
+        }else{
+          $( ".impacto2" ).addClass( "hidden");
+          $( ".impacto1" ).removeClass( "hidden" );
+        }
+      });
+  });
+  $(function () {
+        $(".details-toggle2").click(function () {
+        if($( ".suelo1" ).is(":visible")){
+          $( ".suelo2" ).removeClass( "hidden");
+          $( ".suelo1" ).addClass( "hidden" );
+        }else{
+          $( ".suelo2" ).addClass( "hidden");
+          $( ".suelo1" ).removeClass( "hidden" );
+        }
+      });
+  });
+
+  $(function () {
+    $(".details-toggle3").click(function () {
+    if($( ".seguridad1" ).is(":visible")){
+      $( ".seguridad2" ).removeClass( "hidden");
+      $( ".seguridad1" ).addClass( "hidden" );
+    }else{
+      $( ".seguridad2" ).addClass( "hidden");
+      $( ".seguridad1" ).removeClass( "hidden" );
+    }
+    });
+  });
+  

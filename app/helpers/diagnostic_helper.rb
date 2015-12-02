@@ -24,13 +24,6 @@ module DiagnosticHelper
     end
   end
 
-  def make_appointment(license)
-    if !license
-      'Te recomandamos hacer una cita en SEDECO para poder aclarar todas tus dudas'
-    end
-  end
-
-
   def validate_expiration_zoning(date_siapem, date_zoning)
     if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
       t('zoning.expiration_zoning_html')
