@@ -1,0 +1,56 @@
+@import "colors";
+
+.learning-center .description-container {
+  margin: 40px 0px;
+}
+
+.learning-center .resource {
+  margin-bottom: 20px;
+}
+
+.learning-center .resource-detail {
+  background-color: $light-gray;
+  padding: 30px 15px;
+  height: 220px;
+
+  a {
+    color: $pink;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .resource-icon {
+    fill: $pink;
+  }
+
+  .resource-icon:hover {
+    fill: $purple;
+  }
+}
+
+.learning-center .category-select {
+  padding: 15px 10px;
+  color: $input-gray;
+  text-align: left;
+  font-size: 1.1em;
+  border-radius: 10px;
+
+  &:hover {
+    background: white;
+  }
+
+  span.glyphicon {
+    padding: 18px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: $pink;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  span.glyphicon:hover, span.glyphicon:focus {
+    background: $purple;
+  }
+}
