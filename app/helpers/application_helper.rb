@@ -1,5 +1,5 @@
 module ApplicationHelper
-  
+
   #obtiene la imagen svg
   def prod_img_full(img)
     "iconos/#{img}.svg"
@@ -27,7 +27,7 @@ module ApplicationHelper
     elsif type == "aforo"
       final = 500
       unidad = ""
-    end 
+    end
     array_ = []
 
     ((final.to_i).downto(Integer(init))).each do |n|
@@ -36,4 +36,24 @@ module ApplicationHelper
     return array_
   end
 
+  def bootstrap_class_for(flash_type)
+    case flash_type.to_sym
+      when :success
+        "alert-success"
+      when :error
+        "alert-error"
+      when :alert
+        "alert-block"
+      when :notice
+        "alert-success"
+      else
+        flash_type.to_s
+    end
+  end
+
+  def form_errors_class(object)
+    if object.send(:errors).present?
+      "has-errors"
+    end
+  end
 end

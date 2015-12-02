@@ -14,8 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery-ui/datepicker
+//= require jquery-ui/datepicker-es
 //= require chosen-jquery
 //= require_tree .
 
 $(document).ready(loadChosen);
 $(document).on('page:load', loadChosen);
+$(document).on('page:load', displayModal);
+
+$(function() {
+  $("#calendar").datepicker({
+    onSelect: function(date) {
+      $("#appointment_scheduled_date").val(date)
+      $("#new_appointment").modal();
+    },
+    minDate: 0,
+    dayNamesMin: $.datepicker.regional.es.dayNamesShort,
+    hideIfNoPrevNext: true
+  });
+});
+
+
+var displayModal = $(function() {
+  if ($(".has-errors").length)
+    $("#new_appointment").modal();
+});
