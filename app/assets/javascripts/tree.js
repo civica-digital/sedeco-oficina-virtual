@@ -237,3 +237,50 @@
     }, 2000);
   }
 
+/*Controla las flechas del acordion*/
+$(function () {
+      $(".details-toggle1").click(function () {
+          $( ".suelo1" ).removeClass( "hidden");
+          $( ".suelo2" ).addClass( "hidden" );
+          $( ".seguridad1" ).removeClass( "hidden");
+          $( ".seguridad2" ).addClass( "hidden" );
+        if($( ".impacto1" ).is(":visible")){
+          $( ".impacto2" ).removeClass( "hidden");
+          $( ".impacto1" ).addClass( "hidden" );
+        }else{
+          $( ".impacto2" ).addClass( "hidden");
+          $( ".impacto1" ).removeClass( "hidden" );
+        }
+      });
+  });
+  $(function () {
+        $(".details-toggle2").click(function () {
+          $( ".impacto1" ).removeClass( "hidden");
+          $( ".impacto2" ).addClass( "hidden" );
+          $( ".seguridad1" ).removeClass( "hidden");
+          $( ".seguridad2" ).addClass( "hidden" );
+        if($( ".suelo1" ).is(":visible")){
+          $( ".suelo2" ).removeClass( "hidden");
+          $( ".suelo1" ).addClass( "hidden" );
+        }else{
+          $( ".suelo2" ).addClass( "hidden");
+          $( ".suelo1" ).removeClass( "hidden" );
+        }
+      });
+  });
+
+  $(function () {
+    $(".details-toggle3").click(function () {
+    $( ".impacto1" ).removeClass( "hidden");
+    $( ".impacto2" ).addClass( "hidden" );
+    $( ".suelo1" ).removeClass( "hidden");
+    $( ".suelo2" ).addClass( "hidden" );
+    if($( ".seguridad1" ).is(":visible")){
+      $( ".seguridad2" ).removeClass( "hidden");
+      $( ".seguridad1" ).addClass( "hidden" );
+    }else{
+      $( ".seguridad2" ).addClass( "hidden");
+      $( ".seguridad1" ).removeClass( "hidden" );
+    }
+    });
+  });  
