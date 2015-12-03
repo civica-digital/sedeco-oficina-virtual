@@ -50,3 +50,9 @@
                                                               :next_restrictions=>locals[:next_restrictions][index]}
   %div.col-md-12.margin-top
     %hr
+
+:javascript
+  $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });

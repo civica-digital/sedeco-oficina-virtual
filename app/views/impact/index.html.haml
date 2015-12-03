@@ -2,7 +2,8 @@
   #sidebar-wrapper
     %ul.sidebar-nav
       %li.sidebar-brand
-
+        .col-md-12.text-right
+          %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
 #page-content-wrapper
   .container-fluid
     .header
@@ -58,7 +59,7 @@
     document.getElementById("1").removeAttribute("class");
     number_of_views = "#{@file.size}";    /*Obtenemos el tamaño maximo de ids en la vista*/
   });
-   $("#menu-toggle").click(function(e) {
+  $("#menu-toggleint").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
