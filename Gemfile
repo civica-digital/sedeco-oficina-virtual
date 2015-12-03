@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'validate_url'
 gem 'inline_svg'
 gem 'youtube_addy'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem "letter_opener"
 end
 
 group :development do
