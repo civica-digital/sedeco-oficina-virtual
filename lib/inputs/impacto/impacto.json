@@ -5,6 +5,8 @@
                 {
                     "numero": "1",
                     "texto": "¿Ya cuentas con un establecimiento mercantil?",
+                    "ayuda_titulo": "¿Qué es un establecimiento mercantil?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -29,6 +31,8 @@
                 {
                     "numero": "2",
                     "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
+                    "ayuda_titulo": "¿Qué es un impacto vecinal?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -85,6 +89,8 @@
                 {
                     "numero": "3",
                     "texto": "¿Deseas abrir o tienes un negocio con alguno de estos giros?",
+                    "ayuda_titulo": "¿Qué es un impacto zonal?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -134,6 +140,8 @@
                 {
                     "numero": "4",
                     "texto": "¿Ya registraste tu negocio en el Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles (SIAPEM)?",
+                    "ayuda_titulo": "¿Qué es el SIAMPEM?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -177,6 +185,8 @@
                 {
                     "numero": "5",
                     "texto": "¿Cuándo te registraste en el SIAPEM?",
+                    "ayuda_titulo": "¿En dónde encuentro la fecha de registro del SIAPEM?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "fecha",
                         "respuesta": [
@@ -199,6 +209,8 @@
                 {
                     "numero": "6",
                     "texto": "¿Cuentas con algún tipo de permiso o licencia de funcionamiento tipo A u ordinaria?",
+                    "ayuda_titulo": "¿Qué es una licencia de funcionamiento?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -232,6 +244,8 @@
                 {
                     "numero": "7",
                     "texto": "¿Cuentas con declaración de apertura?",
+                    "ayuda_titulo": "¿Qué es una declaración de apertura?",
+                    "ayuda_texto":"Texto explicativo",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [

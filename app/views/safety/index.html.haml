@@ -1,39 +1,42 @@
-.header
-  =render "shared/titlebar", :title => t('tree.title.safety'),:text => t('tree.subtitle.safety')
-  %div.container-impacto.text-center
-    %div.row
-      %div.col-lg-12
-        -@file.each_with_index do |pregunta, index|
-          -clean_arrays
-          -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
-            -@respuestas_texto_array << respuestas["texto"]
-            -@respuestas_rango_array << respuestas["rangoinicial"]
-            -@respuestas_imagen_array << respuestas["imagen"]
-            -@respuestas_id_array << respuestas["id"]
-            -@respuestas_siguiente_array << respuestas["siguiente"] 
-            -unless respuestas["restricciones"].blank?
-              -respuestas["restricciones"].each do |restriccion|
-                -@respuestas_siguiente_restriccion_array << restriccion["siguiente"]
-                -@respuestas_uso_restriccion_array << restriccion["uso"]
-            -else
-              -@respuestas_siguiente_restriccion_array << "0"
-              -@respuestas_uso_restriccion_array << "0"
-         
-          = render 'shared/questions/question_type', :locals => {:tipo =>pregunta["array_respuestas"]["tipo"],
-                                                        :number => pregunta["numero"], 
-                                                        :texto_question => pregunta["texto"],
-                                                        :texto_answer => @respuestas_texto_array,
-                                                        :imagen => @respuestas_imagen_array,
-                                                        :next => @respuestas_siguiente_array, 
-                                                        :id => @respuestas_id_array,
-                                                        :restrictions =>@respuestas_uso_restriccion_array,
-                                                        :next_restrictions=> @respuestas_siguiente_restriccion_array,
-                                                        :rank_init => @respuestas_rango_array}
-    
-    .div.diagnostic.hidden{:id=>"diagnostic"}         
-      =render "shared/outputs/diagnostic_safety", safety: @tipo_de_impacto
-    .div.margin-bottom-end-page  
-      =render "shared/progressbar"
+= render "shared/wrapper"
+#page-content-wrapper
+  .container-fluid
+    .header
+      =render "shared/titlebar", :title => t('tree.title.safety'),:text => t('tree.subtitle.safety')
+      %div.container-impacto.text-center
+        %div.row
+          %div.col-lg-12
+            -@file.each_with_index do |pregunta, index|
+              -clean_arrays
+              -pregunta["array_respuestas"]["respuesta"].each do |respuestas|
+                -@respuestas_texto_array << respuestas["texto"]
+                -@respuestas_rango_array << respuestas["rangoinicial"]
+                -@respuestas_imagen_array << respuestas["imagen"]
+                -@respuestas_id_array << respuestas["id"]
+                -@respuestas_siguiente_array << respuestas["siguiente"] 
+                -unless respuestas["restricciones"].blank?
+                  -respuestas["restricciones"].each do |restriccion|
+                    -@respuestas_siguiente_restriccion_array << restriccion["siguiente"]
+                    -@respuestas_uso_restriccion_array << restriccion["uso"]
+                -else
+                  -@respuestas_siguiente_restriccion_array << "0"
+                  -@respuestas_uso_restriccion_array << "0"
+             
+              = render 'shared/questions/question_type', :locals => {:tipo =>pregunta["array_respuestas"]["tipo"],
+                                                            :number => pregunta["numero"], 
+                                                            :texto_question => pregunta["texto"],
+                                                            :texto_answer => @respuestas_texto_array,
+                                                            :imagen => @respuestas_imagen_array,
+                                                            :next => @respuestas_siguiente_array, 
+                                                            :id => @respuestas_id_array,
+                                                            :restrictions =>@respuestas_uso_restriccion_array,
+                                                            :next_restrictions=> @respuestas_siguiente_restriccion_array,
+                                                            :rank_init => @respuestas_rango_array}
+        
+        .div.diagnostic.hidden{:id=>"diagnostic"}         
+          =render "shared/outputs/diagnostic_safety", safety: @tipo_de_impacto
+        .div.margin-bottom-end-page  
+          =render "shared/progressbar"
 
 
 

@@ -1,0 +1,20 @@
+#wrapper
+  #sidebar-wrapper
+    %ul.sidebar-nav
+      %li.sidebar-brand
+        .col-md-12.text-right
+          %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
+      %li.col-md-12.text-center
+        %i.fa.fa-info-circle.pink  
+      %li.col-md-12.text-center.pink
+        Conceptos claves
+        %hr
+      
+
+
+
+:javascript
+  $("#menu-toggleint").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
