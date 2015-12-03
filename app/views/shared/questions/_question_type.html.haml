@@ -2,7 +2,7 @@
   %div.col-md-12.text-question
     .p
       = locals[:texto_question]
-      %i#menu-toggle.fa.fa-info-circle.input-gray{:href => "#menu-toggle"}
+      %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle#{locals[:number]}"}
   %div.col-md-12.text-center
     %div.row.seven-cols
       %div.col-md-12
@@ -52,7 +52,14 @@
     %hr
 
 :javascript
-  $("#menu-toggle").click(function(e) {
+  $(document).ready( function () {
+    for(i = 1; i <= "#{@file.size}"; i++){
+      $("#menu-toggle"+i).click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-    });
+      });
+    }
+  });
+
+
+  

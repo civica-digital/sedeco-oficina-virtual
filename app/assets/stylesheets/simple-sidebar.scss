@@ -19,7 +19,8 @@
 }
 
 #sidebar-wrapper {
-    z-index: 1000 !important;
+padding-top:100px;
+    z-index: 500 !important;
     position: fixed;
     left: 250px;
     width: 0;
@@ -55,7 +56,7 @@
     top: 0;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 70px;
     list-style: none;
 }
 

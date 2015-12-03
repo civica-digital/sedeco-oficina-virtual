@@ -3,6 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "colors";
 /**********************NAvbar*********************/
+.nav{
+    color: #fff !important;
+    width: 100%;
+    position: fixed !important;
+    z-index: 1000;
+}
+
+
 .navbar-default .navbar-brand {
   color: #fff !important;
 }
