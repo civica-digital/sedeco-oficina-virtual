@@ -138,6 +138,7 @@ es:
     panel:
       index:
         admin_panel: "Panel de administración"
+        admin_resources: "Administrar recursos"
         app_name: "Oficina virtual SEDECO"
         learning_center: "Centro de aprendizaje"
     resources:
@@ -198,3 +199,5 @@ es:
       next_text_last: "Siguiente paso 'Ver diagnóstico'"
   help:
     learning_html: '<colorprimario><a href="%{path}" target="_blank" class="colorprimario">Ir al centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 
+  button:
+    go: 'Ingresar'
