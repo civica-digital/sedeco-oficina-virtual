@@ -144,6 +144,7 @@ es:
     resources:
       new:
         new_resource: "Nuevo recurso"
+        app_name: "Oficina virtual SEDECO"
       create:
         resource_created: "El recurso se agregó exitosamente."
       index:
