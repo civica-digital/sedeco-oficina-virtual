@@ -1,0 +1,10 @@
+-help_type.each do |help|
+  %div.pink.text-center.text-help
+    =help[:title]
+    %br
+  %div.text-center.text-help
+    =help[:text]        
+    %br
+  %div.text-center.pink
+    #{t('help.learning_html', path: learning_center_index_path)}
+  %hr

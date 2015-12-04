@@ -11,22 +11,13 @@
         %hr
       -if type == 'impact'
         %li
-          -get_help_impact.each do |impact|
-            %div.pink.text-center.text-help
-              =impact[:title]
-              %br
-            %div.text-center.text-help
-              =impact[:text]        
-              %br
-            %div.text-center.pink
-              #{t('help.learning_html', path: learning_center_index_path)}
-            %hr
+          = render "shared/questions/help",:help_type => get_help_impact 
       -elsif type == 'safety'
         %li
-          hola2
+          = render "shared/questions/help",:help_type => get_help_safety
       -else type == 'zoning'
         %li
-          hola3
+          = render "shared/questions/help",:help_type => get_help_zoning
 
 
 
