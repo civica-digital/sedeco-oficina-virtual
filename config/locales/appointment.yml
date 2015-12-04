@@ -1,0 +1,6 @@
+es:
+  appointment:
+    title: 'Agendar una cita'
+    text: 'Selecciona la fecha en la que te gustaría ir a SEDECO.'
+    subtitle: 'Selecciona una fecha:'
+    title_dialog: 'Agendar cita'
