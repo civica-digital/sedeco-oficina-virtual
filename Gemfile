@@ -24,6 +24,7 @@ gem 'youtube_addy'
 gem 'wicked_pdf' #crear PDF
 gem 'wkhtmltopdf-binary'#crear PDF
 gem "font-awesome-rails"
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug'
@@ -32,6 +33,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
   gem 'launchy'
+  gem "letter_opener"
 end
 
 group :development do

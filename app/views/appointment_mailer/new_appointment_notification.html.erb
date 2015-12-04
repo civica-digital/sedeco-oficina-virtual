@@ -1,0 +1,26 @@
+<p>Hola <strong>Administrador</strong>,</p>
+
+<p>Le informamos que se acaba de crear una cita con la siguiente información: </p>
+
+<ul>
+  <li>
+    <strong>Nombre:</strong>
+    <%= @appointment.name %>
+  </li>
+  <li>
+    <strong>Fecha:</strong>
+    <%= l(@appointment.scheduled_date.to_date) %>
+  </li>
+  <li>
+    <strong>Correo electrónico:</strong>
+    <%= @appointment.email %>
+  </li>
+  <li>
+    <strong>Teléfono:</strong>
+    <%= @appointment.phonenumber %>
+  </li>
+</ul>
+
+<p>Saludos,</p>
+
+<strong>Oficina Virtual</strong>
