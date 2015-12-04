@@ -1,15 +1,32 @@
-#wrapper
+#wrapper.toggled
   #sidebar-wrapper
     %ul.sidebar-nav
       %li.sidebar-brand
         .col-md-12.text-right
           %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
       %li.col-md-12.text-center
-        %i.fa.fa-info-circle.pink  
-      %li.col-md-12.text-center.pink
+        %i.fa.fa-info-circle.fa-3x.pink  
+      %li.col-md-12.text-center.pink.text-help
         Conceptos claves
         %hr
-      
+      -if type == 'impact'
+        %li
+          -get_help_impact.each do |impact|
+            %div.pink.text-center.text-help
+              =impact[:title]
+              %br
+            %div.text-center.text-help
+              =impact[:text]        
+              %br
+            %div.text-center.pink
+              #{t('help.learning_html', path: learning_center_index_path)}
+            %hr
+      -elsif type == 'safety'
+        %li
+          hola2
+      -else type == 'zoning'
+        %li
+          hola3
 
 
 

@@ -196,3 +196,5 @@ es:
       type_last: "Terminamos."
       comment_last: "Porfavor da clic en continuar para ver tu diagnóstico completo"
       next_text_last: "Siguiente paso 'Ver diagnóstico'"
+  help:
+    learning_html: '<colorprimario><a href="%{path}" target="_blank" class="colorprimario">Ir al centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 

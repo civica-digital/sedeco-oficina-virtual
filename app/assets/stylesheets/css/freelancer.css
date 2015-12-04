@@ -30,10 +30,10 @@ a.active {
 }
 
 colorprimario{
-  color: #E6007E;
+  color: #E6007E  !important;
 }
 .colorprimario{
-  color: #E6007E;
+  color: #E6007E !important;
 }
 
 h1,
