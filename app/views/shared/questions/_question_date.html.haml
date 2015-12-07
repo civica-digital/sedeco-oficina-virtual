@@ -1,6 +1,6 @@
 -unless locals[:rank_init].nil?
   %div.margin-top-dropdown
-    -if locals[:tipo] == "fecha" || locals[:tipo] == "aforo"|| locals[:tipo] == "rango"
+    -if locals[:tipo] == "fecha" || locals[:tipo] == "aforo"
       =select :date, "date",
         get_array_values(locals[:rank_init],locals[:tipo]).each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",
         :onchange=> "dateClick(#{locals[:number]},
