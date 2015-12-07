@@ -22,8 +22,8 @@ class SafetyController < ApplicationController
     end
 
     unless params[:impact].blank?
-      superficie = params[:impact][:superficie].chomp('m2')   
-      mobiliario = params[:impact][:mobiliario].chomp('m2')   
+      superficie = params[:impact][:superficie] 
+      mobiliario = params[:impact][:mobiliario] 
       aforo_size = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:name])
       total = (superficie.to_f -  mobiliario.to_f) / aforo_size.to_f
       save_aforo(total)
