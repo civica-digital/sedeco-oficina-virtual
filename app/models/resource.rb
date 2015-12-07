@@ -9,4 +9,9 @@ class Resource < ActiveRecord::Base
   def pdf_document?
     url.downcase.include?(".pdf")
   end
+
+  def self.by_category(category)
+    where(category: category)
+  end
+
 end

@@ -1,5 +1,14 @@
 class LearningCenterController < ApplicationController
+  helper_method :category_options
+
   def index
-    @resources = Resource.all
+    @search = params[:search]
+    @resources = Resources.search_results(@search)
+  end
+
+  private
+
+  def category_options
+    Resources.available_categories
   end
 end
