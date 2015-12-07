@@ -130,7 +130,9 @@ es:
       appointment_created: "La cita se ha agendado exitosamente."
   learning_center:
     index:
+      title: "Centro de aprendizaje"
       learning_center_description: "Aquí conocerás los trámites que necesitas para dar de alta tu negocio y resolverás todas las dudas que tengas al respecto."
+      app_name: "Oficina virtual SEDECO"
   admins:
     sessions:
       new:
@@ -185,7 +187,7 @@ es:
       type_con_suelo: "Apto para poner un negocio"
       comment_con_suelo: "Porfavor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_con_suelo: "Siguiente paso 'Protección civíl"
-      type_equipamiento: "Especial"
+      type_equipamiento: "Equipamiento, Area verde o Espacio abierto"
       comment_equipamiento: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_equipamiento: "Siguiente paso 'Hacer una cita'"
       type_derechos: "Derechos adquiridos"
