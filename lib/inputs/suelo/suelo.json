@@ -81,7 +81,7 @@
                 },
                 {
                     "numero": "3",
-                    "texto": "¿Cuánto mide la vivienda donde está o se abrirá el negocio?",
+                    "texto": "¿Cuánto mide la vivienda donde está o se abrirá el negocio? (en m2)",
                     "array_respuestas": {
                         "tipo": "rango",
                         "respuesta": [
@@ -98,7 +98,7 @@
                 },
                 {
                     "numero": "4",
-                    "texto": "¿Cuánto mide o medirá el negocio?",
+                    "texto": "¿Cuánto mide o medirá el negocio? (en m2)",
                     "array_respuestas": {
                         "tipo": "rango",
                         "respuesta": [
