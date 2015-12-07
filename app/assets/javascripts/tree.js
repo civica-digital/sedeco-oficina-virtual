@@ -233,7 +233,7 @@
 /*animacion que sube el scroll lentamente*/
   function up_page(){
     $('html, body').animate({
-    scrollTop: '+=700'
+    scrollTop: '+=900'
     }, 2000);
   }
 

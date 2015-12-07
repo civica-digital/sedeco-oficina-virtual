@@ -30,7 +30,8 @@ module ApplicationHelper
     end
     array_ = []
 
-    ((final.to_i).downto(Integer(init))).each do |n|
+    #((final.to_i).downto(Integer(init))).each do |n|
+    (Integer(init)..(final.to_i)).each do |n|
       array_ << "#{n}#{unidad}"
     end
     return array_
