@@ -20,7 +20,7 @@
                                 "-type": "normal",
                                 "texto": "(HM)Habitacional Mixto",
                                 "imagen": "hab-mixto",
-                                "siguiente": "4",
+                                "siguiente": "2",
                                 "restricciones":[]
                             },
                             {
@@ -28,7 +28,7 @@
                                 "-type": "normal",
                                 "texto": "(HO)Habitacional Oficina",
                                 "imagen": "hab-oficinas",
-                                "siguiente": "4",
+                                "siguiente": "2",
                                 "restricciones":[]
                             },
                             {
@@ -36,7 +36,7 @@
                                 "-type": "normal",
                                 "texto": "(HC)Habitacional Comercio",
                                 "imagen": "hab-comercio",
-                                "siguiente": "4",
+                                "siguiente": "2",
                                 "restricciones":[]
                             },
                             {
@@ -45,14 +45,6 @@
                                 "texto": "(E)Equipamiento,(AV)Áreas verdes o (EA)Espacio Abierto",
                                 "imagen": "espacio",
                                 "siguiente": "-5",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"6",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -69,7 +61,12 @@
                                 "texto": "Si",
                                 "imagen": "si",
                                 "siguiente": "3",
-                                "restricciones":[]
+                                "restricciones":[
+                                {
+                                    "uso": "-20",
+                                    "siguiente": "4"
+                                }
+                                ]
                             },
                             {
                                 "id":"2",
@@ -77,14 +74,6 @@
                                 "texto": "No",
                                 "imagen": "no",
                                 "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -102,14 +91,6 @@
                                 "texto": "Selecciona en metros cuadrados:",
                                 "rangoinicial": "1",
                                 "siguiente": "4",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "-4",
                                 "restricciones":[]
                             }
                         ]
@@ -133,14 +114,6 @@
                                         "siguiente": "8"
                                     }
                                 ]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "-4",
-                                "restricciones":[]
                             }
                         ]
                     }
@@ -171,7 +144,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "-4",
+                                "siguiente": "8",
                                 "restricciones":[]
                             }
                         ]
@@ -187,7 +160,7 @@
                                 "id":"1",
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
-                                "rangoinicial": "1980",
+                                "rangoinicial": "1985",
                                 "siguiente": "7",
                                 "restricciones":[]
                             },
@@ -196,7 +169,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "-4",
+                                "siguiente": "7",
                                 "restricciones":[]
                             }
                         ]
@@ -264,11 +237,11 @@
                                 "restricciones":[]
                             },
                             {
-                                "id":"3",
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "-4",
+                                "siguiente": "0",
                                 "restricciones":[]
                             }
                         ]
@@ -289,11 +262,11 @@
                                 "restricciones":[]
                             },
                             {
-                                "id":"3",
+                                "id":"2",
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "-4",
+                                "siguiente": "0",
                                 "restricciones":[]
                             }
                         ]

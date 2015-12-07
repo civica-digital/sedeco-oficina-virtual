@@ -1,0 +1,16 @@
+-unless locals[:rank_init].nil?
+  %div.margin-top-dropdown
+    =text_field :date, "date", class: 'form-controler', :placeholder => locals[:rank_init],
+      :onchange=> "dateText(#{locals[:number]}, 
+        #{locals[:id]}, 
+        #{locals[:next]},
+        #{locals[:restrictions]},
+        #{locals[:next_restrictions]})",:id=>"date_#{locals[:number]}_#{locals[:id]}"
+-else
+  = render 'shared/questions/question_normal', :locals => {:imagen => locals[:imagen],
+                                                :number => locals[:number], 
+                                                :text => locals[:text],
+                                                :id => locals[:id],
+                                                :next => locals[:next],
+                                                :restrictions => locals[:restrictions],
+                                                :next_restrictions=>locals[:next_restrictions]}

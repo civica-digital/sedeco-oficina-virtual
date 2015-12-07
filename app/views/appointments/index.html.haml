@@ -1,21 +1,25 @@
-%div.container
-  %div.row
-    = render partial: "shared/messages", flash: flash
-    %div.col-md-10.col-md-offset-1
-      %h4
-        Selecciona una fecha
-      %div#calendar.appointments-calendar
+#page-content-wrapper
+  .container-fluid
+    .header
+      =render "shared/titlebar", :title => t('appointment.title'),:text => t('appointment.text')
+      %div.container
+        %div.row
+          = render partial: "shared/messages", flash: flash
+          %div.col-md-10.col-md-offset-1
+            %h4
+              =t('appointment.subtitle')
+            %div#calendar.appointments-calendar
 
-%div.modal.fade#new_appointment
-  %div.modal-dialog.modal-sm
-    %div.modal-content
-      %div.modal-header
-        %h4
-          Agendar cita
-      %div.modal-body
-        = simple_form_for @appointment, html: { class: form_errors_class(@appointment) } do |f|
-          = f.input :scheduled_date, as: :string, readonly: true
-          = f.input :name
-          = f.input :email, as: :email
-          = f.input :phonenumber
-          = f.button :submit, class: "btn btn-primary btn-block"
+      %div.modal.fade#new_appointment
+        %div.modal-dialog.modal-sm
+          %div.modal-content
+            %div.modal-header
+              %h4
+                =t('appointment.title_dialog')
+            %div.modal-body
+              = simple_form_for @appointment, html: { class: form_errors_class(@appointment) } do |f|
+                = f.input :scheduled_date, as: :string, readonly: true
+                = f.input :name
+                = f.input :email, as: :email
+                = f.input :phonenumber
+                = f.button :submit, class: "btn btn-primary btn-block"

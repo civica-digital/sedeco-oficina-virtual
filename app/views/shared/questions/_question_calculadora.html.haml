@@ -1,0 +1,27 @@
+%div.margin-top-dropdown
+  %div.row
+    .col-md-5
+      Superficie del establecimiento
+      =select :date, "date", 
+      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select", id:"superficie",:onchange=> "valueAforo()"
+    .col-md-2
+      .col-md-8.col-md-offset-2
+        %hr.style-line
+    .col-md-5
+      Superficie del mobiliario
+      =select :date, "date", 
+      get_array_values(1,'rango').each_with_index.map {|name, index| [name,index]},{ include_blank: true , selected: false }, class: "chosen-select",:id=>"mobiliario",:onchange=> "valueAforo()"
+  %hr.style-line
+  %div.row  
+    .col-md-6.col-md-offset-3
+      superficie del giro
+      -if bajo_impacto?
+        =select :date, "date", 
+        Towns.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo('bajo')"
+      -else
+        =select :date, "date", 
+        Towns.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto", class: "chosen-select",:onchange=> "valueAforo('vecinal')"
+%div.margin-top-dropdown.hidden{:id=>"diagnosticaforo"} 
+  .jumbotron
+    %h2.colorprimario
+      ="Tu aforo es: #@aforo"

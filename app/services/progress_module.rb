@@ -9,8 +9,6 @@ module ProgressModule
   		 			session[:has_bussine] = true
   		 		when 2
   		 			session[:has_bussine] = false
-  		 		when 3
-  		 			session[:has_bussine] = -4
   		 	else
   				session[:has_bussine] = false
   	 		end
@@ -20,8 +18,6 @@ module ProgressModule
   		 		when 1..5
   					session[:impacto_usuario] = -2
   		 		when 6
-  		 			session[:impacto_usuario] = -4
-  		 		when 7
   		 			session[:impacto_usuario] = -4
   		 	else
   		 		session[:impacto_usuario] = -4
@@ -33,10 +29,8 @@ module ProgressModule
 	            session[:impacto_usuario] = -3
 	          when 5
 	            session[:impacto_usuario] = -1
-	          when 6
-	            session[:impacto_usuario] = -4
 	        else
-	          session[:impacto_usuario] = -4
+	          session[:impacto_usuario] = -1
 	        end
 
   	 	when 4 #pregunta 4
@@ -46,7 +40,7 @@ module ProgressModule
 	          when 2
 	            session[:has_siapem] = false
 	          when 3
-	            session[:has_siapem] = -4
+	            session[:has_siapem] = false
 	        else
 	          session[:has_siapem] = false
 	        end
@@ -70,7 +64,7 @@ module ProgressModule
           when 2
             session[:has_open_declaration] = false
           when 3
-            session[:has_open_declaration] = -4
+            session[:has_open_declaration] = false
         else
           session[:has_open_declaration] = false
         end
@@ -154,7 +148,7 @@ module ProgressModule
           when 3
             session[:license_ambiental] = -4
         else
-          session[:license_ambiental] = false
+          session[:license_ambiental] = true
         end
           
       when 8 #pregunta 8
@@ -166,7 +160,7 @@ module ProgressModule
           when 3
               session[:license_sanitaria] = -4
         else
-          session[:license_sanitaria] = false
+          session[:license_sanitaria] = true
         end
 
       when 9 #pregunta 9
@@ -200,6 +194,10 @@ module ProgressModule
       end
   end
 
+  def save_aforo(value)
+    session[:aforo] = value
+  end
+
 #*************************************USO DE SUELO*********************************
   def save_advance_zoning(actual, clicked) 
     case actual.to_i
@@ -211,21 +209,17 @@ module ProgressModule
             session[:type_zoning] = -2
           when 5
             session[:type_zoning] = -5
-          when 6
-            session[:type_zoning] = -4
         else
-          session[:type_zoning] = -4
+          session[:type_zoning] = -1
         end
       when 2#pregunta 2
         case clicked.to_i
           when 1
-            session[:type_zoning] = -10
+            session[:is_business_home] = true
           when 2
-            session[:type_zoning] = -11
-          when 3
-            session[:type_zoning] = -4
+            session[:is_business_home] = false
         else
-          session[:type_zoning] = -4
+          session[:is_business_home] = false
         end
       when 5#pregunta 5
         case clicked.to_i
@@ -306,6 +300,8 @@ module ProgressModule
     unless session[:size_house].nil? || session[:size_house].to_i == 0
       business = session[:size_business].to_i
       house = session[:size_house].to_i
+      puts business
+      puts house
       if (business*100)/house <= 20
        session[:uso_de_suelo] = true
       else

@@ -22,14 +22,6 @@
                                 "imagen": "no",
                                 "siguiente": "2",
                                 "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
                             }
                         ]
                     }
@@ -86,14 +78,6 @@
                                 "imagen": "no",
                                 "siguiente": "3",
                                 "restricciones":[]
-                            },
-                            {
-                                "id":"7",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
                             }
                         ]
                     }
@@ -143,14 +127,6 @@
                                 "imagen": "no",
                                 "siguiente": "4",
                                 "restricciones":[]
-                            },
-                            {
-                                "id":"6",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
                             }
                         ]
                     }
@@ -187,8 +163,13 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
+                                "siguiente": "7",
+                                "restricciones":[
+                                    {
+                                        "uso": "-2",
+                                        "siguiente": "6"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -203,7 +184,7 @@
                                 "id":"1",
                                 "-type": "fecha",
                                 "texto": "Selecciona una fecha:",
-                                "rangoinicial": "1980",
+                                "rangoinicial": "2011",
                                 "siguiente": "-1",
                                 "restricciones":[
                                     {
@@ -211,14 +192,6 @@
                                         "siguiente": "-2"
                                     }
                                 ]
-                            },
-                            {
-                                "id":"2",
-                                "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "0",
-                                "restricciones":[]
                             }
                         ]
                     }
@@ -250,7 +223,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-2",
                                 "restricciones":[]
                             }
                         ]
@@ -283,7 +256,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "0",
+                                "siguiente": "-1",
                                 "restricciones":[]
                             }
                         ]

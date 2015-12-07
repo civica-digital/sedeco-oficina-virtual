@@ -1,0 +1,9 @@
+= get_diagnostico_seguridad(locals[:has_autodiagnostico],locals[:has_protection],locals[:make_protection],locals[:aforo])
+%hr
+= get_diagnostic_license_ambiental(locals[:license_ambiental])
+%hr
+= get_diagnostic_license_sanitaria(locals[:license_sanitaria])
+%hr
+-if locals[:impacto_usuario] == -2
+	=has_not_debts(locals[:no_adeudos])
+	%hr

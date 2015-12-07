@@ -13,4 +13,5 @@ class Resource < ActiveRecord::Base
   def self.by_category(category)
     where(category: category)
   end
+
 end
