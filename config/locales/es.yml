@@ -185,7 +185,7 @@ es:
       type_sin_suelo: "Habitacional"
       comment_sin_suelo: "y tu negocio mide menos del 20% de tu propiedad por lo que no requieres un uso de suelo diferente. Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_sin_suelo: "Siguiente paso 'Protección civíl'"
-      type_con_suelo: "Apto para poner un negocio"
+      type_con_suelo: "H, HM, HO ó HC"
       comment_con_suelo: "Porfavor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_con_suelo: "Siguiente paso 'Protección civíl"
       type_equipamiento: "Equipamiento, Area verde o Espacio abierto"

@@ -216,7 +216,7 @@
                                 "-type": "normal",
                                 "texto": "No se",
                                 "imagen": "nose",
-                                "siguiente": "-4",
+                                "siguiente": "8",
                                 "restricciones":[]
                             }
                         ]
