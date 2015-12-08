@@ -1,0 +1,38 @@
+%div.row
+  %div.col-md-6
+    %div.col-md-12.landing-text-left
+      .col-md-10.col-md-offset-1.pink
+        LOGO
+      .col-md-10.col-md-offset-1.text-question
+        Aquí conocerás ........ Responde los 3 cuestionarios relacionados al impacto, uso de suelo y protección civil.
+        .row 
+          .col-md-6.text-question
+            =link_to "Comenzar cuestionarios", impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding'
+  %div.col-md-6.back-image-landing
+    %div.col-md-12.landing-menu-icons
+      .col-md-10.col-md-offset-1
+        .col-md-3
+          =image_tag(prod_img_full('centro-lan'), :class=>"bcorner")
+        .col-md-9
+          %div.title-menu-icons
+            Centro de aprendizaje
+          %div.subtitle-menu-icons
+            Encuentra aquí videos o documentos para aprender más de 
+    %div.col-md-12.landing-menu-icons
+      .col-md-10.col-md-offset-1
+        .col-md-3
+          =image_tag(prod_img_full('cita-lan'), :class=>"bcorner")
+        .col-md-9
+          %div.title-menu-icons
+            Agenda una cita
+          %div.subtitle-menu-icons
+            Encuentra aquí videos o documentos para aprender más de 
+    %div.col-md-12.landing-menu-icons
+      .col-md-10.col-md-offset-1
+        .col-md-3
+          =image_tag(prod_img_full('ayuda-lan'), :class=>"bcorner")
+        .col-md-9
+          %div.title-menu-icons
+            Ayuda
+          %div.subtitle-menu-icons
+            Encuentra aquí videos o documentos para aprender más de 
