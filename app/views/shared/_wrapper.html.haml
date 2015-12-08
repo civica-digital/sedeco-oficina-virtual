@@ -1,0 +1,28 @@
+#wrapper.toggled
+  #sidebar-wrapper
+    %ul.sidebar-nav
+      %li.sidebar-brand
+        .col-md-12.text-right
+          %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
+      %li.col-md-12.text-center
+        %i.fa.fa-info-circle.fa-3x.pink  
+      %li.col-md-12.text-center.pink.text-help
+        Conceptos claves
+        %hr
+      -if type == 'impact'
+        %li
+          = render "shared/questions/help",:help_type => get_help_impact 
+      -elsif type == 'safety'
+        %li
+          = render "shared/questions/help",:help_type => get_help_safety
+      -else type == 'zoning'
+        %li
+          = render "shared/questions/help",:help_type => get_help_zoning
+
+
+
+:javascript
+  $("#menu-toggleint").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });

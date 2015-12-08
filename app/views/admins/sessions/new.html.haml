@@ -1,0 +1,25 @@
+#page-content-wrapper
+  .container-fluid
+    .header
+      =render "shared/titlebar", :title => t('appointment.session.title'),:text => t('appointment.session.subtitle')
+      .container
+        .row
+          = render partial: "shared/messages", flash: flash
+        .row
+          .col-md-4.col-md-offset-4
+            %h3.text-center= t(".log_in")
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .form-group
+                = f.label :email
+                %br/
+                = f.email_field :email, autofocus: true, class: "form-control"
+              .form-group
+                = f.label :password
+                %br/
+                = f.password_field :password, autocomplete: "off", class: "form-control"
+              - if devise_mapping.rememberable?
+                .form-group
+                  = f.check_box :remember_me
+                  = f.label :remember_me
+              .actions
+                = f.submit t(".log_in"), class: "btn btn-primary btn-block"

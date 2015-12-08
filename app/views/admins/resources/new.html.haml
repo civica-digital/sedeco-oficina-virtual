@@ -1,11 +1,15 @@
-%div.container
-  %div.jumbotron
-    %h4.text-center
-      = t(".new_resource")
-    %div.row
-      %div.col-md-4.col-md-offset-4
-        = simple_form_for [:admins, @resource], html: { class: form_errors_class(@resource) } do |f|
-          = f.input :name
-          = f.input :url
-          = f.input :category, collection: category_options, include_blank: false
-          = f.button :submit, class: "btn btn-primary btn-block"
+#page-content-wrapper
+  .container-fluid
+    .header
+      =render "shared/titlebar", :title => t('appointment.panel.title'),:text => t(".app_name")
+    %div.container
+      %div.jumbotron
+        %h4.text-center
+          = t(".new_resource")
+        %div.row
+          %div.col-md-4.col-md-offset-4
+            = simple_form_for [:admins, @resource], html: { class: form_errors_class(@resource) } do |f|
+              = f.input :name
+              = f.input :url
+              = f.input :category, collection: category_options, include_blank: false
+              = f.button :submit, class: "btn btn-primary btn-block"

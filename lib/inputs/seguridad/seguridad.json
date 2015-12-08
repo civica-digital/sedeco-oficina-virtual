@@ -120,7 +120,7 @@
                 },
                 {
                     "numero": "5",
-                    "texto": "¿Te aplica un programa  interno de protección civil?",
+                    "texto": "¿Te aplica un programa interno de protección civil?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [

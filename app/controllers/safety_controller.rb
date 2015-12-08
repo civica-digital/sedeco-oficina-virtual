@@ -22,10 +22,17 @@ class SafetyController < ApplicationController
     end
 
     unless params[:impact].blank?
-      superficie = params[:impact][:superficie].chomp('m2')   
-      mobiliario = params[:impact][:mobiliario].chomp('m2')   
-      aforo_size = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:name])
-      total = (superficie.to_f -  mobiliario.to_f) / aforo_size.to_f
+      superficie_t = params[:impact][:superficie_t] 
+      mobiliario_t = params[:impact][:mobiliario_t] 
+      impacto_t = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:impacto_t])
+      superficie_s = params[:impact][:superficie_s] 
+      mobiliario_s = params[:impact][:mobiliario_s]
+      impacto_s = params[:impact][:impacto_s] 
+
+      sumaS = (superficie_s.to_f -  mobiliario_s.to_f) / impacto_s.to_f
+      sumaA = (superficie_t.to_f -  mobiliario_t.to_f) / impacto_t.to_f
+
+      total = sumaS + sumaA
       save_aforo(total)
       respond_to do |format|
         format.js { render :js => "set_value_aforo(#{total.to_i});"}
@@ -37,7 +44,7 @@ class SafetyController < ApplicationController
       progreso_de_seguridad = get_progress(params[:pagetime][:totals],next_value)
       respond_to do |format|  
         if next_value == "0"
-          format.js { render :partial => 'shared/outputs/finish_safety', :locals => {:type => t('outputs.safety.type_last'), :text =>t('outputs.safety.comment_last'),:next_text=>t('outputs.safety.next_text_last'), :path=> "#{diagnostic_index_path}"} }
+          format.js { render :partial => 'shared/outputs/finish_safety', :locals => {:type => t('outputs.safety.type_last'), :text =>t('outputs.safety.comment_last'),:next_text=>t('outputs.safety.next_text_last'), :path=> "#{diagnostic_index_path}",new_window: false}}
         else
           format.js { render :js => "hidden_div(#{next_value},100,100,#{progreso_de_seguridad});"}
         end
