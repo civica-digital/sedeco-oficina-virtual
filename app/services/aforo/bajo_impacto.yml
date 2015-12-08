@@ -1,0 +1,16 @@
+---
+- :id: 1
+  :name: 'Servicios de hospedaje prestados por hospitales, clínicas médicas, asilos, conventos, internados y seminarios'
+  :size: '4.00'
+- :id: 3
+  :name: 'Servicios de educación de carácter privado en los niveles preescolar, jardín de niños, básica, bachillerato, técnica y superior'
+  :size: '0.90'
+- :id: 4
+  :name: 'Juegos electrónicos y/o de video, mecánicos y electromecánicos'
+  :size: '1.00'
+- :id: 5
+  :name: 'Salones de fiestas infantiles'
+  :size: '0.90'
+- :id: 6
+  :name: 'Otro'
+  :size: '0.60'

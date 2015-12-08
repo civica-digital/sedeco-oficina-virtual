@@ -30,10 +30,15 @@ module ApplicationHelper
     end
     array_ = []
 
-    ((final.to_i).downto(Integer(init))).each do |n|
+    #((final.to_i).downto(Integer(init))).each do |n|
+    (Integer(init)..(final.to_i)).each do |n|
       array_ << "#{n}#{unidad}"
     end
     return array_
+  end
+
+  def is_bajo_impacto?
+    session[:impacto_usuario] == -1
   end
 
   def bootstrap_class_for(flash_type)

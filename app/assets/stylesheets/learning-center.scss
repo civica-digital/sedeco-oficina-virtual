@@ -1,7 +1,7 @@
 @import "colors";
 
 .learning-center .description-container {
-  margin: 40px 0px;
+  margin-bottom: 40px;
 }
 
 .learning-center .resource {
@@ -53,4 +53,20 @@
   span.glyphicon:hover, span.glyphicon:focus {
     background: $purple;
   }
+
+
+  i.fa{
+  padding: 18px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: $pink;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  span.fa:hover, span.fa:focus {
+    background: $purple;
+  }
+
 }

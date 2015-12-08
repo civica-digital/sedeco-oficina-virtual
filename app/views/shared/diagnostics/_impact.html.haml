@@ -1,0 +1,5 @@
+= get_diagnostic_impact(locals[:has_bussine],locals[:impacto_usuario],locals[:has_siapem])
+%hr
+-if locals[:impacto_usuario] == -2 && !locals[:has_special_license].nil?
+  = get_diagnostic_impact_license(locals[:has_special_license])
+  %hr

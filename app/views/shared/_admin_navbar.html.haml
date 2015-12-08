@@ -3,10 +3,9 @@
     %a.navbar-brand{:href=>"#page-top"}
       Oficina virtual SEDECO
     %div.collapse.navbar-collapse{:id=>"bs-example-navbar-collapse-1"}
-      %ul.nav.navbar-nav.navbar-right
+      %ul.navbar-nav.navbar-right.margin-top
         %li.page-scroll
           %a
-            Admin
         - if admin_signed_in?
           %li.page-scroll
             = link_to t(".log_out"), destroy_admin_session_path, method: :delete

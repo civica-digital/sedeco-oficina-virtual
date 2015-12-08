@@ -4,10 +4,14 @@ module Towns
   end
 
   def self.load_city(city)
-    return "" unless city.present?
 
+    return "" unless city.present?
     formatted_city = format(city)
-    load_values("towns/#{formatted_city}").fetch(formatted_city).values
+    begin
+     load_values("towns/#{formatted_city}").fetch(formatted_city).values
+    rescue => ex
+      return ""
+    end
   end
 
   private
@@ -28,4 +32,19 @@ module Towns
   def self.path_to(object)
     File.expand_path("#{object}.yml", File.dirname(__FILE__))
   end
+
+  def self.load_aforo(type)
+    load_values(type == 'bajo' ? 'aforo/bajo_impacto' : 'aforo/impacto_vecinal').map do |town|
+        { id: town[:id], label: town[:name], size: town[:size]}
+      end
+  end
+
+  def self.get_value_from_impact(type,name)
+    Towns.load_aforo(type).each do |aforo|
+      if aforo[:label] == name
+        return aforo[:size]
+      end
+    end
+  end
+
 end
