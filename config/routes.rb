@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'impact#index'
+  root 'landing#index'
 
   resources :impact, controller: 'impact'
   resources :zoning, controller: 'zoning'
