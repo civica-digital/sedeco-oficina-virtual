@@ -183,25 +183,25 @@
 /*Permite obtener y validar el aforo del negocio*/
  function valueAforo(type){
 
-    var superficie_s = $("#superficie_s").val();
-    var mobiliario_s = $("#mobiliario_s").val();
-    var impacto_s = $("#impacto_s option:selected").text();
-
     var superficie_t = $("#superficie_t").val();
     var mobiliario_t = $("#mobiliario_t").val();
-    var impacto_t = $("#impacto_t").val();
+    var impact_t = $("#impacto_t option:selected").text();
 
-    if(superficie_s!= "" && mobiliario_s!= "" && impacto_s!= ""&& superficie_t!= "" && mobiliario_t!= "" && impacto_t!= ""){
+    var superficie_s = $("#superficie_s").val();
+    var mobiliario_s = $("#mobiliario_s").val();
+    var impact_s = $("#impacto_s").val();
+
+    if(superficie_s!= "" && mobiliario_s!= "" && impact_s!= ""&& superficie_t!= "" && mobiliario_t!= "" && impact_t!= ""){
      if(parseInt(superficie_s)<parseInt(mobiliario_s)){
         alert('El mobiliario  en el área de servicio no puede ser mayor al establecimiento');
         $("#superficie_s").val("");
         $("#mobiliario_s").val("");
-      }else if(parseInt(superficie_s)<parseInt(mobiliario_s)){
+      }else if(parseInt(superficie_t)<parseInt(mobiliario_t)){
         alert('El mobiliario  en el área de atención no puede ser mayor al establecimiento');
         $("#superficie_t").val("");
         $("#mobiliario_t").val("");
       }else{
-        set_aforo(superficie_s,mobiliario_s,impacto_s,type,superficie_t,mobiliario_t,impacto_t);
+        set_aforo(superficie_s,mobiliario_s,impact_s,type,superficie_t,mobiliario_t,impact_t);
       }
     }
   }
