@@ -4,19 +4,15 @@
       =render "shared/titlebar", :title => t('.title'),:text => t(".learning_center_description")
     %div.container.learning-center
       %div.row.description-container
-        %div.col-md-8.col-md-offset-2
-          %h4.text-center
-            = t(".learning_center_description")
-
-      %div.row.description-container
         %div.col-md-3.col-md-offset-4
           %div.btn-group.btn-block
             %div.category-select.btn.btn-md.btn-default.btn-block.dropdown-toggle{ "data-toggle" => "dropdown" }
               - if @search.present?
                 = @search
               - else
-                = t(".get_social_reason")
-              %span.glyphicon.glyphicon-chevron-down.pull-right
+                %div.text-center
+                  = t(".get_search")
+              %i.fa.fa-angle-down.pull-right
             %ul.dropdown-menu.btn-block{ "data-no-turbolink" => true }
               - category_options.each do |category|
                 %li

@@ -8,46 +8,59 @@
       %div.col-md-12
         -locals[:texto_answer].each_with_index do |text, index|
           -var = "col-md-#{12/locals[:texto_answer].size}"
-          %div{:class=>"#{locals[:texto_answer].size!=1 ? var : 'col-md-6 col-md-offset-3'} #{((12.0/locals[:texto_answer].size)%2 == 0 || index!=0) ? '' : 'col-md-offset-1'}  text-center"}
-
-            -if locals[:tipo]=='normal'
+          -if locals[:tipo]=='normal'
+            %div{:class=>"#{locals[:texto_answer].size!=1 ? var : 'col-md-6 col-md-offset-3'} #{((12.0/locals[:texto_answer].size)%2 == 0 || index!=0) ? '' : 'col-md-offset-1'}  text-center"}
               = render 'shared/questions/question_normal', :locals => {:imagen => locals[:imagen][index],
-                                                              :number => locals[:number], 
-                                                              :text => text,
-                                                              :id => locals[:id][index],
-                                                              :next => locals[:next][index],
-                                                              :restrictions => locals[:restrictions][index],
-                                                              :next_restrictions=>locals[:next_restrictions][index]}
+                                                            :number => locals[:number], 
+                                                            :text => text,
+                                                            :id => locals[:id][index],
+                                                            :next => locals[:next][index],
+                                                            :restrictions => locals[:restrictions][index],
+                                                            :next_restrictions=>locals[:next_restrictions][index]}
 
-            -elsif locals[:tipo]=='fecha' || locals[:tipo]=='rango'|| locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'
+          -elsif locals[:tipo]=='fecha' || locals[:tipo]=='lugar' || locals[:tipo]=='sublugar'
+            %div{:class=>"#{locals[:texto_answer].size!=1 ? var : 'col-md-6 col-md-offset-3'} #{((12.0/locals[:texto_answer].size)%2 == 0 || index!=0) ? '' : 'col-md-offset-1'}  text-center"}
               = render 'shared/questions/question_date', :locals => {  :imagen => locals[:imagen][index],
-                                                              :number => locals[:number], 
-                                                              :text => text,
-                                                              :id => locals[:id][index],
-                                                              :next => locals[:next][index],
-                                                              :restrictions => locals[:restrictions][index],
-                                                              :next_restrictions=>locals[:next_restrictions][index],
-                                                              :rank_init=>locals[:rank_init][index],
-                                                              :tipo => locals[:tipo]}
-            -elsif locals[:tipo]=='open'
+                                                            :number => locals[:number], 
+                                                            :text => text,
+                                                            :id => locals[:id][index],
+                                                            :next => locals[:next][index],
+                                                            :restrictions => locals[:restrictions][index],
+                                                            :next_restrictions=>locals[:next_restrictions][index],
+                                                            :rank_init=>locals[:rank_init][index],
+                                                            :tipo => locals[:tipo]}
+          -elsif locals[:tipo]=='rango'
+            %div{:class=>"#{locals[:texto_answer].size!=1 ? var : 'col-md-6 col-md-offset-3'} #{((12.0/locals[:texto_answer].size)%2 == 0 || index!=0) ? '' : 'col-md-offset-1'}  text-center"}
+              = render 'shared/questions/question_rango', :locals => {  :imagen => locals[:imagen][index],
+                                                            :number => locals[:number], 
+                                                            :text => text,
+                                                            :id => locals[:id][index],
+                                                            :next => locals[:next][index],
+                                                            :restrictions => locals[:restrictions][index],
+                                                            :next_restrictions=>locals[:next_restrictions][index],
+                                                            :rank_init=>locals[:rank_init][index],
+                                                            :tipo => locals[:tipo]}
+          -elsif locals[:tipo]=='open'
+            %div{:class=>"#{locals[:texto_answer].size!=1 ? var : 'col-md-6 col-md-offset-3'} #{((12.0/locals[:texto_answer].size)%2 == 0 || index!=0) ? '' : 'col-md-offset-1'}  text-center"}
               = render 'shared/questions/question_open', :locals => { :imagen => locals[:imagen][index],
-                                                              :number => locals[:number], 
-                                                              :text => text,
-                                                              :id => locals[:id][index],
-                                                              :next => locals[:next][index],
-                                                              :restrictions => locals[:restrictions][index],
-                                                              :next_restrictions=>locals[:next_restrictions][index],
-                                                              :rank_init=>locals[:rank_init][index],
-                                                              :tipo => locals[:tipo]}
+                                                            :number => locals[:number], 
+                                                            :text => text,
+                                                            :id => locals[:id][index],
+                                                            :next => locals[:next][index],
+                                                            :restrictions => locals[:restrictions][index],
+                                                            :next_restrictions=>locals[:next_restrictions][index],
+                                                            :rank_init=>locals[:rank_init][index],
+                                                            :tipo => locals[:tipo]}
 
-            -elsif locals[:tipo]=='calculadora'
+          -elsif locals[:tipo]=='calculadora'
+            %div{:class=>"col-md-12  text-center"}
               = render 'shared/questions/question_calculadora', :locals => {:imagen => locals[:imagen][index],
-                                                              :number => locals[:number], 
-                                                              :text => text,
-                                                              :id => locals[:id][index],
-                                                              :next => locals[:next][index],
-                                                              :restrictions => locals[:restrictions][index],
-                                                              :next_restrictions=>locals[:next_restrictions][index]}
+                                                            :number => locals[:number], 
+                                                            :text => text,
+                                                            :id => locals[:id][index],
+                                                            :next => locals[:next][index],
+                                                            :restrictions => locals[:restrictions][index],
+                                                            :next_restrictions=>locals[:next_restrictions][index]}
   %div.col-md-12.margin-top
     %hr
 

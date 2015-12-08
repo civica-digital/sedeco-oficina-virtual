@@ -183,26 +183,31 @@
 /*Permite obtener y validar el aforo del negocio*/
  function valueAforo(type){
 
-    var superficie = $("#superficie option:selected").text();
-    var mobiliario = $("#mobiliario option:selected").text();
-    var impacto = $("#impacto option:selected").text();
+    var superficie_t = $("#superficie_t").val();
+    var mobiliario_t = $("#mobiliario_t").val();
+    var impact_t = $("#impacto_t option:selected").text();
 
-    if(superficie!= "" && mobiliario!= "" && impacto!= ""){
-      if(parseInt(superficie)>=parseInt(mobiliario)){
-        set_aforo(superficie,mobiliario,impacto,type);
+    var superficie_s = $("#superficie_s").val();
+    var mobiliario_s = $("#mobiliario_s").val();
+    var impact_s = $("#impacto_s").val();
+
+    if(superficie_s!= "" && mobiliario_s!= "" && impact_s!= ""&& superficie_t!= "" && mobiliario_t!= "" && impact_t!= ""){
+     if(parseInt(superficie_s)<parseInt(mobiliario_s)){
+        alert('El mobiliario  en el área de servicio no puede ser mayor al establecimiento');
+        $("#superficie_s").val("");
+        $("#mobiliario_s").val("");
+      }else if(parseInt(superficie_t)<parseInt(mobiliario_t)){
+        alert('El mobiliario  en el área de atención no puede ser mayor al establecimiento');
+        $("#superficie_t").val("");
+        $("#mobiliario_t").val("");
       }else{
-
-        alert('El Mobiliario no puede ser mayor al establecimiento');
-        $("#mobiliario option:selected").removeAttr("selected");
-        $('#mobiliario').trigger("chosen:updated");
+        set_aforo(superficie_s,mobiliario_s,impact_s,type,superficie_t,mobiliario_t,impact_t);
       }
-      
     }
   }
 
-
   /*Obtiene y regresa el valor de aforo de un negocio*/
-  function set_aforo(superficie,mobiliario,impacto,type){
+  function set_aforo(superficie_s,mobiliario_s,impacto_s,type,superficie_t,mobiliario_t,impacto_t){
     $.ajax({
          type:'GET', 
          url: "#{root_path}",
@@ -211,7 +216,9 @@
          },
         error: function(){
         }, 
-         data: $.param({ impact: {type: type ,name: impacto,superficie: superficie, mobiliario: mobiliario}})
+         data: $.param({ impact: {type: type ,
+          impacto_s: impacto_s,superficie_s: superficie_s, mobiliario_s: mobiliario_s,
+          impacto_t: impacto_t,superficie_t: superficie_t, mobiliario_t: mobiliario_t}})
     });
   }
 
@@ -284,7 +291,3 @@ $(function () {
     }
     });
   });  
-
-
-
-     

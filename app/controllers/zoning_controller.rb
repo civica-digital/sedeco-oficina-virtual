@@ -35,7 +35,7 @@ class ZoningController < ApplicationController
         if session[:uso_de_suelo] && next_value == "0"
           format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_sin_suelo'), :text =>t('outputs.zoning.comment_sin_suelo'),:next_text=>t('outputs.zoning.next_text_sin_suelo'), :path=> "#{safety_index_path}",new_window: false  }}
         elsif !session[:uso_de_suelo] && next_value == "0"
-          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_con_suelo'), :text =>t('outputs.zoning.comment_con_suelo'),:next_text=>t('outputs.zoning.next_text_con_suelo'), :path=> "#{safety_index_path}",new_window: false  }}
+          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_con_suelo',), :text =>t('outputs.zoning.comment_con_suelo'),:next_text=>t('outputs.zoning.next_text_con_suelo'), :path=> "#{safety_index_path}",new_window: false  }}
         elsif next_value == "-5"
           format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_equipamiento'), :text =>t('outputs.zoning.comment_equipamiento'),:next_text=>t('outputs.zoning.next_text_equipamiento'), :path=> "#{appointments_path}",new_window: true  }}
         elsif next_value == "-6"
