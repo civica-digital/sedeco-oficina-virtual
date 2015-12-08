@@ -21,7 +21,8 @@
 	padding-top: 100px;
 	padding-bottom: 0px;
 	text-align: left;
-	color: #000000;
+	
+
 	font-size: 20px !important;
 }
 .title-menu-icons{
@@ -46,5 +47,25 @@
 
 .btn-padding{
     padding-bottom: 15px !important;
-padding-top: 15px !important;
+    padding-top: 15px !important;
+}
+
+.half-size{
+    height: 50% !important;
+}
+
+.all-size{
+    height: 45% !important;
+}
+.main{
+    position: relative !important;
+    min-height: 100% !important;
+  }
+
+.footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    font-size: 15px !important;
+    color: #AFAFAF !important;
 }
