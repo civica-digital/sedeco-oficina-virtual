@@ -22,10 +22,17 @@ class SafetyController < ApplicationController
     end
 
     unless params[:impact].blank?
-      superficie = params[:impact][:superficie] 
-      mobiliario = params[:impact][:mobiliario] 
-      aforo_size = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:name])
-      total = (superficie.to_f -  mobiliario.to_f) / aforo_size.to_f
+      superficie_s = params[:impact][:superficie_s] 
+      mobiliario_s = params[:impact][:mobiliario_s] 
+      impacto_s = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:impacto_s])
+      superficie_t = params[:impact][:superficie_t] 
+      mobiliario_t = params[:impact][:mobiliario_t]
+      impacto_t = params[:impact][:mobiliario_t] 
+
+      sumaS = (superficie_s.to_f -  mobiliario_s.to_f) / impacto_s.to_f
+      sumaA = (superficie_t.to_f -  mobiliario_t.to_f) / impacto_t.to_f
+
+      total = sumaS + sumaA
       save_aforo(total)
       respond_to do |format|
         format.js { render :js => "set_value_aforo(#{total.to_i});"}
