@@ -208,3 +208,4 @@ es:
     learning_html: '<colorprimario><a href="%{path}" target="_blank" class="colorprimario">Ir al centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 
   button:
     go: 'Ingresar'
+    app_name: "Oficina virtual SEDECO"
