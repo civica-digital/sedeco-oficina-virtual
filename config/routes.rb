@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
-  root 'impact#index'
-
-  resources :impact, controller: 'impact'
-  resources :zoning, controller: 'zoning'
-  resources :safety, controller: 'safety'
-  resources :diagnostic, controller: 'diagnostics'do
-      collection do
-        get 'download_diagnostic', :path => "descargar_diagnostico"
-      end
-  end
+  root 'landing#index'
 
   localized do
+    resources :impact, only: :index, controller: 'impact'
+    resources :zoning, only: :index, controller: 'zoning'
+    resources :safety, only: :index, controller: 'safety'
+    resources :diagnostic, controller: 'diagnostics'do
+        collection do
+          get 'download_diagnostic', :path => "descargar_diagnostico"
+        end
+    end    
     resources :learning_center, only: :index
     resources :appointments, only: [:index, :create]
     devise_for :admins, controllers: { sessions: 'admins/sessions' }

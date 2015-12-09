@@ -1,0 +1,72 @@
+.back-image-landing{
+	display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(image_path('bg.png')) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.landing-menu-icons{
+	padding-top: 100px;
+	padding-bottom: 0px;
+	text-align: left;
+	color: #ffffff;
+}
+
+.landing-text-left{
+	padding-top: 100px;
+	padding-bottom: 0px;
+	text-align: left;
+	
+
+	font-size: 20px !important;
+}
+.title-menu-icons{
+	font-size: 20px !important;
+	padding-top: 8px;
+}
+
+.subtitle-menu-icons{
+	font-size: 15px !important;
+}
+
+
+.btn-padding{
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
+}
+
+.half-size{
+    height: 50% !important;
+}
+
+.all-size{
+    height: 45% !important;
+}
+.main{
+    position: relative !important;
+    min-height: 100% !important;
+  }
+
+.footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    font-size: 15px !important;
+    color: #AFAFAF !important;
+}
+
+.bcorner{
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    fill: #ffffff;
+    padding: 20px;
+    display: table;
+    width: 95px;
+    height: 95px;
+    margin: 0 auto;
+}
