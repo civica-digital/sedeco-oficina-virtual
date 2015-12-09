@@ -1,4 +1,3 @@
-=# render "shared/wrapper",:type =>'zoning'
 #page-content-wrapper
   .container-fluid
     .header
@@ -10,7 +9,7 @@
               #{image_tag(prod_img_full('cita'), :class=>"padding-icon-date")} #{t('.title_must_cita_html', path: appointments_path)}
             -else
               #{image_tag(prod_img_full('cita'), :class=>"padding-icon-date")} #{t('.title_cita_html', path: appointments_path)}
-          .col-md-3.text-right
+          .col-md-3.text-right.text-question
             = link_to download_diagnostic_diagnostic_index_path, :class=>"colorprimario", :target => "_blank" do
               #{image_tag(prod_img_full('imprimir'))} Imprimir
       %div.container-impacto
