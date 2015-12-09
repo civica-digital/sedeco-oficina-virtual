@@ -4,6 +4,9 @@ es:
       textmain: "Aquí conocerás ........ Responde los 3 cuestionarios relacionados al impacto, uso de suelo y protección civil."
       button_text: "Comenzar cuestionarios"
       text_footer: "Una herramienta de la Secretaría de Desarrollo Económico"
+      close: "Cerrar"
+      text_modal: "Aplicación realizada ...."
+      title_modal: "Oficina virtual SEDECO"
       menu:
         centro_titulo: "Centro de aprendizaje"
         centro_description: "Encuentra aquí videos o documentos para aprender más de "

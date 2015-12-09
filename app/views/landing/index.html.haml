@@ -32,13 +32,29 @@
               =t('.menu.agenda_titulo')
             %div.subtitle-menu-icons
               =t('.menu.agenda_description')
-    %div.col-md-12.landing-menu-icons
-      .col-md-10.col-md-offset-1
-        .col-md-3
-          =image_tag(prod_img_full('ayuda-lan'), :class=>"bcorner")
-        .col-md-9
-          %div.title-menu-icons
-            =t('.menu.ayuda_titulo')
-          %div.subtitle-menu-icons
-            =t('.menu.ayuda_description')
+    = link_to  "#", :id => 'login', "data-target" => "#myModal", "data-toggle" => "modal" do
+      %div.col-md-12.landing-menu-icons
+        .col-md-10.col-md-offset-1
+          .col-md-3
+            =image_tag(prod_img_full('ayuda-lan'), :class=>"bcorner")
+          .col-md-9
+            %div.title-menu-icons
+              =t('.menu.ayuda_titulo')
+            %div.subtitle-menu-icons
+              =t('.menu.ayuda_description')
+
+
+
+#myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4#myModalLabel.modal-title=t('.title_modal')
+      .modal-body
+        =t('.text_modal')
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+          =t('.close')
              
