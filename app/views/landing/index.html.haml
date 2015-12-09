@@ -4,13 +4,13 @@
       .col-md-10.col-md-offset-1.pink
         LOGO
       .col-md-10.col-md-offset-1.text-question
-        Aquí conocerás ........ Responde los 3 cuestionarios relacionados al impacto, uso de suelo y protección civil.
+        =t('.textmain')
         .row 
           .col-md-6.text-question
-            =link_to "Comenzar cuestionarios", impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding'
+            =link_to t('.button_text'), impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding'
       %div.col-md-12.all-size
         .footer
-          Una herramienta de la Secretaría de Desarrollo Económico
+          =t('.text_footer')
   %div.col-md-6.back-image-landing
     =link_to learning_center_index_path do
       %div.col-md-12.landing-menu-icons
@@ -19,9 +19,9 @@
             =image_tag(prod_img_full('centro-lan'), :class=>"bcorner")
           .col-md-9
             %div.title-menu-icons
-              Centro de aprendizaje
+              =t('.menu.centro_titulo')
             %div.subtitle-menu-icons
-              Encuentra aquí videos o documentos para aprender más de 
+              =t('.menu.centro_description')
     =link_to appointments_path do  
       %div.col-md-12.landing-menu-icons
         .col-md-10.col-md-offset-1
@@ -29,15 +29,16 @@
             =image_tag(prod_img_full('cita-lan'), :class=>"bcorner")
           .col-md-9
             %div.title-menu-icons
-              Agenda una cita
+              =t('.menu.agenda_titulo')
             %div.subtitle-menu-icons
-              Encuentra aquí videos o documentos para aprender más de 
+              =t('.menu.agenda_description')
     %div.col-md-12.landing-menu-icons
       .col-md-10.col-md-offset-1
         .col-md-3
           =image_tag(prod_img_full('ayuda-lan'), :class=>"bcorner")
         .col-md-9
           %div.title-menu-icons
-            Ayuda
+            =t('.menu.ayuda_titulo')
           %div.subtitle-menu-icons
-            Encuentra aquí videos o documentos para aprender más de 
+            =t('.menu.ayuda_description')
+             
