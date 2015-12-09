@@ -23,7 +23,15 @@ module QuestionHelper
 	end
 
 	def get_help_safety
-		[{title: '¿Que el AFORO?',text:'texto'},
+		[{title: '¿Qué el AFORO?',text:'texto'},
+		{title: '¿Qué es área de atención?',text:'texto'},
+		{title: '¿A qué se refiere el establecimiento en el área de atención?',text:'texto'},
+		{title: '¿A qué se refiere el mobiliario en el área de atención?',text:'texto'},
+		{title: '¿A qué se refiere el giro en el área de atención?',text:'texto'},
+		{title: '¿Qué es área de servicio?',text:'texto'},
+		{title: '¿A qué se refiere el establecimiento en el área de servicio?',text:'texto'},
+		{title: '¿A qué se refiere el mobiliario en el área de servicio?',text:'texto'},
+		{title: '¿A qué se refiere el área por persona en el área de servicio?',text:'texto'},
 		{title: '¿Para qué es la calculadora?',text:'texto'},
 		{title: '¿Qué es el autodiagnóstico en materia de protección civil?',text:'texto'},
 		{title: '¿Qué es el visto bueno de seguridad y operación?',text:'texto'},
