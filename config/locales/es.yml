@@ -176,7 +176,7 @@ es:
       type_zonal: "Impacto Zonal"
       comment_zonal: "Debido a los datos que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_zonal: "Siguiente paso 'Hacer una cita'"
-      type_bajo: "Bajo impacto"
+      type_bajo: "Bajo Impacto"
       comment_bajo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_bajo: "Siguiente paso 'Uso de suelo'"
       type_vecinal: "Impacto Vecinal"

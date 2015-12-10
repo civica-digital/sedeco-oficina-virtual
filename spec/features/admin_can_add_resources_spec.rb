@@ -6,8 +6,7 @@ describe 'Admin can add resources' do
     login_as admin
 
     visit "/admins/panel"
-
-    click_link "Centro de aprendizaje"
+    click_link "Ingresar"
     click_link "Agregar un recurso"
 
     fill_in "Nombre del Recurso", with: "Mi recurso"
@@ -26,7 +25,7 @@ describe 'Admin can add resources' do
 
     visit "/admins/panel"
 
-    click_link "Centro de aprendizaje"
+    click_link "Ingresar"
     click_link "Agregar un recurso"
 
     fill_in "Liga", with: "fakeurl"
@@ -34,7 +33,7 @@ describe 'Admin can add resources' do
     click_button "Agregar"
 
     expect(page).not_to have_content "El recurso se agregó exitosamente."
-    expect(page).to have_content "no puede estar en blanco"
+    expect(page).to have_content "No puede estar en blanco"
     expect(page).to have_content "No es una URL válida"
   end
 end
