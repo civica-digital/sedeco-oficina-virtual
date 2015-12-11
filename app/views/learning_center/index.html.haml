@@ -23,6 +23,8 @@
           %div.row
             - @resources.each do |resource|
               %div.resource.col-md-6
+                %div.text-center.pink.text-title-video
+                  =truncate(resource.name, :length => 15)
                 - if resource.youtube_video?
                   = YouTubeAddy.youtube_embed_url(resource.url, 360,220).html_safe
                 - else
@@ -32,3 +34,6 @@
                     %h3.text-center
                       = link_to resource.url, target: :blank do
                         = resource.name
+                %div.text-left.text-video
+                  =truncate(resource.description, :length => 100)
+                %hr

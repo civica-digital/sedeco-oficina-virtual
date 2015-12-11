@@ -7,5 +7,5 @@
         %li.page-scroll
           %a
         - if admin_signed_in?
-          %li.page-scroll
+          %li.page-scroll.margin-top
             = link_to t(".log_out"), destroy_admin_session_path, method: :delete

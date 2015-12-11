@@ -1,5 +1,5 @@
 class Resource < ActiveRecord::Base
-  validates :name, :url, :category, presence: true
+  validates :name, :url, :category, :description, presence: true
   validates :url, url: true
 
   def youtube_video?

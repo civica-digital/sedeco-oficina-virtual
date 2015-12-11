@@ -1,6 +1,6 @@
 module Resources
   def self.search_results(search)
-    return Resource.all if search.blank?
+    return Resource.all if search.blank? || (search == I18n.t("category_options.all"))
     Resource.by_category(search)
   end
 
@@ -11,6 +11,6 @@ module Resources
   private
 
   def self.categories
-    [:impact, :ground, :protection]
+    [:impact, :ground, :protection, :all]
   end
 end

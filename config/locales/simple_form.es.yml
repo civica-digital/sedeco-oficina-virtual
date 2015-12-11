@@ -4,7 +4,8 @@ es:
       appointment:
         create: "Agendar"
       resource:
-        create: "Agregar"
+        create: "Guardar"
+        update: "Guardar"
   simple_form:
     "yes": 'Sí'
     "no": 'No'
@@ -28,6 +29,7 @@ es:
       resource:
         name: "Nombre del Recurso"
         url: "Liga"
+        description: "Descripción"
         category: "Categoría"
     errors:
       models:
