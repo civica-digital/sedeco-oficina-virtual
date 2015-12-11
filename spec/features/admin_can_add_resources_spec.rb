@@ -11,8 +11,9 @@ describe 'Admin can add resources' do
 
     fill_in "Nombre del Recurso", with: "Mi recurso"
     fill_in "Liga", with: "http://mirecurso.com"
+    fill_in "Descripción", with: "describe prueba"
     select "Impacto", from: "Categoría"
-    click_button "Agregar"
+    click_button "Guardar"
 
     expect(page).to have_content "El recurso se agregó exitosamente."
     expect(page).to have_content "Mi recurso"
@@ -29,8 +30,9 @@ describe 'Admin can add resources' do
     click_link "Agregar un recurso"
 
     fill_in "Liga", with: "fakeurl"
+    fill_in "Descripción", with: "describe prueba"
     select "Impacto", from: "Categoría"
-    click_button "Agregar"
+    click_button "Guardar"
 
     expect(page).not_to have_content "El recurso se agregó exitosamente."
     expect(page).to have_content "No puede estar en blanco"
