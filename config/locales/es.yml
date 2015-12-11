@@ -175,35 +175,35 @@ es:
     impact:
       type_zonal: "Impacto Zonal"
       comment_zonal: "Debido a los datos que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
-      next_text_zonal: "Siguiente paso 'Hacer una cita'"
+      next_text_zonal: 'Siguiente paso "Hacer una cita"'
       type_bajo: "Bajo Impacto"
       comment_bajo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
-      next_text_bajo: "Siguiente paso 'Uso de suelo'"
+      next_text_bajo: 'Siguiente paso "Uso de suelo"'
       type_vecinal: "Impacto Vecinal"
       comment_vecinal: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
-      next_text_vecinal: "Siguiente paso 'Uso de suelo'"
+      next_text_vecinal: 'Siguiente paso "Uso de suelo"'
       comment_vecinal_cita: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
-      next_text_vecinal_cita: "Siguiente paso 'Hacer una cita'"
+      next_text_vecinal_cita: 'Siguiente paso "Hacer una cita"'
     zoning:
       type_sin_suelo: "Habitacional"
       comment_sin_suelo: "y tu negocio mide menos del 20% de tu propiedad por lo que no requieres un uso de suelo diferente. Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
-      next_text_sin_suelo: "Siguiente paso 'Protección civíl'"
+      next_text_sin_suelo: 'Siguiente paso "Protección civíl"'
       type_con_suelo: "H, HM, HO ó HC"
       comment_con_suelo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
-      next_text_con_suelo: "Siguiente paso 'Protección civíl"
+      next_text_con_suelo: 'Siguiente paso "Protección civíl"'
       type_equipamiento: "Equipamiento, Area verde o Espacio abierto"
       comment_equipamiento: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
-      next_text_equipamiento: "Siguiente paso 'Hacer una cita'"
+      next_text_equipamiento: 'Siguiente paso "Hacer una cita"'
       type_derechos: "Derechos adquiridos"
       comment_derechos: "No cuenta con el Vo.Bo. de Seguridad y operación"
-      next_text_derechos: "Siguiente paso 'Hacer una cita'"
+      next_text_derechos: 'Siguiente paso "Hacer una cita"'
     safety:
       type_vobo: "No tiene el visto bueno de seguridad."
       comment_vobo: "Por favor haz una cita para poder tramitarlo y continuar el diagnóstico."
       next_text_vobo: "Página para ver trámite 'Ir'"
       type_last: "Terminamos."
       comment_last: "Por favor da clic en continuar para ver tu diagnóstico completo"
-      next_text_last: "Siguiente paso 'Ver diagnóstico'"
+      next_text_last: 'Siguiente paso "Ver diagnóstico"'
   help:
     learning_html: '<colorprimario><a href="%{path}" target="_blank" class="colorprimario">Ir al centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 
   button:

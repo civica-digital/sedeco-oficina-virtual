@@ -1,16 +1,16 @@
 es:
   landing:
     index:
-      textmain: "Aquí conocerás ........ Responde los 3 cuestionarios relacionados al impacto, uso de suelo y protección civil."
-      button_text: "Comenzar cuestionarios"
+      textmain: "Contesta tu cuestionario de diagnóstico para saber lo que necesitas para tener en regla tu negocio"
+      button_text: "Comenzar diagnóstico"
       text_footer: "Una herramienta de la Secretaría de Desarrollo Económico"
       close: "Cerrar"
       text_modal: "Aplicación realizada ...."
       title_modal: "Oficina virtual SEDECO"
       menu:
         centro_titulo: "Centro de aprendizaje"
-        centro_description: "Encuentra aquí videos o documentos para aprender más de "
+        centro_description: "Aprende con nuestros contenidos cómo poner en regla tu negocio"
         agenda_titulo: "Agenda una cita"
-        agenda_description: "Encuentra aquí videos o documentos para aprender más de"
+        agenda_description: "Agenda una cita con nosotros si necesitas que te atendamos en persona"
         ayuda_titulo: "Ayuda"
-        ayuda_description: "Encuentra aquí videos o documentos para aprender más de"
+        ayuda_description: "¿Para quién esta dirigida esta herramienta?"

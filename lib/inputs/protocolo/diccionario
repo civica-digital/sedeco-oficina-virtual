@@ -37,9 +37,6 @@ ____
   id: -1
   significado: El negocio es de tipo habitacional
 ____
-  id: -2 
-  significado: El negocio NO es de tipo habitacional
-____
   id: -10
   significado: El negocio esta en la misma vivienda que habita
 ____
