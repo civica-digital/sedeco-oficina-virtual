@@ -34,5 +34,6 @@
                     %h3.text-center
                       = link_to resource.url, target: :blank do
                         = resource.name
-                %div.text-center.text-video
+                %div.text-left.text-video
                   =truncate(resource.description, :length => 100)
+                %hr

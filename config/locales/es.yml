@@ -176,6 +176,7 @@ es:
     impact: "Impacto"
     ground: "Uso de Suelo"
     protection: "Protección Civil"
+    all: "Todos"
   shared:
     question_calculadora:
       menos: "-"
