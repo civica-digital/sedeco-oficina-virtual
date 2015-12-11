@@ -27,6 +27,6 @@ class Admins::ResourcesController < ApplicationController
   end
 
   def resource_params
-    params.require(:resource).permit(:name, :url, :category)
+    params.require(:resource).permit(:name, :url, :category,:title, :description)
   end
 end
