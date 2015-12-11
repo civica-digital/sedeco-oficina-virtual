@@ -23,9 +23,13 @@
                   %th
                     = t(".name")
                   %th
+                    = t(".description")
+                  %th
                     = t(".url")
                   %th
                     = t(".category")
+                  %th
+                    = t(".action")
               %tbody
                 - @resources.each do |resource|
                   %tr
@@ -34,9 +38,17 @@
                     %td
                       = resource.name
                     %td
-                      = resource.url
+                      = truncate(resource.description, :length => 30)
+                    %td
+                      =  truncate(resource.url, :length => 30)
                     %td
                       = resource.category
+                    %td
+                      = link_to edit_admins_resource_path(resource.id) do
+                        %i.fa.fa-pencil-square-o.pink.fa-2x
+                      |
+                      = link_to admins_resource_path(resource), method: :delete, data: { confirm: t('.delete') } do
+                        %i.fa.fa-trash-o.pink.fa-2x
           - else
             %div.row.text-center
               %em.text-muted
