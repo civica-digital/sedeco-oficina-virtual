@@ -46,6 +46,14 @@
                                 "imagen": "espacio",
                                 "siguiente": "-5",
                                 "restricciones":[]
+                            },
+                            {
+                                "id":"6",
+                                "-type": "normal",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
+                                "siguiente": "4",
+                                "restricciones":[]
                             }
                         ]
                     }
