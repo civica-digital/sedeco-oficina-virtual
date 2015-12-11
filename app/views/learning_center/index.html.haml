@@ -24,7 +24,7 @@
             - @resources.each do |resource|
               %div.resource.col-md-6
                 %div.text-center.pink.text-title-video
-                  =resource.name
+                  =truncate(resource.name, :length => 15)
                 - if resource.youtube_video?
                   = YouTubeAddy.youtube_embed_url(resource.url, 360,220).html_safe
                 - else
