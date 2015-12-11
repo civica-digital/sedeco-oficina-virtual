@@ -204,11 +204,13 @@ module ProgressModule
       when 1#pregunta 1
         case clicked.to_i
           when 1
-            session[:type_zoning] = -1
+            session[:type_zoning] = 'Habitacional'
           when 2..4
-            session[:type_zoning] = -2
+            session[:type_zoning] = 'Habitacional Mixto, Oficina o Comercio'
           when 5
-            session[:type_zoning] = -5
+            session[:type_zoning] = 'Equipamiento'
+          when 6
+            session[:type_zoning] = 'No tienes información'
         else
           session[:type_zoning] = -1
         end
