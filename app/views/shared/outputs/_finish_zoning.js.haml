@@ -3,8 +3,8 @@ $('.diagnostic').removeClass("hidden");
 $('.diagnostic').addClass('animated fadeIn');
 $('.jumbotron').html("<H2 class='colorprimario'>#{type}<H2><p>#{text}</p>");
 -if new_window
-	$('.next-step').html("<colorprimario>#{next_text}</colorprimario><a class='colorprimario' href=#{path} data-no-turbolink='true' target='_blank'> <i class='fa fa-angle-right'></i></a>");    
+	$('.next-step').html("<a class='btn btn-default btn btn-primary btn-block btn-padding' href=#{path} data-no-turbolink='true' target='_blank'>#{next_text}</a>");    
 -else
-	$('.next-step').html("<colorprimario>#{next_text}</colorprimario><a class='colorprimario' href=#{path} data-no-turbolink='true'> <i class='fa fa-angle-right'></i></a>");  
+	$('.next-step').html("<a class='btn btn-default btn btn-primary btn-block btn-padding' href=#{path} data-no-turbolink='true'>#{next_text}</a>");  
 //Actualizamos los progressBars
 progressBar("100","100","0");
