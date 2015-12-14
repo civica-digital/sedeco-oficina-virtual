@@ -1,25 +1,25 @@
 module QuestionHelper
 
 	def get_help_impact
-		[{title: '¿Que es un establecimiento mercantil?',text:'texto'},
-		{title: '¿Qué es impacto vecinal?',text:'texto'},
-		{title: '¿Qué es impacto zonal?',text:'texto'},
-		{title: '¿Qué es el SIAPEM?',text:'texto'},
-		{title: '¿En dónde encuentro la fecha de registro del SIAPEM?',text:'texto'},
-		{title: '¿Qué es una licencia de funcionamiento?',text:'texto'},
-		{title: 'Qué es una declaración de apertura?',text:'texto'}]
+		[{title: t('help.question.impact.one'),text: t('help.answer.impact.one_html')},
+		{title: t('help.question.impact.two'),text: t('help.answer.impact.two_html')},
+		{title: t('help.question.impact.three'),text: t('help.answer.impact.three_html')},
+		{title: t('help.question.impact.four'),text: t('help.answer.impact.four_html')},
+		{title: t('help.question.impact.five'),text: t('help.answer.impact.five_html')},
+		{title: t('help.question.impact.six'),text: t('help.answer.impact.six_html')},
+		{title: t('help.question.impact.seven'),text: t('help.answer.impact.seven_html')}]
 	end
 
 	def get_help_zoning
-		[{title: '¿Que tipos de uso de suelo existen?',text:'texto'},
-		{title: '¿Puedo poner cualquier negocio en donde habito?',text:'texto'},
-		{title: '¿Donde reviso el tamaño de mi vivienda?',text:'texto'},
-		{title: '¿Donde reviso el tamaño de mi negocio?',text:'texto'},
-		{title: '¿Qué es un certificado de uso de suelo?',text:'texto'},
-		{title: '¿Dónde reviso la fecha de expedición de uso de suelo?',text:'texto'},
-		{title: '¿Dónde reviso que tipo de certificado de uso de suelo tengo?',text:'texto'},
-		{title: '¿En qué delegaciones aplíca este diagnóstico?',text:'texto'},
-		{title: '¿En qué colonias aplíca este diagnóstico?',text:'texto'}]
+		[{title: t('help.question.zoning.one'),text:t('help.answer.zoning.one_html')},
+		{title: t('help.question.zoning.two'),text:t('help.answer.zoning.two_html')},
+		{title: t('help.question.zoning.three'),text:t('help.answer.zoning.three_html')},
+		{title: t('help.question.zoning.four'),text:t('help.answer.zoning.four_html')},
+		{title: t('help.question.zoning.five'),text:t('help.answer.zoning.five_html')},
+		{title: t('help.question.zoning.six'),text:t('help.answer.zoning.six_html')},
+		{title: t('help.question.zoning.seven'),text:t('help.answer.zoning.seven_html')},
+		{title: t('help.question.zoning.eight'),text:t('help.answer.zoning.eight_html')},
+		{title: t('help.question.zoning.nine'),text:t('help.answer.zoning.nine_html')}]
 	end
 
 	def get_help_safety

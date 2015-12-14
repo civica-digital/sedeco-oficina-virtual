@@ -21,11 +21,20 @@ es:
                       Solo recuerda que el negocio en esos casos deberán <b><colorprimario>ser atendidos exclusivamente por miembros de la familia que habiten en la vivienda</colorprimario></b> de que se trate.<BR>
                       Y el giro mercantil del negocio <b><colorprimario>no puede manejar en su operación grandes volúmenes de agua</colorprimario></b> como los que presten servicios de lavandería,
                       tintorería, lavado de vehículos, venta y distribución de agua embotellada.'
-    documents_html: 'Te invitamos a que revices y obtengas tu uso de suelo actual <a href="http://ciudadmx.df.gob.mx" target="_blank" class="colorprimario">aquí.</a><br>
+    documents_html: 'Te invitamos a que revices tu uso de suelo actual <a href="http://ciudadmx.df.gob.mx" target="_blank" class="colorprimario">aquí.</a><br>
                     Es importante que generes una cita y vayas a SEDECO para el trámite de uso de suelo para tu negocio con <b><colorprimario>(original y copia)</colorprimario></b> de los siguientes documentos:<br>
                     <ul type = disk >
                     <li>Formato requisitado, <a href="http://www.seduvi.df.gob.mx/portal/docs/tramitesyservicios/usodesuelo/formatos/formato_2.pdf" target="_blank" class="colorprimario">obtener aquí</a>.<br>
-                    <li>Pago de derechos, <a href="http://www.tramitesyservicios.df.gob.mx/wb/TyS/certificado_unico_de_zonificacion" target="_blank" class="colorprimario">información completa aquí</a>.
+                    <li>Pago de derechos: 
+                    <BR>
+                      ARTÍCULO 235.- Por los servicios de expedición de certificados, licencias, estudios y dictamen que a continuación se indican, se cubrirán por concepto de derechos, las siguientes cuotas:
+                        III. 
+                        <BR>
+                        *Por certificado único de zonificación de uso del suelo $1,296.40
+                        <BR>
+                        *Por certificado único de zonificación de uso de suelo, emitido a través de un sistema electrónico $1,296.40
+                     <BR>
+                      <a href="http://www.tramitesyservicios.df.gob.mx/wb/TyS/certificado_unico_de_zonificacion" target="_blank" class="colorprimario">más información</a>.
                     <li>Escritura pública
                     <li>Copia de cualquiera de los siguientes documentos:
                       <ul>
@@ -37,7 +46,7 @@ es:
                     <li>Boleta predial y/o declaración de valor catastral con pago de impuesto predial
                     <li>Identificación oficial (credencial de elector, licencia para conducir, cartilla del servicio militar nacional, pasaporte, cédula profesional o forma migratoria FM2 o credencial de inmigrado).
                     </ul>'
-    recommendations_html: 'Debido a que <b><colorprimario>TU NEGOCIO mide más de 80m2</colorprimario></b>, <b><colorprimario>ES PROBABLE que requiera cajones de estacionamientos</colorprimario></b>, por favor revisa dónde y cuándo aplican <a href="http://www.seduvi.df.gob.mx/portal/index.php/programas-de-desarrollo" target="_blank" class="colorprimario">aquí</a>.'
+    recommendations_html: 'Debido a que <b><colorprimario>TU NEGOCIO mide más de 80m2</colorprimario></b>, <b><colorprimario>ES PROBABLE </colorprimario></b> que requiera <a href="http://www.seduvi.df.gob.mx/portal/index.php/programas-de-desarrollo" target="_blank" class="colorprimario">cajones de estacionamiento</a>.'
   safety:
     make_protection_html: '<b><colorprimario>Los negocios QUE TIENEN AFORO MAYOR a 50 deben TENER IMPLEMENTADO el plan de protección interno</colorprimario></b>, en este caso <b><colorprimario>TÚ LO TIENES</colorprimario></b>, pero, revisa que lo tengas implementado al 100%, si deseas puedes revisa los proveedores terceros <a href="" target="_blank" class="colorprimario">aquí</a>.'
     no_make_protection_html: '<b><colorprimario>Los negocios QUE TIENEN AFORO MAYOR a 50 deben TENER IMPLEMENTADO el plan de protección interno</colorprimario></b>, en este caso <b><colorprimario>NO LO TIENES IMPLEMENTADO</colorprimario></b>, es importante que implementes uno, por favor revisa los proveedores terceros <a href="" target="_blank" class="colorprimario">aquí</a>.'
