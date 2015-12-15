@@ -23,23 +23,23 @@ module QuestionHelper
 	end
 
 	def get_help_safety
-		[{title: '¿Qué el AFORO?',text:'texto'},
-		{title: '¿Qué es área de atención?',text:'texto'},
-		{title: '¿A qué se refiere el establecimiento en el área de atención?',text:'texto'},
-		{title: '¿A qué se refiere el mobiliario en el área de atención?',text:'texto'},
-		{title: '¿A qué se refiere el giro en el área de atención?',text:'texto'},
-		{title: '¿Qué es área de servicio?',text:'texto'},
-		{title: '¿A qué se refiere el establecimiento en el área de servicio?',text:'texto'},
-		{title: '¿A qué se refiere el mobiliario en el área de servicio?',text:'texto'},
-		{title: '¿A qué se refiere el área por persona en el área de servicio?',text:'texto'},
-		{title: '¿Para qué es la calculadora?',text:'texto'},
-		{title: '¿Qué es el autodiagnóstico en materia de protección civil?',text:'texto'},
-		{title: '¿Qué es el visto bueno de seguridad y operación?',text:'texto'},
-		{title: '¿Qué es un programa interno de protección civil?',text:'texto'},
-		{title: '¿Cómo se que tengo implementado un plan interno de protección civil?',text:'texto'},
-		{title: '¿Qué es una Licencia Ambiental Única (LAUDF)?',text:'texto'},
-		{title: '¿Qué es un aviso de funcionamiento sanitario?',text:'texto'},
-		{title: '¿Qué es la constancia de no adeudo de Agua y predial?',text:'texto'}]
+		[{title: t('help.question.safety.one'),text:t('help.answer.safety.one_html')},
+		{title: t('help.question.safety.two'),text:t('help.answer.safety.two_html')},
+		{title: t('help.question.safety.three'),text:t('help.answer.safety.three_html')},
+		{title: t('help.question.safety.four'),text:t('help.answer.safety.four_html')},
+		{title: t('help.question.safety.five'),text:t('help.answer.safety.five_html')},
+		{title: t('help.question.safety.six'),text:t('help.answer.safety.six_html')},
+		{title: t('help.question.safety.seven'),text:t('help.answer.safety.seven_html')},
+		{title: t('help.question.safety.eight'),text:t('help.answer.safety.eight_html')},
+		{title: t('help.question.safety.nine'),text:t('help.answer.safety.nine_html')},
+		{title: t('help.question.safety.ten'),text:t('help.answer.safety.ten_html')},
+		{title: t('help.question.safety.eleven'),text:t('help.answer.safety.eleven_html')},
+		{title: t('help.question.safety.twelve'),text:t('help.answer.safety.twelve_html')},
+		{title: t('help.question.safety.thirteen'),text:t('help.answer.safety.thirteen_html')},
+		{title: t('help.question.safety.forteen'),text:t('help.answer.safety.forteen_html')},
+		{title: t('help.question.safety.fiveteen'),text:t('help.answer.safety.fiveteen_html')},
+		{title: t('help.question.safety.sixteen'),text:t('help.answer.safety.sixteen_html')},
+		{title: t('help.question.safety.seventeen'),text:t('help.answer.safety.seventeen_html')}]
 	end
 
 end
