@@ -66,13 +66,25 @@
 
 :javascript
   $(document).ready( function () {
-    for(i = 1; i <= "#{@file.size}"; i++){
+    blur_div();
+  });
+  /*agregamos un fondo blur al abrir la ayuda*/
+  function blur_div(){
+      for(i = 1; i <= "#{@file.size}"; i++){
       $("#menu-toggle"+i).click(function(e) {
         e.preventDefault();
+        $('#head_wrapper').css("position", "fixed");
+        $('#head_wrapper').css("width", "50%");
+        $('#menu-toggleint').css("position", "fixed");
         $("#wrapper").toggleClass("toggled");
+        
+        if($("#wrapper").hasClass("toggled")){
+          $('#page-content-wrapper').css("-webkit-filter", "blur(0px)");
+          $('#page-content-wrapper').css("-webkit-transition", "-webkit-filter .0s");
+        }else{
+          $('#page-content-wrapper').css("-webkit-filter", "blur(5px)");
+          $('#page-content-wrapper').css("-webkit-transition", "-webkit-filter .30s");
+        }
       });
     }
-  });
-
-
-  
+  } 
