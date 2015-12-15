@@ -21,7 +21,6 @@ es:
         nine: '¿En qué colonias aplíca este diagnóstico?'
       safety:
         one: '¿Qué el AFORO?'
-        two: '¿Para qué sirve calcular el Aforo?'
         three: '¿Qué es área de atención?'
         four: '¿A qué se refiere el establecimiento en el área de atención?'
         five: '¿A qué se refiere el mobiliario en el área de atención?'
@@ -97,7 +96,6 @@ es:
               <BR>
               <BR>
               Superficie área de servicios + Superficie área de atención = AFORO'
-        two_html: ''
         three_html: 'Es la resultante de restar a la superficie total del área de atención la superficie ocupada por enseres de atención.'
         four_html: 'La superficie destinada exclusivamente para los usuarios, como pista de baile, área desalimentos y bebidas y pasarelas.'
         five_html: 'superficie ocupada por enseres que se ocupan para atención. ejemplo(mesas, sillas, barras, etc)'

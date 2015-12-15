@@ -24,7 +24,6 @@ module QuestionHelper
 
 	def get_help_safety
 		[{title: t('help.question.safety.one'),text:t('help.answer.safety.one_html')},
-		{title: t('help.question.safety.two'),text:t('help.answer.safety.two_html')},
 		{title: t('help.question.safety.three'),text:t('help.answer.safety.three_html')},
 		{title: t('help.question.safety.four'),text:t('help.answer.safety.four_html')},
 		{title: t('help.question.safety.five'),text:t('help.answer.safety.five_html')},
