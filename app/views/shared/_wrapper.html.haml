@@ -1,13 +1,13 @@
 #wrapper.toggled
   #sidebar-wrapper
     %ul.sidebar-nav
+      %div#head_wrapper
+        %i.fa.fa-info-circle.fa-3x.pink  
+        %div.pink.text-help
+        Conceptos claves
       %li.sidebar-brand
         .col-md-12.text-right
           %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
-      %li.col-md-12.text-center
-        %i.fa.fa-info-circle.fa-3x.pink  
-      %li.col-md-12.text-center.pink.text-help
-        Conceptos claves
         %hr
       -if type == 'impact'
         %li

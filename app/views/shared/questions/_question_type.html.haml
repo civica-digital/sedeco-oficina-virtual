@@ -69,6 +69,9 @@
     for(i = 1; i <= "#{@file.size}"; i++){
       $("#menu-toggle"+i).click(function(e) {
         e.preventDefault();
+        $('#head_wrapper').css("position", "fixed");
+        $('#head_wrapper').css("width", "50%");
+        $('#menu-toggleint').css("position", "fixed");
         $("#wrapper").toggleClass("toggled");
       });
     }

@@ -48,7 +48,10 @@ padding-top:100px;
     position: absolute;
     margin-right: -250px;
 }
-
+#head_wrapper.toggled{
+    position: fixed;
+ 
+}
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -96,6 +99,18 @@ padding-top:100px;
 .sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
+}
+#head_wrapper{
+    height: 112px;
+    width: 100%;
+    display:block;
+    background: white;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    padding: 30px 0 0 0;
+    left:5px;
+    margin:0;
 }
 
 @media(min-width:768px) {
