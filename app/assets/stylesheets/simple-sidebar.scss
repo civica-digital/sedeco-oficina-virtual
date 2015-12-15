@@ -101,16 +101,19 @@ padding-top:100px;
     background: none;
 }
 #head_wrapper{
-    height: 112px;
+    height: 160px;
     width: 100%;
     display:block;
-    background: white;
+    background: #F7F7F7;
     position: relative;
     top: 50px;
     text-align: center;
     padding: 30px 0 0 0;
     left:5px;
     margin:0;
+}
+.wrapper-border{
+    border-bottom: 1px solid #C4C4C4;
 }
 
 @media(min-width:768px) {
