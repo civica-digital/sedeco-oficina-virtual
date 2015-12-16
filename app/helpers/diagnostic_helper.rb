@@ -109,6 +109,32 @@ module DiagnosticHelper
     end
   end
 
+  def get_business_size(size_business,has_business)
+    if has_business
+      "- Tienes un negocio que mide #{size_business}"
+    else
+      "- Quieres abrir un negocio que mide #{size_business}"
+    end
+  end
+
+  def get_ubicacion_negocio(has_business,city_zoning,town_business)
+    if has_business
+      exit = "- Tienes un negocio "
+    else
+      exit = "- Quieres abrir un negocio "
+    end
+    if !city_zoning.nil?
+      exit += "ubicado en la delegación #{city_zoning}"
+      if !town_business.nil?
+        exit += ", en la colonia #{town_business}."
+      else
+        exit += ", pero aun no sabes en que colonia."
+      end
+    else
+      exit += "pero no proporcionaste su ubicación."
+    end
+  end
+
   
 
   def validate_expiration_zoning(date_siapem, date_zoning)

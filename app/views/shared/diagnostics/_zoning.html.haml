@@ -5,11 +5,22 @@
 -if locals[:is_business_home]
   %br
   = get_no_necesita_uso(locals[:uso_de_suelo],locals[:has_bussine],locals[:size_house],locals[:size_business])
+-else
+  %br
+  = get_business_size(locals[:size_business],locals[:has_bussine])
+
+-if !session[:city_zoning].nil?
+  %br
+  = get_ubicacion_negocio(locals[:has_bussine],session[:city_zoning], session[:town_business])
 %hr
 %h3
   =t('title.no_html')
 - if session[:type_zoning] == "Sin información"
   = get_uso_de_suelo_no(locals[:has_bussine],session[:type_zoning])
+
+-if session[:city_zoning].nil? || session[:town_business].nil?
+  %br
+  = get_ubicacion_negocio(locals[:has_bussine],session[:city_zoning], session[:town_business])
 %hr
 %h3
   =t('title.falta_html')

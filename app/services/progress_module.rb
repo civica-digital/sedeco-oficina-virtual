@@ -230,24 +230,24 @@ module ProgressModule
       when 5#pregunta 5
         case clicked.to_i
           when 1
-            session[:has_zoning] = -12
+            session[:has_zoning] = true
           when 2
-            session[:has_zoning] = -13
+            session[:has_zoning] = false
           when 3
-            session[:has_zoning] = -4
+            session[:has_zoning] = false
         else
-          session[:has_zoning] = -4
+          session[:has_zoning] = false
         end
       when 7#pregunta 7
         case clicked.to_i
           when 1
-            session[:has_zoning] = -21
+            session[:has_type_zoning] = -21
           when 2..4
-            session[:has_zoning] = -22
+            session[:has_type_zoning] = -22
           when 5
-            session[:has_zoning] = -4
+            session[:has_type_zoning] = -4
         else
-          session[:has_zoning] = -4
+          session[:has_type_zoning] = -4
         end
 
     else
@@ -283,7 +283,7 @@ module ProgressModule
       when 8 #pregunta 8
         case clicked.to_i
           when 2
-            session[:city_zoning] = 0
+            session[:city_zoning] = nil
         else
           session[:city_zoning] = date
         end
@@ -291,7 +291,7 @@ module ProgressModule
       when 9 #pregunta 9
         case clicked.to_i
           when 2
-            session[:town_business] = 0
+            session[:town_business] = nil
         else
           session[:town_business] = date
         end
