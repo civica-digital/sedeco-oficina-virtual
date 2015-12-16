@@ -4,6 +4,7 @@ $light-gray: #F6F6F6;
 $dark-gray: #CBCBCB;
 $input-gray: #AFAFAF;
 $btn-primary-bg: #E6007E;
+$color-black: #000000;
 
 
 .pink{
@@ -30,4 +31,8 @@ $btn-primary-bg: #E6007E;
 
 .btn-primary-bg{
 	color: $btn-primary-bg !important;
+}
+
+.black{
+	color: $color-black !important;
 }

@@ -1,5 +1,53 @@
 module DiagnosticHelper
 
+
+###############################salidas de impacto###############################  
+  def get_impacto_user(has_business, type)
+    if has_business
+    exit = "- Tienes un negocio en operación de "
+    else
+      exit = "- Quieres abrir un negocio de "
+    end
+    if type == -1
+      exit += "bajo impacto." 
+    elsif type == -2
+      exit += "impacto vecinal."
+    elsif type == -3
+      exit += "impacto zonal."    
+    end
+    return exit
+  end
+
+
+  def get_siapem_user(has_siapem,date_siapem)
+    if has_siapem
+      "- Te encuentras registrado en el SIAPEM desde #{date_siapem}."
+    else
+      "- Aun no te encuentras registrado en el SIAPEM."
+    end
+    
+  end
+
+  def get_has_open_declaration(has_open_declaration)
+    if has_open_declaration
+      "- Cuentas con tu declaración de apertura."
+    else
+      "- Aun no cuentas con tu declaración de apertura."
+    end
+    
+  end
+
+
+  def get_has_special_license(has_special_license)
+    if has_special_license
+      "- Cuentas con una licencia A u ordinaria."
+    else
+      "- No cuentas con una licencia A u ordinaria."
+    end
+  end
+
+
+
   def get_diagnostic_impact(has_business, type, has_siapem)
     if !has_business && type == -1
       t('impact.exituno_html')
@@ -23,6 +71,45 @@ module DiagnosticHelper
       t('impact.hasnt_licese_html')
     end
   end
+
+
+###############################salidas de suelo###############################  
+
+
+  def get_uso_de_suelo_ok(has_business, type_zoning)
+    if has_business
+      "- Tienes un negocio en un uso de suelo #{type_zoning}."
+    else
+      "- Quieres abrir un negocio en un uso de suelo #{type_zoning}."
+    end
+  end
+
+    def get_uso_de_suelo_no(has_business, type_zoning)
+    if has_business
+      "- Tienes un negocio, pero no sabes que uso de suelo tiene."
+    else
+      "- Quieres abrir un negocio, pero no sabes que uso de suelo tiene."
+    end
+  end
+
+
+  def get_no_necesita_uso(uso_de_suelo, has_business, size_house, size_business)
+    if uso_de_suelo
+      if has_business
+        "- Tienes un negocio en el mismo lugar donde habitas, y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+      else
+        "- Quieres abrir un negocio en el mismo lugar donde habitas y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+      end
+    else
+      if has_business
+        "- Tienes un negocio en el mismo lugar donde habitas, y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+      else
+        "- Quieres abrir un negocio en el mismo lugar donde habitas y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+      end
+    end
+  end
+
+  
 
   def validate_expiration_zoning(date_siapem, date_zoning)
     if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i

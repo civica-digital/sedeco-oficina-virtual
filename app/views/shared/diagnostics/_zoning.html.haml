@@ -1,3 +1,26 @@
+%h3
+  =t('title.ok_html')
+- if session[:type_zoning] != "Sin información"
+  = get_uso_de_suelo_ok(locals[:has_bussine],session[:type_zoning])
+-if locals[:is_business_home]
+  %br
+  = get_no_necesita_uso(locals[:uso_de_suelo],locals[:has_bussine],locals[:size_house],locals[:size_business])
+%hr
+%h3
+  =t('title.no_html')
+- if session[:type_zoning] == "Sin información"
+  = get_uso_de_suelo_no(locals[:has_bussine],session[:type_zoning])
+%hr
+%h3
+  =t('title.falta_html')
+-if locals[:uso_de_suelo]
+  = get_validate_not_zoning
+%hr
+
+
+
+
+
 -if locals[:uso_de_suelo]
   = get_validate_not_zoning
 -elsif locals[:has_bussine] && locals[:has_zoning] 
