@@ -241,13 +241,17 @@ module ProgressModule
       when 7#pregunta 7
         case clicked.to_i
           when 1
-            session[:has_type_zoning] = -21
-          when 2..4
-            session[:has_type_zoning] = -22
+            session[:has_type_zoning] = "Derechos adquiridos"
+          when 2
+            session[:has_type_zoning] = "Certificado único de zonificación"
+          when 3
+            session[:has_type_zoning] = "Especial"
+          when 4
+            session[:has_type_zoning] = "Específico"
           when 5
-            session[:has_type_zoning] = -4
+            session[:has_type_zoning] = "Sin información"
         else
-          session[:has_type_zoning] = -4
+          session[:has_type_zoning] = "Sin información"
         end
 
     else

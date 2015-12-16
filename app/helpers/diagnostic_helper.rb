@@ -111,9 +111,9 @@ module DiagnosticHelper
 
   def get_business_size(size_business,has_business)
     if has_business
-      "- Tienes un negocio que mide #{size_business}"
+      "- Tienes un negocio que mide #{size_business} m2"
     else
-      "- Quieres abrir un negocio que mide #{size_business}"
+      "- Quieres abrir un negocio que mide #{size_business} m2"
     end
   end
 
@@ -135,6 +135,34 @@ module DiagnosticHelper
     end
   end
 
+  def get_has_zoning(has_zoning, date_zoning, has_type_zoning)
+    if has_zoning
+      "- Cuentas con un certificado de uso de suelo, expedido en el #{date_zoning}."
+    else
+      "- No cuentas con un certificado de uso de suelo"
+    end
+  end
+
+
+  def get_validate_expiration_zoning(date_siapem, date_zoning, value)
+    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+      "- Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo."
+    elsif !value
+      "- Tienes tu uso de suelo pero no te haz registrado en el SIAPEM."
+    end
+  end
+
+  def get_has_type_zoning(has_type_zoning,value)
+    if value
+      "- Cuentas con el certificado de uso de suelo #{has_type_zoning}."
+    else 
+      "- No tienes información de que tipo de certificado uso de suelo tienes."
+    end
+  end
+
+  def get_no_date_zoning
+    "- No tienes la fecha de expedición de tu uso de suelo."
+  end
   
 
   def validate_expiration_zoning(date_siapem, date_zoning)
@@ -156,6 +184,8 @@ module DiagnosticHelper
   def get_business_recommendations
     t('zoning.recommendations_html')
   end
+
+###############################salidas de seguridad############################### 
 
   def get_diagnostico_seguridad(has_autodiagnostico,has_protection,make_protection,aforo)
     if aforo.to_i >= 50

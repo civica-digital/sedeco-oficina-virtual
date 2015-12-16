@@ -9,10 +9,23 @@
   %br
   = get_business_size(locals[:size_business],locals[:has_bussine])
 
--if !session[:city_zoning].nil?
+-if !session[:city_zoning].nil? && !session[:town_business].nil?
   %br
   = get_ubicacion_negocio(locals[:has_bussine],session[:city_zoning], session[:town_business])
+
+-if session[:has_zoning]
+  %br
+  = get_has_zoning(session[:has_zoning], session[:date_zoning], session[:has_type_zoning])
+  - if session[:has_type_zoning] != "Sin información"
+    %br
+    = get_has_type_zoning(session[:has_type_zoning],true)
+
+-if session[:has_siapem] && session[:has_zoning]
+  %br
+  = get_validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning], true)
+
 %hr
+
 %h3
   =t('title.no_html')
 - if session[:type_zoning] == "Sin información"
@@ -21,24 +34,33 @@
 -if session[:city_zoning].nil? || session[:town_business].nil?
   %br
   = get_ubicacion_negocio(locals[:has_bussine],session[:city_zoning], session[:town_business])
+
+-if !session[:has_zoning]
+  %br
+  = get_has_zoning(session[:has_zoning], session[:date_zoning], session[:has_type_zoning])
+
+-if session[:date_zoning] == 0
+  = get_no_date_zoning
+
+- if !session[:has_siapem] && session[:has_zoning]
+  %br
+  = get_validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning], false)
+
+- if session[:has_type_zoning] == "Sin información"
+  %br
+  = get_has_type_zoning(session[:has_type_zoning],false)
+
 %hr
+
 %h3
   =t('title.falta_html')
--if locals[:uso_de_suelo]
-  = get_validate_not_zoning
-%hr
-
-
-
-
-
 -if locals[:uso_de_suelo]
   = get_validate_not_zoning
 -elsif locals[:has_bussine] && locals[:has_zoning] 
   = validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning])
 -else
   = get_documents_zoning
-%hr
+
 -if locals[:size_business].to_i > 80
   = get_business_recommendations
-  %hr
+%hr
