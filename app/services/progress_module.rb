@@ -98,7 +98,7 @@ module ProgressModule
           when 2
             session[:has_autodiagnostico] = false
           when 3
-            session[:has_autodiagnostico] = -4
+            session[:has_autodiagnostico] = false
         else
           session[:has_autodiagnostico] = false
         end
@@ -110,7 +110,7 @@ module ProgressModule
           when 2
             session[:vobo_seguridad] = false
           when 3
-            session[:vobo_seguridad] = -4
+            session[:vobo_seguridad] = false
         else
           session[:vobo_seguridad] = false
         end
@@ -122,7 +122,7 @@ module ProgressModule
           when 2
             session[:has_protection] = false
           when 3
-            session[:has_protection] = -4
+            session[:has_protection] = false
         else
           session[:has_protection] = false
         end
@@ -134,7 +134,7 @@ module ProgressModule
           when 2
             session[:make_protection] = false
           when 3
-            session[:make_protection] = -4
+            session[:make_protection] = false
         else
           session[:make_protection] = false
         end
@@ -146,7 +146,7 @@ module ProgressModule
           when 2
             session[:license_ambiental] = false
           when 3
-            session[:license_ambiental] = -4
+            session[:license_ambiental] = false
         else
           session[:license_ambiental] = true
         end
@@ -158,7 +158,7 @@ module ProgressModule
           when 2
             session[:license_sanitaria] = false
           when 3
-              session[:license_sanitaria] = -4
+              session[:license_sanitaria] = false
         else
           session[:license_sanitaria] = true
         end
@@ -170,7 +170,7 @@ module ProgressModule
           when 2
             session[:no_adeudos] = false
           when 3
-            session[:no_adeudos] = -4
+            session[:no_adeudos] = false
         else
           session[:no_adeudos] = false
         end

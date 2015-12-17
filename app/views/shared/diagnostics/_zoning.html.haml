@@ -40,6 +40,7 @@
   = get_has_zoning(session[:has_zoning], session[:date_zoning], session[:has_type_zoning])
 
 -if session[:date_zoning] == 0
+  %br
   = get_no_date_zoning
 
 - if !session[:has_siapem] && session[:has_zoning]

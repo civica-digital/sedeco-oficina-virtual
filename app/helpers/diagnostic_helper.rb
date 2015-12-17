@@ -186,6 +186,52 @@ module DiagnosticHelper
   end
 
 ###############################salidas de seguridad############################### 
+  def get_aforo(aforo)
+    "- Tienes un AFORO de: #{aforo}."
+  end
+
+  def get_has_autodiagnostico(has_autodiagnostico)
+    if has_autodiagnostico
+      "- Ya recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación."
+    else 
+      "- Aun no recogistes y/o entregas el autodiagnóstico en materia de protección civil de tu delegación."
+    end
+    
+  end
+
+  def get_has_protection(has_protection)
+    if has_protection
+      "- Te aplica un plan de protección civil."
+    else
+      "No te aplica un plan de protección civil."
+    end
+  end
+
+  def get_make_protection(make_protection)
+    if make_protection
+      "- Tienes implementado el plan de protección civil."
+    else
+      "- No tienes implementado el plan de protección civil."
+    end
+  end
+
+
+  def get_license_sanitaria(license_sanitaria)
+    if license_sanitaria
+      "- Sabes que requieres una Licencia Ambiental Única (LAUDF)."
+    else
+      "- No sabes si requieres una Licencia Ambiental Única (LAUDF)."
+    end
+  end
+
+  def get_license_ambiental(license_ambiental)
+    if license_ambiental
+      "- Sabes que requieres un aviso de funcionamiento sanitario."
+    else
+      "- No sabes si requieres un aviso de funcionamiento sanitario."
+    end
+  end
+
 
   def get_diagnostico_seguridad(has_autodiagnostico,has_protection,make_protection,aforo)
     if aforo.to_i >= 50
