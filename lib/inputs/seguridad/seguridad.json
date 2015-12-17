@@ -34,7 +34,7 @@
                 },
                 {
                     "numero": "2",
-                    "texto": "Calculemos la capacidad total de tu negocio con la siguiente formula:",
+                    "texto": "Calculemos la capacidad total de tu negocio con la siguientes formulas:",
                     "array_respuestas": {
                         "tipo": "calculadora",
                         "respuesta": [
