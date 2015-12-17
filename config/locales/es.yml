@@ -136,7 +136,7 @@ es:
       title: "Centro de aprendizaje"
       get_search: "Buscar"
       learning_center_description: "Aquí conocerás los trámites que necesitas para dar de alta tu negocio y resolverás todas las dudas que tengas al respecto."
-      app_name: "Oficina virtual SEDECO"
+      app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
   admins:
     sessions:
       new:
@@ -145,15 +145,15 @@ es:
       index:
         admin_panel: "Panel de administración"
         admin_resources: "Administrar recursos"
-        app_name: "Oficina virtual SEDECO"
+        app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
         learning_center: "Centro de aprendizaje"
     resources:
       form:
-        app_name: "Oficina virtual SEDECO"
+        app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
         new_resource: "Administrar recurso"
       new:
         new_resource: "Nuevo recurso"
-        app_name: "Oficina virtual SEDECO"
+        app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
       create:
         resource_created: "El recurso se agregó exitosamente."
       update:
@@ -161,7 +161,7 @@ es:
       delete:
         resource_deleted: "El recurso se eliminó exitosamente."
       index:
-        app_name: "Oficina virtual SEDECO"
+        app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
         learning_center: "Centro de aprendizaje"
         add_resource: "Agregar un recurso"
         no_resources: "No se han agregado recursos al centro de aprendizaje."
@@ -219,4 +219,5 @@ es:
     learning_html: '<colorprimario><a href="%{path}" target="_blank" class="colorprimario">Ir al centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 
   button:
     go: 'Ingresar'
-    app_name: "Oficina virtual SEDECO"
+    app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
+    inicio: "Volver al inicio"

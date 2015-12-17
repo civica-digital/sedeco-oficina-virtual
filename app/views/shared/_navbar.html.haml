@@ -8,11 +8,10 @@
         %span.icon-bar
         %span.icon-bar
       %a.navbar-brand{:href=>"#{root_path}"}
-        =t('button.app_name')
+        =t('button.app_name_html')
     %div.collapse.navbar-collapse{:id=>"bs-example-navbar-collapse-1"}
-      %ul.nav.navbar-nav.navbar-right
-        %li.hidden
-          %a{:href=>""}
+      %ul.navbar-nav.navbar-right.margin-top
         %li.page-scroll
-          %a{:href=>""}
-            
+          %a.navbar-brand{:href=>"#{root_path}"}
+            %div.page-scroll.small-text
+              =t('button.inicio')
