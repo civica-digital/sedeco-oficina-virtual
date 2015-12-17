@@ -1,4 +1,8 @@
 es:
+  title:
+    ok_html: '<div class="black"><colorprimario><i class="fa fa-thumbs-o-up"></i></colorprimario> Lo que tienes:</div>'
+    no_html: '<div class="black"><colorprimario><i class="fa fa-thumbs-o-down"></i></colorprimario> Lo que te falta:</div>'
+    falta_html: '<div class="black"><colorprimario><i class="fa fa-hand-o-up"></i></colorprimario> Información importante:</div>'
   diagnostics:
     index:
       title_impact_html: 'Resultado de <colorprimario>"Impacto"</colorprimario>'

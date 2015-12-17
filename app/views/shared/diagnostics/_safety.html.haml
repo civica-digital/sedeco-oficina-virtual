@@ -1,3 +1,47 @@
+%h3
+  =t('title.ok_html')
+=get_aforo(session[:aforo])
+-if session[:aforo].to_i < 50 
+  -if session[:has_autodiagnostico]
+    %br
+    = get_has_autodiagnostico(session[:has_autodiagnostico])
+  -if session[:has_protection]
+    %br
+    = get_has_autodiagnostico(session[:has_protection])
+-if session[:make_protection]
+  %br
+  = get_make_protection(session[:make_protection])
+-if session[:license_sanitaria]
+  %br
+  = get_license_sanitaria(session[:license_sanitaria])
+-if session[:license_ambiental]
+  %br
+  = get_license_ambiental(session[:license_ambiental])
+%hr
+
+%h3
+  =t('title.no_html')
+-if session[:aforo].to_i < 50 
+  -if !session[:has_autodiagnostico]
+    %br
+    = get_has_autodiagnostico(session[:has_autodiagnostico])
+  -if !session[:has_protection]
+    %br
+    = get_has_protection(session[:has_protection])
+-if !session[:make_protection]
+  %br
+  = get_make_protection(session[:make_protection])
+-if !session[:license_sanitaria]
+  %br
+  = get_license_sanitaria(session[:license_sanitaria])
+-if !session[:license_ambiental]
+  %br
+  = get_license_ambiental(session[:license_ambiental])
+%hr
+
+
+%h3
+  =t('title.falta_html')
 = get_diagnostico_seguridad(locals[:has_autodiagnostico],locals[:has_protection],locals[:make_protection],locals[:aforo])
 %hr
 = get_diagnostic_license_ambiental(locals[:license_ambiental])
@@ -5,5 +49,8 @@
 = get_diagnostic_license_sanitaria(locals[:license_sanitaria])
 %hr
 -if locals[:impacto_usuario] == -2
-	=has_not_debts(locals[:no_adeudos])
-	%hr
+  = has_not_debts(locals[:no_adeudos])
+%hr
+
+
+

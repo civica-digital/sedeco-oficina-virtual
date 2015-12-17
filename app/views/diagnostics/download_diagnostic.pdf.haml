@@ -1,24 +1,26 @@
 %meta{:charset=>"UTF-8"}
-.container
-  .row
-    %h1.text-center
-      Diagnóstico general de tu negocio:
-    %hr
-    %hr
-  .row
-    = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
-                                                    :impacto_usuario => session[:impacto_usuario], 
-                                                    :has_siapem => session[:has_siapem],
-                                                    :has_special_license => session[:has_special_license]}         
-  .row
-    = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
-  .row
-    = render 'shared/diagnostics/safety', :locals => {:has_autodiagnostico => session[:has_autodiagnostico],
-              :vobo_seguridad => session[:vobo_seguridad],
-              :has_protection => session[:has_protection],
-              :make_protection => session[:make_protection],
-              :license_ambiental => session[:license_ambiental],
-              :license_sanitaria => session[:license_sanitaria],
-              :no_adeudos => session[:no_adeudos],
-              :aforo => session[:aforo],
-              :impacto_usuario => session[:impacto_usuario]}
+  .container
+    .row
+      %h1.text-center
+        Diagnóstico general de tu negocio:
+      %hr
+      %hr
+    .row
+      = render 'shared/diagnostics/impact', :locals => {:has_bussine => session[:has_bussine],
+                                                      :impacto_usuario => session[:impacto_usuario], 
+                                                      :has_siapem => session[:has_siapem],
+                                                      :has_special_license => session[:has_special_license]}         
+    .row
+      = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
+    .row
+      = render 'shared/diagnostics/safety', :locals => {:has_autodiagnostico => session[:has_autodiagnostico],
+                :vobo_seguridad => session[:vobo_seguridad],
+                :has_protection => session[:has_protection],
+                :make_protection => session[:make_protection],
+                :license_ambiental => session[:license_ambiental],
+                :license_sanitaria => session[:license_sanitaria],
+                :no_adeudos => session[:no_adeudos],
+                :aforo => session[:aforo],
+                :impacto_usuario => session[:impacto_usuario]}
+    %div{:id=>"watermark"}
+      Este documento NO ES OFICIAL, es de caracter informativo.
