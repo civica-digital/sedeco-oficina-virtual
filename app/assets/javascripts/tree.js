@@ -129,10 +129,10 @@
         $('.progress-impacto').text("Impacto: "+impacto+"%");
         $('.progress-impacto-css').css({'width': impacto+'%'});
 
-        $('.progress-uso').text("Suelo: "+suelo+"%");
+        $('.progress-uso').text("Uso de suelo: "+suelo+"%");
         $('.progress-uso-css').css({'width': suelo+'%'});
 
-        $('.progress-proteccion').text("Impacto: "+seguiridad+"%");
+        $('.progress-proteccion').text("Protección civil: "+seguiridad+"%");
         $('.progress-proteccion-css').css({'width': seguiridad+'%'});
 
   }
