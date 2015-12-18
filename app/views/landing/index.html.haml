@@ -51,7 +51,7 @@
       .modal-header
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
-        %h4#myModalLabel.modal-title=t('.title_modal')
+        %h4#myModalLabel.modal-title= image_tag("logo.svg", :class=> "half-width")
       .modal-body
         =t('.text_modal')
       .modal-footer
