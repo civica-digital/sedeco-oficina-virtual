@@ -129,10 +129,10 @@
         $('.progress-impacto').text("Impacto: "+impacto+"%");
         $('.progress-impacto-css').css({'width': impacto+'%'});
 
-        $('.progress-uso').text("Suelo: "+suelo+"%");
+        $('.progress-uso').text("Uso de suelo: "+suelo+"%");
         $('.progress-uso-css').css({'width': suelo+'%'});
 
-        $('.progress-proteccion').text("Impacto: "+seguiridad+"%");
+        $('.progress-proteccion').text("Protección civil: "+seguiridad+"%");
         $('.progress-proteccion-css').css({'width': seguiridad+'%'});
 
   }
@@ -189,9 +189,8 @@
 
     var superficie_s = $("#superficie_s").val();
     var mobiliario_s = $("#mobiliario_s").val();
-    var impact_s = $("#impacto_s").val();
 
-    if(superficie_s!= "" && mobiliario_s!= "" && impact_s!= ""&& superficie_t!= "" && mobiliario_t!= "" && impact_t!= ""){
+    if(superficie_s!= "" && mobiliario_s!= "" && superficie_t!= "" && mobiliario_t!= "" && impact_t!= ""){
      if(parseInt(superficie_s)<parseInt(mobiliario_s)){
         alert('El mobiliario  en el área de servicio no puede ser mayor al establecimiento');
         $("#superficie_s").val("");
@@ -201,13 +200,13 @@
         $("#superficie_t").val("");
         $("#mobiliario_t").val("");
       }else{
-        set_aforo(superficie_s,mobiliario_s,impact_s,type,superficie_t,mobiliario_t,impact_t);
+        set_aforo(superficie_s,mobiliario_s,type,superficie_t,mobiliario_t,impact_t);
       }
     }
   }
 
   /*Obtiene y regresa el valor de aforo de un negocio*/
-  function set_aforo(superficie_s,mobiliario_s,impacto_s,type,superficie_t,mobiliario_t,impacto_t){
+  function set_aforo(superficie_s,mobiliario_s,type,superficie_t,mobiliario_t,impacto_t){
     $.ajax({
          type:'GET', 
          url: "#{root_path}",
@@ -217,7 +216,7 @@
         error: function(){
         }, 
          data: $.param({ impact: {type: type ,
-          impacto_s: impacto_s,superficie_s: superficie_s, mobiliario_s: mobiliario_s,
+          superficie_s: superficie_s, mobiliario_s: mobiliario_s,
           impacto_t: impacto_t,superficie_t: superficie_t, mobiliario_t: mobiliario_t}})
     });
   }
@@ -276,6 +275,7 @@ $(function () {
       });
   });
 
+/*Permite que se vean las ayudas de cada tipo*/
   $(function () {
     $(".details-toggle3").click(function () {
     $( ".impacto1" ).removeClass( "hidden");

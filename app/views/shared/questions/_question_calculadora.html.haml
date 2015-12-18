@@ -1,20 +1,55 @@
 %row  
-  %div.col-md-6
+  %div.col-md-8.col-md-offset-2
     %div.margin-top-dropdown
-      Area de Atención
-      %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle90"}
+      %h3.pink
+        Area de Servicio
+        %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle94"}
+      %br
+      %div.col-md-12
+        La superficie destinada exclusivamente para las labores del personal
       %hr
       %div.row
-        .col-md-5
-          Establecimiento
+        .col-md-5.sin-padding
+          Superficie total para el área de servicios.
+          %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle95"}
+          =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '30.5',
+          :onchange=> "valueAforo()",:id=>"superficie_s"
+        .col-md-2
+          .col-md-10.col-md-offset-1
+            %i.fa.fa-minus.fa-5x
+        .col-md-5.sin-padding
+          Superficie ocupada por enseres de servicios.
+          %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle96"}
+          =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '20.0',
+          :onchange=> "valueAforo()",:id=>"mobiliario_s"
+      %hr
+      %div.row
+        .col-md-5.sin-padding
+        .col-md-2
+          .col-md-10.col-md-offset-1
+            %i.fa.fa-plus.fa-5x
+
+            
+  %div.col-md-8.col-md-offset-2
+    %div.margin-top-dropdown
+      %h3.pink 
+        Area de Atención
+        %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle90"}
+      %br
+      %div.col-md-12
+        La superficie destinada exclusivamente para los usuarios
+      %hr
+      %div.row
+        .col-md-5.sin-padding
+          Superficie total para el área de atención.
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle91"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '100.5',
           :onchange=> "valueAforo()",:id=>"superficie_t"
         .col-md-2
           .col-md-10.col-md-offset-1
-            %hr.style-line
-        .col-md-5
-          Mobiliario
+            %i.fa.fa-minus.fa-5x
+        .col-md-5.sin-padding
+          Superficie ocupada por enseres de atención.
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle92"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '45.5',
           :onchange=> "valueAforo()",:id=>"mobiliario_t"
@@ -31,32 +66,7 @@
             Towns.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto_t", class: "chosen-select",:onchange=> "valueAforo('vecinal')"
 
 
-  %div.col-md-6
-    %div.margin-top-dropdown
-      Area de Servicio
-      %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle94"}
-      %hr
-      %div.row
-        .col-md-5
-          Establecimiento
-          %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle95"}
-          =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '30.5',
-          :onchange=> "valueAforo()",:id=>"superficie_s"
-        .col-md-2
-          .col-md-10.col-md-offset-1
-            %hr.style-line
-        .col-md-5
-          Mobiliario
-          %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle96"}
-          =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '20.0',
-          :onchange=> "valueAforo()",:id=>"mobiliario_s"
-      %hr.style-line
-      %div.row  
-        .col-md-12
-          Area por persona
-          %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle97"}
-          =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '0.5',
-          :onchange=> "valueAforo()",:id=>"impacto_s", :value=> '0.5'
+  
 
 %div.margin-top-dropdown.hidden{:id=>"diagnosticaforo"} 
   .jumbotron

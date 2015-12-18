@@ -2,7 +2,7 @@
   %div.col-md-6
     %div.col-md-12.landing-text-left.main
       .col-md-10.col-md-offset-1.pink
-        LOGO
+        =image_tag("logo-rosa.svg", :class=>"logo-landing")
       .col-md-10.col-md-offset-1.text-question
         =t('.textmain')
         .row 
@@ -51,7 +51,7 @@
       .modal-header
         %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
           %span{"aria-hidden" => "true"} ×
-        %h4#myModalLabel.modal-title=t('.title_modal')
+        %h4#myModalLabel.modal-title= image_tag("logo.svg", :class=> "half-width")
       .modal-body
         =t('.text_modal')
       .modal-footer

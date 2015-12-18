@@ -2,7 +2,7 @@ es:
   tree:
     title:
       impact: 'Cuestionario de Impacto'
-      safety: 'Cuestionario de protección y otros'
+      safety: 'Cuestionario de protección civil'
       zoning: 'Cuestionario de Uso de suelo'
       diagnostic: 'Diagnóstico inicial de tu negocio'
     subtitle:
