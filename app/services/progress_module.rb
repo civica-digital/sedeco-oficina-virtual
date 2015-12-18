@@ -150,8 +150,20 @@ module ProgressModule
         else
           session[:license_ambiental] = true
         end
-          
+
       when 8 #pregunta 8
+        case clicked.to_i
+          when 1
+            session[:make_license_ambiental] = true
+          when 2
+            session[:make_license_ambiental] = false
+          when 3
+            session[:make_license_ambiental] = false
+        else
+          session[:make_license_ambiental] = true
+        end
+          
+      when 9 #pregunta 9
         case clicked.to_i
           when 1
             session[:license_sanitaria] = true
@@ -163,7 +175,19 @@ module ProgressModule
           session[:license_sanitaria] = true
         end
 
-      when 9 #pregunta 9
+      when 10 #pregunta 10
+        case clicked.to_i
+          when 1
+            session[:make_license_sanitaria] = true
+          when 2
+            session[:make_license_sanitaria] = false
+          when 3
+              session[:make_license_sanitaria] = false
+        else
+          session[:make_license_sanitaria] = true
+        end
+
+      when 11 #pregunta 9
         case clicked.to_i
           when 1
             session[:no_adeudos] = true
