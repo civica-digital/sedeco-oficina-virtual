@@ -32,7 +32,7 @@ module DiagnosticHelper
     if has_open_declaration
       "- Cuentas con tu declaración de apertura."
     else
-      "- Aun no cuentas con tu declaración de apertura."
+      "- No cuentas con tu declaración de apertura."
     end
     
   end
