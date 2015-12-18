@@ -221,3 +221,4 @@ es:
     go: 'Ingresar'
     app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
     inicio: "Volver al inicio"
+    app_name: "Asesor virtual"
