@@ -171,6 +171,7 @@
         type:'GET', 
         url: window.url,
         success: function(){
+          ga('send', 'event', 'business_city', window.order, '');
         },
         error: function(){
         }, 
