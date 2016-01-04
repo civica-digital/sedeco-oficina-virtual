@@ -27,7 +27,7 @@
 %hr
 %h3
   =t('title.falta_html')
-= get_diagnostic_impact(locals[:has_bussine],locals[:impacto_usuario],locals[:has_siapem])
+= get_diagnostic_impact(locals[:has_bussine],locals[:impacto_usuario],locals[:has_siapem],session[:has_open_declaration], session[:has_special_license])
 -if locals[:impacto_usuario] == -2 && !locals[:has_special_license].nil?
   %br
   = get_diagnostic_impact_license(locals[:has_special_license])
