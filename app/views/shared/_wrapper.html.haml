@@ -26,12 +26,12 @@
 :javascript
   $("#menu-toggleint").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        if($("#wrapper").hasClass("toggled")){
           $('#page-content-wrapper').css("-webkit-filter", "blur(0px)");
           $('#page-content-wrapper').css("-webkit-transition", "-webkit-filter .0s");
-        }else{
-          $('#page-content-wrapper').css("-webkit-filter", "blur(5px)");
-          $('#page-content-wrapper').css("-webkit-transition", "-webkit-filter .30s");
-        }
+
+          $('#head_wrapper').css("position", "relative");
+          $('#head_wrapper').css("width", "100%");
+          $('#menu-toggleint').css("position", "relative");
+          $("#wrapper").toggleClass("toggled");
+        
     });

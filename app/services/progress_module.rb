@@ -52,7 +52,7 @@ module ProgressModule
 	          when 2
 	            session[:has_special_license] = false
 	          when 3
-	            session[:has_special_license] = -4
+	            session[:has_special_license] = false
 	        else
 	          session[:has_special_license] = false
 	        end

@@ -48,19 +48,22 @@ module DiagnosticHelper
 
 
 
-  def get_diagnostic_impact(has_business, type, has_siapem)
-    if !has_business && type == -1
+  def get_diagnostic_impact(has_business, type, has_siapem, has_open_declaration,has_special_license)
+
+    if !has_business && !has_siapem && type == -1
       t('impact.exituno_html')
-    elsif !has_business && type == -2
+    elsif !has_business && !has_siapem && type == -2
       t('impact.exitdos_html')
-    elsif has_business && type == -1 && has_siapem
+    elsif has_business && has_siapem && type == -1
       t('impact.exittres_html')
-    elsif has_business && type == -2 && has_siapem
+    elsif has_business && has_siapem && type == -2
       t('impact.exitcuatro_html')
-    elsif has_business && type == -1 && !has_siapem
+    elsif has_business && !has_siapem && type == -1 && has_open_declaration
       t('impact.exitcinco_html')
-    elsif has_business && type == -2 && !has_siapem
-      t('impact.exitseis_html')
+    elsif has_business && !has_siapem && type == -2 && has_special_license != nil && !has_special_license
+       t('impact.exitseis_html')
+    elsif has_business && !has_siapem && type == -2 && has_special_license
+      t('impact.exitsiete_html')
     end
   end
 
