@@ -8,3 +8,6 @@ $('.jumbotron').html("<H2 class='colorprimario'>#{type}<H2><p>#{text}</p>");
 	$('.next-step').html("<a class='btn btn-default btn btn-primary btn-block btn-padding' href=#{path} data-no-turbolink='true'>#{next_text}</a>"); 
 //Actualizamos los progressBars
 progressBar("100","100","100");
+
+//analitycs personas que terminaron el cuestionario
+ga('send', 'event', 'diagnostic', "end", '');
