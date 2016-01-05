@@ -52,4 +52,6 @@
       document.getElementById("1").removeAttribute("class");
     }
     number_of_views = "#{@file.size}"; /*Obtenemos el tamaño maximo de ids en la vista*/
+
+    ga('send', 'event', 'page', 'zoning', '');
   });
