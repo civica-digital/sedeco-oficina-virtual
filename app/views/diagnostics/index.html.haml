@@ -1,4 +1,3 @@
-=# render "shared/wrapper",:type =>'zoning'
 #page-content-wrapper
   .container-fluid
     .header
@@ -10,7 +9,7 @@
               #{image_tag(prod_img_full('cita'), :class=>"padding-icon-date")} #{t('.title_must_cita_html', path: appointments_path)}
             -else
               #{image_tag(prod_img_full('cita'), :class=>"padding-icon-date")} #{t('.title_cita_html', path: appointments_path)}
-          .col-md-3.text-right
+          .col-md-3.text-right.text-question
             = link_to download_diagnostic_diagnostic_index_path, :class=>"colorprimario", :target => "_blank" do
               #{image_tag(prod_img_full('imprimir'))} Imprimir
       %div.container-impacto
@@ -21,7 +20,7 @@
                 %h4.panel-title
                   %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
                     .row
-                      .col-md-6.not-padding-left.details-toggle1
+                      .col-md-6.details-toggle1
                         =t('.title_impact_html')
                       .col-md-6.text-right.edit-toggle
                         %i.fa.fa-angle-down.impacto1.colorprimario.hidden
@@ -37,20 +36,20 @@
                 %h4.panel-title
                   %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
                     .row
-                      .col-md-6.not-padding-left.details-toggle2
+                      .col-md-6.details-toggle2
                         =t('.title_zoning_html')
                       .col-md-6.text-right
                         %i.fa.fa-angle-down.suelo1.colorprimario
                         %i.fa.fa-angle-up.suelo2.colorprimario.hidden
               #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
                 .panel-body
-                  = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
+                  = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business],:size_house=>session[:size_house]} 
             .panel.panel-default
               #headingThree.panel-heading{:role => "tab"}
                 %h4.panel-title
                   %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "button"}
                     .row
-                      .col-md-6.not-padding-left.details-toggle3
+                      .col-md-6.details-toggle3
                         =t('.title_safety_html')
                       .col-md-6.text-right
                         %i.fa.fa-angle-down.seguridad1.colorprimario

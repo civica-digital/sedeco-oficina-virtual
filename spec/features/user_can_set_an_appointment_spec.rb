@@ -39,7 +39,7 @@ describe 'User can set an appointment'  do
     fill_in "Teléfono", with: "1112223334"
     click_button "Agendar"
 
-    expect(page).to have_content "no puede estar en blanco"
+    expect(page).to have_content "No puede estar en blanco"
   end
 
   scenario 'and an email with the appointment data is sent', js: true do

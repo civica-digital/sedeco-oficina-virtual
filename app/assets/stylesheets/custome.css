@@ -29,9 +29,7 @@ a.active {
     color: #871C57 !important;
 }
 
-colorprimario{
-  color: #E6007E  !important;
-}
+
 .colorprimario{
   color: #E6007E !important;
 }
@@ -292,6 +290,8 @@ footer .footer-below {
 .scroll-top .btn:focus {
     outline: 0;
 }
+
+
 
 .rcorner{
     border-radius: 20px;

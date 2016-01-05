@@ -1,8 +1,6 @@
 -help_type.each do |help|
   %div.pink.text-center.text-help.margin-bottom-help
     =help[:title]
-  %div.text-center.text-help.margin-bottom-help
+  %div.text-justify.text-help.margin-bottom-help
     =help[:text]        
-  %div.text-center.pink
-    #{t('help.learning_html', path: learning_center_index_path)}
   %hr

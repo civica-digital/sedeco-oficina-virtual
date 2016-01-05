@@ -1,28 +1,37 @@
 #wrapper.toggled
   #sidebar-wrapper
     %ul.sidebar-nav
-      %li.sidebar-brand
-        .col-md-12.text-right
-          %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
-      %li.col-md-12.text-center
+      %div#head_wrapper.wrapper-border
+        %li.sidebar-brand
+          .col-md-12.text-right
+            %i#menu-toggleint.fa.fa-times.input-gray{:href => "#menu-toggleint"}
         %i.fa.fa-info-circle.fa-3x.pink  
-      %li.col-md-12.text-center.pink.text-help
+        %div.pink.text-help
         Conceptos claves
-        %hr
-      -if type == 'impact'
-        %li
-          = render "shared/questions/help",:help_type => get_help_impact 
-      -elsif type == 'safety'
-        %li
-          = render "shared/questions/help",:help_type => get_help_safety
-      -else type == 'zoning'
-        %li
-          = render "shared/questions/help",:help_type => get_help_zoning
+        %div.text-center.pink.margin-top
+          #{t('help.learning_html', path: learning_center_index_path)}
+      %div.sidebar-nav-padding-top
+        -if type == 'impact'
+          %li
+            = render "shared/questions/help",:help_type => get_help_impact 
+        -elsif type == 'safety'
+          %li
+            = render "shared/questions/help",:help_type => get_help_safety
+        -else type == 'zoning'
+          %li
+            = render "shared/questions/help",:help_type => get_help_zoning
 
 
 
 :javascript
   $("#menu-toggleint").click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+          $('#page-content-wrapper').css("-webkit-filter", "blur(0px)");
+          $('#page-content-wrapper').css("-webkit-transition", "-webkit-filter .0s");
+
+          $('#head_wrapper').css("position", "relative");
+          $('#head_wrapper').css("width", "100%");
+          $('#menu-toggleint').css("position", "relative");
+          $("#wrapper").toggleClass("toggled");
+        
     });

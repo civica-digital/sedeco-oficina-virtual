@@ -1,5 +1,35 @@
-= get_diagnostic_impact(locals[:has_bussine],locals[:impacto_usuario],locals[:has_siapem])
+%h3
+  =t('title.ok_html')
+= get_impacto_user(locals[:has_bussine],locals[:impacto_usuario])
+-if locals[:has_siapem]
+  %br
+  = get_siapem_user(locals[:has_siapem],session[:date_siapem])
+
+-elsif session[:has_open_declaration]
+  %br
+  = get_has_open_declaration(session[:has_open_declaration])
+
+-if locals[:impacto_usuario] == -2 && session[:has_special_license]
+  %br
+  = get_has_special_license(session[:has_special_license])
 %hr
+%h3
+  =t('title.no_html')
+-if !locals[:has_siapem]
+  %br
+  = get_siapem_user(locals[:has_siapem],session[:date_siapem])
+  -if !session[:has_open_declaration]
+    %br
+    = get_has_open_declaration(session[:has_open_declaration])
+-if locals[:impacto_usuario] == -2 && !session[:has_special_license]
+  %br
+  = get_has_special_license(session[:has_special_license])
+%hr
+%h3
+  =t('title.falta_html')
+= get_diagnostic_impact(locals[:has_bussine],locals[:impacto_usuario],locals[:has_siapem],session[:has_open_declaration], session[:has_special_license])
 -if locals[:impacto_usuario] == -2 && !locals[:has_special_license].nil?
+  %br
   = get_diagnostic_impact_license(locals[:has_special_license])
-  %hr
+%hr
+

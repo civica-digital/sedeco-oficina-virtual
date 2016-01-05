@@ -1,11 +1,11 @@
 .nav.navbar.navbar-default
   %div.container
-    %a.navbar-brand{:href=>"#page-top"}
-      Oficina virtual SEDECO
+    %a.navbar-brand{:href=>"#{root_path}"}
+      = image_tag("logo.svg")
     %div.collapse.navbar-collapse{:id=>"bs-example-navbar-collapse-1"}
       %ul.navbar-nav.navbar-right.margin-top
         %li.page-scroll
           %a
         - if admin_signed_in?
-          %li.page-scroll
+          %li.page-scroll.margin-top
             = link_to t(".log_out"), destroy_admin_session_path, method: :delete

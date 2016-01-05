@@ -21,10 +21,10 @@ gem 'simple_form'
 gem 'validate_url'
 gem 'inline_svg'
 gem 'youtube_addy'
+gem 'figaro'
 gem 'wicked_pdf' #crear PDF
 gem 'wkhtmltopdf-binary'#crear PDF
 gem "font-awesome-rails"
-gem 'figaro'
 
 group :development, :test do
   gem 'byebug'

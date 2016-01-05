@@ -52,7 +52,7 @@ module ProgressModule
 	          when 2
 	            session[:has_special_license] = false
 	          when 3
-	            session[:has_special_license] = -4
+	            session[:has_special_license] = false
 	        else
 	          session[:has_special_license] = false
 	        end
@@ -98,7 +98,7 @@ module ProgressModule
           when 2
             session[:has_autodiagnostico] = false
           when 3
-            session[:has_autodiagnostico] = -4
+            session[:has_autodiagnostico] = false
         else
           session[:has_autodiagnostico] = false
         end
@@ -110,7 +110,7 @@ module ProgressModule
           when 2
             session[:vobo_seguridad] = false
           when 3
-            session[:vobo_seguridad] = -4
+            session[:vobo_seguridad] = false
         else
           session[:vobo_seguridad] = false
         end
@@ -122,7 +122,7 @@ module ProgressModule
           when 2
             session[:has_protection] = false
           when 3
-            session[:has_protection] = -4
+            session[:has_protection] = false
         else
           session[:has_protection] = false
         end
@@ -134,7 +134,7 @@ module ProgressModule
           when 2
             session[:make_protection] = false
           when 3
-            session[:make_protection] = -4
+            session[:make_protection] = false
         else
           session[:make_protection] = false
         end
@@ -146,31 +146,55 @@ module ProgressModule
           when 2
             session[:license_ambiental] = false
           when 3
-            session[:license_ambiental] = -4
+            session[:license_ambiental] = false
         else
           session[:license_ambiental] = true
         end
-          
+
       when 8 #pregunta 8
+        case clicked.to_i
+          when 1
+            session[:make_license_ambiental] = true
+          when 2
+            session[:make_license_ambiental] = false
+          when 3
+            session[:make_license_ambiental] = false
+        else
+          session[:make_license_ambiental] = true
+        end
+          
+      when 9 #pregunta 9
         case clicked.to_i
           when 1
             session[:license_sanitaria] = true
           when 2
             session[:license_sanitaria] = false
           when 3
-              session[:license_sanitaria] = -4
+              session[:license_sanitaria] = false
         else
           session[:license_sanitaria] = true
         end
 
-      when 9 #pregunta 9
+      when 10 #pregunta 10
+        case clicked.to_i
+          when 1
+            session[:make_license_sanitaria] = true
+          when 2
+            session[:make_license_sanitaria] = false
+          when 3
+              session[:make_license_sanitaria] = false
+        else
+          session[:make_license_sanitaria] = true
+        end
+
+      when 11 #pregunta 9
         case clicked.to_i
           when 1
             session[:no_adeudos] = true
           when 2
             session[:no_adeudos] = false
           when 3
-            session[:no_adeudos] = -4
+            session[:no_adeudos] = false
         else
           session[:no_adeudos] = false
         end
@@ -204,11 +228,17 @@ module ProgressModule
       when 1#pregunta 1
         case clicked.to_i
           when 1
-            session[:type_zoning] = -1
+            session[:type_zoning] = 'Habitacional'
           when 2..4
-            session[:type_zoning] = -2
+            session[:type_zoning] = 'Habitacional Mixto'
+          when 3
+            session[:type_zoning] = 'Habitacional Oficina o Comercio'
+          when 4
+            session[:type_zoning] = 'Habitacional Comercio'
           when 5
-            session[:type_zoning] = -5
+            session[:type_zoning] = 'Equipamiento'
+          when 6
+            session[:type_zoning] = 'Sin información'
         else
           session[:type_zoning] = -1
         end
@@ -224,24 +254,28 @@ module ProgressModule
       when 5#pregunta 5
         case clicked.to_i
           when 1
-            session[:has_zoning] = -12
+            session[:has_zoning] = true
           when 2
-            session[:has_zoning] = -13
+            session[:has_zoning] = false
           when 3
-            session[:has_zoning] = -4
+            session[:has_zoning] = false
         else
-          session[:has_zoning] = -4
+          session[:has_zoning] = false
         end
       when 7#pregunta 7
         case clicked.to_i
           when 1
-            session[:has_zoning] = -21
-          when 2..4
-            session[:has_zoning] = -22
+            session[:has_type_zoning] = "Derechos adquiridos"
+          when 2
+            session[:has_type_zoning] = "Certificado único de zonificación"
+          when 3
+            session[:has_type_zoning] = "Especial"
+          when 4
+            session[:has_type_zoning] = "Específico"
           when 5
-            session[:has_zoning] = -4
+            session[:has_type_zoning] = "Sin información"
         else
-          session[:has_zoning] = -4
+          session[:has_type_zoning] = "Sin información"
         end
 
     else
@@ -277,7 +311,7 @@ module ProgressModule
       when 8 #pregunta 8
         case clicked.to_i
           when 2
-            session[:city_zoning] = 0
+            session[:city_zoning] = nil
         else
           session[:city_zoning] = date
         end
@@ -285,7 +319,7 @@ module ProgressModule
       when 9 #pregunta 9
         case clicked.to_i
           when 2
-            session[:town_business] = 0
+            session[:town_business] = nil
         else
           session[:town_business] = date
         end

@@ -46,6 +46,14 @@
                                 "imagen": "espacio",
                                 "siguiente": "-5",
                                 "restricciones":[]
+                            },
+                            {
+                                "id":"6",
+                                "-type": "normal",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
+                                "siguiente": "4",
+                                "restricciones":[]
                             }
                         ]
                     }
@@ -142,8 +150,8 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "8",
                                 "restricciones":[]
                             }
@@ -167,8 +175,8 @@
                             {
                                 "id":"2",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "7",
                                 "restricciones":[]
                             }
@@ -214,8 +222,8 @@
                             {
                                 "id":"5",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "8",
                                 "restricciones":[]
                             }
@@ -239,8 +247,8 @@
                             {
                                 "id":"2",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "0",
                                 "restricciones":[]
                             }
@@ -264,8 +272,8 @@
                             {
                                 "id":"2",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "0",
                                 "restricciones":[]
                             }

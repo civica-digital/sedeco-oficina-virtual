@@ -7,3 +7,7 @@ es:
     resources: "recursos"
     panel: "panel"
     learning_center: "centro_de_aprendizaje"
+    impact: "impacto"
+    zoning: "uso_de_suelo"
+    safety: "proteccion_civil_y_otros"
+    diagnostic: "diagnostico"

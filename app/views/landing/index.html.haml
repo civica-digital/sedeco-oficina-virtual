@@ -1,0 +1,60 @@
+%div.row
+  %div.col-md-6
+    %div.col-md-12.landing-text-left.main
+      .col-md-10.col-md-offset-1.pink
+        =image_tag("logo-rosa.svg", :class=>"logo-landing")
+      .col-md-10.col-md-offset-1.text-question
+        =t('.textmain')
+        .row 
+          .col-md-6.text-question
+            =link_to t('.button_text'), impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding', onclick: "ga('send', 'event', 'diagnostic', 'begin', '');"
+      %div.col-md-12.all-size
+        .footer
+          =t('.text_footer')
+  %div.col-md-6.back-image-landing
+    =link_to learning_center_index_path do
+      %div.col-md-12.landing-menu-icons
+        .col-md-10.col-md-offset-1
+          .col-md-3
+            =image_tag(prod_img_full('centro-lan'), :class=>"bcorner")
+          .col-md-9
+            %div.title-menu-icons
+              =t('.menu.centro_titulo')
+            %div.subtitle-menu-icons
+              =t('.menu.centro_description')
+    =link_to appointments_path do  
+      %div.col-md-12.landing-menu-icons
+        .col-md-10.col-md-offset-1
+          .col-md-3
+            =image_tag(prod_img_full('cita-lan'), :class=>"bcorner")
+          .col-md-9
+            %div.title-menu-icons
+              =t('.menu.agenda_titulo')
+            %div.subtitle-menu-icons
+              =t('.menu.agenda_description')
+    = link_to  "#", :id => 'login', "data-target" => "#myModal", "data-toggle" => "modal" do
+      %div.col-md-12.landing-menu-icons
+        .col-md-10.col-md-offset-1
+          .col-md-3
+            =image_tag(prod_img_full('ayuda-lan'), :class=>"bcorner")
+          .col-md-9
+            %div.title-menu-icons
+              =t('.menu.ayuda_titulo')
+            %div.subtitle-menu-icons
+              =t('.menu.ayuda_description')
+
+
+
+#myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4#myModalLabel.modal-title= image_tag("logo.svg", :class=> "half-width")
+      .modal-body
+        =t('.text_modal')
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+          =t('.close')
+             

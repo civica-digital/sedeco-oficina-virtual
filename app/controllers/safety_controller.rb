@@ -27,9 +27,8 @@ class SafetyController < ApplicationController
       impacto_t = Towns.get_value_from_impact(params[:impact][:type],params[:impact][:impacto_t])
       superficie_s = params[:impact][:superficie_s] 
       mobiliario_s = params[:impact][:mobiliario_s]
-      impacto_s = params[:impact][:impacto_s] 
 
-      sumaS = (superficie_s.to_f -  mobiliario_s.to_f) / impacto_s.to_f
+      sumaS = (superficie_s.to_f -  mobiliario_s.to_f) / 0.5
       sumaA = (superficie_t.to_f -  mobiliario_t.to_f) / impacto_t.to_f
 
       total = sumaS + sumaA

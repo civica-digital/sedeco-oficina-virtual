@@ -24,8 +24,8 @@
                             {
                                 "id":"2",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "2",
                                 "restricciones":[]
                             }
@@ -34,7 +34,7 @@
                 },
                 {
                     "numero": "2",
-                    "texto": "Calculemos la capacidad total de tu negocio con la siguiente formula:",
+                    "texto": "Calculemos la capacidad total de tu negocio con la siguientes formulas:",
                     "array_respuestas": {
                         "tipo": "calculadora",
                         "respuesta": [
@@ -78,8 +78,8 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "7",
                                 "restricciones":[]
                             }
@@ -110,8 +110,8 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "6",
                                 "restricciones":[]
                             }
@@ -142,8 +142,8 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "7",
                                 "restricciones":[]
                             }
@@ -174,8 +174,8 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "7",
                                 "restricciones":[]
                             }
@@ -200,15 +200,15 @@
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "no",
-                                "siguiente": "8",
+                                "siguiente": "9",
                                 "restricciones":[]
                             },
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
-                                "siguiente": "8",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
+                                "siguiente": "9",
                                 "restricciones":[]
                             }
                         ]
@@ -216,6 +216,38 @@
                 },
                 {
                     "numero": "8",
+                    "texto": "¿Tienes tu Licencia Ambiental Única (LAUDF)?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "9",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "9",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
+                                "siguiente": "9",
+                                "restricciones":[]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "9",
                     "texto": "¿Sabes si requieres un aviso de funcionamiento sanitario?",
                     "array_respuestas": {
                         "tipo": "normal",
@@ -224,13 +256,8 @@
                                 "-type": "normal",
                                 "texto": "Si",
                                 "imagen": "si",
-                                "siguiente": "0",
-                                "restricciones":[
-                                    {
-                                        "uso": "-3",
-                                        "siguiente": "9"
-                                    }
-                                ]
+                                "siguiente": "10",
+                                "restricciones":[]
                             },
                             {
                                 "id":"2",
@@ -248,13 +275,13 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "0",
                                 "restricciones":[
                                     {
                                         "uso": "-3",
-                                        "siguiente": "9"
+                                        "siguiente": "11"
                                     }
                                 ]
                             }
@@ -262,7 +289,54 @@
                     }
                 },
                 {
-                    "numero": "9",
+                    "numero": "10",
+                    "texto": "¿Tienes tu aviso de funcionamiento sanitario?",
+                    "array_respuestas": {
+                        "tipo": "normal",
+                        "respuesta": [
+                            {   "id":"1",
+                                "-type": "normal",
+                                "texto": "Si",
+                                "imagen": "si",
+                                "siguiente": "0",
+                                "restricciones":[
+                                    {
+                                        "uso": "-3",
+                                        "siguiente": "11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":"2",
+                                "-type": "normal",
+                                "texto": "No",
+                                "imagen": "no",
+                                "siguiente": "0",
+                                "restricciones":[
+                                    {
+                                        "uso": "-3",
+                                        "siguiente": "11"
+                                    }
+                                ]
+                            },
+                            {
+                                "id":"3",
+                                "-type": "normal",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
+                                "siguiente": "0",
+                                "restricciones":[
+                                    {
+                                        "uso": "-3",
+                                        "siguiente": "11"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "numero": "11",
                     "texto": "¿Cuentas con la constancia de no adeudo de Agua y predial en secretaria de Finanzas?",
                     "array_respuestas": {
                         "tipo": "normal",
@@ -285,8 +359,8 @@
                             {
                                 "id":"3",
                                 "-type": "normal",
-                                "texto": "No se",
-                                "imagen": "nose",
+                                "texto": "No tengo la información",
+                                "imagen": "puntos",
                                 "siguiente": "0",
                                 "restricciones":[]
                             }

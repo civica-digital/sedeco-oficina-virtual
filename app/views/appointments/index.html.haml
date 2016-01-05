@@ -20,4 +20,4 @@
                 = f.input :name
                 = f.input :email, as: :email
                 = f.input :phonenumber
-                = f.button :submit, class: "btn btn-primary btn-block"
+                = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');"
