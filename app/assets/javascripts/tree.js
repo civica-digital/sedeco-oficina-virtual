@@ -52,6 +52,8 @@
     //hacemos visible el view de pregunta
     document.getElementById(id).removeAttribute("class");
     $('#'+document.getElementById(id).id).addClass('animated fadeIn');
+
+    ga('send', 'event', 'answer', window.location.href, id);
     
     //Actualizamos los progressBars
     progressBar(impacto, suelo, seguiridad);
@@ -171,6 +173,7 @@
         type:'GET', 
         url: window.url,
         success: function(){
+          ga('send', 'event', 'business_city', window.order, '');
         },
         error: function(){
         }, 
@@ -292,3 +295,7 @@ $(function () {
     });
   });  
 
+
+function hello_world(){
+  alert('hola');
+}
