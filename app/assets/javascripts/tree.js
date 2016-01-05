@@ -293,3 +293,7 @@ $(function () {
     });
   });  
 
+
+function hello_world(){
+  alert('hola');
+}
