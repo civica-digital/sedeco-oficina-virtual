@@ -58,12 +58,14 @@ module DiagnosticHelper
       t('impact.exittres_html')
     elsif has_business && has_siapem && type == -2
       t('impact.exitcuatro_html')
+    elsif has_business && !has_siapem && type == -1 && (has_open_declaration == nil || !has_open_declaration)
+     t('impact.exitcinco_html')
     elsif has_business && !has_siapem && type == -1 && has_open_declaration
-      t('impact.exitcinco_html')
-    elsif has_business && !has_siapem && type == -2 && has_special_license != nil && !has_special_license
-       t('impact.exitseis_html')
+      t('impact.exitseis_html')
+    elsif has_business && !has_siapem && type == -2 && (has_special_license == nil || !has_special_license)
+       t('impact.exitsiete_html')
     elsif has_business && !has_siapem && type == -2 && has_special_license
-      t('impact.exitsiete_html')
+      t('impact.exitocho_html')
     end
   end
 
