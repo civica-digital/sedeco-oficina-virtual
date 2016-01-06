@@ -24,6 +24,7 @@ gem 'youtube_addy'
 gem 'figaro'
 gem 'wicked_pdf' #crear PDF
 gem 'wkhtmltopdf-binary'#crear PDF
+gem "wkhtmltopdf-heroku"
 gem "font-awesome-rails"
 
 group :development, :test do
