@@ -23,8 +23,8 @@ gem 'inline_svg'
 gem 'youtube_addy'
 gem 'figaro'
 gem 'wicked_pdf' #crear PDF
-gem 'wkhtmltopdf-binary'#crear PDF
-#gem "wkhtmltopdf-heroku"
+
+#
 gem "font-awesome-rails"
 
 group :development, :test do
@@ -35,9 +35,12 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'launchy'
   gem "letter_opener"
-
+  gem 'wkhtmltopdf-binary'#crear PDF
 end
 
+group :production, :staging do
+  gem "wkhtmltopdf-heroku"
+end
 group :development do
   gem 'better_errors'
 end
