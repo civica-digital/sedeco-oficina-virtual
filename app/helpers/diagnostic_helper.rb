@@ -150,9 +150,9 @@ module DiagnosticHelper
 
 
   def get_validate_expiration_zoning(date_siapem, date_zoning, value)
-    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i && value
       "- Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo."
-    elsif !value
+    else
       "- Tienes tu uso de suelo pero no te haz registrado en el SIAPEM."
     end
   end
