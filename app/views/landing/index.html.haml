@@ -7,7 +7,7 @@
         =t('.textmain')
         .row 
           .col-md-6.text-question
-            =link_to t('.button_text'), impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding', onclick: "ga('send', 'event', 'diagnostic', 'begin', '');"
+            =link_to t('.button_text'), impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding','data-no-turbolink' => true, onclick: "ga('send', 'event', 'diagnostic', 'begin', '');"
       %div.col-md-12.all-size
         .footer
           =t('.text_footer')
