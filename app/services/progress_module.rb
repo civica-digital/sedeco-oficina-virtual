@@ -229,10 +229,10 @@ module ProgressModule
         case clicked.to_i
           when 1
             session[:type_zoning] = 'Habitacional'
-          when 2..4
+          when 2
             session[:type_zoning] = 'Habitacional Mixto'
           when 3
-            session[:type_zoning] = 'Habitacional Oficina o Comercio'
+            session[:type_zoning] = 'Habitacional Oficina'
           when 4
             session[:type_zoning] = 'Habitacional Comercio'
           when 5
