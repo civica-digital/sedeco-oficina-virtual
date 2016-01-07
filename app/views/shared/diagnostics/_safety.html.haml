@@ -14,9 +14,13 @@
 -if session[:license_sanitaria]
   %br
   = get_license_sanitaria(session[:license_sanitaria])
+  %br
+  = get_has_license_sanitaria(session[:make_license_sanitaria])
 -if session[:license_ambiental]
   %br
   = get_license_ambiental(session[:license_ambiental])
+  %br
+  = get_has_license_ambiental(session[:make_license_ambiental])
 %hr
 
 %h3

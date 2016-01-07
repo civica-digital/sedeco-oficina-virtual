@@ -208,9 +208,12 @@ module DiagnosticHelper
     if has_protection
       "- Te aplica un programa interno de protección civil."
     else
-      "No te aplica un programa interno de protección civil."
+      "- No te aplica un programa interno de protección civil."
     end
   end
+
+
+
 
   def get_make_protection(make_protection)
     if make_protection
@@ -234,6 +237,22 @@ module DiagnosticHelper
       "- Sabes que requieres un aviso de funcionamiento sanitario."
     else
       "- No sabes si requieres un aviso de funcionamiento sanitario."
+    end
+  end
+
+  def get_has_license_sanitaria(has_license_sanitaria)
+    if has_license_sanitaria
+      "- Cuentas con una Licencia Ambiental Única (LAUDF)."
+    else
+      "- No cuentas con una Licencia Ambiental Única (LAUDF)."
+    end
+  end
+
+  def get_has_license_ambiental(has_license_ambiental)
+    if has_license_ambiental
+      "- Cuentas con un aviso de funcionamiento sanitario."
+    else
+      "- No cuentas con un aviso de funcionamiento sanitario."
     end
   end
 
