@@ -199,7 +199,7 @@ module DiagnosticHelper
     if has_autodiagnostico
       "- Ya recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación."
     else 
-      "- Aun no recogistes y/o entregas el autodiagnóstico en materia de protección civil de tu delegación."
+      "- Aun no recogiste y/o entregas el autodiagnóstico en materia de protección civil de tu delegación."
     end
     
   end
