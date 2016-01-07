@@ -1,11 +1,11 @@
 class DiagnosticsController < ApplicationController
   
   def index
-  	@appontment = make_appointment(session[:has_zoning], session[:date_siapem],session[:date_zoning],session[:has_siapem])
+    @appontment = make_appointment(session[:has_zoning], session[:date_siapem],session[:date_zoning],session[:has_siapem])
   end
 
   def download_diagnostic
-      render :pdf => "file_name", :template => "diagnostics/download_diagnostic.pdf.haml"
+      render :pdf => "file_name", :template => "diagnostics/download_diagnostic.pdf.haml", no_background: false, background: true
   end
 
 private

@@ -27,29 +27,39 @@
 %hr
 
 %h3
+  -has_empty = true
   =t('title.no_html')
 - if session[:type_zoning] == "Sin información"
   = get_uso_de_suelo_no(locals[:has_bussine],session[:type_zoning])
+  -has_empty = false
 
 -if session[:city_zoning].nil? || session[:town_business].nil?
   %br
   = get_ubicacion_negocio(locals[:has_bussine],session[:city_zoning], session[:town_business])
+  -has_empty = false
 
 -if !session[:has_zoning]
   %br
   = get_has_zoning(session[:has_zoning], session[:date_zoning], session[:has_type_zoning])
+  -has_empty = false
 
 -if session[:date_zoning] == 0
   %br
   = get_no_date_zoning
+  -has_empty = false
 
 - if !session[:has_siapem] && session[:has_zoning]
   %br
   = get_validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning], false)
+  -has_empty = false
 
 - if session[:has_type_zoning] == "Sin información"
   %br
   = get_has_type_zoning(session[:has_type_zoning],false)
+  -has_empty = false
+
+-if has_empty
+  =t('zoning.zoning_diagnostic_empty')
 
 %hr
 

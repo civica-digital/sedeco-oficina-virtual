@@ -13,18 +13,26 @@
   %br
   = get_has_special_license(session[:has_special_license])
 %hr
+
 %h3
+  -has_empty = true
   =t('title.no_html')
 -if !locals[:has_siapem]
   %br
   = get_siapem_user(locals[:has_siapem],session[:date_siapem])
+  -has_empty = false
   -if !session[:has_open_declaration]
     %br
     = get_has_open_declaration(session[:has_open_declaration])
+    -has_empty = false
 -if locals[:impacto_usuario] == -2 && !session[:has_special_license]
   %br
   = get_has_special_license(session[:has_special_license])
+  -has_empty = false
+-if has_empty
+  =t('impact.impact_diagnostic_empty')
 %hr
+
 %h3
   =t('title.falta_html')
 = get_diagnostic_impact(locals[:has_bussine],locals[:impacto_usuario],locals[:has_siapem],session[:has_open_declaration], session[:has_special_license])

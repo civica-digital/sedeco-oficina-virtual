@@ -150,9 +150,9 @@ module DiagnosticHelper
 
 
   def get_validate_expiration_zoning(date_siapem, date_zoning, value)
-    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i && value
       "- Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo."
-    elsif !value
+    else
       "- Tienes tu uso de suelo pero no te haz registrado en el SIAPEM."
     end
   end
@@ -199,24 +199,27 @@ module DiagnosticHelper
     if has_autodiagnostico
       "- Ya recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación."
     else 
-      "- Aun no recogistes y/o entregas el autodiagnóstico en materia de protección civil de tu delegación."
+      "- Aun no recogiste y/o entregas el autodiagnóstico en materia de protección civil de tu delegación."
     end
     
   end
 
   def get_has_protection(has_protection)
     if has_protection
-      "- Te aplica un plan de protección civil."
+      "- Te aplica un programa interno de protección civil."
     else
-      "No te aplica un plan de protección civil."
+      "- No te aplica un programa interno de protección civil."
     end
   end
 
+
+
+
   def get_make_protection(make_protection)
     if make_protection
-      "- Tienes implementado el plan de protección civil."
+      "- Tienes implementado un programa interno de protección civil."
     else
-      "- No tienes implementado el plan de protección civil."
+      "- No tienes implementado un programa interno de protección civil."
     end
   end
 
@@ -234,6 +237,22 @@ module DiagnosticHelper
       "- Sabes que requieres un aviso de funcionamiento sanitario."
     else
       "- No sabes si requieres un aviso de funcionamiento sanitario."
+    end
+  end
+
+  def get_has_license_sanitaria(has_license_sanitaria)
+    if has_license_sanitaria
+      "- Cuentas con una Licencia Ambiental Única (LAUDF)."
+    else
+      "- No cuentas con una Licencia Ambiental Única (LAUDF)."
+    end
+  end
+
+  def get_has_license_ambiental(has_license_ambiental)
+    if has_license_ambiental
+      "- Cuentas con un aviso de funcionamiento sanitario."
+    else
+      "- No cuentas con un aviso de funcionamiento sanitario."
     end
   end
 
