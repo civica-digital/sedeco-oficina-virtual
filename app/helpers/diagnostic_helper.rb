@@ -206,17 +206,17 @@ module DiagnosticHelper
 
   def get_has_protection(has_protection)
     if has_protection
-      "- Te aplica un plan de protección civil."
+      "- Te aplica un programa interno de protección civil."
     else
-      "No te aplica un plan de protección civil."
+      "No te aplica un programa interno de protección civil."
     end
   end
 
   def get_make_protection(make_protection)
     if make_protection
-      "- Tienes implementado el plan de protección civil."
+      "- Tienes implementado un programa interno de protección civil."
     else
-      "- No tienes implementado el plan de protección civil."
+      "- No tienes implementado un programa interno de protección civil."
     end
   end
 

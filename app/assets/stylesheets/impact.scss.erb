@@ -348,3 +348,12 @@ hr.style-line {
     padding-left: 0px !important; 
     padding-right: 0px !important;
 }
+
+
+.wicked{
+  background-image:url(<%="file://#{Rails.root.join('app','assets','images','nooficial.png')}"%>);
+  background-repeat: no-repeat;
+}
+.wicked:after{
+  content: '<%="file://#{Rails.root.join('app','assets','images','nooficial.png')}"%>';
+}
