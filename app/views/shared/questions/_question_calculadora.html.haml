@@ -13,7 +13,7 @@
           Superficie total para el área de servicios.
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle95"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '30.5',
-          :onchange=> "valueAforo()",:id=>"superficie_s"
+          :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"superficie_s"
         .col-md-2
           .col-md-10.col-md-offset-1
             %i.fa.fa-minus.fa-5x
@@ -21,7 +21,7 @@
           Superficie ocupada por enseres de servicios.
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle96"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '20.0',
-          :onchange=> "valueAforo()",:id=>"mobiliario_s"
+          :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"mobiliario_s"
       %hr
       %div.row
         .col-md-5.sin-padding
@@ -44,7 +44,7 @@
           Superficie total para el área de atención.
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle91"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '100.5',
-          :onchange=> "valueAforo()",:id=>"superficie_t"
+          :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"superficie_t"
         .col-md-2
           .col-md-10.col-md-offset-1
             %i.fa.fa-minus.fa-5x
@@ -52,7 +52,7 @@
           Superficie ocupada por enseres de atención.
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle92"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '45.5',
-          :onchange=> "valueAforo()",:id=>"mobiliario_t"
+          :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"mobiliario_t"
       %hr.style-line
       %div.row  
         .col-md-12
@@ -60,10 +60,10 @@
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle93"}
           -if is_bajo_impacto?
             =select :date, "date", 
-            Towns.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto_t", class: "chosen-select",:onchange=> "valueAforo('bajo')"
+            Towns.load_aforo('bajo').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto_t", class: "chosen-select",:onchange=> "valueAforo('bajo',#{session[:size_business].to_f})"
           -else
             =select :date, "date", 
-            Towns.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto_t", class: "chosen-select",:onchange=> "valueAforo('vecinal')"
+            Towns.load_aforo('vecinal').each_with_index.collect {|opt| [opt[:label], opt[:id], opt[:name]]},{ include_blank: true , selected: false },:id=>"impacto_t", class: "chosen-select",:onchange=> "valueAforo('vecinal',#{session[:size_business].to_f})"
 
 
   
