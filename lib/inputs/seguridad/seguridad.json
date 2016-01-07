@@ -198,14 +198,6 @@
                             {
                                 "id":"2",
                                 "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "9",
-                                "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
                                 "texto": "No tengo la información",
                                 "imagen": "puntos",
                                 "siguiente": "9",
@@ -234,14 +226,6 @@
                                 "imagen": "no",
                                 "siguiente": "9",
                                 "restricciones":[]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No tengo la información",
-                                "imagen": "puntos",
-                                "siguiente": "9",
-                                "restricciones":[]
                             }
                         ]
                     }
@@ -261,19 +245,6 @@
                             },
                             {
                                 "id":"2",
-                                "-type": "normal",
-                                "texto": "No",
-                                "imagen": "no",
-                                "siguiente": "0",
-                                "restricciones":[
-                                    {
-                                        "uso": "-3",
-                                        "siguiente": "9"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":"3",
                                 "-type": "normal",
                                 "texto": "No tengo la información",
                                 "imagen": "puntos",
@@ -311,19 +282,6 @@
                                 "-type": "normal",
                                 "texto": "No",
                                 "imagen": "no",
-                                "siguiente": "0",
-                                "restricciones":[
-                                    {
-                                        "uso": "-3",
-                                        "siguiente": "11"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":"3",
-                                "-type": "normal",
-                                "texto": "No tengo la información",
-                                "imagen": "puntos",
                                 "siguiente": "0",
                                 "restricciones":[
                                     {
