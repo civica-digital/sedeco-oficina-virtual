@@ -2,11 +2,13 @@
 %html
   %meta{:charset=>"UTF-8"}
     %head
+      %style{:type=>"text/css"}
+        = Rails.application.assets.find_asset('wicked.css.erb').to_s.html_safe
       %title
       = wicked_pdf_stylesheet_link_tag  "application", :media => "all"
       = wicked_pdf_javascript_include_tag "application"
       = csrf_meta_tags
-    %body
+    %body.wicked
       .container
         .row
           .col-md-12.text-right
@@ -27,7 +29,7 @@
           %hr
           %hr
           = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
-        .row
+        .row.wicked
           %hr
           %hr
           %h2=t('diagnostics.index.title_safety_html')
