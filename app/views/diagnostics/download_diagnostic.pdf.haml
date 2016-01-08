@@ -8,11 +8,13 @@
       = csrf_meta_tags
     %body
       .container
-        = wicked_pdf_image_tag 'logo.png'
         .row
-          %h1.text-center
+          .col-md-12.text-right
+            = wicked_pdf_image_tag 'logo.png', :class=>"half-width"
+        .row
+          %h2.text-center
             Diagnóstico general de tu negocio:
-        .row.wicked
+        .row
           %h2=t('diagnostics.index.title_impact_html')
           %hr
           %hr
@@ -20,12 +22,12 @@
                                                           :impacto_usuario => session[:impacto_usuario], 
                                                           :has_siapem => session[:has_siapem],
                                                           :has_special_license => session[:has_special_license]}         
-        .row.wicked
+        .row
           %h2=t('diagnostics.index.title_zoning_html')
           %hr
           %hr
           = render 'shared/diagnostics/zoning', :locals => {:has_siapem => session[:has_siapem], :date_siapem => session[:date_siapem], :has_zoning => session[:has_zoning],:date_zoning => session[:date_zoning], :is_business_home => session[:is_business_home], :uso_de_suelo => session[:uso_de_suelo], :size_business=> session[:size_business]} 
-        .row.wicked
+        .row
           %hr
           %hr
           %h2=t('diagnostics.index.title_safety_html')
