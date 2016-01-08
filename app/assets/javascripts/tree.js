@@ -184,7 +184,7 @@
 /*************************************************SEGURIDAD************************************/
 
 /*Permite obtener y validar el aforo del negocio*/
- function valueAforo(type){
+ function valueAforo(type,size){
 
     var superficie_t = $("#superficie_t").val();
     var mobiliario_t = $("#mobiliario_t").val();
@@ -202,6 +202,10 @@
         alert('El mobiliario  en el área de atención no puede ser mayor al establecimiento');
         $("#superficie_t").val("");
         $("#mobiliario_t").val("");
+      }else if(parseInt(superficie_s)+parseInt(superficie_t) != size){
+        alert("La suma del area de servicio y el area de atención deben ser iguales al tamaño de tu negocio: "+size+"m2");
+        $("#superficie_s").val("");
+        $("#superficie_t").val("");
       }else{
         set_aforo(superficie_s,mobiliario_s,type,superficie_t,mobiliario_t,impact_t);
       }

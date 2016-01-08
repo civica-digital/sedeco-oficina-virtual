@@ -2,17 +2,21 @@
 %html
   %meta{:charset=>"UTF-8"}
     %head
+      %style{:type=>"text/css"}
+        = Rails.application.assets.find_asset('wicked.css.erb').to_s.html_safe
       %title
       = wicked_pdf_stylesheet_link_tag  "application", :media => "all"
       = wicked_pdf_javascript_include_tag "application"
       = csrf_meta_tags
-    %body
+    %body.wicked
       .container
-        = wicked_pdf_image_tag 'logo.png'
         .row
-          %h1.text-center
+          .col-md-12.text-right
+            = wicked_pdf_image_tag 'logo.png', :class=>"half-width"
+        .row
+          %h2.text-center
             Diagnóstico general de tu negocio:
-        .row.wicked
+        .row
           %h2=t('diagnostics.index.title_impact_html')
           %hr
           %hr
@@ -20,7 +24,7 @@
                                                           :impacto_usuario => session[:impacto_usuario], 
                                                           :has_siapem => session[:has_siapem],
                                                           :has_special_license => session[:has_special_license]}         
-        .row.wicked
+        .row
           %h2=t('diagnostics.index.title_zoning_html')
           %hr
           %hr

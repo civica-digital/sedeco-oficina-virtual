@@ -5,7 +5,7 @@ class DiagnosticsController < ApplicationController
   end
 
   def download_diagnostic
-      render :pdf => "file_name", :template => "diagnostics/download_diagnostic.pdf.haml", no_background: false, background: true
+      render :pdf => "file_name",:show_as_html => false, :template => "diagnostics/download_diagnostic.pdf.haml", :no_background=> false, :background=> true
   end
 
 private
