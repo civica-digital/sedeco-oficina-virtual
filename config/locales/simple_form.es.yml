@@ -18,8 +18,11 @@ es:
       appointment:
         email: 'Correo electrónico'
         phonenumber: "Teléfono"
+        notice_of_privacy: "Aceptar el aviso de privacidad"
         name: "Nombre"
         scheduled_date: "Fecha"
+  appointment:
+    download_notice_of_privacy_html: 'Aceptar el <a href="%{path}" target="_blank" class="colorprimario">AVISO DE PRIVACIDAD</a>' 
   activerecord:
     attributes:
       admin:

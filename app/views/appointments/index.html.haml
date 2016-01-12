@@ -20,4 +20,13 @@
                 = f.input :name
                 = f.input :email, as: :email
                 = f.input :phonenumber
-                = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');"
+                = f.input :notice_of_privacy, label: t('appointment.download_notice_of_privacy_html',path: asset_path("pdf/aviso.pdf")) 
+                = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');", id: "submit"
+
+
+:javascript
+  var checker = document.getElementById('appointment_notice_of_privacy');
+  var sendbtn = document.getElementById('submit');
+  checker.onchange = function() {
+    sendbtn.disabled = !this.checked;
+  };
