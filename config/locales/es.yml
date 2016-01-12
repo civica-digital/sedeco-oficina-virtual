@@ -134,7 +134,7 @@ es:
   learning_center:
     index:
       title: "Centro de aprendizaje"
-      get_search: "Buscar"
+      get_search: "Todos"
       learning_center_description: "Aquí conocerás los trámites que necesitas para dar de alta tu negocio y resolverás todas las dudas que tengas al respecto."
       app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
   admins:
