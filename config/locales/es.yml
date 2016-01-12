@@ -206,7 +206,7 @@ es:
       comment_equipamiento: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_equipamiento: 'Siguiente paso "Hacer una cita"'
       type_derechos: "Derechos adquiridos"
-      comment_derechos: "No cuenta con el Vo.Bo. de Seguridad y operación"
+      comment_derechos: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_derechos: 'Siguiente paso "Hacer una cita"'
     safety:
       type_vobo: "No tiene el visto bueno de seguridad."
