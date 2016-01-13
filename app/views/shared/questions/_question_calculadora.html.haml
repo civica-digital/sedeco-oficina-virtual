@@ -2,15 +2,15 @@
   %div.col-md-8.col-md-offset-2
     %div.margin-top-dropdown
       %h3.pink
-        Area de Servicio
+        =t('.title_service')
         %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle94"}
       %br
       %div.col-md-12
-        La superficie destinada exclusivamente para las labores del personal
+        =t('.subtitle_service')
       %hr
       %div.row
-        .col-md-5.sin-padding
-          Superficie total para el área de servicios.
+        .col-md-5.sin-padding.text-center
+          =t('.superficie_servicios_html')
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle95"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '30.5',
           :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"superficie_s"
@@ -18,7 +18,7 @@
           .col-md-10.col-md-offset-1
             %i.fa.fa-minus.fa-5x
         .col-md-5.sin-padding
-          Superficie ocupada por enseres de servicios.
+          =t('.superficie_servicios_enseres_html')
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle96"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '20.0',
           :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"mobiliario_s"
@@ -33,15 +33,15 @@
   %div.col-md-8.col-md-offset-2
     %div.margin-top-dropdown
       %h3.pink 
-        Area de Atención
+        =t('.title_atention')
         %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle90"}
       %br
       %div.col-md-12
-        La superficie destinada exclusivamente para los usuarios
+        =t('.subtitle_atention')
       %hr
       %div.row
         .col-md-5.sin-padding
-          Superficie total para el área de atención.
+          =t('.superficie_atencion_html')
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle91"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '100.5',
           :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"superficie_t"
@@ -49,7 +49,7 @@
           .col-md-10.col-md-offset-1
             %i.fa.fa-minus.fa-5x
         .col-md-5.sin-padding
-          Superficie ocupada por enseres de atención.
+          =t('.superficie_atencion_enseres_html')
           %i.fa.fa-info-circle.input-gray{:href => "#menu-toggle",:id=>"menu-toggle92"}
           =text_field :date, "date", class: 'form-controler',:type=>"number", :placeholder => '45.5',
           :onchange=> "valueAforo('',#{session[:size_business].to_f})",:id=>"mobiliario_t"
