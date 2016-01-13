@@ -180,6 +180,16 @@ es:
   shared:
     question_calculadora:
       menos: "-"
+    questions:
+      question_calculadora:
+        superficie_servicios_html: 'Superficie total para <br>el área de servicios (en m2).'
+        superficie_servicios_enseres_html: 'Superficie ocupada por <br>enseres de servicios (en m2).'
+        superficie_atencion_html: 'Superficie total para <br>el área de atención (en m2).'
+        superficie_atencion_enseres_html: 'Superficie ocupada por<br>enseres de atención (en m2).'
+        title_service: 'Area de Servicio'
+        subtitle_service: 'La superficie destinada exclusivamente para las labores del personal.'
+        title_atention: 'Area de Atención'
+        subtitle_atention: 'La superficie destinada exclusivamente para los usuarios.'
     admin_navbar:
       log_out: "Cerrar sesión"
   outputs:

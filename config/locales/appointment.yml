@@ -1,5 +1,6 @@
 es:
   appointment:
+    show_notice_of_privacy: 'Ver el AVISO DE PRIVACIDAD' 
     title: 'Agendar una cita'
     text: 'Selecciona la fecha en la que te gustaría ir a SEDECO.'
     subtitle: 'Selecciona una fecha:'

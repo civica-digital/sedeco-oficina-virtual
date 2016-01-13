@@ -54,6 +54,7 @@
         %h4#myModalLabel.modal-title= image_tag("logo.svg", :class=> "half-width")
       .modal-body
         =t('.text_modal')
+        =link_to t('appointment.show_notice_of_privacy'), asset_path("pdf/aviso.pdf"), class: "pink"
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
           =t('.close')
