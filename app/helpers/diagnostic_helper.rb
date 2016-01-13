@@ -51,29 +51,29 @@ module DiagnosticHelper
   def get_diagnostic_impact(has_business, type, has_siapem, has_open_declaration,has_special_license)
 
     if !has_business && !has_siapem && type == -1
-      t('impact.exituno_html')
+      t('impact.exituno_html',path_3: asset_path("pdf/3.pdf"))
     elsif !has_business && !has_siapem && type == -2
-      t('impact.exitdos_html')
+      t('impact.exitdos_html',path_11: asset_path("pdf/11.pdf"))
     elsif has_business && has_siapem && type == -1
-      t('impact.exittres_html')
+      t('impact.exittres_html',path_1: asset_path("pdf/1.pdf"),path_2: asset_path("pdf/2.pdf"),path_6: asset_path("pdf/6.pdf"),path_7: asset_path("pdf/7.pdf"),path_9: asset_path("pdf/9.pdf"),path_10: asset_path("pdf/10.pdf"))
     elsif has_business && has_siapem && type == -2
-      t('impact.exitcuatro_html')
+      t('impact.exitcuatro_html',path_1: asset_path("pdf/1.pdf"),path_2: asset_path("pdf/2.pdf"),path_4: asset_path("pdf/4.pdf"),path_5: asset_path("pdf/5.pdf"),path_6: asset_path("pdf/6.pdf"),path_9: asset_path("pdf/9.pdf"))
     elsif has_business && !has_siapem && type == -1 && (has_open_declaration == nil || !has_open_declaration)
-     t('impact.exitcinco_html')
+     t('impact.exitcinco_html',path_3: asset_path("pdf/3.pdf"))
     elsif has_business && !has_siapem && type == -1 && has_open_declaration
-      t('impact.exitseis_html')
+      t('impact.exitseis_html',path_b: asset_path("pdf/b.pdf"))
     elsif has_business && !has_siapem && type == -2 && (has_special_license == nil || !has_special_license)
-       t('impact.exitsiete_html')
+       t('impact.exitsiete_html',path_a: asset_path("pdf/a.pdf"))
     elsif has_business && !has_siapem && type == -2 && has_special_license
-      t('impact.exitocho_html')
+      t('impact.exitocho_html',path_11: asset_path("pdf/11.pdf"))
     end
   end
 
   def get_diagnostic_impact_license(license)
     if license
-      t('impact.has_license_html')
+      t('impact.has_license_html',path_a: asset_path("pdf/a.pdf"))
     else
-      t('impact.hasnt_licese_html')
+      t('impact.hasnt_licese_html',path_11: asset_path("pdf/11.pdf"))
     end
   end
 
