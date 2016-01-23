@@ -5,6 +5,7 @@ $dark-gray: #CBCBCB;
 $input-gray: #AFAFAF;
 $btn-primary-bg: #E6007E;
 $color-black: #000000;
+$color-white: #ffffff;
 
 
 colorprimario{
@@ -45,4 +46,8 @@ negro{
 
 .black{
 	color: $color-black !important;
+}
+
+.white{
+	color: $color-white !important;
 }
