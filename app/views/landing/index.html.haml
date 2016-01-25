@@ -4,11 +4,12 @@
       .col-md-10.col-md-offset-1
         =image_tag("logo-rosa.svg", :class=>"logo-landing")
     %div.col-md-12.back-image-landing
-      .col-md-10.col-md-offset-1.text-question.text-center.white
-        =t('.textmain')
+      .col-md-10.col-md-offset-1.text-center.white
+        %div.text-title-landing
+          =t('.textmain')
         %div.row.col-md-12
           %div.col-md-4
-          %div.col-md-4
+          %div.col-md-4.text-landing
             =t('.textmain_clic')
             =link_to impact_index_path do
               %div.paddingtop-iconlading
