@@ -62,4 +62,8 @@ module ApplicationHelper
     end
   end
 
+  def page_title
+    "AsesorEnLinea:YoTeApoyo"
+  end
+
 end
