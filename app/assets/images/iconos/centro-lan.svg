@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="40px" height="42px" viewBox="0 0 40 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch 3.4.3 (16044) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
     <title>Fill 1 + Fill 2</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Landing" sketch:type="MSArtboardGroup" transform="translate(-820.000000, -185.000000)" fill="#FFFFFF">
-            <g id="Fill-1-+-Fill-2" sketch:type="MSLayerGroup" transform="translate(820.000000, 185.000000)">
+        <g id="Landing-Sandy" sketch:type="MSArtboardGroup" transform="translate(-621.000000, -601.000000)" fill="#E6007E">
+            <g id="Fill-1-+-Fill-2" sketch:type="MSLayerGroup" transform="translate(621.000000, 601.000000)">
                 <g sketch:type="MSShapeGroup">
                     <path d="M37.1262001,9.02255639 L19.3605552,16.4617698 L1.91139387,9.03273569 C0.860150376,8.59039907 0.0990167727,9.15534991 0.0990167727,10.2880278 L0.0990167727,31.8940428 C0.0990167727,33.0248699 0.860150376,34.3102371 1.91139387,34.7525737 L17.4982071,41.3797571 C18.5466744,41.8197802 20.2244072,41.8197802 21.2733372,41.3876229 L37.1373048,34.7433198 C38.1885483,34.3102371 39.0325043,33.0248699 39.0325043,31.8940428 L39.0325043,10.2880278 C39.0325043,9.15534991 38.1769809,8.59039907 37.1262001,9.02255639" id="Fill-1"></path>
                     <path d="M19.3707345,13.3746674 L27.6104106,9.82486987 C27.6821284,9.38207056 27.7149798,8.92816657 27.7149798,8.46778485 C27.7149798,3.79548872 24.0328514,0 19.4845575,0 C14.9353383,0 11.2541353,3.79548872 11.2541353,8.46778485 C11.2541353,8.94991324 11.2943898,9.42371313 11.362406,9.87437825 L19.3707345,13.3746674" id="Fill-2"></path>
