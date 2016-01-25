@@ -4,30 +4,23 @@
       .col-md-10.col-md-offset-1
         =image_tag("logo-rosa.svg", :class=>"logo-landing")
     %div.col-md-12.back-image-landing
-      .col-md-10.col-md-offset-1.text-question.white
+      .col-md-10.col-md-offset-1.text-question.text-center.white
         =t('.textmain')
         %div.row.col-md-12
           %div.col-md-4
-          %div.col-md-4.text-question
-            =image_tag(prod_img_full('centro-lan'), :class=>"bcorner")
           %div.col-md-4
-          .col-md-12
-            %div.text-center.white
-              =t('.button_text')
+            =t('.textmain_clic')
+            =link_to impact_index_path do
+              %div.paddingtop-iconlading
+                =image_tag(prod_img_full('centro-lan'), :class=>"bcorner")
+                .col-md-12
+                  %div.text-center.white
+                    =t('.button_text_html')
+          %div.col-md-4
+          
             =#link_to t('.button_text'), impact_index_path, :class=>'btn btn-default btn btn-primary btn-block btn-padding','data-no-turbolink' => true, onclick: "ga('send', 'event', 'diagnostic', 'begin', '');"
   
   %div.row.col-md-12
-    %div.col-md-4
-      =link_to learning_center_index_path do
-        %div.col-md-12.landing-menu-icons
-          .col-md-12
-            =image_tag(prod_img_full('centro-lan'), :class=>"rcorner")
-          .col-md-12
-            %div.title-menu-icons.text-center
-              =t('.menu.centro_titulo')
-          .col-md-12
-            %div.subtitle-menu-icons.text-center
-              =t('.menu.centro_description')
     %div.col-md-4
       =link_to appointments_path do  
         %div.col-md-12.landing-menu-icons
@@ -38,7 +31,18 @@
               =t('.menu.agenda_titulo')
           .col-md-12
             %div.subtitle-menu-icons.text-center
-              =t('.menu.agenda_description')
+              =t('.menu.agenda_description_html')
+    %div.col-md-4
+      =link_to learning_center_index_path do
+        %div.col-md-12.landing-menu-icons
+          .col-md-12
+            =image_tag(prod_img_full('centro-lan'), :class=>"rcorner")
+          .col-md-12
+            %div.title-menu-icons.text-center
+              =t('.menu.centro_titulo')
+          .col-md-12
+            %div.subtitle-menu-icons.text-center
+              =t('.menu.centro_description_html')
     %div.col-md-4
       = link_to  "#", :id => 'login', "data-target" => "#myModal", "data-toggle" => "modal" do
         %div.col-md-12.landing-menu-icons
@@ -49,7 +53,7 @@
               =t('.menu.ayuda_titulo')
           .col-md-12
             %div.subtitle-menu-icons.text-center
-              =t('.menu.ayuda_description')
+              =t('.menu.ayuda_description_html')
     %div.col-md-12.all-size
       .footer.text-center.dark-gray
         =t('.text_footer')

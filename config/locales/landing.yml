@@ -1,16 +1,17 @@
 es:
   landing:
     index:
-      textmain: "Contesta tu cuestionario de diagnóstico para saber lo que necesitas para tener en regla tu negocio"
-      button_text: "Comenzar diagnóstico"
+      textmain: "Conoce los requisitos que tienes y los que te faltan para que tu negocio este en regla."
+      textmain_clic: "Haz clic aquí:"
+      button_text_html: "Comienza tu<BR>diagnóstico"
       text_footer: "Una herramienta de la Secretaría de Desarrollo Económico"
       close: "Cerrar"
       text_modal: "Aplicación realizada ...."
       title_modal: "Oficina virtual SEDECO"
       menu:
         centro_titulo: "Centro de aprendizaje"
-        centro_description: "Aprende con nuestros contenidos cómo poner en regla tu negocio"
-        agenda_titulo: "Agenda una cita"
-        agenda_description: "Agenda una cita con nosotros si necesitas que te atendamos en persona"
+        centro_description_html: "Aprende con nuestros contenidos<BR>cómo poner en regla tu negocio."
+        agenda_titulo: "Citas"
+        agenda_description_html: "Agenda una cita con<BR>nosotros."
         ayuda_titulo: "Ayuda"
-        ayuda_description: "¿Para quién esta dirigida esta herramienta?"
+        ayuda_description_html: "¿Para quién esta dirigida<BR>esta herramienta?"

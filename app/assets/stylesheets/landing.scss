@@ -17,7 +17,7 @@
 }
 
 .landing-menu-icons{
-	padding-top: 100px;
+	padding-top: 50px;
 	padding-bottom: 0px;
 	text-align: left;
 	
@@ -57,7 +57,7 @@
 
 .all-size{
     width: 100% !important;
-    height: 45% !important;
+    height: 17% !important;
     margin-left: auto;
     margin-right: auto
 }
@@ -90,7 +90,8 @@
 .logo-landing{
     width: 60% !important;
     padding-bottom: 20px;
-        display: block;
+    padding-top: 10px;
+    display: block;
     margin-left: auto;
     margin-right: auto
 
@@ -110,6 +111,9 @@
 
 }
 
+.paddingtop-iconlading{
+  padding-top: 3em;
+}
 .navbar-brand {
   float: left;
   padding: 15px 15px;
