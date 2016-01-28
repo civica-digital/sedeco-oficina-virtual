@@ -38,13 +38,13 @@ es:
         seventeen: '¿Qué es la constancia de no adeudo de Agua y predial?'
     answer:
       impact:
-        one_html: 'Es un local ubicado en un inmueble donde una persona física o moral desarrolla actividades relativas a la intermediación, compraventa, arrendamiento, distribución de bienes o prestación de servicios lícitos, con fines de lucro.'
-        two_html: 'Es una clasificación que aplica a establecimientos cuyo giro provoca transformaciones, alteraciones o modificaciones en la armonía de la comunidad. Los giros considerados de impacto vecinal son salones de fiesta, restaurantes, establecimientos de hospedaje, clubes privados, salas de cine, teatros y auditorios.'
-        three_html: 'Es una clasificación que aplica a establecimientos cuyo giro principal es la venta y/o distribución de bebidas alcohólicas en envase abierto y/o al copeo para su consumo al interior.'
-        four_html: 'Es el Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles, único medio de registro para que las personas físicas o morales puedan presentar sus Avisos, Solicitudes de Permiso, Registros o Autorizaciones para la apertura y funcionamiento de un establecimiento mercantil en el Distrito Federal.'
-        five_html: 'La fecha de registro se encuentra en el formato del SIAPEM que corresponda, del lado superior derecho,  abajo del nombre del formato y de las claves alfanuméricas tanto del folio del trámite como de la clave del establecimiento.'
-        six_html: 'Las licencias de funcionamiento A, B, ordinarias o especiales, eran otorgadas por las delegaciones políticas a establecimientos mercantiles que ahora son considerados de impacto vecinal o zonal. Independientemente de lo anterior, este tipo de licencias actualmente deben ser registradas en el SIAPEM para revalidar su vigencia.'
-        seven_html: 'Las declaraciones de apertura eran otorgadas por las delegaciones políticas a establecimientos mercantiles que ahora son considerados de bajo impacto. Independientemente de lo anterior, este tipo de avisos actualmente deben ser registrados en el SIAPEM.'
+        one_html: 'Es un local ubicado en un inmueble donde una persona física o moral realiza actividades de intermediación, compraventa, arrendamiento, distribución de bienes o prestación de servicios lícitos, con fines de lucro.'
+        two_html: 'Es una clasificación para establecimientos cuyo giro modifica la armonía de la comunidad, como:  salones de fiesta, restaurantes, establecimientos de hospedaje, clubes privados, salas de cine, teatros y auditorios.'
+        three_html: 'Es una clasificación para establecimientos cuyo giro principal es vender o distribuir bebidas alcohólicas en envase abierto y/o al copeo para su consumo al interior.'
+        four_html: 'El Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles es el único medio  de registro para que las personas físicas o morales presenten sus Avisos, Solicitudes de Permiso, Registros o Autorizaciones para la apertura y funcionamiento de un establecimiento mercantil en la Ciudad de México.'
+        five_html: 'La fecha de registro se encuentra del lado superior derecho, abajo del folio del trámite y clave del establecimiento del  formato del SIAPEM que corresponda.'
+        six_html: 'Las licencias de funcionamiento (A,  B,  ordinarias o especiales) eran otorgadas por las delegaciones a establecimientos mercantiles con impacto vecinal o zonal. Actualmente, este tipo de licencias deben registrarse en el SIAPEM para revalidar su vigencia.'
+        seven_html: 'Las declaraciones de apertura eran otorgadas por las delegaciones a establecimientos mercantiles considerados de bajo impacto. Actualmente, este tipo de avisos deben registrarse en el SIAPEM.'
       zoning:
         one_html: 'La clasificación de uso de suelo que se contempla en el Programa General de Desarrollo Urbano del Distrito Federal es la siguiente:
             <BR><BR>
