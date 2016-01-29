@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/civica-digital/sedeco-oficina-virtual.svg?branch=master)](https://travis-ci.org/civica-digital/sedeco-oficina-virtual)
 [![Code Climate](https://codeclimate.com/github/civica-digital/sedeco-oficina-virtual/badges/gpa.svg)](https://codeclimate.com/github/civica-digital/sedeco-oficina-virtual)
 [![Test Coverage](https://codeclimate.com/github/civica-digital/sedeco-oficina-virtual/badges/coverage.svg)](https://codeclimate.com/github/civica-digital/sedeco-oficina-virtual/coverage)
 
