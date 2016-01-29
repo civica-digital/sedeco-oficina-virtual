@@ -7,8 +7,13 @@ describe 'User can set an appointment'  do
 
     expect(calendar_input).to be_present
     expect(page).to have_content current_month.upcase
-
-    select_date Date.tomorrow
+    if Date.today.day < 25
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    else
+      find(".ui-datepicker-next").click
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    end
+    
     expect(selected_date_cell).to be_present
   end
 
@@ -19,7 +24,12 @@ describe 'User can set an appointment'  do
     expect(calendar_input).to be_present
     expect(page).to have_content current_month.upcase
 
-    select_date Date.tomorrow
+    if Date.today.day < 25
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    else
+      find(".ui-datepicker-next").click
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    end
     fill_in "Nombre", with: "Maria x"
     fill_in "Correo electrónico", with: "maria@mail.com"
     fill_in "Teléfono", with: "1112223334"
@@ -34,7 +44,12 @@ describe 'User can set an appointment'  do
 
     expect(page).to have_content current_month.upcase
 
-    select_date Date.tomorrow
+    if Date.today.day < 25
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    else
+      find(".ui-datepicker-next").click
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    end
     fill_in "Nombre", with: "Maria x"
     fill_in "Teléfono", with: "1112223334"
     click_button "Agendar"
@@ -49,7 +64,12 @@ describe 'User can set an appointment'  do
     expect(calendar_input).to be_present
     expect(page).to have_content current_month.upcase
 
-    select_date Date.tomorrow
+    if Date.today.day < 25
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    else
+      find(".ui-datepicker-next").click
+      select_date Date.commercial(Date.today.year, 1+Date.today.cweek, 3)
+    end
     fill_in "Nombre", with: "Maria x"
     fill_in "Correo electrónico", with: "maria@mail.com"
     fill_in "Teléfono", with: "1112223334"
@@ -58,7 +78,7 @@ describe 'User can set an appointment'  do
     expect(sent_email_subject).to eq "Nueva cita reservada en Oficina Virtual"
     expect(sent_email_content).to include "Maria x"
     expect(sent_email_content).to include "maria@mail.com"
-    expect(sent_email_content).to include I18n.l(Date.tomorrow)
+    expect(sent_email_content).to include I18n.l(Date.commercial(Date.today.year, 1+Date.today.cweek, 3))
     expect(sent_email_content).to include "1112223334"
   end
 
