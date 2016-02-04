@@ -1,0 +1,44 @@
+/* ----------- Web ----------- */
+@media screen 
+  and (min-width: 319px) 
+  and (max-width: 768px)  
+  and (-webkit-device-pixel-ratio: 2) {
+    .scroll-footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 120px;
+        z-index: 300;
+        background-color: #EEEEED;
+    }
+  }
+
+  @media screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (-webkit-device-pixel-ratio: 2){
+    .scroll-footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 120px;
+        z-index: 300;
+        background-color: #EEEEED;
+    }
+  }
+
+  @media screen 
+  and (min-width: 1024px) 
+  and (-webkit-device-pixel-ratio: 2){
+    .scroll-footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 80px;
+        z-index: 300;
+        background-color: #EEEEED;
+    }
+  }

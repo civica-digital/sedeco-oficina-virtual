@@ -4,6 +4,9 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@import "custome_media.scss";
+@import "custome_mobile.scss";
+
 body {
     overflow-x: hidden;
 }
@@ -238,7 +241,7 @@ footer .footer-below {
     left: 0;
     right: 0;
     bottom: 0px;
-    height: 100px;
+    height: 80px;
     z-index: 300;
     background-color: #EEEEED;
 }
@@ -291,8 +294,6 @@ footer .footer-below {
     outline: 0;
 }
 
-
-
 .rcorner{
     border-radius: 20px;
     border: 2px solid #E6007E;
@@ -333,73 +334,5 @@ cursor: pointer;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
-
-/* ----------- Web ----------- */
-@media screen 
-  and (min-width: 319px) 
-  and (max-width: 768px)  
-  and (-webkit-device-pixel-ratio: 2) {
-    .scroll-footer{
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        height: 120px;
-        z-index: 300;
-        background-color: #EEEEED;
-    }
-  }
-
-  @media screen 
-  and (min-width: 768px) 
-  and (max-width: 1024px) 
-  and (-webkit-device-pixel-ratio: 2){
-    .scroll-footer{
-        position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        height: 120px;
-        z-index: 300;
-        background-color: #EEEEED;
-    }
-  }
-
-/* ----------- iMovil ----------- */
-@media screen 
-  and (min-device-width: 319px) 
-  and (max-device-width: 768px)  
-  and (-webkit-device-pixel-ratio: 2) {
-  }
-
-  @media screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-device-pixel-ratio: 2){
-  }
-
-  /* ----------- iPhone 6+ ----------- */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
- }
-
-
-/* ----------- HTC y Galaxy ----------- */
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) {
-    .scroll-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    height: 150px;
-    z-index: 300;
-    background-color: #EEEEED;
-    }
-  }
 
 

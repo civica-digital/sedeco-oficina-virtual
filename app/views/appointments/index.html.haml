@@ -8,20 +8,20 @@
           %div.col-md-10.col-md-offset-1
             %div#calendar.appointments-calendar
 
-      %div.modal.fade#new_appointment
-        %div.modal-dialog.modal-sm
-          %div.modal-content
-            %div.modal-header
-              %h4
-                =t('appointment.title_dialog')
-            %div.modal-body
-              = simple_form_for @appointment, html: { class: form_errors_class(@appointment) } do |f|
-                = f.input :scheduled_date, as: :string, readonly: true
-                = f.input :name
-                = f.input :email, as: :email
-                = f.input :phonenumber
-                = f.input :notice_of_privacy, label: t('appointment.download_notice_of_privacy_html',path: asset_path("pdf/aviso.pdf")) 
-                = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');", id: "submit"
+%div.modal.fade{id: :new_appointment}
+  %div.modal-dialog.modal-sm
+    %div.modal-content
+      %div.modal-header
+        %h4
+          =t('appointment.title_dialog')
+      %div.modal-body
+        = simple_form_for @appointment, html: { class: form_errors_class(@appointment) } do |f|
+          = f.input :scheduled_date, as: :string, readonly: true
+          = f.input :name, as: :string, placeholder: t('appointment.placeholder.name')
+          = f.input :email, as: :email, placeholder: t('appointment.placeholder.email')
+          = f.input :phonenumber, as: :integer, placeholder: t('appointment.placeholder.phone')
+          = f.input :notice_of_privacy, label: t('appointment.download_notice_of_privacy_html',path: asset_path("pdf/aviso.pdf")) 
+          = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');", id: "submit"
 
 
 :javascript

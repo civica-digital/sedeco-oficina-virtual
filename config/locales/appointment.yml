@@ -5,6 +5,10 @@ es:
     text: 'Selecciona la fecha en la que te gustaría ir a SEDECO.'
     subtitle: 'Selecciona una fecha:'
     title_dialog: 'Agendar cita'
+    placeholder:
+      name: "Nombre completo"
+      email: "correo@mail.com"
+      phone: "00000000"
     panel:
       title: 'Panel de administrador'
       subtitle: 'Selecciona una acción'
