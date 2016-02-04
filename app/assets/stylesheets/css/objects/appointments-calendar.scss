@@ -1,4 +1,4 @@
-@import "colors";
+@import "css/values/colors";
 
 .appointments-calendar .ui-datepicker {
   border: none;
@@ -13,12 +13,12 @@
 }
 
 .appointments-calendar .ui-datepicker-calendar {
-  border: 1px solid #cccccc;
+  border: 1px solid $dark-gray;
   border-collapse: collapse;
 
   thead {
     text-transform: uppercase;
-    color: #cccccc;
+    color: $dark-gray;
 
   }
 
@@ -30,7 +30,7 @@
   }
 
   th, td {
-    border: 1px solid #cccccc;
+    border: 1px solid $dark-gray;
   }
 
   td {

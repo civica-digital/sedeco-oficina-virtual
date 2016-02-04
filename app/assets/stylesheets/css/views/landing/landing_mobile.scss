@@ -1,0 +1,209 @@
+/* ----------- iPhone 4 and 4S - iPhone 5 and 5S y 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .text-landing {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  .text-title-landing {
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 200;
+  }
+  .title-menu-icons {
+    font-size: 40px !important;
+    padding-top: 8px;
+    color: #E6007E;
+  }
+  .subtitle-menu-icons {
+    font-size: 40px !important;
+    color: #000000;
+  }
+  .bcorner {
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    fill: #ffffff;
+    padding: 20px;
+    display: table;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .rcorner {
+    border-radius: 20px;
+    border: 2px solid #E6007E;
+    fill: #E6007E;
+    padding: 20px;
+    text-align: center !important;
+    display: table;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100% !important;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 30px !important;
+    color: #ffffff !important;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+   .text-landing {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  .text-title-landing {
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 200;
+  }
+  .title-menu-icons {
+    font-size: 40px !important;
+    padding-top: 8px;
+    color: #E6007E;
+  }
+  .subtitle-menu-icons {
+    font-size: 40px !important;
+    color: #000000;
+  }
+  .bcorner {
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    fill: #ffffff;
+    padding: 20px;
+    display: table;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .rcorner {
+    border-radius: 20px;
+    border: 2px solid #E6007E;
+    fill: #E6007E;
+    padding: 20px;
+    text-align: center !important;
+    display: table;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100% !important;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 30px !important;
+    color: #ffffff !important;
+  }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- Galaxy S4, S5 y HTC----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+  .text-landing {
+    font-size: 55px;
+    margin-bottom: 20px;
+  }
+
+  .text-title-landing {
+    margin-top: 20px;
+    font-size: 45px;
+    font-weight: 200;
+  }
+  .title-menu-icons {
+    font-size: 40px !important;
+    padding-top: 8px;
+    color: #E6007E;
+  }
+  .subtitle-menu-icons {
+    font-size: 40px !important;
+    color: #000000;
+  }
+  .bcorner {
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+    fill: #ffffff;
+    padding: 20px;
+    display: table;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .rcorner {
+    border-radius: 20px;
+    border: 2px solid #E6007E;
+    fill: #E6007E;
+    padding: 20px;
+    text-align: center !important;
+    display: table;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100% !important;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 30px !important;
+    color: #ffffff !important;
+  }
+
+}
+
+
+/* Landscape */
+@media screen 
+  and (device-width: 320px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) 
+  and (orientation: landscape) {
+
+}
