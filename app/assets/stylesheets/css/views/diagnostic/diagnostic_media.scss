@@ -6,6 +6,7 @@
   and (min-resolution: 192dpi) { 
 }
 
+
 /* ----------- Web ----------- */
 @media screen 
   and (min-width: 319px) 
@@ -50,7 +51,7 @@
   and (-webkit-device-pixel-ratio: 2){
 
   .container-impacto {
-    width: 98%;
+    width: 90%;
   }
 
   .six-cols .col-md-1,
@@ -86,7 +87,7 @@
   and (-webkit-device-pixel-ratio: 2){
   
   .container-impacto {
-    width: 98%;
+    width: 90%;
   }
 
   .six-cols .col-md-1,

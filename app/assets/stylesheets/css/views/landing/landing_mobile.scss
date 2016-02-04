@@ -65,6 +65,57 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
+  .text-landing {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .text-title-landing {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 200;
+  }
+  .title-menu-icons {
+    font-size: 20px !important;
+    padding-top: 8px;
+    color: #E6007E;
+  }
+  .subtitle-menu-icons {
+    font-size: 20px !important;
+    color: #000000;
+  }
+  .bcorner {
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    fill: #ffffff;
+    padding: 10px;
+    display: table;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .rcorner {
+    border-radius: 20px;
+    border: 2px solid #E6007E;
+    fill: #E6007E;
+    padding: 10px;
+    text-align: center !important;
+    display: table;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100% !important;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 20px !important;
+    color: #ffffff !important;
+  }
+
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -134,6 +185,57 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+
+    .text-landing {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .text-title-landing {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 200;
+  }
+  .title-menu-icons {
+    font-size: 20px !important;
+    padding-top: 8px;
+    color: #E6007E;
+  }
+  .subtitle-menu-icons {
+    font-size: 20px !important;
+    color: #000000;
+  }
+  .bcorner {
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    fill: #ffffff;
+    padding: 10px;
+    display: table;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .rcorner {
+    border-radius: 20px;
+    border: 2px solid #E6007E;
+    fill: #E6007E;
+    padding: 10px;
+    text-align: center !important;
+    display: table;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .footer {
+    width: 100% !important;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 20px !important;
+    color: #ffffff !important;
+  }
 
 }
 
