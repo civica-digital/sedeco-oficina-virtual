@@ -5,7 +5,7 @@
   %br
   = get_siapem_user(locals[:has_siapem],session[:date_siapem])
 
--elsif session[:has_open_declaration]
+-elsif session[:has_open_declaration] && locals[:impacto_usuario]== -1
   %br
   = get_has_open_declaration(session[:has_open_declaration])
 
@@ -21,7 +21,7 @@
   %br
   = get_siapem_user(locals[:has_siapem],session[:date_siapem])
   -has_empty = false
-  -if !session[:has_open_declaration]
+  -if !session[:has_open_declaration] && locals[:impacto_usuario]== -1
     %br
     = get_has_open_declaration(session[:has_open_declaration])
     -has_empty = false

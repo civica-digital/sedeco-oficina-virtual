@@ -29,6 +29,7 @@ module DiagnosticHelper
   end
 
   def get_has_open_declaration(has_open_declaration)
+
     if has_open_declaration
       "- Cuentas con tu declaración de apertura."
     else
