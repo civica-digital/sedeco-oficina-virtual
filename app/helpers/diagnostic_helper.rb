@@ -70,13 +70,6 @@ module DiagnosticHelper
     end
   end
 
-  def get_diagnostic_impact_license(license)
-    if license
-      t('impact.has_license_html',path_a: asset_path("pdf/a.pdf"))
-    else
-      t('impact.hasnt_licese_html',path_11: asset_path("pdf/11.pdf"))
-    end
-  end
 
 
 ###############################salidas de suelo###############################  
