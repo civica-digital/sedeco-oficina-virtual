@@ -51,8 +51,10 @@ module DiagnosticHelper
 
   def get_diagnostic_impact(has_business, type, has_siapem, has_open_declaration,has_special_license)
 
-    if !has_business && !has_siapem && type == -1
-      t('impact.exituno_html',path_3: asset_path("pdf/3.pdf"))
+    if !has_business && !has_siapem && type == -1 && !has_open_declaration
+      t('impact.exituno_a_html',path_3: asset_path("pdf/3.pdf"))
+    elsif !has_business && !has_siapem && type == -1 && has_open_declaration
+      t('impact.exituno_b_html',path_3: asset_path("pdf/b.pdf"))
     elsif !has_business && !has_siapem && type == -2
       t('impact.exitdos_html',path_11: asset_path("pdf/11.pdf"))
     elsif has_business && has_siapem && type == -1
