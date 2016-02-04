@@ -4,8 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@import "custome_media.css";
-@import "custome_mobile.css";
+@import "css/views/custome/custome_media.css";
+@import "css/views/custome/custome_mobile.css";
 
 body {
     overflow-x: hidden;

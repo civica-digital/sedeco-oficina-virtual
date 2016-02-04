@@ -17,9 +17,9 @@
       %div.modal-body
         = simple_form_for @appointment, html: { class: form_errors_class(@appointment) } do |f|
           = f.input :scheduled_date, as: :string, readonly: true
-          = f.input :name, as: :string
-          = f.input :email, as: :email
-          = f.input :phonenumber, as: :integer
+          = f.input :name, as: :string, placeholder: 'Nombre Completo'
+          = f.input :email, as: :email, placeholder: 'correo@mail.com'
+          = f.input :phonenumber, as: :integer, placeholder: '00000000'
           = f.input :notice_of_privacy, label: t('appointment.download_notice_of_privacy_html',path: asset_path("pdf/aviso.pdf")) 
           = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');", id: "submit"
 
