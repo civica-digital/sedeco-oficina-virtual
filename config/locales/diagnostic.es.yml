@@ -64,11 +64,11 @@ es:
     seguridad_minima_con_proteccion_sin_implementar_html: '<b><colorprimario>Tu negocio cuenta con un plan de protección pero NO ESTÁ implementado</colorprimario></b>, es importante que implementes un programa interno de protección civil ya que esto evitara clausuras a tu negocio, recuerda que si requieres renovar o rehacerlo puedes consultar los terceros acreditados para elaborar un programa interno de protección civil <a href="" target="_blank" class="colorprimario">aquí</a>.'
     seguridad_minima_sin_proteccion_html: '<b><colorprimario>Tu negocio debe tener los REQUISITOS MINIMOS de seguridad</colorprimario></b>, los cuales son puedes revisar <a href="" target="_blank" class="colorprimario">aquí</a>.'
     seguridad_minima_sin_diagnostico_html: 'Es importante que <b><colorprimario>asistas a tu delegación</colorprimario></b> a realizar el autodiagnostico para tu negocio, para que en caso de que te aplique un programa interno de protección civil lo puedas implementar.'
-    ambiental_html: 'Para trámitar o ver si aplica el trámite de la Licencia Ambiental Única para Distrito Federal (LAUDF), <a href="http://www.sedema.df.gob.mx/sedema/images/archivos/tramites/licencia-ambiental-unica-df/laudf-listado-no-requieren.pdf" target="_blank" class="colorprimario">revisa la gaceta aquí</a>.'
+    ambiental_html: 'Para trámitar o ver si aplica el trámite de la Licencia Ambiental Única para la Ciudad de México, <a href="http://www.sedema.df.gob.mx/sedema/images/archivos/tramites/licencia-ambiental-unica-df/laudf-listado-no-requieren.pdf" target="_blank" class="colorprimario">revisa la gaceta aquí</a>.'
     sanitaria_html: 'Para trámitar o ver si aplica la licencia sanitaria te invitamos a realizar lo siguiente:<br>
                     <ul type = disk >
                       <li>Llamen o asistan a <a href="http://www.agenciaproteccionsanitaria.df.gob.mx/" target="_blank" class="colorprimario">Agencia de Protección Sanitaria</a> o a <a href="http://www.cofepris.gob.mx/" target="_blank" class="colorprimario">COFEPRIS</a>.
-                      <li>Realizar el trámite de funcionamiento sanitario para los giros contemplados por parte de la Agencia de Protección Sanitaria del Distrito Federal y/o la Comisión para la Protección contra Riesgos Sanitarios (COFEPRIS).
+                      <li>Realizar el trámite de funcionamiento sanitario para los giros contemplados por parte de la Agencia de Protección Sanitaria de la Ciudad de México y/o la Comisión para la Protección contra Riesgos Sanitarios (COFEPRIS).
                       <li>Aviso de Funcionamiento, de Responsable Sanitario. 
                       <li>Original y 2 copias del formato debidamente llenado.
                       <li>Original y 2 copias del Acta Constitutiva y/o poder otorgado ante notario o corredor público de los representantes legales.
@@ -76,4 +76,4 @@ es:
                       <li>2 copias de identificación oficial con fotogradía de la(s) persona(s) autorizadas(s) (credencial de elector, pasaporte o cartilla). 
                       <li>Licencia Sanitaria L Realizar licencia en COFEPRIS.
                     </ul>'
-    no_debts_html: 'Todos los negocios de <b><colorprimario>IMPACTO VECINAL</colorprimario></b> deben tener la constancia de <b><colorprimario>NO ADEUDOS</colorprimario></b>, la cual puedes tramitar en Finanzas con un periodo no mayor al actual y a la secretaría de aguas del Distrito Federal.'
+    no_debts_html: 'Todos los negocios de <b><colorprimario>IMPACTO VECINAL</colorprimario></b> deben tener la constancia de <b><colorprimario>NO ADEUDOS</colorprimario></b>, la cual puedes tramitar en la Secretaría de Finanzas del Gobierno de la Ciudad de México con un periodo no mayor al actual.'
