@@ -1,6 +1,13 @@
 class AppointmentsController < ApplicationController
   def index
     @appointment = Appointment.new
+    @array_day_out = ["2016-01-01","2016-02-01","2016-03-21","2016-05-01","2016-09-16","2016-11-21","2016-12-25","2017-01-01"]
+   
+    Appointment.where("scheduled_date > ?", Date.yesterday.to_date.to_s).each do |appointment|
+       if Appointment.where(scheduled_date: appointment.scheduled_date.to_date.to_s).count >= 15
+          @array_day_out << appointment.scheduled_date.to_date.to_s
+        end
+    end
   end
 
   def create
