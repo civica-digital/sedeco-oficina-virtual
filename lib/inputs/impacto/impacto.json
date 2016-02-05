@@ -207,7 +207,7 @@
                                 "-type": "normal",
                                 "texto": "Sí",
                                 "imagen": "si",
-                                "siguiente": "-21",
+                                "siguiente": "-2",
                                 "restricciones":[]
                             },
                             {
@@ -231,7 +231,7 @@
                 },
                 {
                     "numero": "7",
-                    "texto": "¿Cuentas con declaración de apertura?",
+                    "texto": "¿Cuentas con declaración de apertura anterior a Marzo 2011?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [

@@ -25,8 +25,38 @@
 
 
 :javascript
+
+  $(document).on('page:load', calendar_init());
+
   var checker = document.getElementById('appointment_notice_of_privacy');
   var sendbtn = document.getElementById('submit');
   checker.onchange = function() {
     sendbtn.disabled = !this.checked;
   };
+
+  
+  /*Cargamos el calendario cuando la vista esta lista*/
+
+
+  function calendar_init() {
+  array_day_out = fill_days_out();
+
+  $("#calendar").datepicker({
+    beforeShowDay: function(date){
+    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+    return [ array_day_out.indexOf(string) == -1 ]
+    },
+    onSelect: function(date) {
+      $("#appointment_scheduled_date").val(date)
+      $("#new_appointment").modal();
+    },
+    minDate: 0,
+    dayNamesMin: $.datepicker.regional.es.dayNamesShort,
+    hideIfNoPrevNext: true
+  });
+  }
+
+  function fill_days_out(){
+    var array_day_out = #{ raw @array_day_out}
+    return array_day_out
+  }

@@ -24,7 +24,7 @@ $(document).ready(loadChosen);
 $(document).on('page:load', loadChosen);
 $(document).on('page:load', displayModal);
 
-var array_day_out = ["2016-01-01","2016-02-01","2016-03-21","2016-05-01","2016-09-16","2016-11-21","2016-12-25","2017-01-01"]
+//var array_day_out = ["2016-01-01","2016-02-01","2016-03-21","2016-05-01","2016-09-16","2016-11-21","2016-12-25","2017-01-01"]
 
 /*$('input').datepicker({
     beforeShowDay: function(date){
@@ -32,7 +32,7 @@ var array_day_out = ["2016-01-01","2016-02-01","2016-03-21","2016-05-01","2016-0
         return [ array_day_out.indexOf(string) == -1 ]
     }
 });*/
-$(function() {
+/*$(function() {
   $("#calendar").datepicker({
     beforeShowDay: function(date){
     var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
@@ -47,7 +47,7 @@ $(function() {
     hideIfNoPrevNext: true
   });
 });
-
+*/
 
 var displayModal = $(function() {
   if ($(".has-errors").length)

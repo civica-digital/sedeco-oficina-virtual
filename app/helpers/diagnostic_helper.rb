@@ -31,7 +31,7 @@ module DiagnosticHelper
   def get_has_open_declaration(has_open_declaration)
 
     if has_open_declaration
-      "- Cuentas con tu declaración de apertura."
+      "- Cuentas con tu declaración de apertura anterior a Marzo 2011."
     else
       "- No cuentas con tu declaración de apertura."
     end
