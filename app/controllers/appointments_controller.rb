@@ -44,6 +44,8 @@ class AppointmentsController < ApplicationController
     Admins.admins_email.each do |email|
       AppointmentMailer.new_appointment_notification(appointment, email).deliver
     end
+
+    AppointmentMailer.new_appointment_user_notification(appointment).deliver
   end
 
   

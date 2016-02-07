@@ -127,7 +127,7 @@ es:
         other: longitud errónea (debe ser de %{count} caracteres)
   appointment_mailer:
     new_appointment_notification:
-      subject: "Nueva cita reservada en Oficina Virtual"
+      subject: "Nueva cita reservada en AsesorEnLinea:YoTeApoyo"
   appointments:
     create:
       appointment_created: "La cita se ha agendado exitosamente."
