@@ -132,7 +132,7 @@ module DiagnosticHelper
         exit += ", pero aun no sabes en que colonia."
       end
     else
-      exit += "pero no proporcionaste su ubicación."
+      exit += "sin ubicación."
     end
   end
 
@@ -170,12 +170,17 @@ module DiagnosticHelper
     if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
       t('zoning.expiration_zoning_html')
     else
-      get_documents_zoning
+      get_documents_zoning(date_siapem, date_zoning)
     end
   end
 
-  def get_documents_zoning
-    t('zoning.documents_html')
+
+  def get_documents_zoning(date_siapem, date_zoning)
+    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+      t('zoning.no_documents_html')
+    else
+      t('zoning.documents_html')
+    end
   end
 
   def get_validate_not_zoning
