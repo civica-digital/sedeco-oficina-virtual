@@ -131,6 +131,7 @@ es:
   appointments:
     create:
       appointment_created: "La cita se ha agendado exitosamente."
+      appointment_not_created: "La cita NO se ha generado ya que tienes otra agendada el día: %{date}."
   learning_center:
     index:
       title: "Centro de aprendizaje"
