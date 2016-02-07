@@ -8,6 +8,11 @@ class AppointmentsController < ApplicationController
           @array_day_out << appointment.scheduled_date.to_date.to_s
         end
     end
+    
+    if Time.now.hour > 12
+      @array_day_out << Date.today.to_date.to_s
+      @tomorrow = true
+    end
   end
 
   def create

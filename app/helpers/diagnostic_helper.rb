@@ -6,7 +6,7 @@ module DiagnosticHelper
     if has_business
     exit = "- Tienes un negocio en operación de "
     else
-      exit = "- Quieres abrir un negocio de "
+      exit = "- Negocio de "
     end
     if type == -1
       exit += "bajo impacto." 
@@ -66,9 +66,9 @@ module DiagnosticHelper
     elsif has_business && !has_siapem && type == -1 && has_open_declaration
       t('impact.exitseis_html',path_b: asset_path("pdf/b.pdf"))
     elsif has_business && !has_siapem && type == -2 && (has_special_license == nil || !has_special_license)
-       t('impact.exitsiete_html',path_a: asset_path("pdf/a.pdf"))
+       t('impact.exitsiete_html',path_11: asset_path("pdf/11.pdf"))
     elsif has_business && !has_siapem && type == -2 && has_special_license
-      t('impact.exitocho_html',path_11: asset_path("pdf/11.pdf"))
+      t('impact.exitocho_html',path_a: asset_path("pdf/a.pdf"))
     end
   end
 
@@ -79,9 +79,9 @@ module DiagnosticHelper
 
   def get_uso_de_suelo_ok(has_business, type_zoning)
     if has_business
-      "- Tienes un negocio en un uso de suelo #{type_zoning}."
+      "- Un negocio en un uso de suelo #{type_zoning}."
     else
-      "- Quieres abrir un negocio en un uso de suelo #{type_zoning}."
+      "- Negocio en un uso de suelo #{type_zoning}."
     end
   end
 
@@ -89,7 +89,7 @@ module DiagnosticHelper
     if has_business
       "- Tienes un negocio, pero no sabes que uso de suelo tiene."
     else
-      "- Quieres abrir un negocio, pero no sabes que uso de suelo tiene."
+      "- Negocio, pero no sabes que uso de suelo tiene."
     end
   end
 
@@ -99,13 +99,13 @@ module DiagnosticHelper
       if has_business
         "- Tienes un negocio en el mismo lugar donde habitas, y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       else
-        "- Quieres abrir un negocio en el mismo lugar donde habitas y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+        "- Negocio en el mismo lugar donde habitas y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       end
     else
       if has_business
         "- Tienes un negocio en el mismo lugar donde habitas, y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       else
-        "- Quieres abrir un negocio en el mismo lugar donde habitas y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+        "- Negocio en el mismo lugar donde habitas y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       end
     end
   end
@@ -114,7 +114,7 @@ module DiagnosticHelper
     if has_business
       "- Tienes un negocio que mide #{size_business} m2"
     else
-      "- Quieres abrir un negocio que mide #{size_business} m2"
+      "- Negocio que mide #{size_business} m2"
     end
   end
 
@@ -122,7 +122,7 @@ module DiagnosticHelper
     if has_business
       exit = "- Tienes un negocio "
     else
-      exit = "- Quieres abrir un negocio "
+      exit = "- Negocio "
     end
     if !city_zoning.nil?
       exit += "ubicado en la delegación #{city_zoning}"
@@ -140,7 +140,7 @@ module DiagnosticHelper
     if has_zoning
       "- Cuentas con un certificado de uso de suelo, expedido en el #{date_zoning}."
     else
-      "- No cuentas con un certificado de uso de suelo"
+      "- No cuentas con un certificado de uso de suelo."
     end
   end
 
@@ -193,9 +193,9 @@ module DiagnosticHelper
 
   def get_has_autodiagnostico(has_autodiagnostico)
     if has_autodiagnostico
-      "- Ya recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación."
+      "- Ya recogiste y entregaste el autodiagnóstico en materia de protección civil en tu delegación."
     else 
-      "- Aun no recogiste y/o entregas el autodiagnóstico en materia de protección civil de tu delegación."
+      "- Aun no recogiste y/o entregas el autodiagnóstico en materia de protección civil en tu delegación."
     end
     
   end
@@ -222,9 +222,9 @@ module DiagnosticHelper
 
   def get_license_sanitaria(license_sanitaria)
     if license_sanitaria
-      "- Sabes que requieres una Licencia Ambiental Única (LAUDF)."
+      "- Sabes que requieres una Licencia Ambiental Única."
     else
-      "- No sabes si requieres una Licencia Ambiental Única (LAUDF)."
+      "- No sabes si requieres una Licencia Ambiental Única."
     end
   end
 
@@ -238,9 +238,9 @@ module DiagnosticHelper
 
   def get_has_license_sanitaria(has_license_sanitaria)
     if has_license_sanitaria
-      "- Cuentas con una Licencia Ambiental Única (LAUDF)."
+      "- Cuentas con una Licencia Ambiental Única."
     else
-      "- No cuentas con una Licencia Ambiental Única (LAUDF)."
+      "- No cuentas con una Licencia Ambiental Única."
     end
   end
 

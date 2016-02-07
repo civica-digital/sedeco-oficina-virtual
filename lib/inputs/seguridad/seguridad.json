@@ -56,7 +56,7 @@
                 },
                 {
                     "numero": "3",
-                    "texto": "¿Recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación?",
+                    "texto": "¿Recogiste y entregaste el autodiagnóstico en materia de protección civil en tu delegación?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [
@@ -208,7 +208,7 @@
                 },
                 {
                     "numero": "8",
-                    "texto": "¿Tienes tu Licencia Ambiental Única (LAUDF)?",
+                    "texto": "¿Tienes tu Licencia Ambiental Única?",
                     "array_respuestas": {
                         "tipo": "normal",
                         "respuesta": [

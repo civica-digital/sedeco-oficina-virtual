@@ -232,9 +232,9 @@ module ProgressModule
           when 2
             session[:type_zoning] = 'Habitacional Mixto'
           when 3
-            session[:type_zoning] = 'Habitacional Oficina'
+            session[:type_zoning] = 'Habitacional con Oficina'
           when 4
-            session[:type_zoning] = 'Habitacional Comercio'
+            session[:type_zoning] = 'Habitacional con Comercio'
           when 5
             session[:type_zoning] = 'Equipamiento'
           when 6

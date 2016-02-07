@@ -32,10 +32,10 @@ describe 'User can see tree safety'  do
     fill_in 'date_1_1', :with => '49'
     find('#date_1_1').native.send_keys(:return)
 
-    expect(page).to have_content "¿Recogiste y entregaste el autodiagnóstico en materia de protección civil de tu delegación?"
+    expect(page).to have_content "¿Recogiste y entregaste el autodiagnóstico en materia de protección civil en tu delegación?"
     page.find("#image3-2").click
 
-    expect(page).to have_content "¿Sabes si requieres una Licencia Ambiental Única (LAUDF)?"
+    expect(page).to have_content "¿Sabes si requieres una Licencia Ambiental Única?"
     page.find("#image7-2").click
 
     expect(page).to have_content "¿Sabes si requieres un aviso de funcionamiento sanitario?"
