@@ -25,7 +25,7 @@
     %br
     = get_has_open_declaration(session[:has_open_declaration])
     -has_empty = false
--if locals[:impacto_usuario] == -2 && !session[:has_special_license]
+-if locals[:impacto_usuario] == -2 && !session[:has_special_license] && !session[:has_siapem]
   %br
   = get_has_special_license(session[:has_special_license])
   -has_empty = false
