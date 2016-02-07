@@ -176,7 +176,7 @@ module DiagnosticHelper
 
 
   def get_documents_zoning(date_siapem, date_zoning)
-    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+    if date_siapem != nil && date_zoning != nill && date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
       t('zoning.no_documents_html')
     else
       t('zoning.documents_html')
