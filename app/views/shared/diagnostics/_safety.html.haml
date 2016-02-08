@@ -33,7 +33,7 @@
     -has_empty = false
   -if !session[:has_protection]
     %br
-    = get_has_protection(session[:has_protection])
+    = get_has_protection(session[:has_protection],locals[:aforo])
     -has_empty = false
 -if !session[:make_protection]
   %br
@@ -62,6 +62,8 @@
 -if locals[:impacto_usuario] == -2
   = has_not_debts(locals[:no_adeudos])
 %hr
+-if session[:aforo].to_i < 50 
+  =t('safety.seguridad_minima_sin_proteccion_html')
 
 
 

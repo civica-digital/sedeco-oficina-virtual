@@ -70,8 +70,8 @@
 -elsif locals[:has_bussine] && locals[:has_zoning] 
   = validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning])
 -else
-  = get_documents_zoning(locals[:date_siapem],locals[:date_zoning])
-
+  = get_documents_zoning(locals[:date_siapem],locals[:date_zoning],session[:has_open_declaration],session[:has_zoning],session[:has_special_license])
+  %br
 -if locals[:size_business].to_i > 80
   = get_business_recommendations
 %hr

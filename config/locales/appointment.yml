@@ -2,7 +2,7 @@ es:
   appointment:
     show_notice_of_privacy: 'Ver el AVISO DE PRIVACIDAD' 
     title: 'Agendar una cita'
-    text: 'Selecciona la fecha en la que te gustaría ir a SEDECO en un horario de 9:00 am a 2:00 pm.'
+    text: 'Selecciona la fecha en la que te gustaría ir a SEDECO. Puedes ir a cualquier hora entre las 9:00 y 14:30 hrs.'
     subtitle: 'Selecciona una fecha:'
     title_dialog: 'Agendar cita'
     placeholder:

@@ -55,8 +55,10 @@ module DiagnosticHelper
       t('impact.exituno_a_html',path_3: asset_path("pdf/3.pdf"))
     elsif !has_business && !has_siapem && type == -1 && has_open_declaration
       t('impact.exituno_b_html',path_3: asset_path("pdf/b.pdf"))
-    elsif !has_business && !has_siapem && type == -2
-      t('impact.exitdos_html',path_11: asset_path("pdf/11.pdf"))
+    elsif !has_business && !has_siapem && type == -2 && has_special_license
+      t('impact.exitdos_a_html',path_a: asset_path("pdf/a.pdf"))
+    elsif !has_business && !has_siapem && type == -2 && !has_special_license
+      t('impact.exitdos_b_html',path_11: asset_path("pdf/11.pdf"))
     elsif has_business && has_siapem && type == -1
       t('impact.exittres_html',path_1: asset_path("pdf/1.pdf"),path_2: asset_path("pdf/2.pdf"),path_6: asset_path("pdf/6.pdf"),path_7: asset_path("pdf/7.pdf"),path_9: asset_path("pdf/9.pdf"),path_10: asset_path("pdf/10.pdf"))
     elsif has_business && has_siapem && type == -2
@@ -97,15 +99,15 @@ module DiagnosticHelper
   def get_no_necesita_uso(uso_de_suelo, has_business, size_house, size_business)
     if uso_de_suelo
       if has_business
-        "- Tienes un negocio en el mismo lugar donde habitas, y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+        "- Tienes un negocio en el mismo lugar donde habitas, y este no sobrepasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       else
-        "- Negocio en el mismo lugar donde habitas y este no sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+        "- Negocio en el mismo lugar donde habitas y este no sobrepasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       end
     else
       if has_business
-        "- Tienes un negocio en el mismo lugar donde habitas, y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+        "- Tienes un negocio en el mismo lugar donde habitas, y este sobrepasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       else
-        "- Negocio en el mismo lugar donde habitas y este sobre pasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
+        "- Negocio en el mismo lugar donde habitas y este sobrepasa el 20% del tamaño total de la vivienda. (Tamaño vivienda: #{size_house} m2, tamaño negocio: #{size_business} m2)"
       end
     end
   end
@@ -170,16 +172,22 @@ module DiagnosticHelper
     if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
       t('zoning.expiration_zoning_html')
     else
-      get_documents_zoning(date_siapem, date_zoning)
+      get_documents_zoning(date_siapem, date_zoning,has_open_declaration,has_zoning,has_special_license)
     end
   end
 
 
-  def get_documents_zoning(date_siapem, date_zoning)
-    if date_siapem != nil && date_zoning != nill && date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
-      t('zoning.no_documents_html')
+  def get_documents_zoning(date_siapem, date_zoning,has_open_declaration,has_zoning,has_special_license)
+    if has_open_declaration && !has_zoning
+      t('zoning.documents_with_format_b_html')
+    elsif has_special_license && !has_zoning
+      t('zoning.documents_with_format_a_html')
     else
-      t('zoning.documents_html')
+      if date_siapem != nil && date_zoning != nil && date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+        t('zoning.no_documents_html')
+      else
+        t('zoning.documents_html')
+      end
     end
   end
 
@@ -205,12 +213,17 @@ module DiagnosticHelper
     
   end
 
-  def get_has_protection(has_protection)
-    if has_protection
-      "- Te aplica un programa interno de protección civil."
+  def get_has_protection(has_protection,aforo)
+    if aforo.to_i < 50
+      "- Revisa los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
     else
-      "- No te aplica un programa interno de protección civil."
+      if has_protection
+        "- Te aplica un programa interno de protección civil."
+      else
+        "- No te aplica un programa interno de protección civil."
+      end
     end
+    
   end
 
 
@@ -270,8 +283,8 @@ module DiagnosticHelper
         t('safety.seguridad_minima_con_proteccion_implementado_html')
       elsif has_autodiagnostico && has_protection && !make_protection
         t('safety.seguridad_minima_con_proteccion_sin_implementar_html')
-      elsif has_autodiagnostico && !has_protection
-        t('safety.seguridad_minima_sin_proteccion_html')
+      #elsif has_autodiagnostico && !has_protection
+       # t('safety.seguridad_minima_sin_proteccion_html')
       else
         t('safety.seguridad_minima_sin_diagnostico_html')
       end
