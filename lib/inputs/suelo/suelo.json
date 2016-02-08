@@ -188,7 +188,7 @@
                                 "-type": "normal",
                                 "texto": "Derechos adquiridos",
                                 "imagen": "derechos-adq",
-                                "siguiente": "-6",
+                                "siguiente": "8",
                                 "restricciones":[]
                             },
                             {

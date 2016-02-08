@@ -65,13 +65,22 @@
 
 %h3
   =t('title.falta_html')
--if locals[:uso_de_suelo]
-  = get_validate_not_zoning
--elsif locals[:has_bussine] && locals[:has_zoning] 
-  = validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning])
--else
-  = get_documents_zoning(locals[:date_siapem],locals[:date_zoning],session[:has_open_declaration],session[:has_zoning],session[:has_special_license])
+-if session[:has_type_zoning]== "Derechos adquiridos" || session[:has_type_zoning]== "Especial" || session[:has_type_zoning]== "Específico" || session[:has_type_zoning] =="Sin información"
+  =t('zoning.zoning_has_type_zoning')
   %br
+-elsif session[:has_type_zoning]== "Certificado único de zonificación" && !locals[:date_zoning].nil?
+  = get_validate_expiration_certificado(locals[:date_siapem],locals[:date_zoning],session[:has_siapem])
+  %br
+-else
+  -if locals[:uso_de_suelo]
+    = get_validate_not_zoning
+  -elsif locals[:has_bussine] && locals[:has_zoning] 
+    = validate_expiration_zoning(locals[:date_siapem],locals[:date_zoning])
+  -else
+    = get_documents_zoning(locals[:date_siapem],locals[:date_zoning],session[:has_open_declaration],session[:has_zoning],session[:has_special_license])
+    %br
 -if locals[:size_business].to_i > 80
   = get_business_recommendations
+  %br
+
 %hr

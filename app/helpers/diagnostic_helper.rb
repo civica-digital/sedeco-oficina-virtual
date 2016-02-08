@@ -155,6 +155,20 @@ module DiagnosticHelper
     end
   end
 
+  def get_validate_expiration_certificado(date_siapem, date_zoning,has_siapem)
+    if date_siapem.to_i == date_zoning.to_i || (date_siapem.to_i - 1) == date_zoning.to_i
+       t('zoning.zoning_with_certificado_ok_html')
+    elsif Date.today.year.to_i == date_zoning.to_i || (Date.today.year.to_i - 1) == date_zoning.to_i
+      t('zoning.zoning_with_certificado_ok_no_siapem_html')
+    else
+        if has_siapem
+          t('zoning.zoning_with_certificado_caduco_siapem_html')
+        else
+          t('zoning.zoning_with_certificado_caduco_html')
+        end 
+    end
+  end
+
   def get_has_type_zoning(has_type_zoning,value)
     if value
       "- Cuentas con el certificado de uso de suelo #{has_type_zoning}."
