@@ -19,7 +19,7 @@
           = f.input :scheduled_date, as: :string, readonly: true
           = f.input :name, as: :string, placeholder: t('appointment.placeholder.name')
           = f.input :email, as: :email, placeholder: t('appointment.placeholder.email')
-          = f.input :phonenumber, as: :integer, placeholder: t('appointment.placeholder.phone')
+          = f.input :phonenumber, as: :tel, placeholder: t('appointment.placeholder.phone')
           = f.input :notice_of_privacy, label: t('appointment.download_notice_of_privacy_html',path: asset_path("pdf/aviso.pdf")) 
           = f.button :submit, class: "btn btn-primary btn-block", onclick: "ga('send', 'event', 'appointment', 'request', '');", id: "submit"
 
