@@ -15,6 +15,17 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
 
+    .scroll-footer{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 150px;
+      z-index: 300;
+      background-color: #EEEEED;
+      display: none;
+    }
+
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -33,6 +44,17 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: landscape) { 
+    
+    .scroll-footer{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 150px;
+      z-index: 300;
+      background-color: #EEEEED;
+      display: none;
+    }
 
 }
 
@@ -52,7 +74,7 @@
     height: 150px;
     z-index: 300;
     background-color: #EEEEED;
-    }
+  }
 
 }
 
@@ -63,6 +85,17 @@
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: landscape) {
+
+  .scroll-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 150px;
+    z-index: 300;
+    background-color: #EEEEED;
+    display: none;
+  }
 
 }
 
