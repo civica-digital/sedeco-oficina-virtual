@@ -15,3 +15,6 @@ es:
     session:
       title: 'Panel de administrador'
       subtitle: 'Ingresa tus datos para accesar'
+    errors:
+      length: 'El teléfono debe tener 10 dígitos'
+      numbers: 'El teléfono solo debe tener números'
