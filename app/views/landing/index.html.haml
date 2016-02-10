@@ -68,7 +68,7 @@
       .modal-body
         =t('.text_modal_html')
         %div.padding-bottom-modal
-        =link_to t('appointment.show_notice_of_privacy'), asset_path("pdf/aviso.pdf"), class: "pink "
+        =link_to t('appointment.show_notice_of_privacy'), asset_path("pdf/aviso.pdf"), class: "pink ",:target => "_blank"
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
           =t('.close')
