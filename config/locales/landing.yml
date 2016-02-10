@@ -6,7 +6,7 @@ es:
       button_text_html: "Comienza tu<BR>diagnóstico"
       text_footer: "Una herramienta de la Secretaría de Desarrollo Económico"
       close: "Cerrar"
-      text_modal: "Aplicación realizada ...."
+      text_modal_html: "Aplicación realizada ....<br><br>Es importante saber que <colorprimario><b>no se emiten diagnósticos parciales y se deben contestar todas las preguntas</b></colorprimario> para poder tener un buen diagnóstico.<br>"
       title_modal: "Oficina virtual SEDECO"
       menu:
         centro_titulo: "Centro de aprendizaje"
