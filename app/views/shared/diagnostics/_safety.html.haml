@@ -72,9 +72,10 @@
 %hr
 -if locals[:impacto_usuario] == -2
   = has_not_debts(locals[:no_adeudos])
-%hr
+  %hr
 -if session[:aforo].to_i < 50 
   =t('safety.seguridad_minima_sin_proteccion_html')
+  %hr
 
 
 
