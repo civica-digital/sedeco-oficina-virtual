@@ -1,9 +1,10 @@
 %div.margin-bottom-end-page
   .H1
-    De acuerdo a tus respuestas, el <colorprimario>IMPACTO DE TU NEGOCIO</colorprimario> es:
+    Gracias por sus respuestas de <colorprimario>IMPACTO</colorprimario>
   .jumbotron
     %h2.colorprimario
-      = impacto
+      -unless impacto.blank?
+        = impacto
   .div.col-md-4.col-md-offset-8
     .H3.text-right.next-step
     
