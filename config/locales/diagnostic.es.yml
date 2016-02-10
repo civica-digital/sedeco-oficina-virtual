@@ -5,7 +5,7 @@ es:
     falta_html: '<div class="black"><colorprimario><i class="fa fa-hand-o-up"></i></colorprimario> Información importante:</div>'
   diagnostics:
     index:
-      title_impact_html: 'Resultado de <colorprimario>"Impacto"</colorprimario>'
+      title_impact_html: 'Resultado de <colorprimario>"Impacto y Estatus de Registro"</colorprimario>'
       title_zoning_html: 'Resultado de <colorprimario>"Uso de suelo"</colorprimario>'
       title_safety_html: 'Resultado de <colorprimario>"Protección civil y otros"</colorprimario>'
       title_must_cita_html: 'Te recomendamos <a href="%{path}" target="_blank" class="colorprimario">hacer una cita</a> para darle continuidad a tu proceso.' 

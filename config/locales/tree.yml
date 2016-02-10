@@ -1,12 +1,12 @@
 es:
   tree:
     title:
-      impact: 'Cuestionario de Impacto'
-      safety: 'Cuestionario de protección civil'
-      zoning: 'Cuestionario de Uso de suelo'
+      impact: 'Cuestionario de Impacto y Estatus de Registro'
+      safety: 'Cuestionario de Protección Civil y Otros'
+      zoning: 'Cuestionario de Uso de Suelo'
       diagnostic: 'Diagnóstico inicial de tu negocio'
     subtitle:
-      impact: 'En la Ciudad de México existen 3 tipos de impacto: Bajo, Vecinal y Zonal, en esta sección conocerás que tipo es tu negocio, respondiendo un maximo de 7 preguntas.'
+      impact: 'En la Ciudad de México existen 3 tipos de impacto: Bajo, Vecinal y Zonal, en esta sección conocerás qué tipo es tu negocio, además de saber su estatus de registro respondiendo un máximo de 7 preguntas.'
       safety: 'Existen diversos trámites que tu negocio debe hacer, en esta sección sabrás cuáles son, respondiendo un maximo de 9 preguntas.'
       zoning: 'Existen diversos tipos de uso de suelo en los que puedes tener un negocio, en esta sección sabrás cuáles son, respondiendo un maximo de 9 preguntas.'
       diagnostic: 'Con base en tus respuestas, este es el diagnóstico de tu negocio, recuerda que NO ES DEFINITIVO NI OFICIAL por lo que recomendamos visitar la SEDECO para aclarar cualquier duda.'
