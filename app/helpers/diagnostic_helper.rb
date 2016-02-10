@@ -229,7 +229,7 @@ module DiagnosticHelper
 
   def get_has_protection(has_protection,aforo)
     if aforo.to_i < 50
-      "- Revisa los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
+      "- Revisar los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
     else
       if has_protection
         "- Te aplica un programa interno de protección civil."
