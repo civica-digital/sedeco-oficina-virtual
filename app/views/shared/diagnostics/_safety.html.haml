@@ -46,7 +46,7 @@
   %br
   = get_license_sanitaria(session[:license_sanitaria])
   -has_empty = false
--if !session[:make_license_sanitaria]  
+-if session[:license_sanitaria] && !session[:make_license_sanitaria]  
   %br
   = get_has_license_sanitaria(session[:make_license_sanitaria])
   -has_empty = false
@@ -54,7 +54,7 @@
   %br
   = get_license_ambiental(session[:license_ambiental])
   -has_empty = false
--if !session[:make_license_ambiental]
+-if session[:license_ambiental] && !session[:make_license_ambiental]
   %br
   = get_has_license_ambiental(session[:make_license_ambiental])
   -has_empty = false
