@@ -38,6 +38,8 @@ class ZoningController < ApplicationController
           format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => nil, :text =>t('outputs.zoning.comment_con_suelo'),:next_text=>t('outputs.zoning.next_text_con_suelo'), :path=> "#{safety_index_path}",new_window: false  }}
         elsif next_value == "-5"
           format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_equipamiento'), :text =>t('outputs.zoning.comment_equipamiento'),:next_text=>t('outputs.zoning.next_text_equipamiento'), :path=> "#{appointments_path}",new_window: true  }}
+        elsif next_value == "-7"
+          format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_industrial'), :text =>t('outputs.zoning.comment_equipamiento'),:next_text=>t('outputs.zoning.next_text_equipamiento'), :path=> "#{appointments_path}",new_window: true  }}
         elsif next_value == "-6"
           format.js { render :partial => 'shared/outputs/finish_zoning', :locals => {:type => t('outputs.zoning.type_derechos'), :text =>t('outputs.zoning.comment_derechos'),:next_text=>t('outputs.zoning.next_text_derechos'), :path=> "#{appointments_path}",new_window: true }}
         else  

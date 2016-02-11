@@ -42,13 +42,21 @@
                             {
                                 "id":"5",
                                 "-type": "normal",
-                                "texto": "(E)Equipamiento,(AV)Áreas verdes o (EA)Espacio Abierto",
+                                "texto": "(AV)Áreas verdes o (EA)Espacio Abierto",
                                 "imagen": "espacio",
                                 "siguiente": "-5",
                                 "restricciones":[]
                             },
                             {
                                 "id":"6",
+                                "-type": "normal",
+                                "texto": "(E)Equipamiento o (I)Industrial",
+                                "imagen": "industrial",
+                                "siguiente": "-7",
+                                "restricciones":[]
+                            },
+                            {
+                                "id":"7",
                                 "-type": "normal",
                                 "texto": "No tengo la información",
                                 "imagen": "puntos",
