@@ -114,9 +114,9 @@ module DiagnosticHelper
 
   def get_business_size(size_business,has_business)
     if has_business
-      "- Tienes un negocio que mide #{size_business} m2"
+      "- Tienes un negocio que mide #{size_business} m2."
     else
-      "- Negocio que mide #{size_business} m2"
+      "- Negocio que mide #{size_business} m2."
     end
   end
 
