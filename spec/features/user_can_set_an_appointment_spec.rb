@@ -35,7 +35,8 @@ describe 'User can set an appointment'  do
     fill_in "Teléfono", with: "1112223334"
     click_button "Agendar"
 
-    expect(page).to have_content "La cita se ha agendado exitosamente."
+    #expect(page).to have_content "La cita se ha agendado exitosamente."
+    page.should satisfy {|page| page.has_content?('La cita se ha agendado exitosamente.') or page.has_content?('La cita NO se ha generado ya que tienes otra agendada')}
   end
 
   scenario 'unless enters invalid data', js: true do
@@ -74,12 +75,16 @@ describe 'User can set an appointment'  do
     fill_in "Correo electrónico", with: "maria@mail.com"
     fill_in "Teléfono", with: "1112223334"
     click_button "Agendar"
-
-    expect(sent_email_subject).to eq "Nueva cita reservada en Oficina Virtual"
-    expect(sent_email_content).to include "Maria x"
-    expect(sent_email_content).to include "maria@mail.com"
-    expect(sent_email_content).to include I18n.l(Date.commercial(Date.today.year, 1+Date.today.cweek, 3))
-    expect(sent_email_content).to include "1112223334"
+   
+    if page.has_content? "La cita se ha agendado exitosamente."
+      expect(sent_email_subject).to eq "Nueva cita reservada en AsesorEnLinea:YoTeApoyo"
+      expect(sent_email_content).to include "Maria x"
+      expect(sent_email_content).to include "maria@mail.com"
+      expect(sent_email_content).to include I18n.l(Date.commercial(Date.today.year, 1+Date.today.cweek, 3))
+      expect(sent_email_content).to include "1112223334"
+    else
+      expect(page).to have_content "La cita NO se ha generado ya que tienes otra agendada"
+    end
   end
 
   def calendar_input
