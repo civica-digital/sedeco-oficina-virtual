@@ -3,12 +3,13 @@ es:
     question:
       impact:
         one: '¿Que es un establecimiento mercantil?'
-        two: '¿Qué es impacto vecinal?'
-        three: '¿Qué es impacto zonal?'
-        four: '¿Qué es el SIAPEM?'
-        five: '¿En dónde encuentro la fecha de registro del SIAPEM?'
-        six: '¿Qué es una licencia de funcionamiento?'
-        seven: 'Qué es una declaración de apertura?'
+        two: ¿Qué es bajo impacto?
+        three: '¿Qué es impacto vecinal?'
+        four: '¿Qué es impacto zonal?'
+        five: '¿Qué es el SIAPEM?'
+        six:  '¿En dónde encuentro la fecha de registro del SIAPEM?'
+        seven: '¿Qué es una licencia de funcionamiento?'
+        eight: 'Qué es una declaración de apertura?'
       zoning:
         one: '¿Que tipos de uso de suelo existen?'
         two: '¿Puedo poner cualquier negocio en donde habito?'
@@ -39,12 +40,13 @@ es:
     answer:
       impact:
         one_html: 'Es un local ubicado en un inmueble donde una persona física o moral realiza actividades de intermediación, compraventa, arrendamiento, distribución de bienes o prestación de servicios lícitos, con fines de lucro.'
-        two_html: 'Es una clasificación para establecimientos cuyo giro modifica la armonía de la comunidad, como:  salones de fiesta, restaurantes, establecimientos de hospedaje, clubes privados, salas de cine, teatros y auditorios.'
-        three_html: 'Es una clasificación para establecimientos cuyo giro principal es vender o distribuir bebidas alcohólicas en envase abierto y/o al copeo para su consumo al interior.'
-        four_html: 'El Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles es el único medio  de registro para que las personas físicas o morales presenten sus Avisos, Solicitudes de Permiso, Registros o Autorizaciones para la apertura y funcionamiento de un establecimiento mercantil en la Ciudad de México.'
-        five_html: 'La fecha de registro se encuentra del lado superior derecho, abajo del folio del trámite y clave del establecimiento del  formato del SIAPEM que corresponda.'
-        six_html: 'Las licencias de funcionamiento (A,  B,  ordinarias o especiales) eran otorgadas por las delegaciones a establecimientos mercantiles con impacto vecinal o zonal. Actualmente, este tipo de licencias deben registrarse en el SIAPEM para revalidar su vigencia.'
-        seven_html: 'Las declaraciones de apertura eran otorgadas por las delegaciones a establecimientos mercantiles considerados de bajo impacto. Actualmente, este tipo de avisos deben registrarse en el SIAPEM.'
+        two_html: 'Las actividades desarrolladas en un establecimiento mercantil, relativas a la intermediación, compraventa, arrendamiento, distribución de bienes o prestación de servicios, y que no se encuentran contempladas dentro de las actividades consideradas de Impacto zonal y de impacto vecinal.'
+        three_html: 'Es una clasificación para establecimientos cuyo giro modifica la armonía de la comunidad, como:  salones de fiesta, restaurantes, establecimientos de hospedaje, clubes privados, salas de cine, teatros y auditorios.'
+        four_html: 'Es una clasificación para establecimientos cuyo giro principal es vender o distribuir bebidas alcohólicas en envase abierto y/o al copeo para su consumo al interior.'
+        five_html: 'El Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles es el único medio  de registro para que las personas físicas o morales presenten sus Avisos, Solicitudes de Permiso, Registros o Autorizaciones para la apertura y funcionamiento de un establecimiento mercantil en la Ciudad de México.'
+        six_html: 'La fecha de registro se encuentra del lado superior derecho, abajo del folio del trámite y clave del establecimiento del  formato del SIAPEM que corresponda.'
+        seven_html: 'Las licencias de funcionamiento (A,  B,  ordinarias o especiales) eran otorgadas por las delegaciones a establecimientos mercantiles con impacto vecinal o zonal. Actualmente, este tipo de licencias deben registrarse en el SIAPEM para revalidar su vigencia.'
+        eight_html: 'Las declaraciones de apertura eran otorgadas por las delegaciones a establecimientos mercantiles considerados de bajo impacto. Actualmente, este tipo de avisos deben registrarse en el SIAPEM.'
       zoning:
         one_html: 'La clasificación de uso de suelo que se contempla en el Programa General de Desarrollo Urbano del Distrito Federal es la siguiente:
             <BR><BR>

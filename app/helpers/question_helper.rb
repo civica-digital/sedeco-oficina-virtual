@@ -7,7 +7,8 @@ module QuestionHelper
 		{title: t('help.question.impact.four'),text: t('help.answer.impact.four_html')},
 		{title: t('help.question.impact.five'),text: t('help.answer.impact.five_html')},
 		{title: t('help.question.impact.six'),text: t('help.answer.impact.six_html')},
-		{title: t('help.question.impact.seven'),text: t('help.answer.impact.seven_html')}]
+		{title: t('help.question.impact.seven'),text: t('help.answer.impact.seven_html')},
+		{title: t('help.question.impact.eight'),text: t('help.answer.impact.eight_html')},]
 	end
 
 	def get_help_zoning
