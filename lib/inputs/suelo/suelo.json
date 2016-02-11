@@ -52,7 +52,7 @@
                                 "-type": "normal",
                                 "texto": "(E)Equipamiento o (I)Industrial",
                                 "imagen": "industrial",
-                                "siguiente": "-5",
+                                "siguiente": "-7",
                                 "restricciones":[]
                             },
                             {
