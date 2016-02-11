@@ -3,7 +3,7 @@ es:
     index:
       textmain: "Conoce los requisitos que tienes y los que te faltan para que tu negocio este en regla."
       textmain_clic: "Haz clic aquí:"
-      dialog_text_html: 'Este es un cuestionario que brinda un <b><colorprimario>DIAGNÓSTICO SOBRE EL ESTATUS DE TU NEGOCIO</colorprimario></b>.<br><br> La aplicación <b><colorprimario>NO MUESTRA DIAGNÓSTICOS PARCIALES, por lo tanto te invitamos a que respondas todas las preguntas de la manera MÁS HONESTA POSIBLE</colorprimario></b>, para ofrecerte un diagnóstico integral y certero al finalizar el cuestionario.' 
+      dialog_text_html: 'Este es un cuestionario que brinda un <b><colorprimario>DIAGNÓSTICO SOBRE EL ESTATUS DE TU NEGOCIO</colorprimario></b>.<br><br> La aplicación <b><colorprimario>NO MUESTRA DIAGNÓSTICOS PARCIALES, por lo tanto te invitamos a que respondas todas las preguntas de la manera MÁS HONESTA POSIBLE</colorprimario></b>, para ofrecerte un diagnóstico integral y certero al finalizar el cuestionario.<br><br>La información que nos proporciones será anónima, a menos que, después de darte tu diagnóstico, decidas hacer una cita de asesoría con nosotros.' 
       button_text_html: "Comienza tu<BR>diagnóstico"
       text_footer: "Una herramienta de la Secretaría de Desarrollo Económico"
       close: "Cerrar"
