@@ -42,7 +42,7 @@
                             {
                                 "id":"5",
                                 "-type": "normal",
-                                "texto": "(E)Equipamiento,(AV)Áreas verdes o (EA)Espacio Abierto",
+                                "texto": "(E)Equipamiento, (I)Industrial, (AV)Áreas verdes o (EA)Espacio Abierto",
                                 "imagen": "espacio",
                                 "siguiente": "-5",
                                 "restricciones":[]
