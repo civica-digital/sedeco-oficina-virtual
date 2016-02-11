@@ -9,16 +9,19 @@
     %br
     = get_has_autodiagnostico(session[:has_protection])
 -if session[:make_protection]
-  %br
   = get_make_protection(session[:make_protection])
+  %br
 -if session[:license_sanitaria]
   %br
   = get_license_sanitaria(session[:license_sanitaria])
+
+-if session[:make_license_sanitaria]  
   %br
   = get_has_license_sanitaria(session[:make_license_sanitaria])
 -if session[:license_ambiental]
   %br
   = get_license_ambiental(session[:license_ambiental])
+-if session[:make_license_ambiental]
   %br
   = get_has_license_ambiental(session[:make_license_ambiental])
 %hr
@@ -43,9 +46,17 @@
   %br
   = get_license_sanitaria(session[:license_sanitaria])
   -has_empty = false
+-if session[:license_sanitaria] && !session[:make_license_sanitaria]  
+  %br
+  = get_has_license_sanitaria(session[:make_license_sanitaria])
+  -has_empty = false
 -if !session[:license_ambiental]
   %br
   = get_license_ambiental(session[:license_ambiental])
+  -has_empty = false
+-if session[:license_ambiental] && !session[:make_license_ambiental]
+  %br
+  = get_has_license_ambiental(session[:make_license_ambiental])
   -has_empty = false
 -if has_empty
   =t('safety.safety_diagnostic_empty')
@@ -61,9 +72,10 @@
 %hr
 -if locals[:impacto_usuario] == -2
   = has_not_debts(locals[:no_adeudos])
-%hr
+  %hr
 -if session[:aforo].to_i < 50 
   =t('safety.seguridad_minima_sin_proteccion_html')
+  %hr
 
 
 

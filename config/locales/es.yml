@@ -195,20 +195,20 @@ es:
       log_out: "Cerrar sesión"
   outputs:
     impact:
-      type_zonal: "Impacto Zonal"
+      type_zonal: "El impacto del negocio es Zonal"
       comment_zonal: "Debido a los datos que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_zonal: 'Siguiente paso "Hacer una cita"'
-      type_bajo: "Bajo Impacto"
+      type_bajo: ""
       comment_bajo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_bajo: 'Siguiente paso "Uso de suelo"'
-      type_vecinal: "Impacto Vecinal"
+      type_vecinal: ""
       comment_vecinal: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_vecinal: 'Siguiente paso "Uso de suelo"'
       comment_vecinal_cita: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_vecinal_cita: 'Siguiente paso "Hacer una cita"'
     zoning:
       type_sin_suelo: "Habitacional"
-      comment_sin_suelo: "Tu negocio mide menos del 20% de tu propiedad por lo que no requieres un uso de suelo diferente. Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
+      comment_sin_suelo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_sin_suelo: 'Siguiente paso "Protección civíl"'
       type_con_suelo: "H, HM, HO ó HC"
       comment_con_suelo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."

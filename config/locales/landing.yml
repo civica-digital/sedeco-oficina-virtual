@@ -3,10 +3,11 @@ es:
     index:
       textmain: "Conoce los requisitos que tienes y los que te faltan para que tu negocio este en regla."
       textmain_clic: "Haz clic aquí:"
+      dialog_text_html: 'Este es un cuestionario que brinda un <b><colorprimario>DIAGNÓSTICO SOBRE EL ESTATUS DE TU NEGOCIO</colorprimario></b>.<br><br> La aplicación <b><colorprimario>NO MUESTRA DIAGNÓSTICOS PARCIALES, por lo tanto te invitamos a que respondas todas las preguntas de la manera MÁS HONESTA POSIBLE</colorprimario></b>, para ofrecerte un diagnóstico integral y certero al finalizar el cuestionario.' 
       button_text_html: "Comienza tu<BR>diagnóstico"
       text_footer: "Una herramienta de la Secretaría de Desarrollo Económico"
       close: "Cerrar"
-      text_modal: "Aplicación realizada ...."
+      text_modal_html: 'Aplicación realizada por la <a href="http://www.sedecodf.gob.mx" target="_blank" class="colorprimario">Secretaría de Desarrollo Económico (SEDECO)</a>, el <a href="http://www.imco.org.mx" target="_blank" class="colorprimario">Instituto Méxicano de la Competitividad (IMCO)</a> y <a href="http://www.civica.digital" target="_blank" class="colorprimario">Cívica Digital</a> para ayudar a los usuarios a diagnosticar por medio de un cuestionario el estatus de su negocio en diversos rubros.<br><br>Es importante saber que <colorprimario><b>no se emiten diagnósticos parciales y se deben contestar todas las preguntas</b></colorprimario> para poder tener un buen diagnóstico.<br><br>La aplicación permite generar citas en SEDECO así como ver videos y archivos de la Secretaría para poder aclarar dudas del usuario y proporcionarle toda la información que requiera.'
       title_modal: "Oficina virtual SEDECO"
       menu:
         centro_titulo: "Centro de aprendizaje"

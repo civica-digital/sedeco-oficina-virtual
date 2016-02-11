@@ -114,9 +114,9 @@ module DiagnosticHelper
 
   def get_business_size(size_business,has_business)
     if has_business
-      "- Tienes un negocio que mide #{size_business} m2"
+      "- Tienes un negocio que mide #{size_business} m2."
     else
-      "- Negocio que mide #{size_business} m2"
+      "- Negocio que mide #{size_business} m2."
     end
   end
 
@@ -229,7 +229,7 @@ module DiagnosticHelper
 
   def get_has_protection(has_protection,aforo)
     if aforo.to_i < 50
-      "- Revisa los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
+      "- Revisar los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
     else
       if has_protection
         "- Te aplica un programa interno de protección civil."
@@ -245,9 +245,9 @@ module DiagnosticHelper
 
   def get_make_protection(make_protection)
     if make_protection
-      "- Tienes implementado un programa interno de protección civil."
+      "- Tienes autorizado e implementado un programa interno de protección civil."
     else
-      "- No tienes implementado un programa interno de protección civil."
+      "- No tienes autorizado e implementado un programa interno de protección civil."
     end
   end
 
