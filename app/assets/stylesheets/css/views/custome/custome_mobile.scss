@@ -35,6 +35,15 @@
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
+  .scroll-footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 150px;
+    z-index: 300;
+    background-color: #EEEEED;
+  }
 
 }
 
