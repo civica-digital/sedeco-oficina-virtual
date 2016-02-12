@@ -2,8 +2,12 @@ require 'rails_helper'
 
 describe 'User can set an appointment'  do
   scenario 'selecting a day from calendar', js: true do
+
+
     current_month = I18n.l(Time.now, format: "%B")
     visit "/citas"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+
 
     expect(calendar_input).to be_present
     expect(page).to have_content current_month.upcase
@@ -20,6 +24,7 @@ describe 'User can set an appointment'  do
   scenario 'selecting a day from calendar and filling the form', js: true do
     current_month = I18n.l(Time.now, format: "%B")
     visit "/citas"
+    page.driver.browser.manage.window.resize_to(1024, 768)
 
     expect(calendar_input).to be_present
     expect(page).to have_content current_month.upcase
@@ -42,6 +47,7 @@ describe 'User can set an appointment'  do
   scenario 'unless enters invalid data', js: true do
     current_month = I18n.l(Time.now, format: "%B")
     visit "/citas"
+    page.driver.browser.manage.window.resize_to(1024, 768)
 
     expect(page).to have_content current_month.upcase
 
@@ -61,6 +67,7 @@ describe 'User can set an appointment'  do
   scenario 'and an email with the appointment data is sent', js: true do
     current_month = I18n.l(Time.now, format: "%B")
     visit "/citas"
+    page.driver.browser.manage.window.resize_to(1024, 768)
 
     expect(calendar_input).to be_present
     expect(page).to have_content current_month.upcase
@@ -110,4 +117,5 @@ describe 'User can set an appointment'  do
   def sent_email
     ActionMailer::Base.deliveries.last
   end
+
 end

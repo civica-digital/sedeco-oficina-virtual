@@ -6,6 +6,7 @@ describe 'Admin can add resources' do
     login_as admin
 
     visit "/admins/panel"
+
     click_link "Ingresar"
     click_link "Agregar un recurso"
 

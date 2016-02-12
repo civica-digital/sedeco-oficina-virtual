@@ -38,4 +38,5 @@ describe 'User can see resources'  do
   def resource_count
     all(".resource").size
   end
+
 end

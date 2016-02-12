@@ -4,6 +4,8 @@ describe 'User can see tree zoning'  do
   scenario 'and he has zoning equipamiento', js: true do
     
     visit "/uso_de_suelo"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+
     page.find("#menu-toggleint").click
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
     page.find("#image1-5").click
@@ -15,6 +17,8 @@ describe 'User can see tree zoning'  do
   scenario 'and he has home business with home <20', js: true do
     
     visit "/uso_de_suelo"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+
     page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
@@ -43,6 +47,8 @@ describe 'User can see tree zoning'  do
   scenario 'and he has home business with home >20', js: true do
     
     visit "/uso_de_suelo"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+
     page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
@@ -75,6 +81,8 @@ describe 'User can see tree zoning'  do
   scenario 'and he has NOT home business', js: true do
     
     visit "/uso_de_suelo"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+    
     page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
@@ -96,6 +104,5 @@ describe 'User can see tree zoning'  do
     expect(page).to have_content "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
 
   end
-
 
 end

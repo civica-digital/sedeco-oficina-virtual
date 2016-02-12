@@ -5,6 +5,8 @@ describe 'User can see tree safety'  do
   scenario 'and he has aforo > 50', js: true do
     
     visit "/proteccion_civil_y_otros"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+
     page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cuál es tu aforo?"
@@ -30,6 +32,8 @@ describe 'User can see tree safety'  do
     scenario 'and he has aforo < 50', js: true do
     
     visit "/proteccion_civil_y_otros"
+    page.driver.browser.manage.window.resize_to(1024, 768)
+    
     page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cuál es tu aforo?"
@@ -48,6 +52,5 @@ describe 'User can see tree safety'  do
     expect(page).to have_content "Terminamos."
 
   end
-
 
 end
