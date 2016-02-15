@@ -17,7 +17,6 @@ require 'capybara/rspec'
 # users commonly want.
 
 require 'coveralls'
-
 Coveralls.wear!('rails')
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
