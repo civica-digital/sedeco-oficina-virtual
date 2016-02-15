@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/civica-digital/sedeco-oficina-virtual.svg?branch=master)](https://travis-ci.org/civica-digital/sedeco-oficina-virtual)
 [![Code Climate](https://codeclimate.com/github/civica-digital/sedeco-oficina-virtual/badges/gpa.svg)](https://codeclimate.com/github/civica-digital/sedeco-oficina-virtual)
-[![Test Coverage](https://coveralls.io/repos/github/civica-digital/sedeco-oficina-virtual/badge.svg?branch=master](https://coveralls.io/github/civica-digital/sedeco-oficina-virtual)
+[![Test Coverage](https://coveralls.io/repos/github/civica-digital/sedeco-oficina-virtual/badge.svg](https://coveralls.io/github/civica-digital/sedeco-oficina-virtual)
 
 <img src="https://raw.githubusercontent.com/civica-digital/sedeco-oficina-virtual/master/app/assets/images/logo.png" alt="" height="100%" width="100%"/>
 ===
