@@ -27,6 +27,8 @@ gem 'figaro'
 gem 'wicked_pdf' #crear PDF
 gem "font-awesome-rails"
 
+gem 'coveralls', require: false
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

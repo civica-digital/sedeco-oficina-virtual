@@ -63,13 +63,13 @@
   function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
     for(i = parseInt(actual)+1; i <= number_of_views; i++){
       var element = document.getElementById(i);
-        if(element != null){
+        if(element !== null){
           element.setAttribute("class", "hidden");
         }
     }
-    if(tipo == TIPO_NORMAL){
+    if(tipo === TIPO_NORMAL){
       save_advance(actual,clicked,next,restriction,next_restrictions);
-    }else if(tipo == TIPO_FECHA){
+    }else if(tipo === TIPO_FECHA){
      save_advance_date(actual,clicked,next,restriction,next_restrictions, date);
     }
     
@@ -81,12 +81,12 @@
       for(j=1; j<8; j++){
 
         var element = document.getElementById(i+"-"+j)
-        if(element != null){
+        if(element !== null){
           element.style.color = '#000000';//Cambiamos el color del texto por default
         }
 
         var element = document.getElementById("image"+i+"-"+j);
-        if(element != null){
+        if(element !== null){
           element.classList.remove("rcorner-selected");
         }
       }
@@ -120,7 +120,7 @@
           show_view(next, restriction, next_restrictions);
          },
         error: function(){
-          alert('error');
+          //alert('error');
         }, 
          data: $.param({ savedate: {actual: actual, clicked: clicked, date: date}})
     });
@@ -193,7 +193,7 @@
     var superficie_s = $("#superficie_s").val();
     var mobiliario_s = $("#mobiliario_s").val();
 
-    if(superficie_s!= "" && mobiliario_s!= "" && superficie_t!= "" && mobiliario_t!= "" && impact_t!= ""){
+    if(superficie_s !== "" && mobiliario_s !== "" && superficie_t !== "" && mobiliario_t !== "" && impact_t !== ""){
      if(parseInt(superficie_s)<parseInt(mobiliario_s)){
         alert('El mobiliario  en el área de servicio no puede ser mayor al establecimiento');
         $("#superficie_s").val("");
@@ -202,7 +202,7 @@
         alert('El mobiliario  en el área de atención no puede ser mayor al establecimiento');
         $("#superficie_t").val("");
         $("#mobiliario_t").val("");
-      }else if(parseInt(superficie_s)+parseInt(superficie_t) != size){
+      }else if(parseInt(superficie_s)+parseInt(superficie_t) !== size){
         alert("La suma del area de servicio y el area de atención deben ser iguales al tamaño de tu negocio: "+size+"m2");
         $("#superficie_s").val("");
         $("#superficie_t").val("");
@@ -301,5 +301,5 @@ $(function () {
 
 
 function hello_world(){
-  alert('hola');
+  //alert('hola');
 }

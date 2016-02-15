@@ -20,6 +20,8 @@
 
   }
 
+
+/*****************pantallas medianas*********************/
   @media screen 
   and (min-width: 768px) 
   and (max-width: 1024px) 
@@ -49,6 +51,36 @@
   }
 
   @media screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (-webkit-device-pixel-ratio: 1){
+    .scroll-footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 120px;
+        z-index: 300;
+        background-color: #EEEEED;
+    }
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+      width: 100%;
+      *width: 100%;
+      margin-left: 0%;
+    }
+    
+    .margin-top-dropdown{
+       margin-top:20px;
+       margin-bottom: 20px;
+       width:100%
+    }
+  }
+
+
+/***************Pantallas grandes*****************/
+  @media screen 
   and (min-width: 1024px) 
   and (-webkit-device-pixel-ratio: 2){
     .scroll-footer{
@@ -65,5 +97,28 @@
     .seven-cols .col-lg-1 {
       width: 12.5%;
       *width: 12.5;
+
+    }
+  }
+
+
+  @media screen 
+  and (min-width: 1024px) 
+  and (-webkit-device-pixel-ratio: 1){
+    .scroll-footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        height: 80px;
+        z-index: 300;
+        background-color: #EEEEED;
+    }
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+      width: 12.5%;
+      *width: 12.5;
+
     }
   }
