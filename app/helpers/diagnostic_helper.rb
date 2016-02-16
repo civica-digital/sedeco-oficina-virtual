@@ -36,12 +36,10 @@ module DiagnosticHelper
     
   end
 
-  def get_has_open_declaration(has_open_declaration)
+  def get_has_open_declaration(has_open_declaration, has_siapem)
 
-    if has_open_declaration
-      "- Cuentas con tu declaración de apertura anterior a Marzo 2011."
-    else
-      "- No cuentas con tu declaración de apertura."
+    if has_open_declaration && !has_siapem
+      "- Cuentas con tu declaración de apertura anterior a Marzo 2011, este documento ya no es vigente, debes regisrarte en el SIAPEM."
     end
     
   end
