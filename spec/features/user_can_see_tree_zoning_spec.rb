@@ -6,7 +6,7 @@ describe 'User can see tree zoning'  do
     visit "/uso_de_suelo"
     page.driver.browser.manage.window.resize_to(1024, 768)
 
-    page.find("#menu-toggleint").click
+   # page.find("#menu-toggleint").click
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
     page.find("#image1-5").click
 
@@ -19,7 +19,7 @@ describe 'User can see tree zoning'  do
     visit "/uso_de_suelo"
     page.driver.browser.manage.window.resize_to(1024, 768)
 
-    page.find("#menu-toggleint").click
+    #page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
     page.find("#image1-1").click
@@ -49,7 +49,7 @@ describe 'User can see tree zoning'  do
     visit "/uso_de_suelo"
     page.driver.browser.manage.window.resize_to(1024, 768)
 
-    page.find("#menu-toggleint").click
+    #page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
     page.find("#image1-1").click
@@ -83,7 +83,7 @@ describe 'User can see tree zoning'  do
     visit "/uso_de_suelo"
     page.driver.browser.manage.window.resize_to(1024, 768)
     
-    page.find("#menu-toggleint").click
+    #page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
     page.find("#image1-1").click
