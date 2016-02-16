@@ -9,10 +9,7 @@
 
 
 /* ----------- Web ----------- */
-@media screen 
-  and (min-width: 319px) 
-  and (max-width: 768px)  
-  and (-webkit-device-pixel-ratio: 2) {
+@media (min-width: 319px){
 
   .six-cols .col-md-1,
   .six-cols .col-sm-1,
@@ -51,11 +48,8 @@
       background-color: #EEEEED;
     }
   }
-
-  @media screen 
-  and (min-width: 768px) 
-  and (max-width: 1024px) 
-  and (-webkit-device-pixel-ratio: 2){
+/*****************pantallas medianas*********************/
+  @media (min-width: 768px){
 
   .container-impacto {
     width: 90%;
@@ -89,9 +83,8 @@
       }
   }
   
-  @media screen 
-  and (min-width: 1024px) 
-  and (-webkit-device-pixel-ratio: 2){
+/***************Pantallas grandes*****************/
+  @media (min-width: 1024px){
   
   .container-impacto {
     width: 90%;
