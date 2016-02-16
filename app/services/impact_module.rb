@@ -2,16 +2,13 @@ module ImpactModule
 
   #guarda los valores clickeados en la session del usuario
   def save_advance_date_impact(actual, clicked, date)
-    case actual.to_i
-      when 5 #pregunta 5
-        case clicked.to_i
-          when 2
-            session[:date_siapem] = 0
+    if actual.to_i == 5
+      case clicked.to_i
+        when 2
+          session[:date_siapem] = 0
         else
           session[:date_siapem] = date
-        end
-    else
-    
+      end
     end
   end
 
@@ -22,9 +19,7 @@ module ImpactModule
         session[:has_bussine] = true
       when 2
         session[:has_bussine] = false
-      else
-        session[:has_bussine] = false
-      end
+    end
   end
 
   #guarda tipo de impacto
@@ -34,9 +29,7 @@ module ImpactModule
         session[:impacto_usuario] = -2
       when 6
         session[:impacto_usuario] = -4
-      else
-        session[:impacto_usuario] = -4
-      end
+    end
   end
 
   #guarda tipo de impacto
@@ -46,9 +39,7 @@ module ImpactModule
         session[:impacto_usuario] = -3
       when 5
         session[:impacto_usuario] = -1
-      else
-        session[:impacto_usuario] = -1
-      end
+    end
   end
 
   #el usuario_tiene_siapem
@@ -60,9 +51,7 @@ module ImpactModule
         session[:has_siapem] = false
       when 3
         session[:has_siapem] = false
-      else
-        session[:has_siapem] = false
-      end
+    end
   end
 
   #si cuenta con licencia especial
@@ -74,9 +63,7 @@ module ImpactModule
         session[:has_special_license] = false
       when 3
         session[:has_special_license] = false
-      else
-        session[:has_special_license] = false
-      end
+    end
   end
 
   #si cuenta con declaracion de apertura
@@ -88,10 +75,6 @@ module ImpactModule
         session[:has_open_declaration] = false
       when 3
         session[:has_open_declaration] = false
-      else
-        session[:has_open_declaration] = false
-      end
+    end
   end
-
-
 end

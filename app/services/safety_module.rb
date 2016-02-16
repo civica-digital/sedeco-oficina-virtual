@@ -8,8 +8,6 @@ module SafetyModule
         session[:has_autodiagnostico] = false
       when 3
         session[:has_autodiagnostico] = false
-      else
-        session[:has_autodiagnostico] = false
     end
   end
 
@@ -20,8 +18,6 @@ module SafetyModule
       when 2
         session[:vobo_seguridad] = false
       when 3
-        session[:vobo_seguridad] = false
-      else
         session[:vobo_seguridad] = false
     end
   end
@@ -34,9 +30,7 @@ module SafetyModule
         session[:has_protection] = false
       when 3
         session[:has_protection] = false
-      else
-        session[:has_protection] = false
-      end
+    end
   end
 
   def save_make_protection(clicked)
@@ -47,9 +41,7 @@ module SafetyModule
         session[:make_protection] = false
       when 3
         session[:make_protection] = false
-      else
-        session[:make_protection] = false
-      end    
+    end    
   end
 
 
@@ -61,9 +53,7 @@ module SafetyModule
         session[:license_ambiental] = false
       when 3
         session[:license_ambiental] = false
-      else
-        session[:license_ambiental] = true
-      end
+    end
   end
 
 
@@ -75,8 +65,6 @@ module SafetyModule
         session[:make_license_ambiental] = false
       when 3
         session[:make_license_ambiental] = false
-    else
-      session[:make_license_ambiental] = true
     end 
   end
 
@@ -89,9 +77,7 @@ module SafetyModule
         session[:license_sanitaria] = false
       when 3
         session[:license_sanitaria] = false
-      else
-        session[:license_sanitaria] = true
-      end
+    end
   end
 
   def save_make_license_sanitaria(clicked)
@@ -102,8 +88,6 @@ module SafetyModule
         session[:make_license_sanitaria] = false
       when 3
         session[:make_license_sanitaria] = false
-      else
-        session[:make_license_sanitaria] = true
     end
   end
 
@@ -115,23 +99,18 @@ module SafetyModule
         session[:no_adeudos] = false
       when 3
         session[:no_adeudos] = false
-      else
-        session[:no_adeudos] = false
-      end
+    end
   end
 
   #guarda los valores clickeados en la session del usuario
   def save_advance_rank_safety(actual, clicked, date)
-    case actual.to_i
-      when 1
-        case clicked.to_i
-          when 2
-            session[:aforo] = 0
-          else
-            session[:aforo] = date
-          end
-      else
+    if actual.to_i == 1 
+      case clicked.to_i
+        when 2
+          session[:aforo] = 0
+        else
+          session[:aforo] = date
       end
+    end
   end
-
 end

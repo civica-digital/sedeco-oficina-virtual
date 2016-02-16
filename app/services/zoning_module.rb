@@ -15,9 +15,7 @@ module ZoningModule
         session[:type_zoning] = 'Equipamiento'
       when 6
         session[:type_zoning] = 'Sin información'
-      else
-        session[:type_zoning] = -1
-      end
+    end
   end
 
   #tiene negocio en casa
@@ -27,9 +25,7 @@ module ZoningModule
         session[:is_business_home] = true
       when 2
         session[:is_business_home] = false
-      else
-        session[:is_business_home] = false
-      end
+    end
   end
 
   #tiene uso de suelo
@@ -41,9 +37,7 @@ module ZoningModule
         session[:has_zoning] = false
       when 3
         session[:has_zoning] = false
-      else
-        session[:has_zoning] = false
-      end
+    end
   end
 
   #tipo de uso de suelo
@@ -59,9 +53,7 @@ module ZoningModule
         session[:has_type_zoning] = "Específico"
       when 5
         session[:has_type_zoning] = "Sin información"
-      else
-        session[:has_type_zoning] = "Sin información"
-      end
+    end
   end
 
   #tamano de la vivienda
@@ -71,7 +63,7 @@ module ZoningModule
         session[:size_house] = 0
       else
         session[:size_house] = date
-      end
+    end
   end
 
   #tamano del negocio
@@ -82,7 +74,7 @@ module ZoningModule
       else
         session[:size_business] = date
         validate_not_zoning
-      end
+    end
   end
 
   #fecha del uso de suelo
@@ -92,7 +84,7 @@ module ZoningModule
         session[:date_zoning] = 0
       else
         session[:date_zoning] = date
-      end
+    end
   end
 
   #delegacion del negocio
@@ -102,7 +94,7 @@ module ZoningModule
         session[:city_zoning] = nil
       else
         session[:city_zoning] = date
-      end
+    end
   end
 
   #colonia del negocio
@@ -112,7 +104,7 @@ module ZoningModule
         session[:town_business] = nil
       else
         session[:town_business] = date
-      end
+    end
   end
 
   #valida si el negocio aplica para no tramitar uso de suelo
@@ -120,8 +112,6 @@ module ZoningModule
     unless session[:size_house].nil? || session[:size_house].to_f == 0
       business = session[:size_business].to_f
       house = session[:size_house].to_f
-      puts business
-      puts house
       if (business*100)/house <= 20.0
        session[:uso_de_suelo] = true
       else
@@ -129,7 +119,4 @@ module ZoningModule
       end
     end
   end
-
-
-
 end
