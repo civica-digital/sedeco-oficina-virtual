@@ -7,7 +7,7 @@ describe 'User can see tree safety'  do
     visit "/proteccion_civil_y_otros"
     page.driver.browser.manage.window.resize_to(1024, 768)
 
-    page.find("#menu-toggleint").click
+    #page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cuál es tu aforo?"
     fill_in 'date_1_1', :with => '100'
@@ -34,7 +34,7 @@ describe 'User can see tree safety'  do
     visit "/proteccion_civil_y_otros"
     page.driver.browser.manage.window.resize_to(1024, 768)
     
-    page.find("#menu-toggleint").click
+   # page.find("#menu-toggleint").click
 
     expect(page).to have_content "¿Cuál es tu aforo?"
     fill_in 'date_1_1', :with => '49'
