@@ -34,15 +34,7 @@ private
         elsif next_value == "-1"
           format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_bajo'), :text =>t('outputs.impact.comment_bajo'),:next_text=>t('outputs.impact.next_text_bajo'), :path=> "#{zoning_index_path}" ,:new_window => false}}
         else  
-          if next_value == "4"
-            if session[:impacto_usuario] == -2
-              format.js { render :js => "openModalDiagnostic('Tienes IMPACTO VECINAL',#{next_value},#{progreso_de_impacto},0,0);"}
-            elsif session[:impacto_usuario] == -1
-              format.js { render :js => "openModalDiagnostic('Tienes BAJO IMPACTO',#{next_value},#{progreso_de_impacto},0,0);"}
-            end
-          else
             format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto},0,0);"}
-          end
         end
       end
     end
