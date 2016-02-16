@@ -196,7 +196,7 @@ es:
   outputs:
     impact:
       type_zonal: "El impacto del negocio es Zonal"
-      comment_zonal: "Debido a los datos que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
+      comment_zonal: "Debido a los datos que recabamos hasta este punto, lo más conveniente para dar seguimiento a tu caso es hacer una cita."
       next_text_zonal: 'Siguiente paso "Hacer una cita"'
       type_bajo: ""
       comment_bajo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
@@ -204,7 +204,7 @@ es:
       type_vecinal: ""
       comment_vecinal: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
       next_text_vecinal: 'Siguiente paso "Uso de suelo"'
-      comment_vecinal_cita: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
+      comment_vecinal_cita: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimiento a tu caso es hacer una cita."
       next_text_vecinal_cita: 'Siguiente paso "Hacer una cita"'
       text_modal_html: '<b><colorprimario>Tienes %{impacto}</colorprimario></b><br><br> Este es un dato muy importante, si crees que no es correcto, por favor vuelve a iniciar el cuestionario.'
       close: 'Continuar'
@@ -217,10 +217,10 @@ es:
       next_text_con_suelo: 'Siguiente paso "Protección civíl"'
       type_equipamiento: "Area verde o Espacio abierto"
       type_industrial: "Equipamiento o Industrial"
-      comment_equipamiento: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
+      comment_equipamiento: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimiento a tu caso es hacer una cita."
       next_text_equipamiento: 'Siguiente paso "Hacer una cita"'
       type_derechos: "Derechos adquiridos"
-      comment_derechos: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
+      comment_derechos: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimiento a tu caso es hacer una cita."
       next_text_derechos: 'Siguiente paso "Hacer una cita"'
     safety:
       type_vobo: "No tiene el visto bueno de seguridad."
