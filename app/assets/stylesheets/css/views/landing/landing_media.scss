@@ -28,6 +28,16 @@
     line-height: 20px;
     height: 50px;
   }
+
+  .logo-landing{
+    width: 90% !important;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+
+  }
 }
 
   @media (min-width: 768px){
@@ -48,6 +58,16 @@
     line-height: 21px;
     height: 60px;
   }
+
+  .logo-landing{
+    width: 60% !important;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+
+}
 }
   
   @media (min-width: 1024px){
@@ -68,5 +88,15 @@
     line-height: 21px;
     height: 60px;
   }
+
+  .logo-landing{
+    width: 60% !important;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+
+}
 
   }
