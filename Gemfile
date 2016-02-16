@@ -27,7 +27,7 @@ gem 'figaro'
 gem 'wicked_pdf' #crear PDF
 gem "font-awesome-rails"
 
-gem 'coveralls', require: false
+
 
 group :development, :test do
   gem 'byebug'
@@ -50,4 +50,5 @@ end
 group :test do
   gem 'capybara'
   gem 'selenium-webdriver', '2.52.0'
+  gem "codeclimate-test-reporter", require: nil
 end
