@@ -60,13 +60,6 @@
     progressBar(impacto, suelo, seguiridad);
   }
 
-  //muestra modal antes de seguir el arbol
-  function openModalDiagnostic(value_impacto,id, impacto, suelo, seguiridad){
-     hidden_div(id, impacto, suelo, seguiridad);
-     $('#myModalImpact').find('colorprimario').html('<span style="color:#E6007E;">'+value_impacto+'</span>');
-     $('#myModalImpact').modal('show');
-  }
-
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
   function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
     for(i = parseInt(actual)+1; i <= number_of_views; i++){
