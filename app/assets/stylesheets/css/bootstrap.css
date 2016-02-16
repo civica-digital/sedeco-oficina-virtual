@@ -4353,6 +4353,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     box-shadow: none;
   }
 }
+
+.navbar-nav > li {
+    float: left;
+    list-style-type: none;
+} 
+
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
   border-top-right-radius: 0;
