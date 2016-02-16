@@ -1,381 +1,93 @@
 module ProgressModule 
-	#guarda los valores clickeados por el momento en la session del usuario
-  #*************************************IMPACTO*********************************
+#guarda los valores clickeados en la session del usuario
+
+#***********IMPACTO************************
+  #recibe seleccion y guarda en sesion
   def save_advance_impact(actual, clicked)
-   	case actual.to_i
-  	 	when 1 #pregunta uno
-  	 		case clicked.to_i
-  		 		when 1
-  		 			session[:has_bussine] = true
-  		 		when 2
-  		 			session[:has_bussine] = false
-  		 	else
-  				session[:has_bussine] = false
-  	 		end
+    case actual.to_i
+      when 1 
+        save_has_bussine(clicked.to_i)
+      when 2 
+        save_impacto_vecinal_usuario(clicked.to_i)
+      when 3 
+        save_impacto_zonal_usuario(clicked.to_i)  
+      when 4
+        save_has_siapem(clicked.to_i)
+      when 6
+        save_has_special_license(clicked.to_i)
+      when 7
+        save_has_open_declaration(clicked.to_i)
+      else
+    end
 
-  	 	when 2 #pregunta 2
-  	 		case clicked.to_i
-  		 		when 1..5
-  					session[:impacto_usuario] = -2
-  		 		when 6
-  		 			session[:impacto_usuario] = -4
-  		 	else
-  		 		session[:impacto_usuario] = -4
-  	 		end
-
-  	 	when 3 #pregunta 3
-	        case clicked.to_i
-	          when 1..4
-	            session[:impacto_usuario] = -3
-	          when 5
-	            session[:impacto_usuario] = -1
-	        else
-	          session[:impacto_usuario] = -1
-	        end
-
-  	 	when 4 #pregunta 4
-	        case clicked.to_i
-	          when 1
-	            session[:has_siapem] = true
-	          when 2
-	            session[:has_siapem] = false
-	          when 3
-	            session[:has_siapem] = false
-	        else
-	          session[:has_siapem] = false
-	        end
-
-  	 	when 6 #pregunta 6
-	        case clicked.to_i
-	          when 1
-	            session[:has_special_license] = true
-	          when 2
-	            session[:has_special_license] = false
-	          when 3
-	            session[:has_special_license] = false
-	        else
-	          session[:has_special_license] = false
-	        end
-
-      when 7 #pregunta 7
-        case clicked.to_i
-          when 1
-            session[:has_open_declaration] = true
-          when 2
-            session[:has_open_declaration] = false
-          when 3
-            session[:has_open_declaration] = false
-        else
-          session[:has_open_declaration] = false
-        end
-  	else
-   	
-   	end
   end
 
 
-  #guarda los valores clickeados por el momento en la session del usuario
-  def save_advance_date_impact(actual, clicked, date)
+#***************USO DE SUELO****************
+  def save_advance_zoning(actual, clicked) 
     case actual.to_i
-      when 5 #pregunta 5
-        case clicked.to_i
-          when 2
-            session[:date_siapem] = 0
-        else
-          session[:date_siapem] = date
-        end
-    else
-    
+      when 1
+        save_type_zoning(clicked.to_i)
+      when 2
+        save_is_business_home(clicked.to_i)
+      when 5
+        save_has_zoning(clicked.to_i)
+      when 7
+        save_has_type_zoning(clicked.to_i)
+      else
     end
   end
-#*************************************SEGURIDAD*********************************
+
+
+  def save_advance_rank_zoning(actual, clicked, date)
+   case actual.to_i
+      when 3
+        save_size_house(clicked.to_i, date)
+      when 4
+        save_size_business(clicked.to_i, date)
+      when 6
+        save_date_zoning(clicked.to_i, date)
+      when 8
+        save_city_zoning(clicked.to_i, date)
+      when 9
+        save_town_business(clicked.to_i, date)
+    else
+    end
+  end
+
+  #**********************SEGURIDAD*********************
   def save_advance_safety(actual, clicked)
     case actual.to_i
-      when 3 #pregunta 3
-        case clicked.to_i
-          when 1
-            session[:has_autodiagnostico] = true
-          when 2
-            session[:has_autodiagnostico] = false
-          when 3
-            session[:has_autodiagnostico] = false
-        else
-          session[:has_autodiagnostico] = false
-        end
-          
-      when 4 #pregunta 4
-        case clicked.to_i
-          when 1
-            session[:vobo_seguridad] = true
-          when 2
-            session[:vobo_seguridad] = false
-          when 3
-            session[:vobo_seguridad] = false
-        else
-          session[:vobo_seguridad] = false
-        end
-          
-      when 5 #pregunta 5
-        case clicked.to_i
-          when 1
-            session[:has_protection] = true
-          when 2
-            session[:has_protection] = false
-          when 3
-            session[:has_protection] = false
-        else
-          session[:has_protection] = false
-        end
-          
-      when 6 #pregunta 6
-        case clicked.to_i
-          when 1
-            session[:make_protection] = true
-          when 2
-            session[:make_protection] = false
-          when 3
-            session[:make_protection] = false
-        else
-          session[:make_protection] = false
-        end
-          
-      when 7 #pregunta 7
-        case clicked.to_i
-          when 1
-            session[:license_ambiental] = true
-          when 2
-            session[:license_ambiental] = false
-          when 3
-            session[:license_ambiental] = false
-        else
-          session[:license_ambiental] = true
-        end
-
-      when 8 #pregunta 8
-        case clicked.to_i
-          when 1
-            session[:make_license_ambiental] = true
-          when 2
-            session[:make_license_ambiental] = false
-          when 3
-            session[:make_license_ambiental] = false
-        else
-          session[:make_license_ambiental] = true
-        end
-          
-      when 9 #pregunta 9
-        case clicked.to_i
-          when 1
-            session[:license_sanitaria] = true
-          when 2
-            session[:license_sanitaria] = false
-          when 3
-              session[:license_sanitaria] = false
-        else
-          session[:license_sanitaria] = true
-        end
-
-      when 10 #pregunta 10
-        case clicked.to_i
-          when 1
-            session[:make_license_sanitaria] = true
-          when 2
-            session[:make_license_sanitaria] = false
-          when 3
-              session[:make_license_sanitaria] = false
-        else
-          session[:make_license_sanitaria] = true
-        end
-
-      when 11 #pregunta 9
-        case clicked.to_i
-          when 1
-            session[:no_adeudos] = true
-          when 2
-            session[:no_adeudos] = false
-          when 3
-            session[:no_adeudos] = false
-        else
-          session[:no_adeudos] = false
-        end
-      
+      when 3
+        save_has_autodiagnostico(clicked.to_i)
+      when 4
+        save_vobo_seguridad(clicked.to_i)
+      when 5
+        save_has_protection(clicked.to_i)  
+      when 6 
+        save_make_protection(clicked.to_i) 
+      when 7 
+        save_license_ambiental(clicked.to_i)
+      when 8
+        save_make_license_ambiental(clicked.to_i)
+      when 9
+        save_license_sanitaria(clicked.to_i)
+      when 10
+        save_make_license_sanitaria(clicked.to_i)
+      when 11
+        save_no_adeudos(clicked.to_i)
       else
       end
   end
 
-
-    #guarda los valores clickeados por el momento en la session del usuario
-  def save_advance_rank_safety(actual, clicked, date)
-    case actual.to_i
-      when 1 #pregunta 1
-        case clicked.to_i
-          when 2
-            session[:aforo] = 0
-          else
-            session[:aforo] = date
-          end
-      else
-      end
-  end
-
+  #hace un set del aforo
   def save_aforo(value)
     session[:aforo] = value
   end
 
-#*************************************USO DE SUELO*********************************
-  def save_advance_zoning(actual, clicked) 
-    case actual.to_i
-      when 1#pregunta 1
-        case clicked.to_i
-          when 1
-            session[:type_zoning] = 'Habitacional'
-          when 2
-            session[:type_zoning] = 'Habitacional Mixto'
-          when 3
-            session[:type_zoning] = 'Habitacional con Oficina'
-          when 4
-            session[:type_zoning] = 'Habitacional con Comercio'
-          when 5
-            session[:type_zoning] = 'Equipamiento'
-          when 6
-            session[:type_zoning] = 'Sin información'
-        else
-          session[:type_zoning] = -1
-        end
-      when 2#pregunta 2
-        case clicked.to_i
-          when 1
-            session[:is_business_home] = true
-          when 2
-            session[:is_business_home] = false
-        else
-          session[:is_business_home] = false
-        end
-      when 5#pregunta 5
-        case clicked.to_i
-          when 1
-            session[:has_zoning] = true
-          when 2
-            session[:has_zoning] = false
-          when 3
-            session[:has_zoning] = false
-        else
-          session[:has_zoning] = false
-        end
-      when 7#pregunta 7
-        case clicked.to_i
-          when 1
-            session[:has_type_zoning] = "Derechos adquiridos"
-          when 2
-            session[:has_type_zoning] = "Certificado único de zonificación"
-          when 3
-            session[:has_type_zoning] = "Especial"
-          when 4
-            session[:has_type_zoning] = "Específico"
-          when 5
-            session[:has_type_zoning] = "Sin información"
-        else
-          session[:has_type_zoning] = "Sin información"
-        end
-
-    else
-    
-    end
-  end
-
-    #guarda los valores clickeados por el momento en la session del usuario
-  def save_advance_rank_zoning(actual, clicked, date)
-   case actual.to_i
-      when 3 #pregunta 3
-        case clicked.to_i
-          when 2
-            session[:size_house] = 0
-        else
-          session[:size_house] = date
-        end
-      when 4 #pregunta 4
-        case clicked.to_i
-          when 2
-            session[:size_business] = 0
-        else
-          session[:size_business] = date
-          validate_not_zoning
-        end
-      when 6 #pregunta 6
-        case clicked.to_i
-          when 2
-            session[:date_zoning] = 0
-        else
-          session[:date_zoning] = date
-        end
-      when 8 #pregunta 8
-        case clicked.to_i
-          when 2
-            session[:city_zoning] = nil
-        else
-          session[:city_zoning] = date
-        end
-      
-      when 9 #pregunta 9
-        case clicked.to_i
-          when 2
-            session[:town_business] = nil
-        else
-          session[:town_business] = date
-        end
-    else
-    
-    end
-  end
-
-
-  #valida si el negocio aplica para no tramitar uso de suelo
-  def validate_not_zoning
-    unless session[:size_house].nil? || session[:size_house].to_f == 0
-      business = session[:size_business].to_f
-      house = session[:size_house].to_f
-      puts business
-      puts house
-      if (business*100)/house <= 20.0
-       session[:uso_de_suelo] = true
-      else
-        session[:uso_de_suelo] = false
-      end
-    end
-  end
-
-
+  #limpia todos los valores de la sesion
   def clean_params_session
-    puts 'Clean all params'
-    session[:has_bussine] = nil
-    session[:impacto_usuario] = nil
-    session[:has_siapem] = nil
-    session[:has_special_license] = nil
-    session[:has_open_declaration] = nil
-    session[:date_siapem] = nil
-
-    session[:type_zoning]= nil
-    session[:is_business_home] = nil
-    session[:has_zoning] = nil
-    session[:has_type_zoning] = nil
-    session[:size_house]= nil
-    session[:size_business] = nil
-    session[:date_zoning] = nil
-    session[:city_zoning] = nil
-    session[:town_business] = nil
-    session[:uso_de_suelo] = nil
-
-    session[:has_autodiagnostico] = nil
-    session[:vobo_seguridad] = nil
-    session[:has_protection] = nil
-    session[:make_protection] = nil
-    session[:license_ambiental] = nil
-    session[:make_license_ambiental] = nil
-    session[:license_sanitaria] = nil
-    session[:make_license_sanitaria] = nil
-    session[:no_adeudos] = nil
-    session[:aforo] = nil
-
+    session.clear
   end
 
 end

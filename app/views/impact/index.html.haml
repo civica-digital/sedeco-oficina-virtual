@@ -32,17 +32,10 @@
                                                             :restrictions =>@respuestas_uso_restriccion_array,
                                                             :next_restrictions=> @respuestas_siguiente_restriccion_array,
                                                             :rank_init => @respuestas_rango_array}
-        
         .div.diagnostic.hidden{:id=>"diagnostic"}         
           =render "shared/outputs/diagnostic_impact", impacto: @tipo_de_impacto
         .div.margin-bottom-end-page  
           =render "shared/progressbar"
-
-
-
-
-
-
 
 
 

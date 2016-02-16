@@ -23,6 +23,7 @@ private
     unless params[:pagetime].blank?    
       next_value = getNext(params[:pagetime][:next],params[:pagetime][:restriction],params[:pagetime][:next_restrictions])
       progreso_de_impacto = get_progress(params[:pagetime][:totals],next_value)
+
       respond_to do |format|
         if next_value == "-3"
           format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_zonal'), :text =>t('outputs.impact.comment_zonal'),:next_text=>t('outputs.impact.next_text_zonal'), :path=> "#{appointments_path}", :new_window => true} }
@@ -32,8 +33,8 @@ private
           format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_vecinal'), :text =>t('outputs.impact.comment_vecinal_cita'),:next_text=>t('outputs.impact.next_text_vecinal_cita'), :path=> "#{appointments_path}", :new_window => true }}
         elsif next_value == "-1"
           format.js { render :partial => 'shared/outputs/finish_impact', :locals => {:type => t('outputs.impact.type_bajo'), :text =>t('outputs.impact.comment_bajo'),:next_text=>t('outputs.impact.next_text_bajo'), :path=> "#{zoning_index_path}" ,:new_window => false}}
-        else    
-          format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto},0,0);"}
+        else  
+            format.js { render :js => "hidden_div(#{next_value},#{progreso_de_impacto},0,0);"}
         end
       end
     end

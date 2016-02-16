@@ -10,7 +10,7 @@ describe 'User can see tree zoning'  do
     expect(page).to have_content "¿Cual es el uso de suelo del inmueble donde tienes o quieres poner tu establecimiento?"
     page.find("#image1-5").click
 
-    expect(page).to have_content "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita"
+    expect(page).to have_content "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimiento a tu caso es hacer una cita."
 
   end
 

@@ -54,6 +54,7 @@
     $('#'+document.getElementById(id).id).addClass('animated fadeIn');
 
     ga('send', 'event', 'answer', window.location.href, id);
+
     
     //Actualizamos los progressBars
     progressBar(impacto, suelo, seguiridad);
