@@ -14,6 +14,15 @@
        margin-bottom: 20px;
        width:100%
     }
+    .seven-cols .col-md-1,
+    .seven-cols .col-md-2,
+    .seven-cols .col-md-3,
+    .seven-cols .col-md-4,
+    .seven-cols .col-md-5,
+    .seven-cols .col-md-6,
+    .seven-cols .col-md-7{
+      margin-bottom: 15px;
+    }
   }
 
 
@@ -34,6 +43,16 @@
       width: 100%;
       *width: 100%;
       margin-left: 0%;
+      margin-bottom: 15px;
+    }
+
+    .seven-cols .col-md-2,
+    .seven-cols .col-md-3,
+    .seven-cols .col-md-4,
+    .seven-cols .col-md-5,
+    .seven-cols .col-md-6,
+    .seven-cols .col-md-7{
+      margin-bottom: 15px;
     }
         
     .margin-top-dropdown{
