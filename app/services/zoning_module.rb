@@ -65,7 +65,7 @@ module ZoningModule
   end
 
   #tamano de la vivienda
-  def save_size_house(clicked)
+  def save_size_house(clicked,date)
     case clicked.to_i
       when 2
         session[:size_house] = 0
@@ -75,7 +75,7 @@ module ZoningModule
   end
 
   #tamano del negocio
-  def save_size_business(clicked)
+  def save_size_business(clicked,date)
     case clicked.to_i
       when 2
         session[:size_business] = 0
@@ -86,7 +86,7 @@ module ZoningModule
   end
 
   #fecha del uso de suelo
-  def save_date_zoning(clicked)
+  def save_date_zoning(clicked,date)
     case clicked.to_i
       when 2
         session[:date_zoning] = 0
@@ -96,7 +96,7 @@ module ZoningModule
   end
 
   #delegacion del negocio
-  def save_city_zoning(clicked)
+  def save_city_zoning(clicked,date)
     case clicked.to_i
       when 2
         session[:city_zoning] = nil
@@ -106,7 +106,7 @@ module ZoningModule
   end
 
   #colonia del negocio
-  def save_town_business(clicked)
+  def save_town_business(clicked,date)
     case clicked.to_i
       when 2
         session[:town_business] = nil

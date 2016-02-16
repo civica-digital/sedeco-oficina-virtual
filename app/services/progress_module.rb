@@ -42,15 +42,15 @@ module ProgressModule
   def save_advance_rank_zoning(actual, clicked, date)
    case actual.to_i
       when 3
-        save_size_house(clicked.to_i)
+        save_size_house(clicked.to_i, date)
       when 4
-        save_size_business(clicked.to_i)
+        save_size_business(clicked.to_i, date)
       when 6
-        save_date_zoning(clicked.to_i)
+        save_date_zoning(clicked.to_i, date)
       when 8
-        save_city_zoning(clicked.to_i)
+        save_city_zoning(clicked.to_i, date)
       when 9
-        save_town_business(clicked.to_i)
+        save_town_business(clicked.to_i, date)
     else
     end
   end
@@ -87,34 +87,7 @@ module ProgressModule
 
   #limpia todos los valores de la sesion
   def clean_params_session
-    session[:has_bussine] = nil
-    session[:impacto_usuario] = nil
-    session[:has_siapem] = nil
-    session[:has_special_license] = nil
-    session[:has_open_declaration] = nil
-    session[:date_siapem] = nil
-
-    session[:type_zoning]= nil
-    session[:is_business_home] = nil
-    session[:has_zoning] = nil
-    session[:has_type_zoning] = nil
-    session[:size_house]= nil
-    session[:size_business] = nil
-    session[:date_zoning] = nil
-    session[:city_zoning] = nil
-    session[:town_business] = nil
-    session[:uso_de_suelo] = nil
-
-    session[:has_autodiagnostico] = nil
-    session[:vobo_seguridad] = nil
-    session[:has_protection] = nil
-    session[:make_protection] = nil
-    session[:license_ambiental] = nil
-    session[:make_license_ambiental] = nil
-    session[:license_sanitaria] = nil
-    session[:make_license_sanitaria] = nil
-    session[:no_adeudos] = nil
-    session[:aforo] = nil
+    session.clear
   end
 
 end

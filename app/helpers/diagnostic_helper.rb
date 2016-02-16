@@ -19,6 +19,14 @@ module DiagnosticHelper
   end
 
 
+  def get_simple_impacto_user(type)
+      if type == -1
+        return "BAJO IMPACTO." 
+      elsif type == -2
+        return "IMPACTO VECINAL."  
+      end
+    end
+
   def get_siapem_user(has_siapem,date_siapem)
     if has_siapem
       "- Te encuentras registrado en el SIAPEM desde #{date_siapem}."

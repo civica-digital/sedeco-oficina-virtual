@@ -32,7 +32,6 @@
                                                             :restrictions =>@respuestas_uso_restriccion_array,
                                                             :next_restrictions=> @respuestas_siguiente_restriccion_array,
                                                             :rank_init => @respuestas_rango_array}
-        
         .div.diagnostic.hidden{:id=>"diagnostic"}         
           =render "shared/outputs/diagnostic_impact", impacto: @tipo_de_impacto
         .div.margin-bottom-end-page  
@@ -40,6 +39,18 @@
 
 
 
+#myModalImpact.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4#myModalLabel.modal-title= image_tag("logo.svg", :class=> "half-width")
+      .modal-body.bookId
+        =t('outputs.impact.text_modal_html',impacto: "#{get_simple_impacto_user(session[:impacto_usuario])}")
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"}
+          =t('outputs.impact.close')
 
 
 

@@ -54,9 +54,17 @@
     $('#'+document.getElementById(id).id).addClass('animated fadeIn');
 
     ga('send', 'event', 'answer', window.location.href, id);
+
     
     //Actualizamos los progressBars
     progressBar(impacto, suelo, seguiridad);
+  }
+
+  //muestra modal antes de seguir el arbol
+  function openModalDiagnostic(value_impacto,id, impacto, suelo, seguiridad){
+     hidden_div(id, impacto, suelo, seguiridad);
+     $('#myModalImpact').find('colorprimario').html('<span style="color:#E6007E;">'+value_impacto+'</span>');
+     $('#myModalImpact').modal('show');
   }
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/

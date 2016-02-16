@@ -206,6 +206,8 @@ es:
       next_text_vecinal: 'Siguiente paso "Uso de suelo"'
       comment_vecinal_cita: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimeinto a tu caso es hacer una cita."
       next_text_vecinal_cita: 'Siguiente paso "Hacer una cita"'
+      text_modal_html: '<b><colorprimario>Tienes %{impacto}</colorprimario></b><br><br> Este es un dato muy importante, si crees que no es correcto, por favor vuelve a iniciar el cuestionario.'
+      close: 'Continuar'
     zoning:
       type_sin_suelo: "Habitacional"
       comment_sin_suelo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
