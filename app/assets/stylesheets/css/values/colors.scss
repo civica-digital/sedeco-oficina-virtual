@@ -7,6 +7,7 @@ $btn-primary-bg: #E6007E;
 $back-gray-dark: #EEEEED;
 $color-black: #000000;
 $color-white: #ffffff;
+$text-modal: #333333;
 
 
 colorprimario{
@@ -17,6 +18,10 @@ blanco{
 }
 negro{
    color: #000000  !important; 
+}
+
+negro-gray{
+   color: #333333  !important; 
 }
 
 .pink{
@@ -51,4 +56,8 @@ negro{
 
 .white{
 	color: $color-white !important;
+}
+
+u{
+	color: $pink !important;
 }
