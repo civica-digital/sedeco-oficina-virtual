@@ -22,7 +22,6 @@ describe 'the user can enter the website'  do
   scenario "see the diagnostic" , js: true do
     visit(root_path)
     page.find("#diagnostic_modal").click
-    sleep 1
     page.find("#diagnostic").click
     sleep 1
     expect(page.current_path).to eq impact_index_es_path

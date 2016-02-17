@@ -62,7 +62,7 @@
 
   /*Elimina todos los views despues del clickeado y con ajax muestra el siguiente view*/
   function deleteAndFill(actual,clicked,next,restriction,next_restrictions, tipo, date){
-    for(i = parseInt(actual)+1; i <= number_of_views; i++){
+    for(i = parseInt(actual,10)+1; i <= number_of_views; i++){
       var element = document.getElementById(i);
         if(element !== null){
           element.setAttribute("class", "hidden");
@@ -86,9 +86,9 @@
           element.style.color = '#000000';//Cambiamos el color del texto por default
         }
 
-        var element = document.getElementById("image"+i+"-"+j);
-        if(element !== null){
-          element.classList.remove("rcorner-selected");
+        var element_imagen = document.getElementById("image"+i+"-"+j);
+        if(element_imagen !== null){
+          element_imagen.classList.remove("rcorner-selected");
         }
       }
     }
@@ -195,15 +195,15 @@
     var mobiliario_s = $("#mobiliario_s").val();
 
     if(superficie_s !== "" && mobiliario_s !== "" && superficie_t !== "" && mobiliario_t !== "" && impact_t !== ""){
-     if(parseInt(superficie_s)<parseInt(mobiliario_s)){
+     if(parseInt(superficie_s,10)<parseInt(mobiliario_s,10)){
         alert('El mobiliario  en el área de servicio no puede ser mayor al establecimiento');
         $("#superficie_s").val("");
         $("#mobiliario_s").val("");
-      }else if(parseInt(superficie_t)<parseInt(mobiliario_t)){
+      }else if(parseInt(superficie_t,10)<parseInt(mobiliario_t,10)){
         alert('El mobiliario  en el área de atención no puede ser mayor al establecimiento');
         $("#superficie_t").val("");
         $("#mobiliario_t").val("");
-      }else if(parseInt(superficie_s)+parseInt(superficie_t) !== size){
+      }else if(parseInt(superficie_s,10)+parseInt(superficie_t,10) !== size){
         alert("La suma del area de servicio y el area de atención deben ser iguales al tamaño de tu negocio: "+size+"m2");
         $("#superficie_s").val("");
         $("#superficie_t").val("");
@@ -266,9 +266,8 @@ $(function () {
           $( ".impacto1" ).removeClass( "hidden" );
         }
       });
-  });
-  $(function () {
-        $(".details-toggle2").click(function () {
+      
+      $(".details-toggle2").click(function () {
           $( ".impacto1" ).removeClass( "hidden");
           $( ".impacto2" ).addClass( "hidden" );
           $( ".seguridad1" ).removeClass( "hidden");
@@ -281,26 +280,19 @@ $(function () {
           $( ".suelo1" ).removeClass( "hidden" );
         }
       });
+
+      $(".details-toggle3").click(function () {
+        $( ".impacto1" ).removeClass( "hidden");
+        $( ".impacto2" ).addClass( "hidden" );
+        $( ".suelo1" ).removeClass( "hidden");
+        $( ".suelo2" ).addClass( "hidden" );
+        if($( ".seguridad1" ).is(":visible")){
+          $( ".seguridad2" ).removeClass( "hidden");
+          $( ".seguridad1" ).addClass( "hidden" );
+        }else{
+          $( ".seguridad2" ).addClass( "hidden");
+          $( ".seguridad1" ).removeClass( "hidden" );
+        }
+      });
+
   });
-
-/*Permite que se vean las ayudas de cada tipo*/
-  $(function () {
-    $(".details-toggle3").click(function () {
-    $( ".impacto1" ).removeClass( "hidden");
-    $( ".impacto2" ).addClass( "hidden" );
-    $( ".suelo1" ).removeClass( "hidden");
-    $( ".suelo2" ).addClass( "hidden" );
-    if($( ".seguridad1" ).is(":visible")){
-      $( ".seguridad2" ).removeClass( "hidden");
-      $( ".seguridad1" ).addClass( "hidden" );
-    }else{
-      $( ".seguridad2" ).addClass( "hidden");
-      $( ".seguridad1" ).removeClass( "hidden" );
-    }
-    });
-  });  
-
-
-function hello_world(){
-  //alert('hola');
-}
