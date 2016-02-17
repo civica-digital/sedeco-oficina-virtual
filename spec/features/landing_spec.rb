@@ -19,6 +19,15 @@ describe 'the user can enter the website'  do
 
   end
 
+  scenario "see the diagnostic" , js: true do
+    visit(root_path)
+    page.find("#diagnostic_modal").click
+    sleep 1
+    page.find("#diagnostic").click
+    sleep 1
+    expect(page.current_path).to eq impact_index_es_path
+  end
+
   scenario "see the appointments" , js: true do
     visit(root_path)
     page.find("#cita").click

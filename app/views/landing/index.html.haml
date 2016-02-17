@@ -11,7 +11,7 @@
           %div.col-md-4
           %div.col-md-4.text-landing
             =t('.textmain_clic')
-            = link_to  "#", :id => 'login', "data-target" => "#myModalDiagnostic", "data-toggle" => "modal" do
+            = link_to  "#", :id => 'diagnostic_modal', "data-target" => "#myModalDiagnostic", "data-toggle" => "modal" do
               %div.paddingtop-iconlading
                 =image_tag(prod_img_full('dignostico-lan'), :class=>"bcorner")
                 .col-md-12
@@ -84,5 +84,5 @@
       .modal-body
         =t('.dialog_text_html')
       .modal-footer
-        =link_to "Comenzar", impact_index_path, 'data-no-turbolink' => true, onclick: "ga('send', 'event', 'diagnostic', 'begin', '');", class: "button btn btn-default"
+        =link_to t('.begin'),impact_index_path,:id => 'diagnostic', 'data-no-turbolink' => true, onclick: "ga('send', 'event', 'diagnostic', 'begin', '');", class: "button btn btn-default"
              
