@@ -211,10 +211,10 @@ es:
     zoning:
       type_sin_suelo: "Habitacional"
       comment_sin_suelo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
-      next_text_sin_suelo: 'Siguiente paso "Protección civíl"'
+      next_text_sin_suelo: 'Siguiente paso "Protección civil"'
       type_con_suelo: "H, HM, HO ó HC"
       comment_con_suelo: "Por favor continua y al final se daran todos los trámites y pasos que tu negocio necesita."
-      next_text_con_suelo: 'Siguiente paso "Protección civíl"'
+      next_text_con_suelo: 'Siguiente paso "Protección civil"'
       type_equipamiento: "Area verde o Espacio abierto"
       type_industrial: "Equipamiento o Industrial"
       comment_equipamiento: "Debido a los dato que recabamos hasta este punto, lo más conveniente para dar seguimiento a tu caso es hacer una cita."
