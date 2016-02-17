@@ -20,8 +20,8 @@
   
   %div.row.col-md-12
     %div.col-md-4
-      =link_to appointments_path do  
-        %div.col-md-12.landing-menu-icons
+      =link_to appointments_path  do  
+        %div.col-md-12.landing-menu-icons{:id => "cita"}
           .col-md-12
             =image_tag(prod_img_full('cita'), :class=>"rcorner")
           .col-md-12
@@ -32,7 +32,7 @@
               =t('.menu.agenda_description_html')
     %div.col-md-4
       =link_to learning_center_index_path do
-        %div.col-md-12.landing-menu-icons
+        %div.col-md-12.landing-menu-icons{:id => "learning"}
           .col-md-12
             =image_tag(prod_img_full('centro-lan'), :class=>"rcorner")
           .col-md-12
@@ -43,7 +43,7 @@
               =t('.menu.centro_description_html')
     %div.col-md-4
       = link_to  "#", :id => 'login', "data-target" => "#myModal", "data-toggle" => "modal" do
-        %div.col-md-12.landing-menu-icons
+        %div.col-md-12.landing-menu-icons{:id => "help"}
           .col-md-12
             =image_tag(prod_img_full('ayuda-lan'), :class=>"rcorner")
           .col-md-12
