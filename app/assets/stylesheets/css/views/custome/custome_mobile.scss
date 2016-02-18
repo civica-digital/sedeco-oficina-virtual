@@ -6,6 +6,28 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+    .text-question{
+      font-size: 4.5em !important;
+    }
+    .text-answer{
+      font-size: 3em !important;
+    }
+
+    .fa-times{
+      font-size: 6em !important;
+      margin-left: -40px;
+    }
+
+    .text-help {
+      font-size: 3em !important;
+    }
+  
+    .sidebar-nav li {
+      text-indent: 0px;
+      line-height: 40px !important;
+      padding-right: 1.5em;
+    }
+
 }
 
 /* Landscape */
@@ -26,6 +48,28 @@
       display: none;
     }
 
+    .text-question{
+      font-size: 4.5em !important;
+    }
+    .text-answer{
+      font-size: 3em !important;
+    }
+
+    .fa-times{
+      font-size: 6em !important;
+      margin-left: -40px;
+    }
+
+    .text-help {
+      font-size: 3em !important;
+    }
+
+    .sidebar-nav li {
+      text-indent: 0px;
+      line-height: 40px !important;
+      padding-right: 1.5em;
+    }
+
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -35,15 +79,38 @@
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
-  .scroll-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    height: 150px;
-    z-index: 300;
-    background-color: #EEEEED;
-  }
+    .scroll-footer{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 150px;
+      z-index: 300;
+      background-color: #EEEEED;
+    }
+
+    .text-question{
+      font-size: 4.5em !important;
+    }
+    
+    .text-answer{
+      font-size: 3em !important;
+    }
+    
+    .fa-times{
+      font-size: 6em !important;
+      margin-left: -40px;
+    }
+    
+    .text-help {
+      font-size: 3em !important;
+    }
+    
+    .sidebar-nav li {
+      text-indent: 0px;
+      line-height: 40px !important;
+      padding-right: 1.5em;
+    }
 
 }
 
@@ -65,6 +132,29 @@
       display: none;
     }
 
+    .text-question{
+      font-size: 4.5em !important;
+    }
+    
+    .text-answer{
+      font-size: 3em !important;
+    }
+    
+    .fa-times{
+      font-size: 6em !important;
+      margin-left: -40px;
+    }
+
+    .text-help {
+      font-size: 3em !important;
+    }
+    
+    .sidebar-nav li {
+      text-indent: 0px;
+      line-height: 40px !important;
+      padding-right: 1.5em;
+    }
+
 }
 
 /* ----------- Galaxy S4, S5 y HTC----------- */
@@ -75,15 +165,38 @@
   and (device-height: 640px) 
   and (-webkit-device-pixel-ratio: 3) {
 
-  .scroll-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    height: 150px;
-    z-index: 300;
-    background-color: #EEEEED;
-  }
+    .scroll-footer{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 150px;
+      z-index: 300;
+      background-color: #EEEEED;
+    }
+
+    .text-question{
+      font-size: 4.5em !important;
+    }
+
+    .text-answer{
+      font-size: 3em !important;
+    }
+
+    .fa-times{
+      font-size: 6em !important;
+      margin-left: -40px;
+    }
+
+    .text-help {
+      font-size: 3em !important;
+    }
+    
+    .sidebar-nav li {
+      text-indent: 0px;
+      line-height: 40px !important;
+      padding-right: 1.5em;
+    }
 
 }
 
@@ -95,15 +208,38 @@
   and (-webkit-device-pixel-ratio: 3) 
   and (orientation: landscape) {
 
-  .scroll-footer{
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    height: 150px;
-    z-index: 300;
-    background-color: #EEEEED;
-    display: none;
+    .scroll-footer{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 150px;
+      z-index: 300;
+      background-color: #EEEEED;
+      display: none;
+    }
+
+    .text-question{
+      font-size: 4.5em !important;
+    }
+
+    .text-answer{
+      font-size: 3em !important;
+    }
+
+    .fa-times{
+      font-size: 6em !important;
+      margin-left: -40px;
+    }
+
+    .text-help {
+      font-size: 3em !important;
+    }
+
+    .sidebar-nav li {
+      text-indent: 0px;
+      line-height: 40px !important;
+      padding-right: 1.5em;
     }
 
 }
