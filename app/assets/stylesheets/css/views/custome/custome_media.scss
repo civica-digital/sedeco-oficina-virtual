@@ -24,6 +24,13 @@
     .seven-cols .col-md-7{
       margin-bottom: 15px;
     }
+
+    .text-question{
+      font-size: 2.5em !important;
+    }
+    .text-answer{
+      font-size: 2.5em !important;
+    }
   }
 
 
@@ -61,6 +68,13 @@
        margin-bottom: 20px;
        width:100%
     }
+
+    .text-question{
+      font-size: 1.5em !important;
+    }
+    .text-answer{
+      font-size: 1.5em !important;
+    }
   }
 
  
@@ -81,5 +95,11 @@
       width: 13.5%;
       *width: 13.5;
 
+    }
+    .text-question{
+      font-size: 1.5em !important;
+    }
+    .text-answer{
+      font-size: 1.5em !important;
     }
   }
