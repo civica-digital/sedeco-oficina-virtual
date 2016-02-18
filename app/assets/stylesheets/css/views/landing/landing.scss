@@ -1,7 +1,7 @@
 @import "landing_media.scss";
 @import "landing_mobile.scss";
 
-.back-image-landing{
+.back-image-landing {
   display: table;
     position: relative;
     width: 100%;
@@ -13,48 +13,46 @@
     -o-background-size: cover;
 }
 
-.container-laanding
-{
+.container-laanding {
   width:100%;
   height:50% !important;
 }
 
-.landing-menu-icons{
+.landing-menu-icons {
   padding-top: 50px;
   padding-bottom: 0px;
   text-align: left;
   
 }
 
-.landing-text-left{
+.landing-text-left {
   /*padding-top: 100px;*/
   padding-bottom: 0px;
   text-align: left;
-  
-
   font-size: 20px !important;
 }
 
-.btn-padding{
+.btn-padding {
     padding-bottom: 15px !important;
     padding-top: 15px !important;
 }
 
-.half-size{
+.half-size {
     height: 50% !important;
 }
-.half-width{
+
+.half-width {
     width: 50% !important;
 }
 
-
-.all-size{
+.all-size {
     width: 100% !important;
     height: 17% !important;
     margin-left: auto;
     margin-right: auto
 }
-.main{
+
+.main {
     position: relative !important;
     min-height: 100% !important;
   }
@@ -71,7 +69,7 @@
 }
 
 
-.logo-landing{
+.logo-landing {
     width: 60% !important;
     padding-bottom: 20px;
     padding-top: 10px;
@@ -80,7 +78,8 @@
     margin-right: auto
 
 }
-.logo-nabvar{
+
+.logo-nabvar {
     width: 20% !important;
 }
 
@@ -92,12 +91,12 @@
    /* probably not needed anymore, but doesn't hurt */
    -o-object-fit: contain;
    object-fit: contain; 
-
 }
 
-.paddingtop-iconlading{
+.paddingtop-iconlading {
   padding-top: 3em;
 }
+
 .navbar-brand {
   float: left;
   padding: 15px 15px;
@@ -106,6 +105,6 @@
   height: 60px !important;
 }
 
-.padding-bottom-modal{
+.padding-bottom-modal {
   padding-bottom: 2em;
 }
