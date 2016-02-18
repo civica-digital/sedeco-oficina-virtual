@@ -230,7 +230,7 @@ es:
       comment_last: "Por favor da clic en continuar para ver tu diagnóstico completo"
       next_text_last: 'Siguiente paso "Ver diagnóstico"'
   help:
-    learning_html: '<colorprimario><a href="%{path}" target="_blank" class="colorprimario">Ir al centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 
+    learning_html: '<colorprimario><a href="%{path}" target="_blank" class="btn btn-default btn btn-primary">Conoce más en nuestro<br>centro de aprendizaje <i class="fa fa-external-link"></i></a></colorprimario>' 
   button:
     go: 'Ingresar'
     app_name_html: "<negro>yo</negro><blanco>te</blanco><negro>apoyo:</negro><blanco>asesor</blanco><negro>virtual</negro>"
