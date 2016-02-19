@@ -24,4 +24,15 @@ describe 'Test all Helpers'  do
     get_simple_impacto_user(-2).should == "IMPACTO VECINAL."
   end
 
+  it "should get_siapem_user" do
+    
+    get_siapem_user(true,"12/12/2012").should == "- Te encuentras registrado en el SIAPEM desde 12/12/2012."
+
+    get_siapem_user(false, nil).should == "- Aun no te encuentras registrado en el SIAPEM."
+  end
+
+  it "should get_has_open_declaration" do
+    get_has_open_declaration(true, false).should == "- Cuentas con tu declaración de apertura anterior a Marzo 2011, este documento ya no es vigente, debes regisrarte en el SIAPEM."
+  end
+
 end
