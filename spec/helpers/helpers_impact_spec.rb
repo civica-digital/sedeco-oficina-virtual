@@ -1,6 +1,6 @@
 require_relative '../../app/helpers/diagnostic_helper'
 
-describe 'Test all Helpers'  do
+describe 'Test all Helpers impact'  do
   include DiagnosticHelper
 
    it "should get_impacto_user" do
@@ -35,4 +35,9 @@ describe 'Test all Helpers'  do
     get_has_open_declaration(true, false).should == "- Cuentas con tu declaración de apertura anterior a Marzo 2011, este documento ya no es vigente, debes regisrarte en el SIAPEM."
   end
 
+  it "should get_has_special_license" do
+    get_has_special_license(true).should ==  "- Cuentas con una licencia A u ordinaria."
+
+    get_has_special_license(false).should == "- No cuentas con una licencia A u ordinaria."
+  end
 end
