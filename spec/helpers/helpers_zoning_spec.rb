@@ -48,4 +48,9 @@ describe 'Test all Helpers zoning'  do
     get_validate_expiration_zoning("2015", "2014", true).should == "- Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo."
     get_validate_expiration_zoning("2015", "2014", false).should == "- Tienes tu uso de suelo pero no te haz registrado en el SIAPEM."
   end
+
+  it "should get_has_type_zoning" do
+    get_has_type_zoning("comercial",true).should == "- Cuentas con el certificado de uso de suelo comercial."
+    get_has_type_zoning("comercial",false).should == "- No tienes información de que tipo de certificado uso de suelo tienes."
+  end
 end
