@@ -13,7 +13,7 @@ describe 'Test all Helpers safety'  do
    end
 
    it "should get_has_protection" do
-   	get_has_protection(false,50).should ==  "- Revisar los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
+   	get_has_protection(false,49).should ==  "- Revisar los requerimientos minimos de protección civil que están en el articúlo 10 de la Ley de Establecimientos Mercantiles."
    	get_has_protection(true,51).should == "- Te aplica un programa interno de protección civil."
    	get_has_protection(false,51).should ==  "- No te aplica un programa interno de protección civil."
    end	
