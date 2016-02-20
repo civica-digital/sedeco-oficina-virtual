@@ -40,9 +40,12 @@ describe 'Test all Helpers zoning'  do
   end
 
   it "should get_has_zoning" do
-    get_has_zoning(true, "2016", false).should == "- Cuentas con un certificado de uso de suelo, expedido en el 2016"
+    get_has_zoning(true, "2016", false).should == "- Cuentas con un certificado de uso de suelo, expedido en el 2016."
     get_has_zoning(false, "2016", false).should == "- No cuentas con un certificado de uso de suelo."
   end
 
-  
+  it "should get_validate_expiration_zoning" do
+    get_validate_expiration_zoning("2015", "2014", true).should == "- Te registraste en el SIAPEM a menos de un año de tramitar tu uso de suelo."
+    get_validate_expiration_zoning("2015", "2014", false).should == "- Tienes tu uso de suelo pero no te haz registrado en el SIAPEM."
+  end
 end
