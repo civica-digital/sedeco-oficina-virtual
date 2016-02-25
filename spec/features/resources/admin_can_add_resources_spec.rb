@@ -21,6 +21,7 @@ describe 'Admin can add resources' do
     expect(page).to have_content "Impacto"
   end
 
+
   scenario 'unless data is invalid' do
     admin = create :admin
     login_as admin
