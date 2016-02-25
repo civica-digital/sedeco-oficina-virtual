@@ -3,7 +3,7 @@ es:
     question:
       impact:
         one: '¿Que es un establecimiento mercantil?'
-        two: ¿Qué es bajo impacto?
+        two: '¿Qué es bajo impacto?'
         three: '¿Qué es impacto vecinal?'
         four: '¿Qué es impacto zonal?'
         five: '¿Qué es el SIAPEM?'
@@ -45,25 +45,24 @@ es:
         four_html: 'Es una clasificación para establecimientos cuyo giro principal es vender o distribuir bebidas alcohólicas en envase abierto y/o al copeo para su consumo al interior.'
         five_html: 'El Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles es el único medio  de registro para que las personas físicas o morales presenten sus Avisos, Solicitudes de Permiso, Registros o Autorizaciones para la apertura y funcionamiento de un establecimiento mercantil en la Ciudad de México.'
         six_html: 'La fecha de registro se encuentra del lado superior derecho, abajo del folio del trámite y clave del establecimiento del  formato del SIAPEM que corresponda.'
-        seven_html: 'Las licencias de funcionamiento (A,  B,  ordinarias o especiales) eran otorgadas por las delegaciones a establecimientos mercantiles con impacto vecinal o zonal. Actualmente, este tipo de licencias deben registrarse en el SIAPEM para revalidar su vigencia.'
-        eight_html: 'Las declaraciones de apertura eran otorgadas por las delegaciones a establecimientos mercantiles considerados de bajo impacto. Actualmente, este tipo de avisos deben registrarse en el SIAPEM.'
+        seven_html: 'Las licencias de funcionamiento (A,  B, Ordinarias o Especiales) eran otorgadas por las delegaciones a establecimientos mercantiles con impacto vecinal o zonal hasta antes de la entrada en operación del SIAPEM (marzo de 2011). Actualmente, este tipo de licencias deben registrarse en el SIAPEM para que tengan validez.'
+        eight_html: 'Las declaraciones de apertura eran otorgadas por las delegaciones a establecimientos mercantiles considerados de bajo impacto hasta antes de la entrada en operación del SIAPEM (marzo de 2011). Actualmente, este tipo de avisos deben registrarse en el SIAPEM.'
       zoning:
-        one_html: 'La clasificación de uso de suelo que se contempla en el Programa General de Desarrollo Urbano del Distrito Federal es la siguiente:
+        one_html: 'De acuerdo con el Programa General de Desarrollo Urbano de la ciudad, es la siguiente:
             <BR><BR>
               <ul>
                 <li>H (Habitacional)
                 <li>HC (Habitacional con comercio en Planta Baja)
                 <li>HO (Habitacional con oficinas)
                 <li>HM (Habitacional Mixto)
+                <li>I (Industrial)
                 <li>E (Equipamiento)
                 <li>AV (Áreas Verdes)
                 <li>EA (Espacio Abierto)
               </ul>'
-        two_html: 'Si la clasificación del uso de suelo de la vivienda es de tipo urbano, el interesado puede obtener un certificado de uso de suelo vigente que incluirá los giros mercantiles que se pueden ejercer en el inmueble correspondiente, siempre y cuando el establecimiento mercantil se registre en el SIAPEM. 
+        two_html: 'A través de la obtención de un certificado de uso de suelo puedes conocer los giros que se pueden ejercer en el inmueble y registrar el establecimiento en el SIAPEM. 
               <BR><BR>
-              Asimismo, el interesado puede aperturar un establecimiento de bajo impacto en el SIAPEM localizado dentro de su vivienda, mediante el artículo 37 de la Ley de Establecimientos Mercantiles del Distrito Federal, sin necesidad de contar con un certificado de uso de suelo, siempre que sea máximo en el 20% de la construcción de la vivienda y sea operado por la persona que habita o un familiar. 
-              <BR><BR>
-              El artículo referido menciona algunas excepciones de giros mercantiles que no podrán ejercerse bajo esta modalidad:
+              También puedes aperturar un establecimiento de bajo impacto en el SIAPEM, localizado en tu vivienda, mediante el art. 37 de la Ley de Establecimientos Mercantiles del Distrito Federal, sin tener un certificado de uso de suelo, siempre que ocupes máximo el 20% de la construcción de la vivienda, y lo opere la persona que habita o un familiar. El artículo 37 menciona algunas excepciones de giros mercantiles que no podrás ejercer bajo esta modalidad:
               <BR><BR>
               <ol type="I">
               <li>Hospedaje prestados por hospitales, clínicas médicas, asilos, conventos, internados y seminarios;
@@ -74,11 +73,11 @@ es:
               <li>Baños Públicos, masajes y gimnasios;
               <li>Lavandería y tintorería;
               <li>Salones de fiestas infantiles.'
-        three_html: 'En los certificados de uso de suelo viene referido el tamaño oficial de la vivienda, casi siempre después de la clasificación del uso de suelo o en las especificaciones del predio. <BR><BR>En caso que esa información no concuerde con el tamaño real de la vivienda, el interesado deberá acudir a la Ventanilla Única Delegacional que le corresponde para realizar el trámite de Alineamiento y Número Oficial, mismo que reconocerá las condiciones reales del inmueble, con el cual podrá realizar los trámites para actualizar la información ante las oficinas de Tesorería y Catastro.'
-        four_html: 'El tamaño del negocio deberá ser revisado, medido y registrado en el SIAPEM por eltitular del mismo, ya que el formato que se obtenga será el documento válido para declarar el tamaño específico de un  establecimiento mercantil.'
-        five_html: 'Un certificado de uso de suelo es el documento oficial donde se hacen constar las disposiciones normativas e instrumentos de planeación de desarrollo urbano respecto al uso de suelo de un inmueble determinado.'
-        six_html: 'La fecha de expedición del certificado de uso de suelo viene en la parte superior del mismo documento. Este dato es de suma importancia, ya que este tipo de documentos tienen vigencias variables dependiendo del tipo de certificado que se trate.'
-        seven_html: 'El nombre del tipo de certificado de uso de suelo viene en la parte superior del documento referido. Los tipos de certificado existentes según el artículo 125 del Reglamento de la Ley de Desarrollo Urbano del Distrito Federal son:
+        three_html: 'En los certificados de uso de suelo viene el tamaño oficial de la vivienda, casi siempre después de la clasificación del uso de suelo o en las especificaciones del predio. Si esa información no concuerda con el tamaño real, debes acudir a la Ventanilla Única Delegacional que te corresponde para realizar el trámite de Alineamiento y Número Oficial, que reconocerá las condiciones reales de tu inmueble, para después hacer los trámites para actualizar la información ante las oficinas de Tesorería y Catastro.'
+        four_html: 'Lo debes medir y registrar en el SIAPEM, ya que el formato que obtengas será el documento válido para declarar el tamaño específico de tu establecimiento mercantil.'
+        five_html: 'Es el documento oficial en el que se especifican los usos que puede tener el inmueble de tu negocio y las normas e instrumentos de planeación de desarrollo urbano que le aplican.'
+        six_html: 'Viene en la parte superior del certificado de uso de suelo. Este dato es muy importante, ya que estos documentos tienen vigencias variables, dependiendo del tipo de certificado que sea.'
+        seven_html: 'El nombre del tipo de certificado de uso de suelo viene en la parte superior del certificado. Los tipos existentes son (art. 125 del Reglamento de la Ley de Desarrollo Urbano del DF)::
               <BR>
               <BR>
               <ul>
@@ -90,7 +89,7 @@ es:
               </ul>
               <BR>
               <BR>
-              NOTA: Este tipo de certificado no se incluye en el articulo 125 del Reglamento de la Ley de Desarrollo Urbano del Distrito Federal, ya que está contemplado en el Acuerdo de Regularización de Uso de Suelo para Establecimientos de hasta 100m2 de superficie, de la Secretaría de Desarrollo Urbano y Vivienda (SEDUVI), publicado en la Gaceta Oficial del Distrito Federal el 19 de junio de 2014.'
+              NOTA: Este tipo de certificado no se incluye en el artículo 125, pero se encuentra en el Acuerdo de Regularización de Uso de Suelo para Establecimientos de hasta 100 m2 de superficie, publicado en la Gaceta Oficial del Distrito Federal el 19 de junio de 2014.'
         eight_html: 'En las 16 delegaciones dentro de la Ciudad de México.'
         nine_html: 'En las colonias que se encuentren dentro de la Ciudad de México.'
       safety:
@@ -106,10 +105,10 @@ es:
         eight_html: 'La superficie destinada exclusivamente para las labores del personal, como: cocinas, cantina, área de barra, guardarropa.'
         nine_html: 'Superficie ocupada por enseres de servicios.- La superficie ocupada por equipos y muebles: barras, contrabarras, mesas de cocina, estufas, hornos, estufetas, equipos de lavado, alacenas y refrigeradores, entre otros.'
         ten_html: 'Las áreas de servicios comprenderán una superficie de por lo menos 0.50 m2 por persona (Artículo 5o. Fración IX del Reglamento de la Ley de Establecimientos Mercantiles en Materia de Aforo y Seguridad)'
-        eleven_html: 'El Autodiagnóstico del Programa Interno de Protección Civil, es una herramienta informativa utilizada por el interesado para saber si su establecimiento mercantil necesita un Programa de este tipo. Este Autodiagnóstico se puede solicitar en la oficina de protección civil de la delegación política correspondiente. Si el resultado es positivo, el usuario deberá conseguir un Tercero Acreditado para que elabore un Programa Interno de Protección Civil específico para su establecimiento.'
-        twelve_html: 'El Visto Bueno de Seguridad y Operación es un documento que certifica que laconstrucción cuenta con las características de seguridad obligatorias para ejercer una actividad económica, en predios con capacidad igual o superior a 50 personas de aforo. Este tipo de documento se debe tramitar en la Ventanilla Única Delegacional y debe ser elaborado y firmado por un Director Responsable de Obra (DRO), con licencia y/o carnet vigente.'
-        thirteen_html: 'Es un documento elaborado por un Tercero Acreditado, que servirá como instrumento para planear, determinar e implementar las acciones de prevención, auxilio y recuperación, destinadas a salvaguardar la integridad física de las personas que habitan, laboran o concurren en el inmueble determinado, así como para proteger las instalaciones, bienes, entorno e información, ante la posible ocurrencia de siniestros.'
+        eleven_html: 'Es una herramienta informativa para identificar si tu establecimiento necesita un programa de este tipo. Este cuestionario se puede solicitar en la Ventanilla Única de la Delegación donde está tu negocio. Si el resultado del diagnóstico es positivo, debes conseguir un Tercero Acreditado para que elabore un programa interno de protección civil específico para tu establecimiento.'
+        twelve_html: 'Es un documento que certifica que la construcción de tu negocio cuenta con las características de seguridad para ejercer una actividad económica en predios con capacidad igual o mayor a 50 personas. Este documento se debe tramitar en la Ventanilla Única Delegacional y debe ser elaborado y firmado por un Director Responsable de Obra, con licencia y/o carnet vigente.'
+        thirteen_html: 'Es un documento hecho por un Tercero Acreditado, que sirve para definir e implementar las acciones de prevención, auxilio y recuperación, para proteger a quienes entran al inmueble de tu negocio, y para proteger las instalaciones, bienes, entorno e información, en caso de que ocurra un siniestro.'
         forteen_html: 'En la oficina deprotección civil de la delegación correspondiente). Todos los usuarios que tienen implementado un programa probablemente lo saben, puesto que el documento se revalida anualmente y no es transferible a otro establecimiento.'
-        fiveteen_html: 'Es el instrumento de política ambiental por el que se concentran diversas obligacionesambientales de los responsables, que están sujetos a las disposiciones de la Ley Ambiental de Protección a la Tierra en el Distrito Federal, mediante la tramitación de un solo procedimiento que ampare los permisos y autorizaciones referidos en la normatividad ambiental. La LAUDF tiene vigencia de un año y se puede tramitar de lunes a viernes en un horario de 9:00 a 13:00 hrs., en la Unidad de Atención Ciudadana localizada en Tlaxcoaque No. 8, Planta Baja, Colonia Centro Histórico, Delegación Cuauhtémoc, C.P. 06090.'
-        sixteen_html: 'Es un documento donde el Responsable Sanitario declara ante las autoridades correspondientes que cumple con las disposiciones en materia de protección sanitaria. Lo anterior incluye la protección de la población contra riesgos sanitarios, a través de actividades de vigilancia y el fomento de la salud, así como el mejoramiento de las condiciones sanitarias de los bienes, productos, insumos y servicios que los clientes consumen en el establecimiento. Este documento se puede tramitar ante la Agencia de Protección Sanitaria del Distrito Federal (APSDF) o en la Comisión Federal para la Protección contra Riesgos Sanitarios (COFEPRIS).'
-        seventeen_html: 'La Constancia de Adeudo de Predial y la Constancia de Adeudo por Suministro de Agua, son documentos que se obtienen en las oficinas de Tesorería del Distrito Federal, que sirven para comprobar que el inmueble donde se va a ejercer la actividad económica no tiene adeudos en estas materias fiscales. Este tipo de documentos son necesarios para registrar en el SIAPEM giros mercantiles de impacto vecinal y zonal.'
+        fiveteen_html: 'Es el instrumento que concentra tus obligaciones ambientales como responsable de un establecimiento sujeto a la Ley Ambiental de Protección a la Tierra en el DF, y que ampara los permisos y autorizaciones que se especifican en esa Ley. La LAUDF tiene vigencia de un año y se puede tramitar en la Unidad de Atención Ciudadana ubicada en Tlaxcoaque No. 8, Planta Baja, Centro Histórico.'
+        sixteen_html: 'Es un documento en el que el Responsable Sanitario del establecimiento declara ante las autoridades que cumple con la Ley en materia de protección sanitaria. Esto incluye proteger a la población contra riesgos sanitarios con actividades de vigilancia y fomento de la salud, y mantener en buenas condiciones sanitarias los bienes, productos, insumos y servicios que los clientes consumen en tu establecimiento. El aviso se puede tramitar en la Agencia de Protección Sanitaria de la Ciudad de México o en la Comisión Federal para la Protección contra Riesgos Sanitarios (COFEPRIS).'
+        seventeen_html: 'La Constancia de Adeudo de Predial y la Constancia de Adeudo por Suministro de Agua se obtienen en las oficinas de Tesorería de la Ciudad de México y en las del Sistema de Aguas de la Ciudad de México, respectivamente, y sirven para comprobar que el inmueble de tu negocio no tiene adeudos en estas materias. Estos documentos son necesarios para solicitar el permiso para la apertura de establecimientos  mercantiles con giro de impacto vecinal y zonal en el SIAPEM, por lo tanto, debes tramitarlos para completar la información de los formatos EM08 (permiso de impacto zonal), EM11 (permiso de impacto vecinal), así como en el EM 09 (Aviso de Colocación de Enseres en la Vía Pública).'
