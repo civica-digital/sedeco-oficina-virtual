@@ -2,7 +2,7 @@
   %div.col-md-12.text-question
     %p
       = locals[:texto_question]
-      %i.fa.fa-info-circle.fa-lg.input-gray{:href => "#menu-toggle",:id=>"menu-toggle#{locals[:number]}"}
+      %i.fa.fa-info-circle.fa-lg.pink{:href => "#menu-toggle",:id=>"menu-toggle#{locals[:number]}",:rel=>"popover",:data=>{:content=>"Conceptos claves"}}
   .row
     .col-md-12
       .answer-container
@@ -67,6 +67,9 @@
   $(document).ready( function () {
     blur_div();
   });
+
+  $("i.fa").popover({'trigger':'hover'});
+
   /*agregamos un fondo blur al abrir la ayuda*/
   function blur_div(){
       for(i = 1; i <= "#{@file.size}"; i++){
