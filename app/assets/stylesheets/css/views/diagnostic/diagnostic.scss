@@ -115,10 +115,17 @@ hr.style-line {
 }
 
 /******************Chosen******************/
+
 .chosen-select{
      position:relative; 
      z-index: 400;
 }
+
+.chosen-container .chosen-results  {
+ max-height: 95px !important;
+}
+
+
 
 .chosen-container ul.chosen-results li.highlighted {
   background-color: #E6007E;
