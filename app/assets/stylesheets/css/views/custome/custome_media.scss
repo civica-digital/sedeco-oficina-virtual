@@ -25,11 +25,11 @@
       margin-bottom: 15px;
     }
 
-    .text-question{
-      font-size: 1.5em !important;
+    .text-question p{
+      font-size: 0.6em;
     }
-    .text-answer{
-      font-size: 1em !important;
+    .text-answer {
+      font-size: 1em  ;
     }
 
     .fa-times{
@@ -99,12 +99,11 @@
        width:100%
     }
 
-    .text-question{
-      font-size: 1.2em !important;
+    .text-question p{
+      font-size: 0.8em ;
     }
-    
-    .text-answer{
-      font-size: 1.1em !important;
+    .text-answer {
+      font-size: 1em ;
     }
 
     .fa-times{
@@ -126,7 +125,7 @@
       display: inline-block;
       text-align: center;
       padding: 20px;
-      width: 300px;
+      width: 270px;
       min-height: 220px;
       vertical-align: top;
     }
@@ -157,11 +156,11 @@
       *width: 13.5;
 
     }
-    .text-question{
-      font-size: 1.2em !important;
+    .text-question p{
+      font-size: 0.8em;
     }
-    .text-answer{
-      font-size: 1.1em !important;
+    .text-answer {
+      font-size: 1.2em ;
     }
 
     .fa-times{

@@ -4,7 +4,6 @@
 
 @import "css/values/colors";
 @import "diagnostic_media.scss";
-@import "diagnostic_mobile.scss";
 
 
 /*********************container impacto**************************/
@@ -91,7 +90,7 @@ hr.style-line {
 .text-question{
   margin-bottom: 30px;
   margin-top: 20px;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 .text-title-tree{
