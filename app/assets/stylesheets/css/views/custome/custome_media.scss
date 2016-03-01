@@ -26,10 +26,10 @@
     }
 
     .text-question{
-      font-size: 2.5em !important;
+      font-size: 1.5em !important;
     }
     .text-answer{
-      font-size: 2.3em !important;
+      font-size: 1em !important;
     }
 
     .fa-times{
@@ -45,6 +45,21 @@
       text-indent: 0px;
       line-height: 40px !important;
       padding-right: 1.5em;
+    }
+
+    .answer-block{
+      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      width: 150px;
+      min-height: 220px;
+      vertical-align: top;
+    }
+
+    .answer-container{
+      text-align: center;
+      overflow: hidden;
+
     }
   }
 
@@ -106,6 +121,21 @@
       line-height: 20px !important;
       padding-right: 1.5em;
     }
+
+    .answer-block{
+      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      width: 300px;
+      min-height: 220px;
+      vertical-align: top;
+    }
+
+    .answer-container{
+      text-align: center;
+      overflow: hidden;
+
+    }
   }
 
  
@@ -147,5 +177,20 @@
       text-indent: 0px;
       line-height: 20px !important;
       padding-right: 1.5em;
+    }
+
+    .answer-block{
+      display: inline-block;
+      text-align: center;
+      padding: 20px;
+      width: 300px;
+      min-height: 220px;
+      vertical-align: top;
+    }
+
+    .answer-container{
+      text-align: center;
+      overflow: hidden;
+
     }
   }
