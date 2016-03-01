@@ -4,7 +4,6 @@
 
 @import "css/values/colors";
 @import "diagnostic_media.scss";
-@import "diagnostic_mobile.scss";
 
 
 /*********************container impacto**************************/
@@ -85,13 +84,11 @@ hr.style-line {
 }
 
 /*************************Texts***********************/
-.text-answer{
-  margin-top: 10px;
-}
+
 .text-question{
   margin-bottom: 30px;
   margin-top: 20px;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 .text-title-tree{
@@ -100,12 +97,7 @@ hr.style-line {
   color: $pink;
   background-color: #EEEEED;
 }
-.text-subtitle-tree{
-  padding-bottom: 10px;
-  font-size: 20px;
-  background-color: #EEEEED;
 
-}
 
 .text-help{
       font-size: 20px;
@@ -116,10 +108,17 @@ hr.style-line {
 }
 
 /******************Chosen******************/
+
 .chosen-select{
      position:relative; 
      z-index: 400;
 }
+
+.chosen-container .chosen-results  {
+ max-height: 95px !important;
+}
+
+
 
 .chosen-container ul.chosen-results li.highlighted {
   background-color: #E6007E;

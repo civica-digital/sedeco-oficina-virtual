@@ -4,7 +4,7 @@ describe 'User can see tree impact'  do
   scenario 'and he has impacto zonal', js: true do
     
     visit "/impacto"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1224, 768)
     
     expect(page).to have_content "¿Ya cuentas con un establecimiento mercantil?"
     page.find("#image1-1").click
@@ -12,17 +12,18 @@ describe 'User can see tree impact'  do
     expect(page).to have_content "¿Deseas abrir o tienes un negocio con alguno de estos giros?"
     page.find("#image2-6").click
 
+
     expect(page).to have_content "¿Deseas abrir o tienes un negocio con alguno de estos giros?",count: 2
-    page.find("#image3-1").click
+    page.find("#image3-4").click
 
+    sleep 1
     expect(page).to have_content "El impacto del negocio es Zonal"
-
   end
 
   scenario 'and he has impacto vecinal', js: true do
     
     visit "/impacto"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1224, 768)
 
     expect(page).to have_content "¿Ya cuentas con un establecimiento mercantil?"
     page.find("#image1-1").click
@@ -46,7 +47,7 @@ describe 'User can see tree impact'  do
   scenario 'and he has impacto bajo, NO SIAPEM ', js: true do
     
     visit "/impacto"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1224, 768)
 
     expect(page).to have_content "¿Ya cuentas con un establecimiento mercantil?"
     page.find("#image1-1").click
@@ -70,7 +71,7 @@ describe 'User can see tree impact'  do
   scenario 'and he has impacto bajo, SI SIAPEM ', js: true do
     
     visit "/impacto"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1224, 768)
     
     expect(page).to have_content "¿Ya cuentas con un establecimiento mercantil?"
     page.find("#image1-1").click

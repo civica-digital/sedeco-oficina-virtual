@@ -4,24 +4,24 @@ describe 'User can see tree impact'  do
   scenario 'and he has impacto zonal', js: true do
     
     visit "/impacto"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1324, 768)
     
     expect(page).to have_content "¿Ya cuentas con un establecimiento mercantil?"
     page.find("#image1-1").click
 
     expect(page).to have_content "¿Deseas abrir o tienes un negocio con alguno de estos giros?"
     page.find("#image2-6").click
-
+    sleep 1
     expect(page).to have_content "¿Deseas abrir o tienes un negocio con alguno de estos giros?",count: 2
     page.find("#image3-5").click
     
     expect(page).to have_content "¿Ya registraste tu negocio en el Sistema Electrónico de Avisos y Permisos de Establecimientos Mercantiles (SIAPEM)?"
     page.find("#image4-2").click
-
-    expect(page).to have_content "¿Cuentas con declaración de apertura anterior a Marzo 2011?"
-    page.find("#image7-3").click
-    
     sleep 1
+    expect(page).to have_content "¿Cuentas con declaración de apertura anterior a Marzo 2011?"
+    page.find("#image7-2").click
+    
+    sleep 2
 
     click_link('Siguiente paso "Uso de suelo"')
 
@@ -54,6 +54,7 @@ describe 'User can see tree impact'  do
 
     expect(page).to have_content "¿Recogiste y entregaste el autodiagnóstico en materia de protección civil en tu delegación?"
     page.find("#image3-2").click
+    sleep 1
 
     expect(page).to have_content "¿Sabes si requieres una Licencia Ambiental Única (LAUDF)?"
     page.find("#image7-2").click

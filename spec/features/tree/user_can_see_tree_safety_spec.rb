@@ -5,7 +5,7 @@ describe 'User can see tree safety'  do
   scenario 'and he has aforo > 50', js: true do
     
     visit "/proteccion_civil_y_otros"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1224, 768)
 
     #page.find("#menu-toggleint").click
 
@@ -32,7 +32,7 @@ describe 'User can see tree safety'  do
     scenario 'and he has aforo < 50', js: true do
     
     visit "/proteccion_civil_y_otros"
-    page.driver.browser.manage.window.resize_to(1024, 768)
+    page.driver.browser.manage.window.resize_to(1224, 768)
     
    # page.find("#menu-toggleint").click
 
