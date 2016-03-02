@@ -41,7 +41,7 @@ group :development, :test do
 end
 
 group :production, :staging do
-  gem "wkhtmltopdf-heroku"
+  #gem "wkhtmltopdf-heroku"
 end
 group :development do
   gem 'better_errors'
