@@ -68,7 +68,21 @@
     blur_div();
   });
 
-  $("i.fa").popover({'trigger':'hover'});
+  var options = {
+    placement: function (context, source) {
+        var position = $(source).position();
+
+        if (position.left >= 700) {
+            return "right";
+        }
+
+        if (position.left < 700) {
+            return "bottom";
+        }
+    }
+    , trigger: "hover"
+  };
+  $("i.fa").popover(options);
 
   /*agregamos un fondo blur al abrir la ayuda*/
   function blur_div(){
