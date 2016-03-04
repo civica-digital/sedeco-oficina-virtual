@@ -1,7 +1,7 @@
 %div.hidden{:id=>"#{locals[:number]}"}
-  %div.col-md-12.text-question
+  %div.col-md-12
     %p
-      = locals[:texto_question]
+      =label_tag :label,locals[:texto_question]
       %i.fa.fa-info-circle.fa-lg.pink{:href => "#menu-toggle",:id=>"menu-toggle#{locals[:number]}",:rel=>"popover",:data=>{:content=>"Conceptos claves"}}
   .row
     .col-md-12
