@@ -7,6 +7,7 @@
 @import "custome_media.scss";
 
 body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -344,4 +345,8 @@ footer .footer-below {
 
 .popover-content {
     font-size: 15px;
+}
+
+label {
+    font-weight: normal !important;
 }
