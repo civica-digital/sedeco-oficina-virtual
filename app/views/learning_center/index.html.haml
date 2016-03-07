@@ -4,7 +4,7 @@
       =render "shared/titlebar", :title => t('.title'),:text => t(".learning_center_description")
     %div.container.learning-center
       .row.description-container
-        .col-md-3.col-md-offset-4
+        .col-md-4.col-md-offset-4
           %div.btn-group.btn-block
             %div.category-select.btn.btn-md.btn-default.btn-block.dropdown-toggle{ "data-toggle" => "dropdown" }
               - if @search.present?
@@ -18,18 +18,18 @@
                 %li
                   = link_to category, learning_center_index_path(search: category)
                 %li.divider
-      %div.row.resource-container
-        %div.col-md-8.col-md-offset-2
-          %div.row
+      .row.resource-container
+        .col-md-9.col-md-offset-2
+          .row
             - @resources.each do |resource|
               = link_to resource.url, onclick: "ga('send', 'event', 'video', '#{resource.url}', '');", target: :blank do
-                %div.resource.col-md-6
-                  %div.text-center.pink.text-title-video
+                .col-md-6.col-xs-12.resource
+                  %div.pink.text-title-video
                     =truncate(resource.name, :length => 15)
                   - if resource.youtube_video?
                     = YouTubeAddy.youtube_embed_url(resource.url, 360,220).html_safe
                   - else
-                    %div.resource-detail.text-center
+                    %div.resource-detail
                       = inline_svg "iconos/pdf.svg", class: 'resource-icon'
                   %div.text-left.text-video
                     =truncate(resource.description, :length => 100)

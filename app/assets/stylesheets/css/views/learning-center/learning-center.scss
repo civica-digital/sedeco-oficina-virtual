@@ -7,12 +7,16 @@
 
 .learning-center .resource {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .learning-center .resource-detail {
   background-color: $light-gray;
   padding: 30px 15px;
   height: 220px;
+  width: 360px;
+  text-align: center;
+  margin: auto;
 
   a {
     color: $pink;
