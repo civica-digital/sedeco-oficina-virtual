@@ -18,39 +18,40 @@
                   %div.text-center.white
                     =t('.button_text_html')
   
-  %div.row.col-md-12
-    .answer-container
-      %div.col-md-4.col-xs-12.col-lg-4
-        =link_to appointments_path  do  
-          %div.col-md-12.landing-menu-icons{:id => "cita"}
-            .col-md-12
-              =image_tag(prod_img_full('cita'), :class=>"rcorner")
-            .col-md-12
-              .title-menu-icons.text-center
-                =t('.menu.agenda_titulo')
-              .subtitle-menu-icons.text-center
-                =t('.menu.agenda_description_html')
-      %div.col-md-4.col-xs-12.col-lg-4
-        =link_to learning_center_index_path, 'data-no-turbolink' => true do
-          %div.col-md-12.landing-menu-icons{:id => "learning"}
-            .col-md-12
-              =image_tag(prod_img_full('centro-lan'), :class=>"rcorner")
-            .col-md-12
-              .title-menu-icons.text-center
-                =t('.menu.centro_titulo')
-              .subtitle-menu-icons.text-center
-                =t('.menu.centro_description_html')
-      %div.col-md-4.col-xs-12.col-lg-4
-        = link_to  "#", :id => 'login', "data-target" => "#myModal", "data-toggle" => "modal" do
-          %div.col-md-12.landing-menu-icons{:id => "help"}
-            .col-md-12
-              =image_tag(prod_img_full('ayuda-lan'), :class=>"rcorner")
-            .col-md-12
-              .title-menu-icons.text-center
-                =t('.menu.ayuda_titulo')
-              .subtitle-menu-icons.text-center
-                =t('.menu.ayuda_description_html')
-    %div.col-md-12.all-size
+  %div.row
+    .col-md-12.answer-container
+      .row
+        %div.col-md-4.col-xs-12.col-lg-4
+          =link_to appointments_path  do  
+            %div.col-md-12.landing-menu-icons{:id => "cita"}
+              .col-md-12
+                =image_tag(prod_img_full('cita'), :class=>"rcorner")
+              .col-md-12
+                .title-menu-icons.text-center
+                  =t('.menu.agenda_titulo')
+                .subtitle-menu-icons.text-center
+                  =t('.menu.agenda_description_html')
+        %div.col-md-4.col-xs-12.col-lg-4
+          =link_to learning_center_index_path, 'data-no-turbolink' => true do
+            %div.col-md-12.landing-menu-icons{:id => "learning"}
+              .col-md-12
+                =image_tag(prod_img_full('centro-lan'), :class=>"rcorner")
+              .col-md-12
+                .title-menu-icons.text-center
+                  =t('.menu.centro_titulo')
+                .subtitle-menu-icons.text-center
+                  =t('.menu.centro_description_html')
+        %div.col-md-4.col-xs-12.col-lg-4
+          = link_to  "#", :id => 'login', "data-target" => "#myModal", "data-toggle" => "modal" do
+            %div.col-md-12.landing-menu-icons{:id => "help"}
+              .col-md-12
+                =image_tag(prod_img_full('ayuda-lan'), :class=>"rcorner")
+              .col-md-12
+                .title-menu-icons.text-center
+                  =t('.menu.ayuda_titulo')
+                .subtitle-menu-icons.text-center
+                  =t('.menu.ayuda_description_html')
+    .col-md-12.all-size
       .footer.text-center.dark-gray
         =t('.text_footer')
 
