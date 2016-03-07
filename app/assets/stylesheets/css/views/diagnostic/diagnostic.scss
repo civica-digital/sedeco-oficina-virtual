@@ -13,7 +13,7 @@
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 10px;
-  padding-bottom: 90px;
+  padding-bottom: 55px;
 }
 
 .container-impacto-fluid {
@@ -85,11 +85,6 @@ hr.style-line {
 
 /*************************Texts***********************/
 
-.text-question{
-  margin-bottom: 30px;
-  margin-top: 20px;
-  /*font-size: 20px;*/
-}
 
 .text-title-tree{
   padding-top: 10px;
@@ -98,13 +93,8 @@ hr.style-line {
   background-color: #EEEEED;
 }
 
-
-.text-help{
-      font-size: 20px;
-}
-
 .small-text{
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /******************Chosen******************/
@@ -123,7 +113,7 @@ hr.style-line {
 .chosen-container ul.chosen-results li.highlighted {
   background-color: #E6007E;
   background-image: none;
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 .chosen-container {
   position: relative;
@@ -272,4 +262,9 @@ hr.style-line {
     margin-left: auto;
     padding-left: 0px !important; 
     padding-right: 0px !important;
+}
+
+.label-end{
+  margin-bottom: 0px !important;
+  margin-top: 55px !important;
 }
