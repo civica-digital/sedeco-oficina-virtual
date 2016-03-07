@@ -306,6 +306,10 @@ footer .footer-below {
   font-size: 2em;
 }
 
+.answer-container{
+  text-align: center;
+}
+
 .text-answer {
   padding-top: 15px;
   font-size: 17px;
@@ -322,4 +326,8 @@ footer .footer-below {
     margin-top: 55px;
     font-size: 21px;
     padding-bottom: 30px;
+}
+
+.search-choice-close{
+ display: none !important; 
 }
