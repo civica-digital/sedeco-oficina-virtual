@@ -3,8 +3,8 @@
     .header
       =render "shared/titlebar", :title => t('.title'),:text => t(".learning_center_description")
     %div.container.learning-center
-      %div.row.description-container
-        %div.col-md-3.col-md-offset-4
+      .row.description-container
+        .col-md-3.col-md-offset-4
           %div.btn-group.btn-block
             %div.category-select.btn.btn-md.btn-default.btn-block.dropdown-toggle{ "data-toggle" => "dropdown" }
               - if @search.present?
