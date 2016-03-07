@@ -1,9 +1,9 @@
 %div.hidden{:id=>"#{locals[:number]}"}
-  %div.col-md-12
-    %p
-      =label_tag :label,locals[:texto_question]
-      %i.fa.fa-info-circle.fa-lg.pink{:href => "#menu-toggle",:id=>"menu-toggle#{locals[:number]}",:rel=>"popover",:data=>{:content=>"Conceptos claves"}}
-  .row
+  .row.question-container
+    .col-md-12
+      =label_tag :label do
+        =locals[:texto_question]
+        %i.fa.fa-info-circle.fa-lg.pink{:href => "#menu-toggle",:id=>"menu-toggle#{locals[:number]}",:rel=>"popover",:data=>{:content=>"Conceptos claves"}}
     .col-md-12
       .answer-container
         -locals[:texto_answer].each_with_index do |text, index|
