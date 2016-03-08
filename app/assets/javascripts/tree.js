@@ -248,12 +248,14 @@
   function up_page(id, next_id){
     console.log(id+"");
     console.log(next_id+"");
-    if ( $( "#id" ).is( ":hidden" ) ) {
-      divLoc = $('#'+next_id).offset().top;
-    }else{
-      divLoc = '+=520'
-    }
-      $('html, body').animate({scrollTop: divLoc}, 2000);
+    
+    if (id !== null && id != "" && parseInt(id) > 0) {
+      n_id = (next_id!==0 && $( "#"+id ).is( ":hidden")) ? next_id : id 
+      var divLoc = $('#'+n_id).offset();
+      $('html, body').animate({scrollTop: divLoc.top}, 2000);
+     }else{
+       $('html, body').animate({scrollTop: '+=520'}, 2000);
+     }
   }
 
 /*Controla las flechas del acordion*/
