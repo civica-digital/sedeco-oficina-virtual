@@ -53,6 +53,7 @@
 
     .question-container label {
       font-size: 18px;
+      padding-top: 10px;
     }
 
     .text-answer {
@@ -73,7 +74,8 @@
     }
 
     .text-help {
-      font-size: 18px;
+      font-size: 17px;
+      text-align: left;
     }
 
   }
@@ -132,6 +134,7 @@
 
     .question-container label {
       font-size: 20px;
+      padding-top: 5px;
     }
 
     .jumbotron {
@@ -189,9 +192,11 @@
 
     .question-container label {
       font-size: 22px;
+      padding-top: 0px;
     }
     
     .text-help {
         font-size: 21px;
+        text-align: justify;
     }
   }
