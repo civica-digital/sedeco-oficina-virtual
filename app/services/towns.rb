@@ -4,7 +4,6 @@ module Towns
   end
 
   def self.load_city(city)
-
     return "" unless city.present?
     formatted_city = format(city)
     begin

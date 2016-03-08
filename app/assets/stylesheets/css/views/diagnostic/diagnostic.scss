@@ -100,8 +100,22 @@ hr.style-line {
 /******************Chosen******************/
 
 .chosen-select{
-     position:relative; 
-     z-index: 400;
+
+  position:relative; 
+  z-index: 400;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100% !important;
+  color: #777777 !important;
+  font-size: 9pt !important;
 }
 
 .chosen-container .chosen-results  {
