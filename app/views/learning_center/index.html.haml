@@ -27,7 +27,7 @@
                   %div.pink.text-title-video
                     =truncate(resource.name, :length => 15)
                   - if resource.youtube_video?
-                    = YouTubeAddy.youtube_embed_url(resource.url, 360,220).html_safe
+                    = YouTubeAddy.youtube_embed_url(resource.url, '90%',220).html_safe
                   - else
                     %div.resource-detail
                       = inline_svg "iconos/pdf.svg", class: 'resource-icon'
