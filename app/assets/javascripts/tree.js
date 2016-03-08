@@ -37,7 +37,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-            up_page();
+            up_page(next,next_restrictions);
          },
         error: function(){
         }, 
@@ -152,7 +152,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          up_page();
+          up_page("","");
          },
         error: function(){
         }, 
@@ -219,7 +219,7 @@
          type:'GET', 
          url: "#{root_path}",
          success: function(){
-          up_page();
+          up_page("","");
          },
         error: function(){
         }, 
@@ -245,10 +245,16 @@
 
 
 /*animacion que sube el scroll lentamente*/
-  function up_page(){
-    $('html, body').animate({
-    scrollTop: '+=520'
-    }, 2000);
+  function up_page(id, next_id){
+    console.log(id+"");
+    console.log(next_id+"");
+    if (id !== null && id != "" && parseInt(id) > 0) {
+      n_id = next_id!==0 ? next_id : id 
+      var divLoc = $('#'+n_id).offset();
+      $('html, body').animate({scrollTop: divLoc.top}, "slow");
+    }else{
+      $('html, body').animate({scrollTop: '+=520'}, 2000);
+    }
   }
 
 /*Controla las flechas del acordion*/
