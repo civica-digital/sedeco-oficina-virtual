@@ -251,7 +251,7 @@
     if (id !== null && id != "" && parseInt(id) > 0) {
       n_id = next_id!==0 ? next_id : id 
       var divLoc = $('#'+n_id).offset();
-      $('html, body').animate({scrollTop: divLoc.top}, "slow");
+      $('html, body').animate({scrollTop: divLoc.top}, 2000);
     }else{
       $('html, body').animate({scrollTop: '+=520'}, 2000);
     }
