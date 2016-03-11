@@ -82,6 +82,7 @@
     }
     , trigger: "hover"
   };
+
   $("i.fa").popover(options);
 
   /*agregamos un fondo blur al abrir la ayuda*/
@@ -99,6 +100,9 @@
           $('#head_wrapper').css("position", "fixed");
           $('#menu-toggleint').css("position", "fixed");
           $("#wrapper").toggleClass("toggled");
+
+          $('i.fa').popover('hide');
+          $("i.fa").popover('disable');
           
         }else{
           $('#page-content-wrapper').css("-webkit-filter", "blur(0px)");
@@ -107,7 +111,8 @@
           $('#head_wrapper').css("position", "relative");
           $('#menu-toggleint').css("position", "relative");
           $("#wrapper").toggleClass("toggled");
-          
+          $("i.fa").popover('enable');
+          $("i.fa").popover(options);
 
         }
       });

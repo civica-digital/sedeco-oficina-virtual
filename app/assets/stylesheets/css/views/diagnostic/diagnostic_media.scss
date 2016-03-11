@@ -47,6 +47,11 @@
       color: $pink;
       background-color: #EEEEED;
     }
+
+    .form-controler {
+      height: 65px;
+    }
+
   }
 /*****************pantallas medianas*********************/
   @media (min-width: 768px){
@@ -86,6 +91,9 @@
         font-size: 21px;
         color: $pink;
         background-color: #EEEEED;
+    }
+    .form-controler {
+      height: 48px;
     }
   }
   
@@ -127,5 +135,8 @@
       font-size: 21px;
       color: $pink;
       background-color: #EEEEED;
+    }
+    .form-controler {
+      height: 48px;
     }
   }
