@@ -1,5 +1,5 @@
 class AppointmentMailer < ActionMailer::Base
-  default from: "oficina_virtual@sedeco.mx"
+  default from: "asesorenlinea@sedeco.mx"
 
   def new_appointment_notification(appointment, admin_email)
     @appointment = appointment
